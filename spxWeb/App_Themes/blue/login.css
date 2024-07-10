@@ -1,0 +1,24 @@
+﻿.infGeneral
+{
+	border: solid 1px #003366 !important;
+	font-size:11px;
+	margin-left: 145px;
+	margin-top: 20px;
+	padding: 3px 3px 3px 3px;
+	width: 640px;
+	height:350px;
+	text-align:left;
+}
+
+.infGeneral table
+{
+	
+	font-size:11px;
+	margin-left: 125px;
+	/*margin-top: 20px;
+	padding: 3px 3px 3px 3px;
+	width: 640px;
+	height:420px;
+	text-align:left;border: solid 1px #003366 !important;
+*/
+}

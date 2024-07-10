@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="MedioSolicitud" 
+ table="[dbo].[medioSolicitud]" 
+>
+<id name="CodMedioSolicitud"
+ column="`codMedioSolicitud`"
+ type="System.Int32"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="DescripcionMedio"
+column="`descripcionMedio`"
+type="System.String"
+length="30"
+    >
+</property>
+<bag name="SolicitudServicios"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codMedioSolicitud`" />
+</key>
+<one-to-many class="SolicitudServicio" />
+</bag>
+</class>
+</hibernate-mapping>
+

@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="CgSmtpServer" 
+ table="[dbo].[cgSmtpServer]" 
+>
+<id name="IdCgSmtpServer"
+ column="`idCgSmtpServer`"
+ type="System.Int32"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="ServidorSmtp"
+column="`servidorSmtp`"
+type="System.String"
+length="250"
+    >
+</property>
+<property
+name="UsuarioSmtp"
+column="`usuarioSmtp`"
+type="System.String"
+length="250"
+    >
+</property>
+<property
+name="PassSmtp"
+column="`passSmtp`"
+type="System.String"
+length="250"
+    >
+</property>
+<property
+name="ConAutenticacion"
+column="`conAutenticacion`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="SslHabilitado"
+column="`sslHabilitado`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="Puerto"
+column="`puerto`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="CorreoOrigen"
+column="`correoOrigen`"
+type="System.String"
+length="250"
+    >
+</property>
+<property
+name="NombreOrigen"
+column="`nombreOrigen`"
+type="System.String"
+length="250"
+    >
+</property>
+<property
+name="ResponderA"
+column="`responderA`"
+type="System.String"
+length="250"
+    >
+</property>
+<property
+name="AsuntoPrefijo"
+column="`asuntoPrefijo`"
+type="System.String"
+length="250"
+    >
+</property>
+<property
+name="AsuntoPostfijo"
+column="`asuntoPostfijo`"
+type="System.String"
+length="250"
+    >
+</property>
+<property
+name="CuerpoPrefijo"
+column="`cuerpoPrefijo`"
+type="System.String"
+    >
+</property>
+<property
+name="CuerpoPostfijo"
+column="`cuerpoPostfijo`"
+type="System.String"
+    >
+</property>
+<property
+name="DejarCopiaTabla"
+column="`dejarCopiaTabla`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="IsBodyHtml"
+column="`IsBodyHtml`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="Habilitado"
+column="`habilitado`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<bag name="CgSmtpServerCCs"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`idCgSmtpServer`" />
+</key>
+<one-to-many class="CgSmtpServerCC" />
+</bag>
+<bag name="CgSmtpServerCCOs"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`idCgSmtpServer`" />
+</key>
+<one-to-many class="CgSmtpServerCCO" />
+</bag>
+</class>
+</hibernate-mapping>
+

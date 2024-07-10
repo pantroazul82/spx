@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="FiltrosRpt" 
+ table="[dbo].[filtrosRpt]" 
+>
+<composite-id unsaved-value="any"
+ >
+<key-property 
+name="IdRpt"
+column="`idRpt`"
+type="System.Int32"
+>
+</key-property>
+<key-property 
+name="CodFiltroRpt"
+column="`codFiltroRpt`"
+type="System.Int32"
+>
+</key-property>
+</composite-id> 
+<property
+name="CodTipoFiltroRpt"
+column="`codTipoFiltroRpt`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="Nombre"
+column="`nombre`"
+type="System.String"
+length="30"
+    >
+</property>
+<property
+name="Campo"
+column="`campo`"
+type="System.String"
+length="50"
+    >
+</property>
+<many-to-one
+ name="Rpt" 
+ class="Rpt" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`idRpt`" />
+</many-to-one>
+<many-to-one
+ name="TipoFiltroRpt" 
+ class="TipoFiltroRpt" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codTipoFiltroRpt`" />
+</many-to-one>
+</class>
+</hibernate-mapping>
+

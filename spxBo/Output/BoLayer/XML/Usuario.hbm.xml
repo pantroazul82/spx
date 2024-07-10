@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="Usuario" 
+ table="[dbo].[usuario]" 
+>
+<id name="CodUsuario"
+ access="nosetter.camelcase-underscore" 
+ column="`codUsuario`"
+ type="System.Int32"
+ unsaved-value="-2147483648"
+    >
+<generator class="native" >
+</generator>
+</id> 
+<property
+name="Login"
+column="`login`"
+type="System.String"
+length="50"
+    >
+</property>
+<property
+name="Nombre"
+column="`nombre`"
+type="System.String"
+length="50"
+    >
+</property>
+<property
+name="Password"
+column="`password`"
+type="System.String"
+    >
+</property>
+<property
+name="EsBloqueado"
+column="`esBloqueado`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="EsDeshabilitado"
+column="`esDeshabilitado`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="Correo"
+column="`correo`"
+type="System.String"
+length="100"
+    >
+</property>
+<property
+name="Intentos"
+column="`intentos`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="FechaCambioPassword"
+column="`fechaCambioPassword`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="Cedula"
+column="`cedula`"
+type="System.String"
+length="20"
+    >
+</property>
+</class>
+</hibernate-mapping>
+

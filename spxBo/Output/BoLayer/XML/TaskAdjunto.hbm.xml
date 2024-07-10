@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="TaskAdjunto" 
+ table="[dbo].[taskAdjuntos]" 
+>
+<composite-id unsaved-value="any"
+ >
+<key-property 
+name="CodTarea"
+column="`codTarea`"
+type="System.Int32"
+>
+</key-property>
+<key-property 
+name="CodAdjunto"
+column="`codAdjunto`"
+type="System.Int32"
+>
+</key-property>
+</composite-id> 
+<property
+name="Nombre"
+column="`nombre`"
+type="System.String"
+length="50"
+    >
+</property>
+<many-to-one
+ name="Task" 
+ class="Task" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codTarea`" />
+</many-to-one>
+</class>
+</hibernate-mapping>
+

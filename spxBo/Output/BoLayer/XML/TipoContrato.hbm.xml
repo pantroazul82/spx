@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="TipoContrato" 
+ table="[dbo].[tipoContrato]" 
+>
+<id name="CodTipoContrato"
+ column="`codTipoContrato`"
+ type="System.String"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="NombreTipoContrato"
+column="`nombreTipoContrato`"
+type="System.String"
+length="60"
+    >
+</property>
+<property
+name="Descripcion"
+column="`descripcion`"
+type="System.String"
+    >
+</property>
+<property
+name="DeMantenimiento"
+column="`deMantenimiento`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="DeConsumo"
+column="`deConsumo`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<bag name="Contratos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codTipoContrato`" />
+</key>
+<one-to-many class="Contrato" />
+</bag>
+<bag name="ModalidadContratos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codTipoContrato`" />
+</key>
+<one-to-many class="ModalidadContrato" />
+</bag>
+</class>
+</hibernate-mapping>
+

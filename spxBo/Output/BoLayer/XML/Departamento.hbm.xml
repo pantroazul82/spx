@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="Departamento" 
+ table="[dbo].[departamentos]" 
+>
+<composite-id unsaved-value="any"
+ >
+<key-property 
+name="CodPais"
+column="`codPais`"
+type="System.String"
+length="5"
+>
+</key-property>
+<key-property 
+name="CodDepartamento"
+column="`codDepartamento`"
+type="System.String"
+length="5"
+>
+</key-property>
+</composite-id> 
+<property
+name="NombreDepartamento"
+column="`NombreDepartamento`"
+type="System.String"
+length="30"
+    >
+</property>
+<many-to-one
+ name="Paise" 
+ class="Paise" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codPais`" />
+</many-to-one>
+<bag name="Ciudades"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codPais`" />
+ <column name= "`codDepartamento`" />
+</key>
+<one-to-many class="Ciudade" />
+</bag>
+</class>
+</hibernate-mapping>
+

@@ -1,0 +1,59 @@
+﻿.titulo
+{
+	border: solid 2px #203360 !important;
+	font-size:30px;
+	color:#FFFFE7;
+	background-color:#5D84B4;
+	text-align:left;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	margin-top: 10px;
+	padding: 3px 3px 3px 20px;
+	width: 80%;
+}
+
+.reporte
+{
+	border: solid 2px #003366 !important;
+	font-size:11px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	margin-top: 50px;
+	padding: 3px 3px 3px 3px;
+	width: 770px;
+	text-align:left;
+	z-index:0 !important;
+	color:#003366;
+}
+.reporte a
+{
+	color:#003366 !important;
+}
+.opciones
+{
+	border: solid 2px #003366;
+	font-size:12px;
+	margin-bottom: 100px;
+	margin-left: 460px;
+	margin-top: -40px;
+	padding: 3px 3px 3px 5px;
+	width: 300px;
+	height:20px;
+	text-align:left;
+	background-color:#F1F1F1;
+}
+
+
+.publicidad
+{
+	border: solid 1px #003366;
+	font-size:11px;
+margin-bottom:-560px;
+	margin-left: 805px;
+	margin-top: -91px;
+	/*
+	padding: 3px 3px 3px 44px;
+*/
+	width: 145px;
+	height:500px;
+}

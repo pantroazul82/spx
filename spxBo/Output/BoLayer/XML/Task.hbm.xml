@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="Task" 
+ table="[dbo].[task]" 
+>
+<id name="CodTarea"
+ column="`codTarea`"
+ type="System.Int32"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="LoginAutor"
+column="`loginAutor`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="CodCategoria"
+column="`codCategoria`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="LoginPropietario"
+column="`loginPropietario`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="FechaCreacion"
+column="`fechaCreacion`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="FechaInicio"
+column="`fechaInicio`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="FechaVencimiento"
+column="`fechaVencimiento`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="CodEstatus"
+column="`codEstatus`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="CodPrioridad"
+column="`codPrioridad`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="PcCompletado"
+column="`pcCompletado`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="Asunto"
+column="`asunto`"
+type="System.String"
+length="250"
+    >
+</property>
+<property
+name="Cuerpo"
+column="`cuerpo`"
+type="System.String"
+    >
+</property>
+<property
+name="EsCompletada"
+column="`esCompletada`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="EsAprobada"
+column="`esAprobada`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="ConservarEnPropias"
+column="`conservarEnPropias`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="NotificarFin"
+column="`notificarFin`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="EsPrivada"
+column="`esPrivada`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="CodTareaCompartida"
+column="`codTareaCompartida`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="Aceptada"
+column="`aceptada`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="AsociadoA"
+column="`asociadoA`"
+type="System.String"
+length="100"
+    >
+</property>
+<property
+name="FechaFinalizacion"
+column="`fechaFinalizacion`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="FechaAprobacion"
+column="`fechaAprobacion`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="VisibleAutor"
+column="`visibleAutor`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="VisiblePropietario"
+column="`visiblePropietario`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="ParametrosInternos"
+column="`parametrosInternos`"
+type="System.String"
+length="40"
+    >
+</property>
+<many-to-one
+ name="Prioridad" 
+ class="Prioridad" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codPrioridad`" />
+</many-to-one>
+<many-to-one
+ name="TaskCategorium" 
+ class="TaskCategorium" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codCategoria`" />
+</many-to-one>
+<many-to-one
+ name="TaskEstatu" 
+ class="TaskEstatu" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codEstatus`" />
+</many-to-one>
+<many-to-one
+ name="Usuario0" 
+ class="Usuario0" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`loginAutor`" />
+</many-to-one>
+<many-to-one
+ name="Usuario01" 
+ class="Usuario0" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`loginPropietario`" />
+</many-to-one>
+<bag name="TaskAdjuntos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codTarea`" />
+</key>
+<one-to-many class="TaskAdjunto" />
+</bag>
+<bag name="TaskPatronRecurrencia"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codTarea`" />
+</key>
+<one-to-many class="TaskPatronRecurrencium" />
+</bag>
+<bag name="TaskReminders"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codTarea`" />
+</key>
+<one-to-many class="TaskReminder" />
+</bag>
+</class>
+</hibernate-mapping>
+

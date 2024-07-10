@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="Repuesto" 
+ table="[dbo].[repuestos]" 
+>
+<id name="CodRepuesto"
+ column="`codRepuesto`"
+ type="System.String"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="Descripcion"
+column="`descripcion`"
+type="System.String"
+length="80"
+    >
+</property>
+<property
+name="Precio"
+column="`precio`"
+type="System.Nullable`1[System.Decimal]"
+    >
+</property>
+<property
+name="Observaciones"
+column="`Observaciones`"
+type="System.String"
+length="250"
+    >
+</property>
+<bag name="DetalleSolicitudInsumos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codRepuesto`" />
+</key>
+<one-to-many class="DetalleSolicitudInsumo" />
+</bag>
+<bag name="RepuestosxContratos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codRepuesto`" />
+</key>
+<one-to-many class="RepuestosxContrato" />
+</bag>
+<bag name="RepuestosxOrdenPrestamos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codRepuesto`" />
+</key>
+<one-to-many class="RepuestosxOrdenPrestamo" />
+</bag>
+<bag name="RepuestoxOrdenServicios"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codRepuesto`" />
+</key>
+<one-to-many class="RepuestoxOrdenServicio" />
+</bag>
+</class>
+</hibernate-mapping>
+

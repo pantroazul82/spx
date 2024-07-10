@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="Fabricante" 
+ table="[dbo].[fabricante]" 
+>
+<id name="CodFabricante"
+ column="`codFabricante`"
+ type="System.String"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="NombreFabricante"
+column="`nombre_fabricante`"
+type="System.String"
+length="50"
+    >
+</property>
+<property
+name="NumeroNit"
+column="`numero_nit`"
+type="System.String"
+length="20"
+    >
+</property>
+<property
+name="PaginaWeb"
+column="`pagina_web`"
+type="System.String"
+length="50"
+    >
+</property>
+<property
+name="EmailContacto"
+column="`email_contacto`"
+type="System.String"
+length="50"
+    >
+</property>
+<property
+name="Telefono1"
+column="`telefono1`"
+type="System.String"
+length="20"
+    >
+</property>
+<property
+name="Telefono2"
+column="`telefono2`"
+type="System.String"
+length="20"
+    >
+</property>
+<property
+name="NombreContacto"
+column="`nombre_contacto`"
+type="System.String"
+length="50"
+    >
+</property>
+<property
+name="TituloContacto"
+column="`tituloContacto`"
+type="System.String"
+length="10"
+    >
+</property>
+<bag name="Modelos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codFabricante`" />
+</key>
+<one-to-many class="Modelo" />
+</bag>
+</class>
+</hibernate-mapping>
+

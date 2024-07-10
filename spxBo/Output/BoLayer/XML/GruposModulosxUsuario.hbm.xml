@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="GruposModulosxUsuario" 
+ table="[dbo].[gruposModulosxUsuario]" 
+>
+<composite-id unsaved-value="any"
+ >
+<key-property 
+name="CodGrupoModulo"
+column="`codGrupoModulo`"
+type="System.String"
+length="10"
+>
+</key-property>
+<key-property 
+name="Login"
+column="`login`"
+type="System.String"
+length="10"
+>
+</key-property>
+</composite-id> 
+<property
+name="ControlTotal"
+column="`controlTotal`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="Modificar"
+column="`modificar`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="LecturaEjecucion"
+column="`lecturaEjecucion`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="Escribir"
+column="`escribir`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="Eliminar"
+column="`eliminar`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="Imprimir"
+column="`imprimir`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="Denegar"
+column="`denegar`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<many-to-one
+ name="GruposModulo" 
+ class="GruposModulo" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codGrupoModulo`" />
+</many-to-one>
+<many-to-one
+ name="Usuario0" 
+ class="Usuario0" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`login`" />
+</many-to-one>
+</class>
+</hibernate-mapping>
+

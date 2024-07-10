@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+***********************************************************************************************
+website.publishproj
+
+ADVERTENCIA: NO MODIFIQUE el archivo, se usa para el proceso de publicación web.
+
+Copyright (C) Microsoft Corporation. Todos los derechos reservados.
+
+***********************************************************************************************
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.30319</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6ca902ef-6662-46bd-81a7-a463b3b6abf9}</ProjectGuid>
+    <SourceWebPhysicalPath>$(MSBuildThisFileDirectory)</SourceWebPhysicalPath>
+    <SourceWebVirtualPath>/spxWebDemo</SourceWebVirtualPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SourceWebProject>
+    </SourceWebProject>
+    <SourceWebMetabasePath>
+    </SourceWebMetabasePath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <!-- for VS2010 we need to use 10.5 but for VS2012+ we should use VisualStudioVersion -->
+    <WebPublishTargetsVersion Condition=" '$(WebPublishTargetsVersion)' =='' and '$(VisualStudioVersion)' == 10.0 ">10.5</WebPublishTargetsVersion>
+    <WebPublishTargetsVersion Condition=" '$(WebPublishTargetsVersion)'=='' ">$(VisualStudioVersion)</WebPublishTargetsVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(WebPublishTargetsVersion)</VSToolsPath>
+    <_WebPublishTargetsPath Condition=" '$(_WebPublishTargetsPath)'=='' ">$(VSToolsPath)</_WebPublishTargetsPath>
+    <AssemblyFileVersion Condition="'$(AssemblyFileVersion)' == ''">1.0.0.0</AssemblyFileVersion>
+    <AssemblyVersion Condition="'$(AssemblyVersion)' == ''">1.0.0.0</AssemblyVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AssemblyAttributes Include="AssemblyFileVersion">
+      <Value>$(AssemblyFileVersion)</Value>
+    </AssemblyAttributes>
+    <AssemblyAttributes Include="AssemblyVersion">
+      <Value>$(AssemblyVersion)</Value>
+    </AssemblyAttributes>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\componentes\SPXComponents\SPXWebUtils\SPXWebUtils.csproj">
+      <Project>{2C29C44A-C83E-42C6-BFF7-DCE64635CF82}</Project>
+      <Name>SPXWebUtils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\spxBo\Output\BoLayer\BOLayer.csproj">
+      <Project>{F094CF11-600F-4018-997E-7458A79A926F}</Project>
+      <Name>BOLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SupportTech X\SPControladoraDatos\SPControladoraDatos.csproj">
+      <Project>{D588F19E-9FE5-4E58-9D1D-51F8B3D1069A}</Project>
+      <Name>SPControladoraDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SupportTech X\SpFrm\SpFrm.csproj">
+      <Project>{CFF6861A-3B4C-4793-B14B-3A21A6B57A1F}</Project>
+      <Name>SpFrm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SupportTech X\spHerramientas\spHerramientas.csproj">
+      <Project>{99C640D7-0B40-4690-B8EE-2AA90722E208}</Project>
+      <Name>spHerramientas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SupportTech X\spHorarios\spHorarios.csproj">
+      <Project>{9EA9DE2A-4B02-4FB7-92FC-77907ED97DA3}</Project>
+      <Name>spHorarios</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SupportTech X\spProcesos\spProcesos.csproj">
+      <Project>{A8B5B6AE-8E58-4469-A8FF-917E3F2E4A89}</Project>
+      <Name>spProcesos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SupportTech\SupportTech.csproj">
+      <Project>{5A660349-5958-4BAF-A7D9-776EF7DDFF76}</Project>
+      <Name>SupportTech</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(_WebPublishTargetsPath)\Web\Microsoft.WebSite.Publishing.targets" />
+</Project>

@@ -1,0 +1,73 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Poppins&display=swap');
+@import url('https://fonts.cdnfonts.com/css/source-sans-pro');
+
+* {
+    font-family: "Poppins";
+}
+
+body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    overflow-y: hidden;
+    justify-content: center;
+    align-items: center;
+    background: #4FBDDB;
+    height: 100vh;
+}
+
+.screen-1 {
+    background: #f1f7fe;
+    padding: 2em;
+    flex-direction: column;
+    border-radius: 30px;
+    box-shadow: 0 0 2em #f1f7fe;
+    gap: 2em;
+}
+.img-container{
+   text-align:center;
+}
+
+.img-container .title-image {
+        max-width: 100%;
+        max-height: 100%;
+        margin-bottom: 30px;
+        width: 60%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+h1.titulo {
+    font-family: "Dosis" !important;
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #4FBDDB;
+}
+
+p.lead {
+    font-family: "Source Sans Pro", sans-serif !important;
+    color: #697B80;
+    font-size: 1.4rem;
+}
+
+@media (max-width: 768px) {
+
+    .img-container .title-image {
+        width: 80%;
+      
+    }
+
+    h1.titulo {
+        /* Estilos para el título */
+        font-size: 1.0rem; /* Utilizando vw para un tamaño de fuente relativo al ancho de la ventana */
+    }
+
+    p.lead {
+        /* Estilos para el texto de introducción */
+        font-size: 1.0rem; /* Utilizando vw para un tamaño de fuente relativo al ancho de la ventana */
+    }
+}
+
+

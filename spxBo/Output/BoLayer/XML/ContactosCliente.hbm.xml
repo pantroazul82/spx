@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="ContactosCliente" 
+ table="[dbo].[contactosClientes]" 
+>
+<composite-id unsaved-value="any"
+ >
+<key-property 
+name="NitCliente"
+column="`nitCliente`"
+type="System.String"
+length="20"
+>
+</key-property>
+<key-property 
+name="CodContacto"
+column="`codContacto`"
+type="System.String"
+length="20"
+>
+</key-property>
+</composite-id> 
+<property
+name="NombreContacto"
+column="`nombreContacto`"
+type="System.String"
+length="20"
+    >
+</property>
+<property
+name="ApellidosContacto"
+column="`apellidosContacto`"
+type="System.String"
+length="20"
+    >
+</property>
+<property
+name="DocContacto"
+column="`docContacto`"
+type="System.String"
+length="15"
+    >
+</property>
+<property
+name="CodTipoDoc"
+column="`codTipoDoc`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="TituloContacto"
+column="`tituloContacto`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="Telefono1"
+column="`telefono1`"
+type="System.String"
+length="25"
+    >
+</property>
+<property
+name="Telefono2"
+column="`telefono2`"
+type="System.String"
+length="25"
+    >
+</property>
+<property
+name="Fax"
+column="`fax`"
+type="System.String"
+length="25"
+    >
+</property>
+<property
+name="Celular"
+column="`celular`"
+type="System.String"
+length="50"
+    >
+</property>
+<property
+name="Email"
+column="`email`"
+type="System.String"
+length="50"
+    >
+</property>
+<property
+name="PaginaWeb"
+column="`paginaWeb`"
+type="System.String"
+length="50"
+    >
+</property>
+<property
+name="Cumpleanos"
+column="`cumpleanos`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<many-to-one
+ name="TipoDocumento" 
+ class="TipoDocumento" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codTipoDoc`" />
+</many-to-one>
+<many-to-one
+ name="TituloContactoParent" 
+ class="TituloContacto" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`tituloContacto`" />
+</many-to-one>
+<bag name="LlamadaSoportes"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`nitCliente`" />
+ <column name= "`codContacto`" />
+</key>
+<one-to-many class="LlamadaSoporte" />
+</bag>
+<bag name="Seguimientos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`nitCliente`" />
+ <column name= "`codContacto`" />
+</key>
+<one-to-many class="Seguimiento" />
+</bag>
+<bag name="SucursalClientes"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`nitCliente`" />
+ <column name= "`codContacto`" />
+</key>
+<one-to-many class="SucursalCliente" />
+</bag>
+</class>
+</hibernate-mapping>
+

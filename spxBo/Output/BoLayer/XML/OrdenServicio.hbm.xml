@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="OrdenServicio" 
+ table="[dbo].[ordenServicio]" 
+>
+<id name="CodOrdenServicio"
+ column="`codOrdenServicio`"
+ type="System.Int32"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="FechaCreacion"
+column="`fechaCreacion`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="FechaProgramacion"
+column="`fechaProgramacion`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="FechaFinProgramacion"
+column="`fechaFinProgramacion`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="FechaCierre"
+column="`fechaCierre`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="FechaAprobacion"
+column="`fechaAprobacion`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="FechaAnulacion"
+column="`fechaAnulacion`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="CreadaPor"
+column="`creadaPor`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="AprobadaPor"
+column="`aprobadaPor`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="AsignadoA"
+column="`asignadoA`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="CerradaPor"
+column="`cerradaPor`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="AnuladaPor"
+column="`anuladaPor`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="EsInterno"
+column="`esInterno`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="Serial"
+column="`serial`"
+type="System.String"
+length="30"
+    >
+</property>
+<property
+name="NitCliente"
+column="`nitCliente`"
+type="System.String"
+length="20"
+    >
+</property>
+<property
+name="CodSucursal"
+column="`codSucursal`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="CodTiposervicio"
+column="`codTiposervicio`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="CodModalidad"
+column="`codModalidad`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="CodEstadoOrdenServicio"
+column="`codEstadoOrdenServicio`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="CodPrioridadOS"
+column="`codPrioridadOS`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="Observaciones"
+column="`observaciones`"
+type="System.String"
+length="500"
+    >
+</property>
+<property
+name="ObservacionesIngeniero"
+column="`observacionesIngeniero`"
+type="System.String"
+length="500"
+    >
+</property>
+<property
+name="FallasReportadas"
+column="`fallasReportadas`"
+type="System.String"
+length="500"
+    >
+</property>
+<property
+name="Diagnostico"
+column="`diagnostico`"
+type="System.String"
+length="500"
+    >
+</property>
+<property
+name="NumEntrada"
+column="`numEntrada`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="HoraEntradaControl"
+column="`horaEntradaControl`"
+type="System.String"
+length="15"
+    >
+</property>
+<property
+name="HoraSalidaControl"
+column="`horaSalidaControl`"
+type="System.String"
+length="15"
+    >
+</property>
+<property
+name="NombreUsuarioCliente"
+column="`nombreUsuarioCliente`"
+type="System.String"
+length="40"
+    >
+</property>
+<property
+name="CodAsesor"
+column="`codAsesor`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<many-to-one
+ name="AsesoresComerciale" 
+ class="AsesoresComerciale" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codAsesor`" />
+</many-to-one>
+<many-to-one
+ name="Equipo" 
+ class="Equipo" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`serial`" />
+</many-to-one>
+<many-to-one
+ name="EstadosOrdenServicio" 
+ class="EstadosOrdenServicio" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codEstadoOrdenServicio`" />
+</many-to-one>
+<many-to-one
+ name="ModalidadEquipo" 
+ class="ModalidadEquipo" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codModalidad`" />
+</many-to-one>
+<many-to-one
+ name="SucursalCliente" 
+ class="SucursalCliente" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`nitCliente`" />
+<column name="`codSucursal`" />
+</many-to-one>
+<many-to-one
+ name="TipoServicio" 
+ class="TipoServicio" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codTiposervicio`" />
+</many-to-one>
+<bag name="ActividadxordenServicios"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codOrdenServicio`" />
+</key>
+<one-to-many class="ActividadxordenServicio" />
+</bag>
+<bag name="ArchivosXOrdenServicios"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codOrdenServicio`" />
+</key>
+<one-to-many class="ArchivosXOrdenServicio" />
+</bag>
+<bag name="ComprobantesAceptacionOrdenservicios"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codOrdenServicio`" />
+</key>
+<one-to-many class="ComprobantesAceptacionOrdenservicio" />
+</bag>
+<bag name="DetalleProgramacionViajes"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codOrdenServicio`" />
+</key>
+<one-to-many class="DetalleProgramacionViaje" />
+</bag>
+<bag name="OrdenPrestamos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codOrdenServicio`" />
+</key>
+<one-to-many class="OrdenPrestamo" />
+</bag>
+<bag name="ReasignacionOrdenesTrabajos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codOrdenServicio`" />
+</key>
+<one-to-many class="ReasignacionOrdenesTrabajo" />
+</bag>
+<bag name="RepuestoxOrdenServicios"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codOrdenServicio`" />
+</key>
+<one-to-many class="RepuestoxOrdenServicio" />
+</bag>
+<bag name="SolicitudInsumos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codOrdenServicio`" />
+</key>
+<one-to-many class="SolicitudInsumo" />
+</bag>
+<bag name="SolicitudServicios"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codOrdenServicio`" />
+</key>
+<one-to-many class="SolicitudServicio" />
+</bag>
+</class>
+</hibernate-mapping>
+

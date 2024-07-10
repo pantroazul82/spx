@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="ProgramacionViaje" 
+ table="[dbo].[programacionViajes]" 
+>
+<id name="CodProgramacionViajes"
+ column="`codProgramacionViajes`"
+ type="System.Int32"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="FechaCreacion"
+column="`fechaCreacion`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="CreadoPor"
+column="`creadoPor`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="FechaViaje"
+column="`fechaViaje`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="FechaRegreso"
+column="`fechaRegreso`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="IngenieroAsignado"
+column="`ingenieroAsignado`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="Programada"
+column="`programada`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="CodPais"
+column="`codPais`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="CodDepartamento"
+column="`codDepartamento`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="CodCiudad"
+column="`codCiudad`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="Observaciones"
+column="`observaciones`"
+type="System.String"
+length="250"
+    >
+</property>
+<property
+name="CodAsesor"
+column="`codAsesor`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<many-to-one
+ name="AsesoresComerciale" 
+ class="AsesoresComerciale" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codAsesor`" />
+</many-to-one>
+<many-to-one
+ name="Usuario0" 
+ class="Usuario0" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`ingenieroAsignado`" />
+</many-to-one>
+<many-to-one
+ name="Usuario01" 
+ class="Usuario0" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`creadoPor`" />
+</many-to-one>
+<bag name="DetalleProgramacionViajes"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codProgramacionViajes`" />
+</key>
+<one-to-many class="DetalleProgramacionViaje" />
+</bag>
+</class>
+</hibernate-mapping>
+

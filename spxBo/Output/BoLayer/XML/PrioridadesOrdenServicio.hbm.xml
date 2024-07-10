@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="PrioridadesOrdenServicio" 
+ table="[dbo].[prioridadesOrdenServicio]" 
+>
+<id name="CodPrioridadOS"
+ column="`codPrioridadOS`"
+ type="System.Int32"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="Nombre"
+column="`nombre`"
+type="System.String"
+length="30"
+    >
+</property>
+<property
+name="Orden"
+column="`orden`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="EsOrdenInterna"
+column="`esOrdenInterna`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<bag name="DetalleProgramacionViajes"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codPrioridadOS`" />
+</key>
+<one-to-many class="DetalleProgramacionViaje" />
+</bag>
+</class>
+</hibernate-mapping>
+

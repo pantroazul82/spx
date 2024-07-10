@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="LlamadaSoporte" 
+ table="[dbo].[LlamadaSoporte]" 
+>
+<id name="IdLlamadaSoporte"
+ column="`idLlamadaSoporte`"
+ type="System.Int32"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="CodEstadoLLamadaTecnica"
+column="`codEstadoLLamadaTecnica`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="FechaLlamada"
+column="`fechaLlamada`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="LlamadaRecibida"
+column="`llamadaRecibida`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="NitCliente"
+column="`nitCliente`"
+type="System.String"
+length="20"
+    >
+</property>
+<property
+name="CodUbicacion"
+column="`codUbicacion`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="CodContacto"
+column="`codContacto`"
+type="System.String"
+length="20"
+    >
+</property>
+<property
+name="InfAdicionalContacto"
+column="`infAdicionalContacto`"
+type="System.String"
+length="150"
+    >
+</property>
+<property
+name="Serial"
+column="`serial`"
+type="System.String"
+length="30"
+    >
+</property>
+<property
+name="CodModalidadEquipo"
+column="`codModalidadEquipo`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="AsesorTelefonico"
+column="`asesorTelefonico`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="IngenieroAsesor"
+column="`ingenieroAsesor`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="FechaAsignacionIngeniero"
+column="`fechaAsignacionIngeniero`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="CodAsesor"
+column="`codAsesor`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="ObsCliente"
+column="`obsCliente`"
+type="System.String"
+    >
+</property>
+<property
+name="ObsAsesorTelefonico"
+column="`obsAsesorTelefonico`"
+type="System.String"
+    >
+</property>
+<property
+name="Solucionado"
+column="`solucionado`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="ObsFinales"
+column="`obsFinales`"
+type="System.String"
+    >
+</property>
+<property
+name="FechaCierre"
+column="`fechaCierre`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="CerradaPor"
+column="`cerradaPor`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="CodSolicitud"
+column="`codSolicitud`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<many-to-one
+ name="AsesoresComerciale" 
+ class="AsesoresComerciale" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codAsesor`" />
+</many-to-one>
+<many-to-one
+ name="ContactosCliente" 
+ class="ContactosCliente" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`nitCliente`" />
+<column name="`codContacto`" />
+</many-to-one>
+<many-to-one
+ name="Equipo" 
+ class="Equipo" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`serial`" />
+</many-to-one>
+<many-to-one
+ name="EstadosLLamadasTecnica" 
+ class="EstadosLLamadasTecnica" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codEstadoLLamadaTecnica`" />
+</many-to-one>
+<many-to-one
+ name="ModalidadEquipo" 
+ class="ModalidadEquipo" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codModalidadEquipo`" />
+</many-to-one>
+<many-to-one
+ name="SolicitudServicio" 
+ class="SolicitudServicio" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codSolicitud`" />
+</many-to-one>
+<many-to-one
+ name="SucursalCliente" 
+ class="SucursalCliente" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`nitCliente`" />
+<column name="`codUbicacion`" />
+</many-to-one>
+<many-to-one
+ name="Usuario0" 
+ class="Usuario0" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`asesorTelefonico`" />
+</many-to-one>
+<many-to-one
+ name="Usuario01" 
+ class="Usuario0" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`ingenieroAsesor`" />
+</many-to-one>
+<many-to-one
+ name="Usuario02" 
+ class="Usuario0" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`cerradaPor`" />
+</many-to-one>
+<bag name="IndicacionesLLamadas"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`idLLamadaSoporte`" />
+</key>
+<one-to-many class="IndicacionesLLamada" />
+</bag>
+<bag name="Seguimientos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`idLlamadaSoporte`" />
+</key>
+<one-to-many class="Seguimiento" />
+</bag>
+</class>
+</hibernate-mapping>
+

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="Transportadora" 
+ table="[dbo].[transportadora]" 
+>
+<id name="CodTransportadora"
+ column="`codTransportadora`"
+ type="System.Int32"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="NombreTransportadora"
+column="`nombreTransportadora`"
+type="System.String"
+length="100"
+    >
+</property>
+<property
+name="Telefono"
+column="`telefono`"
+type="System.String"
+length="50"
+    >
+</property>
+<property
+name="Telefono2"
+column="`telefono2`"
+type="System.String"
+length="50"
+    >
+</property>
+<property
+name="Celular"
+column="`celular`"
+type="System.String"
+length="50"
+    >
+</property>
+<property
+name="Direccion"
+column="`direccion`"
+type="System.String"
+length="100"
+    >
+</property>
+<property
+name="Observaciones"
+column="`observaciones`"
+type="System.String"
+    >
+</property>
+<bag name="Recoleccions"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codTransportadora`" />
+</key>
+<one-to-many class="Recoleccion" />
+</bag>
+</class>
+</hibernate-mapping>
+

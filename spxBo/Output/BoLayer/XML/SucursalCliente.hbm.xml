@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="SucursalCliente" 
+ table="[dbo].[sucursalCliente]" 
+>
+<composite-id unsaved-value="any"
+ >
+<key-property 
+name="NitCliente"
+column="`nitCliente`"
+type="System.String"
+length="20"
+>
+</key-property>
+<key-property 
+name="CodSucursal"
+column="`codSucursal`"
+type="System.String"
+length="5"
+>
+</key-property>
+</composite-id> 
+<property
+name="NombreSucursal"
+column="`nombreSucursal`"
+type="System.String"
+length="50"
+    >
+</property>
+<property
+name="CodPais"
+column="`codPais`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="CodDepartamento"
+column="`codDepartamento`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="CodCiudad"
+column="`codCiudad`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="Direccion"
+column="`Direccion`"
+type="System.String"
+length="100"
+    >
+</property>
+<property
+name="Telefono1"
+column="`Telefono1`"
+type="System.String"
+length="15"
+    >
+</property>
+<property
+name="Telefono2"
+column="`Telefono2`"
+type="System.String"
+length="15"
+    >
+</property>
+<property
+name="CodContacto"
+column="`codContacto`"
+type="System.String"
+length="20"
+    >
+</property>
+<many-to-one
+ name="Ciudade" 
+ class="Ciudade" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codPais`" />
+<column name="`codDepartamento`" />
+<column name="`codCiudad`" />
+</many-to-one>
+<many-to-one
+ name="Cliente" 
+ class="Cliente" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`nitCliente`" />
+</many-to-one>
+<many-to-one
+ name="ContactosCliente" 
+ class="ContactosCliente" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`nitCliente`" />
+<column name="`codContacto`" />
+</many-to-one>
+<bag name="EntradaSalidaEquipos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`nitCliente`" />
+ <column name= "`codSucursal`" />
+</key>
+<one-to-many class="EntradaSalidaEquipo" />
+</bag>
+<bag name="EntradaSalidaEquipos1"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`nitClienteSalida`" />
+ <column name= "`codSucursalSalida`" />
+</key>
+<one-to-many class="EntradaSalidaEquipo" />
+</bag>
+<bag name="Equipos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`nitClienteUbica`" />
+ <column name= "`codSucursalUbica`" />
+</key>
+<one-to-many class="Equipo" />
+</bag>
+<bag name="LlamadaSoportes"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`nitCliente`" />
+ <column name= "`codUbicacion`" />
+</key>
+<one-to-many class="LlamadaSoporte" />
+</bag>
+<bag name="LogCambioUbicaciones"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`nitClienteDestino`" />
+ <column name= "`codSucursalDestino`" />
+</key>
+<one-to-many class="LogCambioUbicacione" />
+</bag>
+<bag name="LogCambioUbicaciones1"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`nitClienteDestino`" />
+ <column name= "`codSucursalDestino`" />
+</key>
+<one-to-many class="LogCambioUbicacione" />
+</bag>
+<bag name="OrdenServicios"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`nitCliente`" />
+ <column name= "`codSucursal`" />
+</key>
+<one-to-many class="OrdenServicio" />
+</bag>
+<bag name="Recoleccions"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`nitCliente`" />
+ <column name= "`codSucursal`" />
+</key>
+<one-to-many class="Recoleccion" />
+</bag>
+</class>
+</hibernate-mapping>
+

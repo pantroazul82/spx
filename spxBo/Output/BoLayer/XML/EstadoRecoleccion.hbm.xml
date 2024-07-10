@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="EstadoRecoleccion" 
+ table="[dbo].[estadoRecoleccion]" 
+>
+<id name="CodEstadoRecoleccion"
+ column="`codEstadoRecoleccion`"
+ type="System.Int32"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="JerarquiaEstadoRecoleccion"
+column="`jerarquiaEstadoRecoleccion`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="NombreEstadoRecoleccion"
+column="`nombreEstadoRecoleccion`"
+type="System.String"
+length="50"
+    >
+</property>
+<bag name="Recoleccions"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codEstadoRecoleccion`" />
+</key>
+<one-to-many class="Recoleccion" />
+</bag>
+</class>
+</hibernate-mapping>
+

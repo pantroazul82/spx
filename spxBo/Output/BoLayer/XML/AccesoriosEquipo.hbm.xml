@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="AccesoriosEquipo" 
+ table="[dbo].[accesoriosEquipo]" 
+>
+<id name="CodAccesoriosEquipos"
+ column="`codAccesoriosEquipos`"
+ type="System.String"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="NombreAccesorio"
+column="`nombreAccesorio`"
+type="System.String"
+length="50"
+    >
+</property>
+<property
+name="Descripcion"
+column="`descripcion`"
+type="System.String"
+length="250"
+    >
+</property>
+<property
+name="CodFabricante"
+column="`codFabricante`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="CodModelo"
+column="`codModelo`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="CodFoto"
+column="`codFoto`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<many-to-one
+ name="Fotografium" 
+ class="Fotografium" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codFoto`" />
+</many-to-one>
+<many-to-one
+ name="Modelo" 
+ class="Modelo" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codFabricante`" />
+<column name="`codModelo`" />
+</many-to-one>
+<bag name="AccesoriosxEntradaSalidaEquipos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codAccesoriosEquipos`" />
+</key>
+<one-to-many class="AccesoriosxEntradaSalidaEquipo" />
+</bag>
+</class>
+</hibernate-mapping>
+

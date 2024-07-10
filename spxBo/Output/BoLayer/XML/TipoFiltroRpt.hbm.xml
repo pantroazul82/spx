@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="TipoFiltroRpt" 
+ table="[dbo].[tipoFiltroRpt]" 
+>
+<id name="CodTipoFiltroRpt"
+ column="`codTipoFiltroRpt`"
+ type="System.Int32"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="Descripcion"
+column="`descripcion`"
+type="System.String"
+length="10"
+    >
+</property>
+<bag name="FiltrosRpts"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codTipoFiltroRpt`" />
+</key>
+<one-to-many class="FiltrosRpt" />
+</bag>
+</class>
+</hibernate-mapping>
+

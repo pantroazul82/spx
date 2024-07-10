@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsPlantillas2020" targetNamespace="http://tempuri.org/dsPlantillas2020.xsd" xmlns:mstns="http://tempuri.org/dsPlantillas2020.xsd" xmlns="http://tempuri.org/dsPlantillas2020.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="spx2020ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="spx2020ConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.spx2020ConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="pltDispositivosxOrdenTableAdapter" GeneratorDataComponentClassName="pltDispositivosxOrdenTableAdapter" Name="pltDispositivosxOrden" UserDataComponentName="pltDispositivosxOrdenTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="spx2020ConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select 
+dispositivosmedicionxordenservicio.cod_dispositivosmedicionxordenservicio,
+serial_herramienta,
+
+
+case when fabricante.nombre_fabricante is null then
+dispositivosmedicionxordenservicio.fabricante_externo
+else fabricante.nombre_fabricante end
+nombre_fabricante
+,
+
+case when modelos.NombreModelo is null then
+dispositivosmedicionxordenservicio.modelo_externo
+else modelos.NombreModelo end
+NombreModelo
+,ultimo_responsable,
+responsable_externo,serial_externo
+ from 
+
+[dispositivosmedicionxordenservicio]
+left join 
+vistaEquipo on vistaEquipo.serial = dispositivosmedicionxordenservicio.serial_herramienta
+left join Modelos on Modelos.codFabricante = dispositivosmedicionxordenservicio.codFabricante and Modelos.codModelo = dispositivosmedicionxordenservicio.codModelo
+left join fabricante on fabricante.codFabricante = dispositivosmedicionxordenservicio.codFabricante
+
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="cod_dispositivosmedicionxordenservicio" DataSetColumn="cod_dispositivosmedicionxordenservicio" />
+              <Mapping SourceColumn="serial_herramienta" DataSetColumn="serial_herramienta" />
+              <Mapping SourceColumn="nombre_fabricante" DataSetColumn="nombre_fabricante" />
+              <Mapping SourceColumn="NombreModelo" DataSetColumn="NombreModelo" />
+              <Mapping SourceColumn="ultimo_responsable" DataSetColumn="ultimo_responsable" />
+              <Mapping SourceColumn="responsable_externo" DataSetColumn="responsable_externo" />
+              <Mapping SourceColumn="serial_externo" DataSetColumn="serial_externo" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="spx2020ConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByCodOrdenServicio" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByCodOrdenServicio" GeneratorSourceName="FillByCodOrdenServicio" GetMethodModifier="Public" GetMethodName="GetDataByCodOrdenServicio" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByCodOrdenServicio" UserSourceName="FillByCodOrdenServicio">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select 
+dispositivosmedicionxordenservicio.cod_dispositivosmedicionxordenservicio,
+serial_herramienta,
+
+
+case when fabricante.nombre_fabricante is null then
+dispositivosmedicionxordenservicio.fabricante_externo
+else fabricante.nombre_fabricante end
+nombre_fabricante
+,
+
+case when modelos.NombreModelo is null then
+dispositivosmedicionxordenservicio.modelo_externo
+else modelos.NombreModelo end
+NombreModelo
+,ultimo_responsable,
+responsable_externo,serial_externo
+ from 
+
+[dispositivosmedicionxordenservicio]
+left join 
+vistaEquipo on vistaEquipo.serial = dispositivosmedicionxordenservicio.serial_herramienta
+left join Modelos on Modelos.codFabricante = dispositivosmedicionxordenservicio.codFabricante and Modelos.codModelo = dispositivosmedicionxordenservicio.codModelo
+left join fabricante on fabricante.codFabricante = dispositivosmedicionxordenservicio.codFabricante
+
+where dispositivosmedicionxordenservicio.codOrdenServicio=@codOrdenServicio</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="codOrdenServicio" ColumnName="codOrdenServicio" DataSourceName="spxjul1.dbo.dispositivosmedicionxordenservicio" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@codOrdenServicio" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="codOrdenServicio" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="pltVariablesxOrdenServicioTableAdapter" GeneratorDataComponentClassName="pltVariablesxOrdenServicioTableAdapter" Name="pltVariablesxOrdenServicio" UserDataComponentName="pltVariablesxOrdenServicioTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="spx2020ConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        variables_medicionxorden_servicio.cod_variables_medicionxorden_servicio, variables_medicionxorden_servicio.codOrdenServicio, 
+                         variables_medicionxorden_servicio.cod_sub_variable_medicion, variables_medicionxorden_servicio.resultado_variable, 
+                         variables_medicion.nombre_variables_medicion, variables_medicion.cod_variables_medicion,
+						 sub_variable_medicion.nombre_subvariable,
+						 case when variables_medicionxmodelo.unidades is not null
+						  then variables_medicionxmodelo.unidades else 						 
+						 variables_medicion.unidades
+						 end 'unidades',
+						 variables_medicionxmodelo.rango_inicial,variables_medicionxmodelo.rango_final,
+						 case when resultado_variable&lt; variables_medicionxmodelo.rango_inicial or resultado_variable &gt; variables_medicionxmodelo.rango_final
+						 then '*' else '' end alarma,
+relizado_por_equipo
+FROM            variables_medicionxorden_servicio
+INNER JOIN sub_variable_medicion ON sub_variable_medicion.cod_sub_variables_medicion = variables_medicionxorden_servicio.cod_sub_variable_medicion
+ INNER JOIN variables_medicion ON variables_medicion.cod_variables_medicion = sub_variable_medicion.cod_variables_medicion
+ join ordenServicio on ordenServicio.codOrdenServicio = variables_medicionxorden_servicio.codOrdenServicio
+ join equipos on equipos.serial= ordenServicio.serial
+ left join variables_medicionxmodelo on variables_medicionxmodelo.codFabricante = equipos.codFabricante and variables_medicionxmodelo.codModelo = equipos.codModelo  
+ and variables_medicionxmodelo.cod_variables_medicion = variables_medicion.cod_variables_medicion
+ and variables_medicionxmodelo.cod_sub_variables_medicion = sub_variable_medicion.cod_sub_variables_medicion
+ 
+ </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="cod_variables_medicionxorden_servicio" DataSetColumn="cod_variables_medicionxorden_servicio" />
+              <Mapping SourceColumn="codOrdenServicio" DataSetColumn="codOrdenServicio" />
+              <Mapping SourceColumn="cod_sub_variable_medicion" DataSetColumn="cod_sub_variable_medicion" />
+              <Mapping SourceColumn="resultado_variable" DataSetColumn="resultado_variable" />
+              <Mapping SourceColumn="nombre_variables_medicion" DataSetColumn="nombre_variables_medicion" />
+              <Mapping SourceColumn="cod_variables_medicion" DataSetColumn="cod_variables_medicion" />
+              <Mapping SourceColumn="nombre_subvariable" DataSetColumn="nombre_subvariable" />
+              <Mapping SourceColumn="unidades" DataSetColumn="unidades" />
+              <Mapping SourceColumn="rango_inicial" DataSetColumn="rango_inicial" />
+              <Mapping SourceColumn="rango_final" DataSetColumn="rango_final" />
+              <Mapping SourceColumn="alarma" DataSetColumn="alarma" />
+              <Mapping SourceColumn="relizado_por_equipo" DataSetColumn="relizado_por_equipo" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="spx2020ConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillByCodOrdenServicio" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByCodOrdenServicio" GeneratorSourceName="FillByCodOrdenServicio" GetMethodModifier="Public" GetMethodName="GetDataByCodOrdenServicio" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByCodOrdenServicio" UserSourceName="FillByCodOrdenServicio">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText> SELECT        variables_medicionxorden_servicio.cod_variables_medicionxorden_servicio, variables_medicionxorden_servicio.codOrdenServicio, 
+                         variables_medicionxorden_servicio.cod_sub_variable_medicion, variables_medicionxorden_servicio.resultado_variable, 
+                         variables_medicion.nombre_variables_medicion, variables_medicion.cod_variables_medicion,
+						 sub_variable_medicion.nombre_subvariable,
+						 case when variables_medicionxmodelo.unidades is not null
+						  then variables_medicionxmodelo.unidades else 						 
+						 variables_medicion.unidades
+						 end 'unidades',
+						 variables_medicionxmodelo.rango_inicial,variables_medicionxmodelo.rango_final,
+						 case when resultado_variable&lt; variables_medicionxmodelo.rango_inicial or resultado_variable &gt; variables_medicionxmodelo.rango_final
+						 then '*' else '' end alarma,
+relizado_por_equipo
+FROM            variables_medicionxorden_servicio
+INNER JOIN sub_variable_medicion ON sub_variable_medicion.cod_sub_variables_medicion = variables_medicionxorden_servicio.cod_sub_variable_medicion
+ INNER JOIN variables_medicion ON variables_medicion.cod_variables_medicion = sub_variable_medicion.cod_variables_medicion
+ join ordenServicio on ordenServicio.codOrdenServicio = variables_medicionxorden_servicio.codOrdenServicio
+ join equipos on equipos.serial= ordenServicio.serial
+ left join variables_medicionxmodelo on variables_medicionxmodelo.codFabricante = equipos.codFabricante and variables_medicionxmodelo.codModelo = equipos.codModelo  
+ and variables_medicionxmodelo.cod_variables_medicion = variables_medicion.cod_variables_medicion
+ and variables_medicionxmodelo.cod_sub_variables_medicion = sub_variable_medicion.cod_sub_variables_medicion
+
+where variables_medicionxorden_servicio.codOrdenServicio=@CodOrdenServicio
+
+</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="CodOrdenServicio" ColumnName="codOrdenServicio" DataSourceName="spxjul1.dbo.variables_medicionxorden_servicio" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@CodOrdenServicio" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="codOrdenServicio" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsPlantillas2020" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsPlantillas2020" msprop:Generator_UserDSName="dsPlantillas2020">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="pltDispositivosxOrden" msprop:Generator_TableClassName="pltDispositivosxOrdenDataTable" msprop:Generator_TableVarName="tablepltDispositivosxOrden" msprop:Generator_TablePropName="pltDispositivosxOrden" msprop:Generator_RowDeletingName="pltDispositivosxOrdenRowDeleting" msprop:Generator_RowChangingName="pltDispositivosxOrdenRowChanging" msprop:Generator_RowEvHandlerName="pltDispositivosxOrdenRowChangeEventHandler" msprop:Generator_RowDeletedName="pltDispositivosxOrdenRowDeleted" msprop:Generator_UserTableName="pltDispositivosxOrden" msprop:Generator_RowChangedName="pltDispositivosxOrdenRowChanged" msprop:Generator_RowEvArgName="pltDispositivosxOrdenRowChangeEvent" msprop:Generator_RowClassName="pltDispositivosxOrdenRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cod_dispositivosmedicionxordenservicio" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columncod_dispositivosmedicionxordenservicio" msprop:Generator_ColumnPropNameInRow="cod_dispositivosmedicionxordenservicio" msprop:Generator_ColumnPropNameInTable="cod_dispositivosmedicionxordenservicioColumn" msprop:Generator_UserColumnName="cod_dispositivosmedicionxordenservicio" type="xs:int" />
+              <xs:element name="serial_herramienta" msprop:Generator_ColumnVarNameInTable="columnserial_herramienta" msprop:Generator_ColumnPropNameInRow="serial_herramienta" msprop:Generator_ColumnPropNameInTable="serial_herramientaColumn" msprop:Generator_UserColumnName="serial_herramienta" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombre_fabricante" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnnombre_fabricante" msprop:Generator_ColumnPropNameInRow="nombre_fabricante" msprop:Generator_ColumnPropNameInTable="nombre_fabricanteColumn" msprop:Generator_UserColumnName="nombre_fabricante" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NombreModelo" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNombreModelo" msprop:Generator_ColumnPropNameInRow="NombreModelo" msprop:Generator_ColumnPropNameInTable="NombreModeloColumn" msprop:Generator_UserColumnName="NombreModelo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ultimo_responsable" msprop:Generator_ColumnVarNameInTable="columnultimo_responsable" msprop:Generator_ColumnPropNameInRow="ultimo_responsable" msprop:Generator_ColumnPropNameInTable="ultimo_responsableColumn" msprop:Generator_UserColumnName="ultimo_responsable" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="responsable_externo" msprop:Generator_ColumnVarNameInTable="columnresponsable_externo" msprop:Generator_ColumnPropNameInRow="responsable_externo" msprop:Generator_ColumnPropNameInTable="responsable_externoColumn" msprop:Generator_UserColumnName="responsable_externo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="serial_externo" msprop:Generator_ColumnVarNameInTable="columnserial_externo" msprop:Generator_ColumnPropNameInRow="serial_externo" msprop:Generator_ColumnPropNameInTable="serial_externoColumn" msprop:Generator_UserColumnName="serial_externo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="pltVariablesxOrdenServicio" msprop:Generator_TableClassName="pltVariablesxOrdenServicioDataTable" msprop:Generator_TableVarName="tablepltVariablesxOrdenServicio" msprop:Generator_TablePropName="pltVariablesxOrdenServicio" msprop:Generator_RowDeletingName="pltVariablesxOrdenServicioRowDeleting" msprop:Generator_RowChangingName="pltVariablesxOrdenServicioRowChanging" msprop:Generator_RowEvHandlerName="pltVariablesxOrdenServicioRowChangeEventHandler" msprop:Generator_RowDeletedName="pltVariablesxOrdenServicioRowDeleted" msprop:Generator_UserTableName="pltVariablesxOrdenServicio" msprop:Generator_RowChangedName="pltVariablesxOrdenServicioRowChanged" msprop:Generator_RowEvArgName="pltVariablesxOrdenServicioRowChangeEvent" msprop:Generator_RowClassName="pltVariablesxOrdenServicioRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cod_variables_medicionxorden_servicio" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columncod_variables_medicionxorden_servicio" msprop:Generator_ColumnPropNameInRow="cod_variables_medicionxorden_servicio" msprop:Generator_ColumnPropNameInTable="cod_variables_medicionxorden_servicioColumn" msprop:Generator_UserColumnName="cod_variables_medicionxorden_servicio" type="xs:int" />
+              <xs:element name="codOrdenServicio" msprop:Generator_ColumnVarNameInTable="columncodOrdenServicio" msprop:Generator_ColumnPropNameInRow="codOrdenServicio" msprop:Generator_ColumnPropNameInTable="codOrdenServicioColumn" msprop:Generator_UserColumnName="codOrdenServicio" type="xs:int" minOccurs="0" />
+              <xs:element name="cod_sub_variable_medicion" msprop:Generator_ColumnVarNameInTable="columncod_sub_variable_medicion" msprop:Generator_ColumnPropNameInRow="cod_sub_variable_medicion" msprop:Generator_ColumnPropNameInTable="cod_sub_variable_medicionColumn" msprop:Generator_UserColumnName="cod_sub_variable_medicion" type="xs:int" minOccurs="0" />
+              <xs:element name="resultado_variable" msprop:Generator_ColumnVarNameInTable="columnresultado_variable" msprop:Generator_ColumnPropNameInRow="resultado_variable" msprop:Generator_ColumnPropNameInTable="resultado_variableColumn" msprop:Generator_UserColumnName="resultado_variable" type="xs:decimal" minOccurs="0" />
+              <xs:element name="nombre_variables_medicion" msprop:Generator_ColumnVarNameInTable="columnnombre_variables_medicion" msprop:Generator_ColumnPropNameInRow="nombre_variables_medicion" msprop:Generator_ColumnPropNameInTable="nombre_variables_medicionColumn" msprop:Generator_UserColumnName="nombre_variables_medicion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cod_variables_medicion" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columncod_variables_medicion" msprop:Generator_ColumnPropNameInRow="cod_variables_medicion" msprop:Generator_ColumnPropNameInTable="cod_variables_medicionColumn" msprop:Generator_UserColumnName="cod_variables_medicion" type="xs:int" />
+              <xs:element name="nombre_subvariable" msprop:Generator_ColumnVarNameInTable="columnnombre_subvariable" msprop:Generator_ColumnPropNameInRow="nombre_subvariable" msprop:Generator_ColumnPropNameInTable="nombre_subvariableColumn" msprop:Generator_UserColumnName="nombre_subvariable" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="unidades" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnunidades" msprop:Generator_ColumnPropNameInRow="unidades" msprop:Generator_ColumnPropNameInTable="unidadesColumn" msprop:Generator_UserColumnName="unidades" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="rango_inicial" msprop:Generator_ColumnVarNameInTable="columnrango_inicial" msprop:Generator_ColumnPropNameInRow="rango_inicial" msprop:Generator_ColumnPropNameInTable="rango_inicialColumn" msprop:Generator_UserColumnName="rango_inicial" type="xs:decimal" minOccurs="0" />
+              <xs:element name="rango_final" msprop:Generator_ColumnVarNameInTable="columnrango_final" msprop:Generator_ColumnPropNameInRow="rango_final" msprop:Generator_ColumnPropNameInTable="rango_finalColumn" msprop:Generator_UserColumnName="rango_final" type="xs:decimal" minOccurs="0" />
+              <xs:element name="alarma" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnalarma" msprop:Generator_ColumnPropNameInRow="alarma" msprop:Generator_ColumnPropNameInTable="alarmaColumn" msprop:Generator_UserColumnName="alarma" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="relizado_por_equipo" msprop:Generator_ColumnVarNameInTable="columnrelizado_por_equipo" msprop:Generator_ColumnPropNameInRow="relizado_por_equipo" msprop:Generator_ColumnPropNameInTable="relizado_por_equipoColumn" msprop:Generator_UserColumnName="relizado_por_equipo" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:pltDispositivosxOrden" />
+      <xs:field xpath="mstns:cod_dispositivosmedicionxordenservicio" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,81 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="modulo_seguridad" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="modulo_seguridad">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="cod_modulo_seguridad" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" type="xs:int" />
+                <xs:element name="nombre_modulo_seguridad">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="100" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//modulo_seguridad" />
+        <xs:field xpath="cod_modulo_seguridad" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <modulo_seguridad>
+    <cod_modulo_seguridad>1</cod_modulo_seguridad>
+    <nombre_modulo_seguridad>Seguridad</nombre_modulo_seguridad>
+  </modulo_seguridad>
+  <modulo_seguridad>
+    <cod_modulo_seguridad>4</cod_modulo_seguridad>
+    <nombre_modulo_seguridad>Querys y Reportes</nombre_modulo_seguridad>
+  </modulo_seguridad>
+  <modulo_seguridad>
+    <cod_modulo_seguridad>1001</cod_modulo_seguridad>
+    <nombre_modulo_seguridad>Almacen</nombre_modulo_seguridad>
+  </modulo_seguridad>
+  <modulo_seguridad>
+    <cod_modulo_seguridad>1002</cod_modulo_seguridad>
+    <nombre_modulo_seguridad>Cientifica</nombre_modulo_seguridad>
+  </modulo_seguridad>
+  <modulo_seguridad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+    <nombre_modulo_seguridad>Ingenieria</nombre_modulo_seguridad>
+  </modulo_seguridad>
+  <modulo_seguridad>
+    <cod_modulo_seguridad>1004</cod_modulo_seguridad>
+    <nombre_modulo_seguridad>Contratos</nombre_modulo_seguridad>
+  </modulo_seguridad>
+  <modulo_seguridad>
+    <cod_modulo_seguridad>1005</cod_modulo_seguridad>
+    <nombre_modulo_seguridad>SPX Admin</nombre_modulo_seguridad>
+  </modulo_seguridad>
+  <modulo_seguridad>
+    <cod_modulo_seguridad>1006</cod_modulo_seguridad>
+    <nombre_modulo_seguridad>Herramientas SPX</nombre_modulo_seguridad>
+  </modulo_seguridad>
+  <modulo_seguridad>
+    <cod_modulo_seguridad>1007</cod_modulo_seguridad>
+    <nombre_modulo_seguridad>Equipos SPX</nombre_modulo_seguridad>
+  </modulo_seguridad>
+  <modulo_seguridad>
+    <cod_modulo_seguridad>1008</cod_modulo_seguridad>
+    <nombre_modulo_seguridad>Reserva Equipos</nombre_modulo_seguridad>
+  </modulo_seguridad>
+  <modulo_seguridad>
+    <cod_modulo_seguridad>1009</cod_modulo_seguridad>
+    <nombre_modulo_seguridad>Actividades Cientifica</nombre_modulo_seguridad>
+  </modulo_seguridad>
+  <modulo_seguridad>
+    <cod_modulo_seguridad>1010</cod_modulo_seguridad>
+    <nombre_modulo_seguridad>Solicitudes Web</nombre_modulo_seguridad>
+  </modulo_seguridad>
+  <modulo_seguridad>
+    <cod_modulo_seguridad>1011</cod_modulo_seguridad>
+    <nombre_modulo_seguridad>Contratos de Consumo</nombre_modulo_seguridad>
+  </modulo_seguridad>
+</NewDataSet>

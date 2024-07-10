@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="CGQ_ParametrosQuery" 
+ table="[dbo].[CGQ_ParametrosQuery]" 
+>
+<composite-id unsaved-value="any"
+ >
+<key-property 
+name="CodQuery"
+column="`codQuery`"
+type="System.Int32"
+>
+</key-property>
+<key-property 
+name="CodParametrosQuery"
+column="`codParametrosQuery`"
+type="System.Int32"
+>
+</key-property>
+</composite-id> 
+<property
+name="Campo"
+column="`campo`"
+type="System.String"
+length="100"
+    >
+</property>
+<property
+name="Caption"
+column="`caption`"
+type="System.String"
+length="100"
+    >
+</property>
+<property
+name="CodTipoFiltro"
+column="`codTipoFiltro`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<many-to-one
+ name="CGQ_Query" 
+ class="CGQ_Query" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codQuery`" />
+</many-to-one>
+<many-to-one
+ name="CGQ_TipoFiltro" 
+ class="CGQ_TipoFiltro" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codTipoFiltro`" />
+</many-to-one>
+</class>
+</hibernate-mapping>
+

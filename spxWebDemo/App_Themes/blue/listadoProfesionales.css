@@ -1,0 +1,43 @@
+﻿.inicio
+{
+	font-family:Georgia;
+	font-size:12px !important;
+    text-align:left;
+	padding: 3px 3px 3px 10px;
+}
+
+.panelBusqueda
+{
+	border: solid 1px #BDC7D8 !important;
+	font-family:Georgia;
+	font-size:12px !important;
+	color:#780001;
+    text-align:left;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	margin-top: 10px;
+	padding: 3px 3px 3px 10px;
+	width: 300px;
+}
+
+.panelBusqueda input
+{
+	width: 150px;
+	border: solid 1px #BDC7D8;
+}
+
+.panelBusqueda select
+{
+	width: 150px;
+	border: solid 1px #BDC7D8;
+}
+
+.publicidad
+{
+	border: solid 1px #003366;
+	font-size:11px;
+	margin-left: 805px;
+	margin-top: -266px;
+	width: 145px;
+	height:500px;
+}

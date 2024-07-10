@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="GrupoUsuario" 
+ table="[dbo].[grupoUsuario]" 
+>
+<id name="CodGrupoUsuario"
+ access="nosetter.camelcase-underscore" 
+ column="`codGrupoUsuario`"
+ type="System.Int32"
+ unsaved-value="-2147483648"
+    >
+<generator class="native" >
+</generator>
+</id> 
+<property
+name="Descripcion"
+column="`descripcion`"
+type="System.String"
+length="100"
+    >
+</property>
+<property
+name="EsDeshabilitado"
+column="`esDeshabilitado`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<bag name="GrupoSeguridad_grupoUsuarios"
+ cascade="all-delete-orphan"
+ inverse="true" 
+>
+<key>
+ <column name= "`codGrupoUsuario`" />
+</key>
+<one-to-many class="GrupoSeguridad_grupoUsuario" />
+</bag>
+<bag name="GrupoUsuario_usuarios"
+ cascade="all-delete-orphan"
+ inverse="true" 
+>
+<key>
+ <column name= "`codGrupoUsuario`" />
+</key>
+<one-to-many class="GrupoUsuario_usuario" />
+</bag>
+<bag name="ModuloSeguridad_grupoUsuarios"
+ cascade="all-delete-orphan"
+ inverse="true" 
+>
+<key>
+ <column name= "`codGrupoUsuario`" />
+</key>
+<one-to-many class="ModuloSeguridad_grupoUsuario" />
+</bag>
+</class>
+</hibernate-mapping>
+

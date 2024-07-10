@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="AsesoresComerciale" 
+ table="[dbo].[asesoresComerciales]" 
+>
+<id name="CodAsesor"
+ column="`codAsesor`"
+ type="System.Int32"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="NombreAsesor"
+column="`NombreAsesor`"
+type="System.String"
+length="50"
+    >
+</property>
+<property
+name="Correo"
+column="`correo`"
+type="System.String"
+length="250"
+    >
+</property>
+<property
+name="Telefono"
+column="`telefono`"
+type="System.String"
+length="15"
+    >
+</property>
+<property
+name="Celular"
+column="`celular`"
+type="System.String"
+length="15"
+    >
+</property>
+<bag name="LlamadaSoportes"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codAsesor`" />
+</key>
+<one-to-many class="LlamadaSoporte" />
+</bag>
+<bag name="OrdenServicios"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codAsesor`" />
+</key>
+<one-to-many class="OrdenServicio" />
+</bag>
+<bag name="ProgramacionViajes"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codAsesor`" />
+</key>
+<one-to-many class="ProgramacionViaje" />
+</bag>
+<bag name="SolicitudServicios"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codAsesor`" />
+</key>
+<one-to-many class="SolicitudServicio" />
+</bag>
+</class>
+</hibernate-mapping>
+

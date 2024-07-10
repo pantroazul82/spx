@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="EstadosOrdenPrestamo" 
+ table="[dbo].[estadosOrdenPrestamo]" 
+>
+<id name="CodEstadoOrdenPrestamo"
+ column="`codEstadoOrdenPrestamo`"
+ type="System.Int32"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="NombreEstadoOP"
+column="`nombreEstadoOP`"
+type="System.String"
+length="50"
+    >
+</property>
+<property
+name="DescripcionEstadoOP"
+column="`descripcionEstadoOP`"
+type="System.String"
+length="50"
+    >
+</property>
+<bag name="OrdenPrestamos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codEstadoOrdenPrestamo`" />
+</key>
+<one-to-many class="OrdenPrestamo" />
+</bag>
+</class>
+</hibernate-mapping>
+

@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="IndicacionesLLamada" 
+ table="[dbo].[indicacionesLLamadas]" 
+>
+<composite-id unsaved-value="any"
+ >
+<key-property 
+name="IdLLamadaSoporte"
+column="`idLLamadaSoporte`"
+type="System.Int32"
+>
+</key-property>
+<key-property 
+name="CodIndicacion"
+column="`codIndicacion`"
+type="System.Int32"
+>
+</key-property>
+</composite-id> 
+<property
+name="IngresadaPor"
+column="`ingresadaPor`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="Descripcion"
+column="`descripcion`"
+type="System.String"
+    >
+</property>
+<property
+name="Observaciones"
+column="`observaciones`"
+type="System.String"
+    >
+</property>
+<property
+name="FechaCreacion"
+column="`fechaCreacion`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="FechaIndicacion"
+column="`fechaIndicacion`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<many-to-one
+ name="LlamadaSoporte" 
+ class="LlamadaSoporte" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`idLLamadaSoporte`" />
+</many-to-one>
+<many-to-one
+ name="Usuario0" 
+ class="Usuario0" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`ingresadaPor`" />
+</many-to-one>
+</class>
+</hibernate-mapping>
+

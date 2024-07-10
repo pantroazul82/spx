@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="ModuloSeguridad_grupoUsuario" 
+ table="[dbo].[moduloSeguridad_grupoUsuario]" 
+>
+<id name="CodModuloSeguridad_grupoUsuario"
+ access="nosetter.camelcase-underscore" 
+ column="`codModuloSeguridad_grupoUsuario`"
+ type="System.Int32"
+ unsaved-value="-2147483648"
+    >
+<generator class="native" >
+</generator>
+</id> 
+<property
+name="CodGrupoUsuario"
+column="`codGrupoUsuario`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="CodModuloSeguridad"
+column="`codModuloSeguridad`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="ControlTotal"
+column="`controlTotal`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="Modificar"
+column="`modificar`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="LecturaEjecucion"
+column="`lecturaEjecucion`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="Escribir"
+column="`escribir`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="Eliminar"
+column="`eliminar`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="Imprimir"
+column="`imprimir`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="Denegar"
+column="`denegar`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<many-to-one
+ name="GrupoUsuario" 
+ class="GrupoUsuario" 
+ cascade="save-update" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codGrupoUsuario`" />
+</many-to-one>
+<many-to-one
+ name="ModuloSeguridad" 
+ class="ModuloSeguridad" 
+ cascade="save-update" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codModuloSeguridad`" />
+</many-to-one>
+</class>
+</hibernate-mapping>
+

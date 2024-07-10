@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="TiposArchivoXequipo" 
+ table="[dbo].[TiposArchivoXequipo]" 
+>
+<id name="CodTipoArchivoxEquipo"
+ column="`codTipoArchivoxEquipo`"
+ type="System.String"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="Nombre"
+column="`nombre`"
+type="System.String"
+length="40"
+    >
+</property>
+<property
+name="Descripcion"
+column="`descripcion`"
+type="System.String"
+length="350"
+    >
+</property>
+<property
+name="EsObligatorio"
+column="`esObligatorio`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<bag name="ArchivosXequipos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codTipoArchivoxEquipo`" />
+</key>
+<one-to-many class="ArchivosXequipo" />
+</bag>
+</class>
+</hibernate-mapping>
+

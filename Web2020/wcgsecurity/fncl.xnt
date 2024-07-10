@@ -1,0 +1,520 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="funcionalidad" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="funcionalidad">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="cod_funcionalidad" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" type="xs:int" />
+                <xs:element name="nombre_funcionalidad">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                      <xs:maxLength value="100" />
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
+                <xs:element name="cod_modulo_seguridad" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//funcionalidad" />
+        <xs:field xpath="cod_funcionalidad" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <funcionalidad>
+    <cod_funcionalidad>1</cod_funcionalidad>
+    <nombre_funcionalidad>Usuarios y Grupos</nombre_funcionalidad>
+    <cod_modulo_seguridad>1</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>2</cod_funcionalidad>
+    <nombre_funcionalidad>Lineas</nombre_funcionalidad>
+    <cod_modulo_seguridad>1</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>3</cod_funcionalidad>
+    <nombre_funcionalidad>Configuracion de Permisos</nombre_funcionalidad>
+    <cod_modulo_seguridad>1</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>60</cod_funcionalidad>
+    <nombre_funcionalidad>Configuracion Query</nombre_funcionalidad>
+    <cod_modulo_seguridad>4</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>61</cod_funcionalidad>
+    <nombre_funcionalidad>Ejecutar Query</nombre_funcionalidad>
+    <cod_modulo_seguridad>4</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>64</cod_funcionalidad>
+    <nombre_funcionalidad>Query por Usuario</nombre_funcionalidad>
+    <cod_modulo_seguridad>4</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>65</cod_funcionalidad>
+    <nombre_funcionalidad>Conexiones Query</nombre_funcionalidad>
+    <cod_modulo_seguridad>4</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>20</cod_funcionalidad>
+    <nombre_funcionalidad>Parametros generales</nombre_funcionalidad>
+    <cod_modulo_seguridad>2</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>28</cod_funcionalidad>
+    <nombre_funcionalidad>Configurar clientes</nombre_funcionalidad>
+    <cod_modulo_seguridad>2</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1090</cod_funcionalidad>
+    <nombre_funcionalidad>Traslado Equipos</nombre_funcionalidad>
+    <cod_modulo_seguridad>1006</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1091</cod_funcionalidad>
+    <nombre_funcionalidad>Valores x Defecto</nombre_funcionalidad>
+    <cod_modulo_seguridad>1006</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1092</cod_funcionalidad>
+    <nombre_funcionalidad>Cambiar Seriales</nombre_funcionalidad>
+    <cod_modulo_seguridad>1006</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1093</cod_funcionalidad>
+    <nombre_funcionalidad>Cambiar Accesorios</nombre_funcionalidad>
+    <cod_modulo_seguridad>1006</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1094</cod_funcionalidad>
+    <nombre_funcionalidad>Traslados Entre Clientes</nombre_funcionalidad>
+    <cod_modulo_seguridad>1006</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>2017</cod_funcionalidad>
+    <nombre_funcionalidad>Traslados Locales</nombre_funcionalidad>
+    <cod_modulo_seguridad>1006</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1095</cod_funcionalidad>
+    <nombre_funcionalidad>Seguimiento</nombre_funcionalidad>
+    <cod_modulo_seguridad>1006</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>2031</cod_funcionalidad>
+    <nombre_funcionalidad>Informacion Adicional usuarios</nombre_funcionalidad>
+    <cod_modulo_seguridad>1006</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1118</cod_funcionalidad>
+    <nombre_funcionalidad>Exporta Excel Seguimiento</nombre_funcionalidad>
+    <cod_modulo_seguridad>1006</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1096</cod_funcionalidad>
+    <nombre_funcionalidad>Log de Traslados de Equipos</nombre_funcionalidad>
+    <cod_modulo_seguridad>1006</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1032</cod_funcionalidad>
+    <nombre_funcionalidad>Elimina Historial de Cambio de Ubicacion</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1097</cod_funcionalidad>
+    <nombre_funcionalidad>Programados Versus Realizados</nombre_funcionalidad>
+    <cod_modulo_seguridad>1006</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1098</cod_funcionalidad>
+    <nombre_funcionalidad>Correctivos Postpreventivos</nombre_funcionalidad>
+    <cod_modulo_seguridad>1006</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1099</cod_funcionalidad>
+    <nombre_funcionalidad>Estadistico Matematico</nombre_funcionalidad>
+    <cod_modulo_seguridad>1006</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1100</cod_funcionalidad>
+    <nombre_funcionalidad>Conteo Correctivos</nombre_funcionalidad>
+    <cod_modulo_seguridad>1006</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>2030</cod_funcionalidad>
+    <nombre_funcionalidad>Traslados a Bodegas Especiales</nombre_funcionalidad>
+    <cod_modulo_seguridad>1006</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1115</cod_funcionalidad>
+    <nombre_funcionalidad>Hoja Vida del Equipo</nombre_funcionalidad>
+    <cod_modulo_seguridad>1007</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1116</cod_funcionalidad>
+    <nombre_funcionalidad>Modificar Equipos</nombre_funcionalidad>
+    <cod_modulo_seguridad>1007</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1117</cod_funcionalidad>
+    <nombre_funcionalidad>Parametriza problemas Frecuentes</nombre_funcionalidad>
+    <cod_modulo_seguridad>1007</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1119</cod_funcionalidad>
+    <nombre_funcionalidad>Modifica Tipo de Propiedad</nombre_funcionalidad>
+    <cod_modulo_seguridad>1006</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1002</cod_funcionalidad>
+    <nombre_funcionalidad>Acepta Orden de Prestamo</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1010</cod_funcionalidad>
+    <nombre_funcionalidad>Anula Ordenes de Prestamo</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1017</cod_funcionalidad>
+    <nombre_funcionalidad>Autoriza Orden Prestamo</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1104</cod_funcionalidad>
+    <nombre_funcionalidad>Recibe Repuestos</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1105</cod_funcionalidad>
+    <nombre_funcionalidad>Entrega Repuestos</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1106</cod_funcionalidad>
+    <nombre_funcionalidad>Repuestos Prestados</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1079</cod_funcionalidad>
+    <nombre_funcionalidad>Solicita Orden de Prestamo</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1080</cod_funcionalidad>
+    <nombre_funcionalidad>Solicita Orden de Prestamo x Otra Persona</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1083</cod_funcionalidad>
+    <nombre_funcionalidad>Listado Ordenes de Prestamo</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1030</cod_funcionalidad>
+    <nombre_funcionalidad>Crea orden de servicio</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1054</cod_funcionalidad>
+    <nombre_funcionalidad>Listado Ordenes Servicio</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1081</cod_funcionalidad>
+    <nombre_funcionalidad>Mis Ordenes Servicio</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1082</cod_funcionalidad>
+    <nombre_funcionalidad>Estadisticas Orden de Servicio</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1060</cod_funcionalidad>
+    <nombre_funcionalidad>Programacion de Mantenimientos</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1086</cod_funcionalidad>
+    <nombre_funcionalidad>Listado Programaciones</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1023</cod_funcionalidad>
+    <nombre_funcionalidad>Cierra Orden de Servicio</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1065</cod_funcionalidad>
+    <nombre_funcionalidad>Reasigna Orden de Servicio</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1003</cod_funcionalidad>
+    <nombre_funcionalidad>Acepta Orden de Servicio</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1011</cod_funcionalidad>
+    <nombre_funcionalidad>Anula Orden de Servicio</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1014</cod_funcionalidad>
+    <nombre_funcionalidad>Aprueba Ordenes de Servicio</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1052</cod_funcionalidad>
+    <nombre_funcionalidad>Modifica Ordenes de Servicio en Cualquier Estado.</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1063</cod_funcionalidad>
+    <nombre_funcionalidad>Realiza Orden de Servicio</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1200</cod_funcionalidad>
+    <nombre_funcionalidad>Orden Servicio Web</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1201</cod_funcionalidad>
+    <nombre_funcionalidad>Orden Servicio Web Administrador</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>2014</cod_funcionalidad>
+    <nombre_funcionalidad>Crea orden Web!</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>2015</cod_funcionalidad>
+    <nombre_funcionalidad>Crea Orden Web para otros</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>2052</cod_funcionalidad>
+    <nombre_funcionalidad>Ve solo sus ordenes de servicio web</nombre_funcionalidad>
+    <cod_modulo_seguridad>1013</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>2053</cod_funcionalidad>
+    <nombre_funcionalidad>Ve solo sus ordenes de servicio windows</nombre_funcionalidad>
+    <cod_modulo_seguridad>1013</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1005</cod_funcionalidad>
+    <nombre_funcionalidad>Modifica Entrada/Salida Equipos</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1033</cod_funcionalidad>
+    <nombre_funcionalidad>Crea Entrada de equipo</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1072</cod_funcionalidad>
+    <nombre_funcionalidad>Crea Salida de equipo</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1120</cod_funcionalidad>
+    <nombre_funcionalidad>Seguimientos Entrada salida de equipos</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1034</cod_funcionalidad>
+    <nombre_funcionalidad>Agrega Archivos Entrada/Salida.</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1035</cod_funcionalidad>
+    <nombre_funcionalidad>Elimina Achivos Entrada/Salida.</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1036</cod_funcionalidad>
+    <nombre_funcionalidad>Entrada y Salida de Equipos</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1084</cod_funcionalidad>
+    <nombre_funcionalidad>Listado de Entrada y Salida</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>2013</cod_funcionalidad>
+    <nombre_funcionalidad>Anula Entrada y Salida</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1006</cod_funcionalidad>
+    <nombre_funcionalidad>ADMINISTRADOR SOLICITUDES DE SERVICIO</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1004</cod_funcionalidad>
+    <nombre_funcionalidad>Acepta Rechaza Prellamada</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1009</cod_funcionalidad>
+    <nombre_funcionalidad>ANULA SOLICITUD DE INSUMOS</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1019</cod_funcionalidad>
+    <nombre_funcionalidad>CIERRA SOLICITUD DE INSUMOS</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1013</cod_funcionalidad>
+    <nombre_funcionalidad>Aprueba Solicitudes de Insumos</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>2075</cod_funcionalidad>
+    <nombre_funcionalidad>Crea Solicitud de Insumos</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1012</cod_funcionalidad>
+    <nombre_funcionalidad>Anula Recoleccion!</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1113</cod_funcionalidad>
+    <nombre_funcionalidad>Desconfirma recoleccion</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1026</cod_funcionalidad>
+    <nombre_funcionalidad>Confirma Recoleccion</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1031</cod_funcionalidad>
+    <nombre_funcionalidad>Crea Recoleccion</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1042</cod_funcionalidad>
+    <nombre_funcionalidad>Llamadas Tecnicas</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1046</cod_funcionalidad>
+    <nombre_funcionalidad>Listado de Llamadas</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1058</cod_funcionalidad>
+    <nombre_funcionalidad>Listado Prellamadas</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1064</cod_funcionalidad>
+    <nombre_funcionalidad>Realiza seguimiento</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1066</cod_funcionalidad>
+    <nombre_funcionalidad>Parametros Llamadas</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>2018</cod_funcionalidad>
+    <nombre_funcionalidad>Parametros Proceso</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1029</cod_funcionalidad>
+    <nombre_funcionalidad>Listado Contratos!!</nombre_funcionalidad>
+    <cod_modulo_seguridad>1004</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1101</cod_funcionalidad>
+    <nombre_funcionalidad>Crear Contratos!!</nombre_funcionalidad>
+    <cod_modulo_seguridad>1004</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1102</cod_funcionalidad>
+    <nombre_funcionalidad>Parametros Contratos!!</nombre_funcionalidad>
+    <cod_modulo_seguridad>1004</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1103</cod_funcionalidad>
+    <nombre_funcionalidad>Vincular Ordenes Contrato!!</nombre_funcionalidad>
+    <cod_modulo_seguridad>1004</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1107</cod_funcionalidad>
+    <nombre_funcionalidad>Desvincular Ordenes Contrato!!</nombre_funcionalidad>
+    <cod_modulo_seguridad>1004</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1007</cod_funcionalidad>
+    <nombre_funcionalidad>ALMACEN</nombre_funcionalidad>
+    <cod_modulo_seguridad>1001</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1078</cod_funcionalidad>
+    <nombre_funcionalidad>Crea Solicitud de Servicio</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1087</cod_funcionalidad>
+    <nombre_funcionalidad>Listado Solicitud de Servicio</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1085</cod_funcionalidad>
+    <nombre_funcionalidad>Listado Solicitud Insumos</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>2016</cod_funcionalidad>
+    <nombre_funcionalidad>Aprueba Solicitud de Servicio</nombre_funcionalidad>
+    <cod_modulo_seguridad>1003</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1088</cod_funcionalidad>
+    <nombre_funcionalidad>Listado Equipos Disponibles</nombre_funcionalidad>
+    <cod_modulo_seguridad>1008</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>1089</cod_funcionalidad>
+    <nombre_funcionalidad>Equipos Reservados!</nombre_funcionalidad>
+    <cod_modulo_seguridad>1008</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>2002</cod_funcionalidad>
+    <nombre_funcionalidad>Generar solicitudes Web!</nombre_funcionalidad>
+    <cod_modulo_seguridad>1010</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>2003</cod_funcionalidad>
+    <nombre_funcionalidad>Aprobar Solicitudes Web!</nombre_funcionalidad>
+    <cod_modulo_seguridad>1010</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>2004</cod_funcionalidad>
+    <nombre_funcionalidad>Ejecutar Solicitudes Ingenieria!</nombre_funcionalidad>
+    <cod_modulo_seguridad>1010</cod_modulo_seguridad>
+  </funcionalidad>
+  <funcionalidad>
+    <cod_funcionalidad>2072</cod_funcionalidad>
+    <nombre_funcionalidad>Asignar Ultimo responsable</nombre_funcionalidad>
+    <cod_modulo_seguridad>1006</cod_modulo_seguridad>
+  </funcionalidad>
+</NewDataSet>

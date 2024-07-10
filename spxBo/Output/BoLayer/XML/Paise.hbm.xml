@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="Paise" 
+ table="[dbo].[paises]" 
+>
+<id name="CodPais"
+ column="`codPais`"
+ type="System.String"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="NombrePais"
+column="`nombrePais`"
+type="System.String"
+length="30"
+    >
+</property>
+<bag name="Departamentos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codPais`" />
+</key>
+<one-to-many class="Departamento" />
+</bag>
+</class>
+</hibernate-mapping>
+

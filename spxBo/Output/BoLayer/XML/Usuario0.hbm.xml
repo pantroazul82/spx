@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="Usuario0" 
+ table="[dbo].[usuario]" 
+>
+<id name="Login"
+ column="`login`"
+ type="System.String"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="Nombre"
+column="`nombre`"
+type="System.String"
+length="35"
+    >
+</property>
+<property
+name="Password"
+column="`password`"
+type="System.String"
+    >
+</property>
+<property
+name="EsBloqueado"
+column="`es_bloqueado`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="EsDeshabilitado"
+column="`es_bloqueado`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="Correo"
+column="`correo`"
+type="System.String"
+length="200"
+    >
+</property>
+
+<bag name="ActividadxordenServicios"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`loginAutor`" />
+</key>
+<one-to-many class="ActividadxordenServicio" />
+</bag>
+<bag name="EntradaSalidaEquipos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`creadoPor`" />
+</key>
+<one-to-many class="EntradaSalidaEquipo" />
+</bag>
+<bag name="EntradaSalidaEquipos1"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`usuarioSeguimiento`" />
+</key>
+<one-to-many class="EntradaSalidaEquipo" />
+</bag>
+<bag name="GruposModulosxUsuarios"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`login`" />
+</key>
+<one-to-many class="GruposModulosxUsuario" />
+</bag>
+<bag name="GruposUsuariosxUsuarios"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`login`" />
+</key>
+<one-to-many class="GruposUsuariosxUsuario" />
+</bag>
+<bag name="IndicacionesLLamadas"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`ingresadaPor`" />
+</key>
+<one-to-many class="IndicacionesLLamada" />
+</bag>
+<bag name="LlamadaSoportes"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`asesorTelefonico`" />
+</key>
+<one-to-many class="LlamadaSoporte" />
+</bag>
+<bag name="LlamadaSoportes1"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`ingenieroAsesor`" />
+</key>
+<one-to-many class="LlamadaSoporte" />
+</bag>
+<bag name="LlamadaSoportes2"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`cerradaPor`" />
+</key>
+<one-to-many class="LlamadaSoporte" />
+</bag>
+<bag name="LogCambioUbicaciones"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`usuarioCambio`" />
+</key>
+<one-to-many class="LogCambioUbicacione" />
+</bag>
+<bag name="ModulosxUsuarios"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`login`" />
+</key>
+<one-to-many class="ModulosxUsuario" />
+</bag>
+<bag name="ObservacionesxOrdenPrestamos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`loginAutor`" />
+</key>
+<one-to-many class="ObservacionesxOrdenPrestamo" />
+</bag>
+<bag name="OrdenPrestamos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`loginRecibido`" />
+</key>
+<one-to-many class="OrdenPrestamo" />
+</bag>
+<bag name="OrdenPrestamos1"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`loginAceptado`" />
+</key>
+<one-to-many class="OrdenPrestamo" />
+</bag>
+<bag name="OrdenPrestamos2"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`loginAutorizo`" />
+</key>
+<one-to-many class="OrdenPrestamo" />
+</bag>
+<bag name="OrdenPrestamos3"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`loginSolicito`" />
+</key>
+<one-to-many class="OrdenPrestamo" />
+</bag>
+<bag name="OrdenPrestamos4"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`loginResponsable`" />
+</key>
+<one-to-many class="OrdenPrestamo" />
+</bag>
+<bag name="ProgramacionViajes"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`ingenieroAsignado`" />
+</key>
+<one-to-many class="ProgramacionViaje" />
+</bag>
+<bag name="ProgramacionViajes1"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`creadoPor`" />
+</key>
+<one-to-many class="ProgramacionViaje" />
+</bag>
+<bag name="Recoleccions"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`confirmadaPor`" />
+</key>
+<one-to-many class="Recoleccion" />
+</bag>
+<bag name="Recoleccions1"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`solicitadoPor`" />
+</key>
+<one-to-many class="Recoleccion" />
+</bag>
+<bag name="Recoleccions2"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`responsableRecoleccion`" />
+</key>
+<one-to-many class="Recoleccion" />
+</bag>
+<bag name="RegionesXusuarios"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`login`" />
+</key>
+<one-to-many class="RegionesXusuario" />
+</bag>
+<bag name="Seguimientos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`creadoPor`" />
+</key>
+<one-to-many class="Seguimiento" />
+</bag>
+<bag name="Seguimientos1"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`realizadoPor`" />
+</key>
+<one-to-many class="Seguimiento" />
+</bag>
+<bag name="SolicitudServicios"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`creadaPor`" />
+</key>
+<one-to-many class="SolicitudServicio" />
+</bag>
+<bag name="SolicitudServicios1"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`aceptadaPor`" />
+</key>
+<one-to-many class="SolicitudServicio" />
+</bag>
+<bag name="Tasks"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`loginAutor`" />
+</key>
+<one-to-many class="Task" />
+</bag>
+<bag name="Tasks1"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`loginPropietario`" />
+</key>
+<one-to-many class="Task" />
+</bag>
+<bag name="UsuarioCopiaOcultaxSmtpAccions"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`login`" />
+</key>
+<one-to-many class="UsuarioCopiaOcultaxSmtpAccion" />
+</bag>
+<bag name="UsuarioCopiaxSmtpAccions"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`login`" />
+</key>
+<one-to-many class="UsuarioCopiaxSmtpAccion" />
+</bag>
+<bag name="UsuariosXusuarios"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`login`" />
+</key>
+<one-to-many class="UsuariosXusuario" />
+</bag>
+<bag name="UsuariosXusuarios1"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`subordinadoDe`" />
+</key>
+<one-to-many class="UsuariosXusuario" />
+</bag>
+<bag name="UsuarioxSmtpAccions"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`login`" />
+</key>
+<one-to-many class="UsuarioxSmtpAccion" />
+</bag>
+</class>
+</hibernate-mapping>
+

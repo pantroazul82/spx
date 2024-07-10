@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="GruposXgrupo" 
+ table="[dbo].[gruposXgrupos]" 
+>
+<composite-id unsaved-value="any"
+ >
+<key-property 
+name="CodGruposUsu"
+column="`codGruposUsu`"
+type="System.String"
+length="10"
+>
+</key-property>
+<key-property 
+name="SubordinadoDe"
+column="`subordinadoDe`"
+type="System.String"
+length="10"
+>
+</key-property>
+</composite-id> 
+<many-to-one
+ name="GruposUsuario" 
+ class="GruposUsuario" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codGruposUsu`" />
+</many-to-one>
+<many-to-one
+ name="GruposUsuario1" 
+ class="GruposUsuario" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`subordinadoDe`" />
+</many-to-one>
+</class>
+</hibernate-mapping>
+

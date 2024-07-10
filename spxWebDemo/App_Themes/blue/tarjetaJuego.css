@@ -1,0 +1,78 @@
+﻿
+.infJugador
+{
+	border: solid 1px #003366 !important;
+	font-size:11px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	margin-top: 15px;
+	padding: 3px 3px 3px 3px;
+	width: 400px;
+    height:220px;
+	text-align:left;
+}
+
+.tablacastigos
+{
+    background-color:#DADADA;
+	border: solid 1px #003366 !important;
+	font-size:11px;
+	margin-bottom: 10px;
+	margin-left: 510px;
+	margin-top: -237px;
+	padding: 3px 3px 3px 3px;
+	width: 400px;
+	 height:140px;
+	text-align:center;
+}
+
+.controlEquitativo
+{
+    background-color:#DADADA;
+	border: solid 1px #003366 !important;
+	font-size:11px;
+	margin-bottom: 10px;
+	margin-left: 510px;
+	margin-top: 15px;
+	padding: 3px 3px 3px 3px;
+	width: 400px;
+	height:160px;
+	text-align:center;
+}
+
+.informacionGeneral
+{
+	border: solid 1px #003366 !important;
+	font-size:11px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	margin-top: -110px;
+	padding: 3px 3px 3px 3px;
+	width: 490px;
+	height: 200px;
+	text-align:left;
+}
+
+.tarjeta
+{
+	border: solid 2px #003366 !important;
+	font-size:11px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	margin-top: 15px;
+	padding: 3px 3px 3px 3px;
+	width: 500px;
+	text-align:left;
+}
+
+.botones
+{
+	border: solid 2px #003366 !important;
+	font-size:11px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	margin-top: 15px;
+	padding: 3px 3px 3px 3px;
+	width: 500px;
+	text-align:left;
+}

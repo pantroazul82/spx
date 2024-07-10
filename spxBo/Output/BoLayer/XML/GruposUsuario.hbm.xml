@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="GruposUsuario" 
+ table="[dbo].[gruposUsuarios]" 
+>
+<id name="CodGruposUsu"
+ column="`codGruposUsu`"
+ type="System.String"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="NombreGru"
+column="`nombreGru`"
+type="System.String"
+length="100"
+    >
+</property>
+<property
+name="DescripcionGru"
+column="`descripcionGru`"
+type="System.String"
+    >
+</property>
+<bag name="GruposCopiaOcultaxSmtpAccions"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codGruposUsu`" />
+</key>
+<one-to-many class="GruposCopiaOcultaxSmtpAccion" />
+</bag>
+<bag name="GruposCopiaxSmtpAccions"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codGruposUsu`" />
+</key>
+<one-to-many class="GruposCopiaxSmtpAccion" />
+</bag>
+<bag name="GruposModulosxGruposUsuarios"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codGruposUsu`" />
+</key>
+<one-to-many class="GruposModulosxGruposUsuario" />
+</bag>
+<bag name="GruposUsuariosxUsuarios"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codGruposUsu`" />
+</key>
+<one-to-many class="GruposUsuariosxUsuario" />
+</bag>
+<bag name="GruposXgrupos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codGruposUsu`" />
+</key>
+<one-to-many class="GruposXgrupo" />
+</bag>
+<bag name="GruposXgrupos1"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`subordinadoDe`" />
+</key>
+<one-to-many class="GruposXgrupo" />
+</bag>
+<bag name="GruposxSmtpAccions"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codGruposUsu`" />
+</key>
+<one-to-many class="GruposxSmtpAccion" />
+</bag>
+<bag name="ModulosxGruposUsuarios"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codGruposUsu`" />
+</key>
+<one-to-many class="ModulosxGruposUsuario" />
+</bag>
+</class>
+</hibernate-mapping>
+

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="GruposModulo" 
+ table="[dbo].[gruposModulos]" 
+>
+<id name="CodGrupoModulo"
+ column="`codGrupoModulo`"
+ type="System.String"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="NombreGrupoModulo"
+column="`nombreGrupoModulo`"
+type="System.String"
+length="30"
+    >
+</property>
+<property
+name="Descripcion"
+column="`descripcion`"
+type="System.String"
+    >
+</property>
+<bag name="GruposModulosxGruposUsuarios"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codGrupoModulo`" />
+</key>
+<one-to-many class="GruposModulosxGruposUsuario" />
+</bag>
+<bag name="GruposModulosxUsuarios"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codGrupoModulo`" />
+</key>
+<one-to-many class="GruposModulosxUsuario" />
+</bag>
+<bag name="Modulos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codGrupoModulo`" />
+</key>
+<one-to-many class="Modulo" />
+</bag>
+</class>
+</hibernate-mapping>
+

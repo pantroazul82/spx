@@ -1,0 +1,84 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "spxWeb", "spxWeb", "{905742D8-1378-4F40-9FB6-5354C8F121B9}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{F094CF11-600F-4018-997E-7458A79A926F}|BOLayer.dll;{D588F19E-9FE5-4E58-9D1D-51F8B3D1069A}|SPControladoraDatos.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/spxWeb"
+		Debug.AspNetCompiler.PhysicalPath = "spxWeb\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\spxWeb\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/spxWeb"
+		Release.AspNetCompiler.PhysicalPath = "spxWeb\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\spxWeb\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "51289"
+		SlnRelativePath = "spxWeb\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPControladoraDatos", "SupportTech X\SPControladoraDatos\SPControladoraDatos.csproj", "{D588F19E-9FE5-4E58-9D1D-51F8B3D1069A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupportTech", "SupportTech\SupportTech.csproj", "{5A660349-5958-4BAF-A7D9-776EF7DDFF76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BOLayer", "spxBo\Output\BoLayer\BOLayer.csproj", "{F094CF11-600F-4018-997E-7458A79A926F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{905742D8-1378-4F40-9FB6-5354C8F121B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{905742D8-1378-4F40-9FB6-5354C8F121B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{905742D8-1378-4F40-9FB6-5354C8F121B9}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{905742D8-1378-4F40-9FB6-5354C8F121B9}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{D588F19E-9FE5-4E58-9D1D-51F8B3D1069A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D588F19E-9FE5-4E58-9D1D-51F8B3D1069A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D588F19E-9FE5-4E58-9D1D-51F8B3D1069A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D588F19E-9FE5-4E58-9D1D-51F8B3D1069A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A660349-5958-4BAF-A7D9-776EF7DDFF76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A660349-5958-4BAF-A7D9-776EF7DDFF76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A660349-5958-4BAF-A7D9-776EF7DDFF76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A660349-5958-4BAF-A7D9-776EF7DDFF76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F094CF11-600F-4018-997E-7458A79A926F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F094CF11-600F-4018-997E-7458A79A926F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F094CF11-600F-4018-997E-7458A79A926F}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{F094CF11-600F-4018-997E-7458A79A926F}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/kuxancol
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SupportTech\u0020X\\SPControladoraDatos\\SPControladoraDatos.csproj
+		SccProjectName1 = SupportTech\u0020X/SPControladoraDatos
+		SccLocalPath1 = SupportTech\u0020X\\SPControladoraDatos
+		SccProjectUniqueName2 = SupportTech\\SupportTech.csproj
+		SccProjectName2 = SupportTech
+		SccLocalPath2 = SupportTech
+		SccProjectUniqueName3 = spxBo\\Output\\BoLayer\\BOLayer.csproj
+		SccProjectName3 = spxBo/Output/BoLayer
+		SccLocalPath3 = spxBo\\Output\\BoLayer
+		SccWebProject4 = true
+		SccProjectUniqueName4 = spxWeb
+		SccProjectName4 = spxWeb
+		SccLocalPath4 = spxWeb
+		SccProjectEnlistmentChoice4 = 2
+	EndGlobalSection
+EndGlobal

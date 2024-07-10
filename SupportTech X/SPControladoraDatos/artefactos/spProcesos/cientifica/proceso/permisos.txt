@@ -1,0 +1,16 @@
+﻿NUECIE Nueva Cientifica
+PARCIE Parametriza Cientifica
+LISTCIE Listado Cientifica
+ACEPCIE ACepta Cientifica
+SEGCIE Seguimiento Cientifica
+ASECIE Asesor Responable Cientifica
+ANUCIE Anula Cientifica
+CIEEDIAS Edita Asesor Responsable
+CIEEDIA  Cientifica Edita Informacion Aceptacion
+CIEREOPE Cientifica Reabre Orden
+
+ACEPPRELL Acepta Rechaza Prellamada
+PRELLLIST Listado Prellamadas
+
+
+

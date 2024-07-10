@@ -1,0 +1,19 @@
+﻿SPXSeguridad.logica.clsInicializador cls = new SPXSeguridad.logica.clsInicializador();
+cls.agregarModulo(1, "modulo 1");
+cls.agregarModulo(2, "modulo 2");
+cls.agregarFuncionalidad(1, 1, "funcion 1");
+cls.agregarFuncionalidad(1, 2, "funcion 2");
+cls.agregarFuncionalidad(1, 3, "funcion 3");
+cls.agregarFuncionalidad(2, 4, "funcion 4");
+cls.agregarFuncionalidad(2, 5, "funcion 5");
+cls.guardarTablaFuncionalidades();
+cls.guardarTablaModulos();
+
+
+//permisos de modulos componentes
+modulo 1 Seguridad
+modulo 2 Reportes y Consultas
+modulo 3 Tablas Basicas
+modulo 4 
+modulo 5 
+modulo 6 

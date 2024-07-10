@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="SolicitudServicio" 
+ table="[dbo].[solicitudServicio]" 
+>
+<id name="CodSolicitudServicio"
+ column="`codSolicitudServicio`"
+ type="System.Int32"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="FechaCreacion"
+column="`fechaCreacion`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="FechaSugerida"
+column="`fechaSugerida`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="FechaAceptacion"
+column="`fechaAceptacion`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="CreadaPor"
+column="`creadaPor`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="AceptadaPor"
+column="`aceptadaPor`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="Aceptada"
+column="`aceptada`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="Serial"
+column="`serial`"
+type="System.String"
+length="30"
+    >
+</property>
+<property
+name="NitCliente"
+column="`nitCliente`"
+type="System.String"
+length="20"
+    >
+</property>
+<property
+name="CodSucursal"
+column="`codSucursal`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="CodTipoServicio"
+column="`codTipoServicio`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="CodModalidad"
+column="`codModalidad`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="CodEstadoSolicitud"
+column="`codEstadoSolicitud`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="CodPrioridadSolicitud"
+column="`codPrioridadSolicitud`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="ObjetoServicio"
+column="`objetoServicio`"
+type="System.String"
+length="500"
+    >
+</property>
+<property
+name="FallasReportadas"
+column="`fallasReportadas`"
+type="System.String"
+length="500"
+    >
+</property>
+<property
+name="Observaciones"
+column="`Observaciones`"
+type="System.String"
+length="500"
+    >
+</property>
+<property
+name="CodAsesor"
+column="`codAsesor`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="CodMedioSolicitud"
+column="`codMedioSolicitud`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="CodOrdenServicio"
+column="`codOrdenServicio`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<many-to-one
+ name="AsesoresComerciale" 
+ class="AsesoresComerciale" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codAsesor`" />
+</many-to-one>
+<many-to-one
+ name="Cliente" 
+ class="Cliente" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`nitCliente`" />
+</many-to-one>
+<many-to-one
+ name="Equipo" 
+ class="Equipo" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`serial`" />
+</many-to-one>
+<many-to-one
+ name="EstadosSolicitud" 
+ class="EstadosSolicitud" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codEstadoSolicitud`" />
+</many-to-one>
+<many-to-one
+ name="MedioSolicitud" 
+ class="MedioSolicitud" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codMedioSolicitud`" />
+</many-to-one>
+<many-to-one
+ name="ModalidadEquipo" 
+ class="ModalidadEquipo" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codModalidad`" />
+</many-to-one>
+<many-to-one
+ name="OrdenServicio" 
+ class="OrdenServicio" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codOrdenServicio`" />
+</many-to-one>
+<many-to-one
+ name="PrioridadSolicitud" 
+ class="PrioridadSolicitud" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codPrioridadSolicitud`" />
+</many-to-one>
+<many-to-one
+ name="TipoServicio" 
+ class="TipoServicio" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codTipoServicio`" />
+</many-to-one>
+<many-to-one
+ name="Usuario0" 
+ class="Usuario0" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`creadaPor`" />
+</many-to-one>
+<many-to-one
+ name="Usuario01" 
+ class="Usuario0" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`aceptadaPor`" />
+</many-to-one>
+<bag name="LlamadaSoportes"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codSolicitud`" />
+</key>
+<one-to-many class="LlamadaSoporte" />
+</bag>
+</class>
+</hibernate-mapping>
+

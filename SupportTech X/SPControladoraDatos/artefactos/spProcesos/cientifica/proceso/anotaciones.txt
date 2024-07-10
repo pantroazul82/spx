@@ -1,0 +1,5 @@
+﻿in1 fecha asesor-> fecha primer seguimiento
+
+ind2 fecha primer seguimiento fecha cerrada
+ind3 fecha primer seguimiento fecha cerrada en seguimiento
+ind4 fecha cerrada en seguimiento - fecha cerrada 

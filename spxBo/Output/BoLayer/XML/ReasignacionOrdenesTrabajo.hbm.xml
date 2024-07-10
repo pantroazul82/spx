@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="ReasignacionOrdenesTrabajo" 
+ table="[dbo].[reasignacionOrdenesTrabajo]" 
+>
+<composite-id unsaved-value="any"
+ >
+<key-property 
+name="CodOrdenServicio"
+column="`codOrdenServicio`"
+type="System.Int32"
+>
+</key-property>
+<key-property 
+name="CodReasignacion"
+column="`codReasignacion`"
+type="System.Int32"
+>
+</key-property>
+</composite-id> 
+<property
+name="LoginOriginal"
+column="`loginOriginal`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="LoginNuevo"
+column="`loginNuevo`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="FechaReAsignacion"
+column="`fechaReAsignacion`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="MotivoReasignacion"
+column="`motivoReasignacion`"
+type="System.String"
+length="350"
+    >
+</property>
+<property
+name="ReasignadoPor"
+column="`reasignadoPor`"
+type="System.String"
+length="10"
+    >
+</property>
+<many-to-one
+ name="OrdenServicio" 
+ class="OrdenServicio" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codOrdenServicio`" />
+</many-to-one>
+</class>
+</hibernate-mapping>
+

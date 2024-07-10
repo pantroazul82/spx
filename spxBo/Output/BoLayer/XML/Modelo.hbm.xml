@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="Modelo" 
+ table="[dbo].[Modelos]" 
+>
+<composite-id unsaved-value="any"
+ >
+<key-property 
+name="CodFabricante"
+column="`codFabricante`"
+type="System.String"
+length="5"
+>
+</key-property>
+<key-property 
+name="CodModelo"
+column="`codModelo`"
+type="System.String"
+length="5"
+>
+</key-property>
+</composite-id> 
+<property
+name="NombreModelo"
+column="`NombreModelo`"
+type="System.String"
+length="30"
+    >
+</property>
+<property
+name="Descripcion"
+column="`descripcion`"
+type="System.String"
+    >
+</property>
+<property
+name="NombreManual"
+column="`nombreManual`"
+type="System.String"
+length="150"
+    >
+</property>
+<property
+name="CodTipoEquipo"
+column="`codTipoEquipo`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="CodSubTipoEquipo"
+column="`codSubTipoEquipo`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="Voltaje"
+column="`voltaje`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="Watios"
+column="`watios`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="Amperios"
+column="`amperios`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="Frecuencia"
+column="`frecuencia`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="DuracionMantenimiento"
+column="`duracionMantenimiento`"
+type="System.Nullable`1[System.Double]"
+    >
+</property>
+<property
+name="DiasxMantenimiento"
+column="`diasxMantenimiento`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="MesesxMantenimiento"
+column="`mesesxMantenimiento`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="PesoEstimado"
+column="`pesoEstimado`"
+type="System.Nullable`1[System.Decimal]"
+    >
+</property>
+<property
+name="CodUnidadPeso"
+column="`codUnidadPeso`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<many-to-one
+ name="Fabricante" 
+ class="Fabricante" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codFabricante`" />
+</many-to-one>
+<many-to-one
+ name="SubTipoEquipo" 
+ class="SubTipoEquipo" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codTipoEquipo`" />
+<column name="`codSubTipoEquipo`" />
+</many-to-one>
+<bag name="AccesoriosEquipos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codFabricante`" />
+ <column name= "`codModelo`" />
+</key>
+<one-to-many class="AccesoriosEquipo" />
+</bag>
+<bag name="ActividadesxModelos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codFabricante`" />
+ <column name= "`codModelo`" />
+</key>
+<one-to-many class="ActividadesxModelo" />
+</bag>
+<bag name="ArchivosxModelos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codFabricante`" />
+ <column name= "`codModelo`" />
+</key>
+<one-to-many class="ArchivosxModelo" />
+</bag>
+<bag name="Equipos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codFabricante`" />
+ <column name= "`codModelo`" />
+</key>
+<one-to-many class="Equipo" />
+</bag>
+<bag name="Problemas_frecuentes"
+ cascade="all-delete-orphan"
+ inverse="true" 
+>
+<key>
+ <column name= "`codFabricante`" />
+ <column name= "`codModelo`" />
+</key>
+<one-to-many class="Problemas_frecuente" />
+</bag>
+</class>
+</hibernate-mapping>
+

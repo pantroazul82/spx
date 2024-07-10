@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="TituloContacto" 
+ table="[dbo].[tituloContacto]" 
+>
+<id name="CodTituloContacto"
+ column="`codTituloContacto`"
+ type="System.String"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="TituloContacto1"
+column="`tituloContacto`"
+type="System.String"
+length="30"
+    >
+</property>
+<bag name="Clientes"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`tituloContacto`" />
+</key>
+<one-to-many class="Cliente" />
+</bag>
+<bag name="ContactosClientes"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`tituloContacto`" />
+</key>
+<one-to-many class="ContactosCliente" />
+</bag>
+</class>
+</hibernate-mapping>
+

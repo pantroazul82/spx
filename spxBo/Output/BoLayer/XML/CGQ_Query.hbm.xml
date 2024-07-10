@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="CGQ_Query" 
+ table="[dbo].[CGQ_Query]" 
+>
+<id name="CodQuery"
+ column="`codQuery`"
+ type="System.Int32"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="NombreQuery"
+column="`nombreQuery`"
+type="System.String"
+length="100"
+    >
+</property>
+<property
+name="Sql"
+column="`sql`"
+type="System.String"
+    >
+</property>
+<bag name="CGQ_ParametrosQueries"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codQuery`" />
+</key>
+<one-to-many class="CGQ_ParametrosQuery" />
+</bag>
+</class>
+</hibernate-mapping>
+

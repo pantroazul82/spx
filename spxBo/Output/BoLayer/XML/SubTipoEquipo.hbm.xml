@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="SubTipoEquipo" 
+ table="[dbo].[subTipoEquipo]" 
+>
+<composite-id unsaved-value="any"
+ >
+<key-property 
+name="CodTipoEquipo"
+column="`codTipoEquipo`"
+type="System.String"
+length="5"
+>
+</key-property>
+<key-property 
+name="CodSubtipoEquipo"
+column="`codSubtipoEquipo`"
+type="System.String"
+length="5"
+>
+</key-property>
+</composite-id> 
+<property
+name="NombreSubTipo"
+column="`nombreSubTipo`"
+type="System.String"
+length="100"
+    >
+</property>
+<many-to-one
+ name="TipoEquipo" 
+ class="TipoEquipo" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codTipoEquipo`" />
+</many-to-one>
+<bag name="Modelos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codTipoEquipo`" />
+ <column name= "`codSubTipoEquipo`" />
+</key>
+<one-to-many class="Modelo" />
+</bag>
+</class>
+</hibernate-mapping>
+

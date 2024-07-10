@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="Prioridad" 
+ table="[dbo].[prioridad]" 
+>
+<id name="CodPrioridad"
+ column="`codPrioridad`"
+ type="System.String"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="NombrePrioridad"
+column="`nombrePrioridad`"
+type="System.String"
+length="50"
+    >
+</property>
+<property
+name="DescripcionPrioridad"
+column="`descripcionPrioridad`"
+type="System.String"
+length="250"
+    >
+</property>
+<property
+name="Orden"
+column="`orden`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<bag name="Tasks"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codPrioridad`" />
+</key>
+<one-to-many class="Task" />
+</bag>
+</class>
+</hibernate-mapping>
+

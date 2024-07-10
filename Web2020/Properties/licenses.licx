@@ -1,0 +1,10 @@
+C1.Web.Wijmo.Controls.C1ReportViewer.C1ReportViewer, C1.Web.Wijmo.Controls.4, Version=4.0.20121.56, Culture=neutral, PublicKeyToken=9b75583953471eea
+SuperSignature.MouseSignature, SuperSignature, Version=1.5.0.0, Culture=neutral, PublicKeyToken=6fef500d0eeb8668
+DevExpress.Web.ASPxGridViewExporter, DevExpress.Web.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.Web.ASPxPivotGrid.ASPxPivotGridExporter, DevExpress.Web.ASPxPivotGrid.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.Web.ASPxMenu, DevExpress.Web.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.Web.ASPxPivotGrid.ASPxPivotGrid, DevExpress.Web.ASPxPivotGrid.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.Web.ASPxCalendar, DevExpress.Web.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.XtraCharts.Web.WebChartControl, DevExpress.XtraCharts.v17.2.Web, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.Web.ASPxGridView, DevExpress.Web.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
+DevExpress.Web.ASPxButton, DevExpress.Web.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a

@@ -1,0 +1,453 @@
+﻿GO
+/****** Object:  Table [dbo].[grupo_usuario]    Script Date: 05/27/2011 10:54:11 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[grupo_usuario](
+	[cod_grupo_usuario] [int] IDENTITY(1,1) NOT NULL,
+	[nombre_grupo_usuario] [varchar](100) NOT NULL,
+ CONSTRAINT [PK_grupo_usuario] PRIMARY KEY CLUSTERED 
+(
+	[cod_grupo_usuario] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[linea]    Script Date: 05/27/2011 10:54:11 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[linea](
+	[cod_linea] [int] IDENTITY(1,1) NOT NULL,
+	[nombre_linea] [varchar](100) NULL,
+	[contacto_linea] [varchar](45) NULL,
+	[email_linea] [varchar](100) NULL,
+	[telefono_linea] [varchar](45) NULL,
+	[direccion_linea] [varchar](45) NULL,
+	[fax_linea] [varchar](45) NULL,
+	[logo] [image] NULL,
+	[txt1] [varchar](100) NULL,
+	[txt2] [varchar](100) NULL,
+	[txt3] [varchar](100) NULL,
+	[txt4] [varchar](100) NULL,
+	[txt5] [varchar](100) NULL,
+	[txt6] [varchar](100) NULL,
+	[txt7] [varchar](100) NULL,
+	[txt8] [varchar](100) NULL,
+	[txt9] [varchar](100) NULL,
+	[txt10] [varchar](100) NULL,
+	[ind1] [bit] NULL,
+	[ind2] [bit] NULL,
+	[ind3] [bit] NULL,
+	[ind4] [bit] NULL,
+	[ind5] [bit] NULL,
+	[cal1] [datetime] NULL,
+	[cal2] [datetime] NULL,
+	[cal3] [datetime] NULL,
+	[cal4] [datetime] NULL,
+	[cal5] [datetime] NULL,
+	[for1] [int] NULL,
+	[for2] [int] NULL,
+	[for3] [int] NULL,
+	[for4] [int] NULL,
+	[for5] [int] NULL,
+	[num1] [float] NULL,
+	[num2] [float] NULL,
+	[num3] [float] NULL,
+	[num4] [float] NULL,
+	[num5] [float] NULL,
+ CONSTRAINT [PK_linea] PRIMARY KEY CLUSTERED 
+(
+	[cod_linea] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[tipo_documento]    Script Date: 05/27/2011 10:54:11 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[tipo_documento](
+	[cod_tipo_documento] [int] IDENTITY(1,1) NOT NULL,
+	[nombre_tipo_documento] [varchar](30) NULL,
+	[ind_1] [bit] NULL,
+	[ind_2] [bit] NULL,
+	[abreviatura] [varchar](5) NULL,
+ CONSTRAINT [PK_tipo_documento] PRIMARY KEY CLUSTERED 
+(
+	[cod_tipo_documento] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[sysusersobjects]    Script Date: 05/27/2011 10:54:11 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[sysusersobjects](
+	[name] [text] NULL,
+	[date] [datetime] NULL,
+	[user_] [varchar](100) NULL,
+	[object_] [varchar](100) NULL,
+	[file_] [varchar](200) NULL,
+	[file_size] [varchar](20) NULL,
+	[file_date] [varchar](40) NULL,
+	[file_time] [varchar](20) NULL,
+	[pointer] [varchar](80) NULL,
+	[id_user] [int] NULL,
+	[idSysuserObjects] [int] IDENTITY(1,1) NOT NULL,
+ CONSTRAINT [PK_sysusersobjects] PRIMARY KEY CLUSTERED 
+(
+	[idSysuserObjects] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[modulo_seguridad]    Script Date: 05/27/2011 10:54:11 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[modulo_seguridad](
+	[cod_modulo_seguridad] [int] IDENTITY(1,1) NOT NULL,
+	[nombre_modulo_seguridad] [varchar](100) NOT NULL,
+ CONSTRAINT [PK_modulo_seguridad] PRIMARY KEY CLUSTERED 
+(
+	[cod_modulo_seguridad] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[funcionalidad]    Script Date: 05/27/2011 10:54:11 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[funcionalidad](
+	[cod_funcionalidad] [int] IDENTITY(1,1) NOT NULL,
+	[nombre_funcionalidad] [varchar](100) NOT NULL,
+	[cod_modulo_seguridad] [int] NULL,
+ CONSTRAINT [PK_funcionalidad] PRIMARY KEY CLUSTERED 
+(
+	[cod_funcionalidad] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[moduloseguridad_grupousuario]    Script Date: 05/27/2011 10:54:11 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+/* drop table moduloseguridad_grupousuario */
+CREATE TABLE [dbo].[moduloseguridad_grupousuario](
+	[codmoduloseguridad_grupousuario] [int] IDENTITY(1,1) NOT NULL,
+	[cod_modulo_seguridad] [int] NOT NULL,
+	[cod_grupo_usuario] [int] NOT NULL,
+	[control_total] [bit] NULL,
+	[modificar] [bit] NULL,
+	[lectura_ejecucion] [bit] NULL,
+	[escribir] [bit] NULL,
+	[eliminar] [bit] NULL,
+	[imprimir] [bit] NULL,
+	[denegar] [bit] NULL,
+ CONSTRAINT [PK_moduloseguridad_grupousuario] PRIMARY KEY CLUSTERED 
+(
+	[codmoduloseguridad_grupousuario] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[grupo_usuarioxlinea]    Script Date: 05/27/2011 10:54:11 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[grupo_usuarioxlinea](
+	[cod_grupo_usuarioxlinea] [int] IDENTITY(1,1) NOT NULL,
+	[cod_grupo_usuario] [int] NOT NULL,
+	[cod_linea] [int] NOT NULL,
+ CONSTRAINT [PK_grupo_usuarioxlinea] PRIMARY KEY CLUSTERED 
+(
+	[cod_grupo_usuarioxlinea] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[usuario]    Script Date: 05/27/2011 10:54:11 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+/* drop table usuario */
+CREATE TABLE [dbo].[usuario](
+	[cod_usuario] [int] IDENTITY(1,1) NOT NULL,
+	[login] [char](50) NOT NULL,
+	[nombre] [char](50) NOT NULL,
+	[documento] [varchar](20) NULL,
+	[cod_tipo_documento] [int] NULL,
+	[password] [text] NOT NULL,
+	[es_bloqueado] [bit] NULL,
+	[correo] [varchar](200) NULL,
+	[intentos] [int] NULL,
+	[fecha_cambio_password] [datetime] NULL,
+ CONSTRAINT [PK_usuario] PRIMARY KEY CLUSTERED 
+(
+	[cod_usuario] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[funcionalidad_grupousuario]    Script Date: 05/27/2011 10:54:11 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[funcionalidad_grupousuario](
+	[cod_funcionalidad_grupousuario] [int] IDENTITY(1,1) NOT NULL,
+	[cod_grupo_usuario] [int] NOT NULL,
+	[cod_funcionalidad] [int] NOT NULL,
+	[control_total] [bit] NULL,
+	[modificar] [bit] NULL,
+	[lectura_ejecucion] [bit] NULL,
+	[escribir] [bit] NULL,
+	[eliminar] [bit] NULL,
+	[imprimir] [bit] NULL,
+	[denegar] [bit] NULL,
+ CONSTRAINT [PK_funcionalidad_grupousuario] PRIMARY KEY CLUSTERED 
+(
+	[cod_funcionalidad_grupousuario] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[parametro]    Script Date: 05/27/2011 10:54:11 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[parametro](
+	[cod_parametro] [int] IDENTITY(1,1) NOT NULL,
+	[cod_linea] [int] NULL,
+	[cod_manual] [char](10) NOT NULL,
+	[descripcion] [varchar](45) NULL,
+	[valor_numero] [decimal](10, 0) NULL,
+	[valor_texto] [varchar](200) NULL,
+	[texto_laargo] [text] NULL,
+ CONSTRAINT [PK_parametro] PRIMARY KEY CLUSTERED 
+(
+	[cod_parametro] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+/****** Object:  Table [dbo].[moduloseguridad_usuario]    Script Date: 05/27/2011 10:54:11 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+/* drop table moduloseguridad_usuario */
+CREATE TABLE [dbo].[moduloseguridad_usuario](
+	[cod_moduloseguridad_usuario] [int] IDENTITY(1,1) NOT NULL,
+	[cod_modulo_seguridad] [int] NOT NULL,
+	[cod_usuario] [int] NOT NULL,
+	[control_total] [bit] NULL,
+	[modificar] [bit] NULL,
+	[lectura_ejecucion] [bit] NULL,
+	[escribir] [bit] NULL,
+	[eliminar] [bit] NULL,
+	[imprimir] [bit] NULL,
+	[denegar] [bit] NULL,
+ CONSTRAINT [PK_moduloseguridad_usuario] PRIMARY KEY CLUSTERED 
+(
+	[cod_moduloseguridad_usuario] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[lineasxusuario]    Script Date: 05/27/2011 10:54:11 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[lineasxusuario](
+	[cod_lineasxusuario] [int] IDENTITY(1,1) NOT NULL,
+	[cod_linea] [int] NOT NULL,
+	[cod_usuario] [int] NOT NULL,
+ CONSTRAINT [PK_lineasxusuario] PRIMARY KEY CLUSTERED 
+(
+	[cod_lineasxusuario] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[grupousuario_usuario]    Script Date: 05/27/2011 10:54:11 ******/
+/* drop table grupousuario_usuario */
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[grupousuario_usuario](
+	[cod_grupo_usuario] [int] NOT NULL,
+	[cod_usuario] [int] NOT NULL,
+	[cod_grupousuario_usuario] [int] IDENTITY(1,1) NOT NULL,
+ CONSTRAINT [PK_grupousuario_usuario_1] PRIMARY KEY CLUSTERED 
+(
+	[cod_grupousuario_usuario] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[funcionalidad_usuario]    Script Date: 05/27/2011 10:54:11 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[funcionalidad_usuario](
+	[cod_funcionalidad_usuario] [int] IDENTITY(1,1) NOT NULL,
+	[cod_funcionalidad] [int] NOT NULL,
+	[cod_usuario] [int] NOT NULL,
+	[control_total] [bit] NULL,
+	[modificar] [bit] NULL,
+	[lectura_ejecucion] [bit] NULL,
+	[escribir] [bit] NULL,
+	[eliminar] [bit] NULL,
+	[imprimir] [bit] NULL,
+	[denegar] [bit] NULL,
+ CONSTRAINT [PK_funcionalidad_usuario] PRIMARY KEY CLUSTERED 
+(
+	[cod_funcionalidad_usuario] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  ForeignKey [FK_funcionalidad_grupousuario_grupo_usuario]    Script Date: 05/27/2011 10:54:11 ******/
+ALTER TABLE [dbo].[funcionalidad_grupousuario]  WITH CHECK ADD  CONSTRAINT [FK_funcionalidad_grupousuario_grupo_usuario] FOREIGN KEY([cod_grupo_usuario])
+REFERENCES [dbo].[grupo_usuario] ([cod_grupo_usuario])
+GO
+ALTER TABLE [dbo].[funcionalidad_grupousuario] CHECK CONSTRAINT [FK_funcionalidad_grupousuario_grupo_usuario]
+GO
+/****** Object:  ForeignKey [FK_funcionalidad_usuario_usuario]    Script Date: 05/27/2011 10:54:11 ******/
+ALTER TABLE [dbo].[funcionalidad_usuario]  WITH CHECK ADD  CONSTRAINT [FK_funcionalidad_usuario_usuario] FOREIGN KEY([cod_usuario])
+REFERENCES [dbo].[usuario] ([cod_usuario])
+GO
+ALTER TABLE [dbo].[funcionalidad_usuario] CHECK CONSTRAINT [FK_funcionalidad_usuario_usuario]
+GO
+/****** Object:  ForeignKey [FK_grupo_usuarioxlinea_grupo_usuario]    Script Date: 05/27/2011 10:54:11 ******/
+ALTER TABLE [dbo].[grupo_usuarioxlinea]  WITH CHECK ADD  CONSTRAINT [FK_grupo_usuarioxlinea_grupo_usuario] FOREIGN KEY([cod_grupo_usuario])
+REFERENCES [dbo].[grupo_usuario] ([cod_grupo_usuario])
+GO
+ALTER TABLE [dbo].[grupo_usuarioxlinea] CHECK CONSTRAINT [FK_grupo_usuarioxlinea_grupo_usuario]
+GO
+/****** Object:  ForeignKey [FK_grupo_usuarioxlinea_linea]    Script Date: 05/27/2011 10:54:11 ******/
+ALTER TABLE [dbo].[grupo_usuarioxlinea]  WITH CHECK ADD  CONSTRAINT [FK_grupo_usuarioxlinea_linea] FOREIGN KEY([cod_linea])
+REFERENCES [dbo].[linea] ([cod_linea])
+GO
+ALTER TABLE [dbo].[grupo_usuarioxlinea] CHECK CONSTRAINT [FK_grupo_usuarioxlinea_linea]
+GO
+/****** Object:  ForeignKey [FK_grupousuario_usuario_grupo_usuario]    Script Date: 05/27/2011 10:54:11 ******/
+ALTER TABLE [dbo].[grupousuario_usuario]  WITH CHECK ADD  CONSTRAINT [FK_grupousuario_usuario_grupo_usuario] FOREIGN KEY([cod_grupo_usuario])
+REFERENCES [dbo].[grupo_usuario] ([cod_grupo_usuario])
+GO
+ALTER TABLE [dbo].[grupousuario_usuario] CHECK CONSTRAINT [FK_grupousuario_usuario_grupo_usuario]
+GO
+/****** Object:  ForeignKey [FK_grupousuario_usuario_usuario]    Script Date: 05/27/2011 10:54:11 ******/
+ALTER TABLE [dbo].[grupousuario_usuario]  WITH CHECK ADD  CONSTRAINT [FK_grupousuario_usuario_usuario] FOREIGN KEY([cod_usuario])
+REFERENCES [dbo].[usuario] ([cod_usuario])
+GO
+ALTER TABLE [dbo].[grupousuario_usuario] CHECK CONSTRAINT [FK_grupousuario_usuario_usuario]
+GO
+/****** Object:  ForeignKey [FK_lineasxusuario_linea]    Script Date: 05/27/2011 10:54:11 ******/
+ALTER TABLE [dbo].[lineasxusuario]  WITH CHECK ADD  CONSTRAINT [FK_lineasxusuario_linea] FOREIGN KEY([cod_linea])
+REFERENCES [dbo].[linea] ([cod_linea])
+GO
+ALTER TABLE [dbo].[lineasxusuario] CHECK CONSTRAINT [FK_lineasxusuario_linea]
+GO
+/****** Object:  ForeignKey [FK_lineasxusuario_usuario]    Script Date: 05/27/2011 10:54:11 ******/
+ALTER TABLE [dbo].[lineasxusuario]  WITH CHECK ADD  CONSTRAINT [FK_lineasxusuario_usuario] FOREIGN KEY([cod_usuario])
+REFERENCES [dbo].[usuario] ([cod_usuario])
+GO
+ALTER TABLE [dbo].[lineasxusuario] CHECK CONSTRAINT [FK_lineasxusuario_usuario]
+GO
+/****** Object:  ForeignKey [FK_moduloseguridad_grupousuario_grupo_usuario]    Script Date: 05/27/2011 10:54:11 ******/
+ALTER TABLE [dbo].[moduloseguridad_grupousuario]  WITH CHECK ADD  CONSTRAINT [FK_moduloseguridad_grupousuario_grupo_usuario] FOREIGN KEY([cod_grupo_usuario])
+REFERENCES [dbo].[grupo_usuario] ([cod_grupo_usuario])
+GO
+ALTER TABLE [dbo].[moduloseguridad_grupousuario] CHECK CONSTRAINT [FK_moduloseguridad_grupousuario_grupo_usuario]
+GO
+/****** Object:  ForeignKey [FK_moduloseguridad_usuario_usuario]    Script Date: 05/27/2011 10:54:11 ******/
+ALTER TABLE [dbo].[moduloseguridad_usuario]  WITH CHECK ADD  CONSTRAINT [FK_moduloseguridad_usuario_usuario] FOREIGN KEY([cod_usuario])
+REFERENCES [dbo].[usuario] ([cod_usuario])
+GO
+ALTER TABLE [dbo].[moduloseguridad_usuario] CHECK CONSTRAINT [FK_moduloseguridad_usuario_usuario]
+GO
+/****** Object:  ForeignKey [FK_parametro_linea]    Script Date: 05/27/2011 10:54:11 ******/
+ALTER TABLE [dbo].[parametro]  WITH CHECK ADD  CONSTRAINT [FK_parametro_linea] FOREIGN KEY([cod_linea])
+REFERENCES [dbo].[linea] ([cod_linea])
+GO
+ALTER TABLE [dbo].[parametro] CHECK CONSTRAINT [FK_parametro_linea]
+GO
+/****** Object:  ForeignKey [FK_usuario_tipo_documento]    Script Date: 05/27/2011 10:54:11 ******/
+ALTER TABLE [dbo].[usuario]  WITH CHECK ADD  CONSTRAINT [FK_usuario_tipo_documento] FOREIGN KEY([cod_tipo_documento])
+REFERENCES [dbo].[tipo_documento] ([cod_tipo_documento])
+GO
+ALTER TABLE [dbo].[usuario] CHECK CONSTRAINT [FK_usuario_tipo_documento]
+GO
+
+
+
+INSERT
+INTO tipo_documento (nombre_tipo_documento, ind_1, ind_2, Abreviatura)
+VALUES ('Cedula de Ciudadania', 0, 0, 'C.C.')
+INSERT
+INTO tipo_documento (nombre_tipo_documento, ind_1, ind_2, Abreviatura)
+VALUES ('Cedula de Extranjeria', 0, 0, 'C.E.')
+INSERT
+INTO tipo_documento (nombre_tipo_documento, ind_1, ind_2, Abreviatura)
+VALUES ('Pasaporte', 0, 0, 'P.')
+
+INSERT
+INTO usuario (login, nombre, documento,  password ,es_bloqueado,correo,intentos,fecha_cambio_password)
+VALUES ('Admin','Administrador','','',0,'',0,getdate())
+
+INSERT
+INTO grupo_usuario (nombre_grupo_usuario)
+VALUES ('Administradores')
+
+INSERT
+INTO grupousuario_usuario ( cod_usuario, cod_grupo_usuario)
+VALUES (1,1)
+
+INSERT
+INTO linea ( nombre_linea, contacto_linea, email_linea, telefono_linea, direccion_linea, fax_linea)
+VALUES ( 'Linea General', '', '', '', '', '')
+
+INSERT
+INTO grupo_usuarioxlinea (cod_grupo_usuario ,cod_linea)
+VALUES ( 1,1)
+
+INSERT
+INTO moduloseguridad_grupousuario ( cod_modulo_seguridad, cod_grupo_usuario, control_total, modificar, lectura_ejecucion,
+escribir, eliminar, imprimir, denegar)
+VALUES ( 1, 1, 1, 1, 1,1, 1, 1, 0)

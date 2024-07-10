@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="CGQ_TipoFiltro" 
+ table="[dbo].[CGQ_TipoFiltro]" 
+>
+<id name="CodTipoFiltro"
+ column="`codTipoFiltro`"
+ type="System.Int32"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="Descripcion"
+column="`descripcion`"
+type="System.String"
+length="10"
+    >
+</property>
+<bag name="CGQ_ParametrosQueries"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codTipoFiltro`" />
+</key>
+<one-to-many class="CGQ_ParametrosQuery" />
+</bag>
+</class>
+</hibernate-mapping>
+

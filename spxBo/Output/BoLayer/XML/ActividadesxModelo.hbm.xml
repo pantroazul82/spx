@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="ActividadesxModelo" 
+ table="[dbo].[ActividadesxModelo]" 
+>
+<composite-id unsaved-value="any"
+ >
+<key-property 
+name="CodFabricante"
+column="`codFabricante`"
+type="System.String"
+length="5"
+>
+</key-property>
+<key-property 
+name="CodModelo"
+column="`codModelo`"
+type="System.String"
+length="5"
+>
+</key-property>
+<key-property 
+name="CodActividad"
+column="`codActividad`"
+type="System.Int32"
+>
+</key-property>
+</composite-id> 
+<property
+name="Descripcion"
+column="`descripcion`"
+type="System.String"
+    >
+</property>
+<many-to-one
+ name="Modelo" 
+ class="Modelo" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codFabricante`" />
+<column name="`codModelo`" />
+</many-to-one>
+</class>
+</hibernate-mapping>
+

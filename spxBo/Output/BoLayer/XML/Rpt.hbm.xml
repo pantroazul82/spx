@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="Rpt" 
+ table="[dbo].[rpt]" 
+>
+<id name="IdRpt"
+ column="`idRpt`"
+ type="System.Int32"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="NombreRpt"
+column="`nombreRpt`"
+type="System.String"
+length="100"
+    >
+</property>
+<property
+name="CaptionRpt"
+column="`captionRpt`"
+type="System.String"
+length="100"
+    >
+</property>
+<property
+name="Xml"
+column="`xml`"
+type="System.String"
+length="50"
+    >
+</property>
+<property
+name="FiltroObligatorio"
+column="`filtroObligatorio`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<bag name="FiltrosRpts"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`idRpt`" />
+</key>
+<one-to-many class="FiltrosRpt" />
+</bag>
+</class>
+</hibernate-mapping>
+

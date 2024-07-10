@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="SmtpServer" 
+ table="[dbo].[smtpServer]" 
+>
+<id name="SmtpServer1"
+ column="`smtpServer`"
+ type="System.String"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="SmtpAutentificacion"
+column="`smtpAutentificacion`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="SmtpUser"
+column="`smtpUser`"
+type="System.String"
+length="250"
+    >
+</property>
+<property
+name="SmtpPass"
+column="`smtpPass`"
+type="System.String"
+length="250"
+    >
+</property>
+<property
+name="SmtpDirOrigen"
+column="`smtpDirOrigen`"
+type="System.String"
+length="250"
+    >
+</property>
+<property
+name="SmtpEnableSsl"
+column="`smtpEnableSsl`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="SmtpHabilitado"
+column="`smtpHabilitado`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+</class>
+</hibernate-mapping>
+

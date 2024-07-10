@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="TrabajosxReporteServicio" 
+ table="[dbo].[trabajosxReporteServicio]" 
+>
+<composite-id unsaved-value="any"
+ >
+<key-property 
+name="IdReporteServicio"
+column="`idReporteServicio`"
+type="System.Int32"
+>
+</key-property>
+<key-property 
+name="IdTrabajo"
+column="`idTrabajo`"
+type="System.Int32"
+>
+</key-property>
+</composite-id> 
+<property
+name="LoginAutor"
+column="`loginAutor`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="Descripcion"
+column="`descripcion`"
+type="System.String"
+    >
+</property>
+</class>
+</hibernate-mapping>
+

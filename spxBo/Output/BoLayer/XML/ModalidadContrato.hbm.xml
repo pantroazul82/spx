@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="ModalidadContrato" 
+ table="[dbo].[modalidadContrato]" 
+>
+<composite-id unsaved-value="any"
+ >
+<key-property 
+name="CodModalidadContrato"
+column="`codModalidadContrato`"
+type="System.String"
+length="5"
+>
+</key-property>
+<key-property 
+name="CodTipoContrato"
+column="`codTipoContrato`"
+type="System.String"
+length="5"
+>
+</key-property>
+</composite-id> 
+<property
+name="NombreModalidadContrato"
+column="`nombreModalidadContrato`"
+type="System.String"
+length="30"
+    >
+</property>
+<property
+name="Desccripcion"
+column="`desccripcion`"
+type="System.String"
+    >
+</property>
+<many-to-one
+ name="TipoContrato" 
+ class="TipoContrato" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codTipoContrato`" />
+</many-to-one>
+<bag name="Contratos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codModalidadContrato`" />
+ <column name= "`codTipoContrato`" />
+</key>
+<one-to-many class="Contrato" />
+</bag>
+</class>
+</hibernate-mapping>
+

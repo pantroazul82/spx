@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="OrdenPrestamo" 
+ table="[dbo].[OrdenPrestamo]" 
+>
+<id name="CodOrdenPrestamo"
+ column="`codOrdenPrestamo`"
+ type="System.Int32"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="LoginResponsable"
+column="`loginResponsable`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="LoginSolicito"
+column="`loginSolicito`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="LoginAutorizo"
+column="`loginAutorizo`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="LoginAceptado"
+column="`loginAceptado`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="LoginRecibido"
+column="`loginRecibido`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="LoginAnulo"
+column="`loginAnulo`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="FechaOrden"
+column="`fechaOrden`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="FechaDevolucion"
+column="`fechaDevolucion`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="CodPais"
+column="`codPais`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="CodDepartamento"
+column="`codDepartamento`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="CodCiudad"
+column="`codCiudad`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="CodOrdenServicio"
+column="`codOrdenServicio`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="Anulada"
+column="`anulada`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="ObsIniciales"
+column="`obsIniciales`"
+type="System.String"
+    >
+</property>
+<property
+name="ObsAprobacion"
+column="`obsAprobacion`"
+type="System.String"
+    >
+</property>
+<property
+name="ObsEntrega"
+column="`obsEntrega`"
+type="System.String"
+    >
+</property>
+<property
+name="ObsDevolucion"
+column="`obsDevolucion`"
+type="System.String"
+    >
+</property>
+<property
+name="CodEstadoOrdenPrestamo"
+column="`codEstadoOrdenPrestamo`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<many-to-one
+ name="Ciudade" 
+ class="Ciudade" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codPais`" />
+<column name="`codDepartamento`" />
+<column name="`codCiudad`" />
+</many-to-one>
+<many-to-one
+ name="EstadosOrdenPrestamo" 
+ class="EstadosOrdenPrestamo" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codEstadoOrdenPrestamo`" />
+</many-to-one>
+<many-to-one
+ name="OrdenServicio" 
+ class="OrdenServicio" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codOrdenServicio`" />
+</many-to-one>
+<many-to-one
+ name="Usuario0" 
+ class="Usuario0" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`loginRecibido`" />
+</many-to-one>
+<many-to-one
+ name="Usuario01" 
+ class="Usuario0" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`loginAceptado`" />
+</many-to-one>
+<many-to-one
+ name="Usuario02" 
+ class="Usuario0" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`loginAutorizo`" />
+</many-to-one>
+<many-to-one
+ name="Usuario03" 
+ class="Usuario0" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`loginSolicito`" />
+</many-to-one>
+<many-to-one
+ name="Usuario04" 
+ class="Usuario0" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`loginResponsable`" />
+</many-to-one>
+<bag name="ObservacionesxOrdenPrestamos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codOrdenPrestamo`" />
+</key>
+<one-to-many class="ObservacionesxOrdenPrestamo" />
+</bag>
+<bag name="RepuestosxOrdenPrestamos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codOrdenPrestamo`" />
+</key>
+<one-to-many class="RepuestosxOrdenPrestamo" />
+</bag>
+</class>
+</hibernate-mapping>
+

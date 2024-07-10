@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="Soluciones_problema" 
+ table="[dbo].[soluciones_problemas]" 
+>
+<id name="Cod_soluciones_problemas"
+ access="nosetter.camelcase-underscore" 
+ column="`cod_soluciones_problemas`"
+ type="System.Int32"
+ unsaved-value="-2147483648"
+    >
+<generator class="native" >
+</generator>
+</id> 
+<property
+name="Cod_problema_frecuente"
+column="`cod_problema_frecuente`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="Nombre_solucion"
+column="`nombre_solucion`"
+type="System.String"
+length="45"
+    >
+</property>
+<property
+name="Descripcion_solucion"
+column="`descripcion_solucion`"
+type="System.String"
+length="5000"
+    >
+</property>
+<many-to-one
+ name="Problemas_frecuente" 
+ class="Problemas_frecuente" 
+ cascade="save-update" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`cod_problema_frecuente`" />
+</many-to-one>
+</class>
+</hibernate-mapping>
+

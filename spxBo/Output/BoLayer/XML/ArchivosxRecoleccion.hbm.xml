@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="ArchivosxRecoleccion" 
+ table="[dbo].[archivosxRecoleccion]" 
+>
+<id name="CodArhivoxRecolecion"
+ column="`codArhivoxRecolecion`"
+ type="System.Int32"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="CodRecoleccion"
+column="`codRecoleccion`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="NombreArchivo"
+column="`nombreArchivo`"
+type="System.String"
+length="100"
+    >
+</property>
+<property
+name="Descripcion"
+column="`descripcion`"
+type="System.String"
+length="250"
+    >
+</property>
+<many-to-one
+ name="Recoleccion" 
+ class="Recoleccion" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codRecoleccion`" />
+</many-to-one>
+</class>
+</hibernate-mapping>
+

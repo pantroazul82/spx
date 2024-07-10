@@ -1,0 +1,286 @@
+﻿CREATE TABLE IF NOT EXISTS linea(
+  `cod_linea` INT NOT NULL AUTO_INCREMENT,
+  `nombre_linea` VARCHAR (100) NULL DEFAULT NULL,
+  `contacto_linea` VARCHAR (45) NULL DEFAULT NULL,
+  `email_linea` VARCHAR (100) NULL DEFAULT NULL,
+  `telefono_linea` VARCHAR (45) NULL DEFAULT NULL,
+  `direccion_linea` VARCHAR (45) NULL DEFAULT NULL,
+  `fax_linea` VARCHAR (45) NULL DEFAULT NULL,
+  `logo` LONGBLOB NULL DEFAULT NULL,
+  PRIMARY KEY (`cod_linea`)
+)
+AUTO_INCREMENT = 0;
+
+CREATE TABLE IF NOT EXISTS parametro(
+  `cod_parametro` INT (11) NOT NULL AUTO_INCREMENT,
+  `cod_linea` INT (11) NULL DEFAULT NULL,
+  `cod_manual` CHAR (10) CHARACTER SET 'latin1' COLLATE 'latin1_spanish_ci' NOT NULL,
+  `descripcion` VARCHAR (45) CHARACTER SET 'latin1' COLLATE 'latin1_spanish_ci' NULL DEFAULT NULL,
+  `valor_numero` DECIMAL (10, 0) NULL DEFAULT NULL,
+  `valor_texto` VARCHAR (200) CHARACTER SET 'latin1' COLLATE 'latin1_spanish_ci' NULL DEFAULT NULL,
+  `texto_laargo` TEXT CHARACTER SET 'latin1' COLLATE 'latin1_spanish_ci' NULL DEFAULT NULL,
+  PRIMARY KEY (`cod_parametro`),
+  INDEX `fk_parametro_linea1` (`cod_linea` ASC),
+  CONSTRAINT `fk_parametro_linea1`
+  FOREIGN KEY (`cod_linea`)
+  REFERENCES linea (`cod_linea`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION
+)
+ENGINE = INNODB;
+
+CREATE TABLE IF NOT EXISTS tipo_documento(
+  `cod_tipo_documento` INT NOT NULL AUTO_INCREMENT,
+  `nombre_tipo_documento` VARCHAR (30) NULL,
+  `ind_1` BIT NULL,
+  `ind_2` BIT NULL,
+  `abreviatura` VARCHAR (5) NULL,
+  PRIMARY KEY (`cod_tipo_documento`)
+)
+ENGINE = INNODB;
+
+CREATE TABLE IF NOT EXISTS grupo_usuario(
+  `cod_grupo_usuario` INT NOT NULL AUTO_INCREMENT,
+  `nombre_grupo_usuario` VARCHAR (100) NOT NULL,
+  PRIMARY KEY (`cod_grupo_usuario`),
+  INDEX `FK_grupoSeguridad_grupoUsuario_grupoUsuarioIdx2` (`cod_grupo_usuario` ASC)
+)
+ENGINE = INNODB;
+
+CREATE TABLE IF NOT EXISTS usuario(
+  `cod_usuario` INT (11) NOT NULL AUTO_INCREMENT,
+  `login` CHAR (50) NOT NULL,
+  `nombre` CHAR (50) NOT NULL,
+  `documento` VARCHAR (20) NULL DEFAULT NULL,
+  `cod_tipo_documento` INT NULL,
+  `password` TEXT NOT NULL,
+  `es_bloqueado` BIT (1) NULL DEFAULT NULL,
+  `correo` VARCHAR (200) NULL DEFAULT NULL,
+  `intentos` INT (11) NULL DEFAULT NULL,
+  `fecha_cambio_password` DATETIME NULL DEFAULT NULL,
+  PRIMARY KEY (`cod_usuario`),
+  INDEX `FK_grupoSeguridad_usuario_usuariosIdx2` (`cod_usuario` ASC),
+  INDEX `fk_usuario_tipo_documento1` (`cod_tipo_documento` ASC),
+  CONSTRAINT `fk_usuario_tipo_documento1`
+  FOREIGN KEY (`cod_tipo_documento`)
+  REFERENCES tipo_documento (`cod_tipo_documento`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION
+);
+
+CREATE TABLE IF NOT EXISTS sysusersobjects(
+  `name` LONGTEXT CHARACTER SET 'latin1' COLLATE 'latin1_spanish_ci' NULL DEFAULT NULL,
+  `date` DATETIME NULL DEFAULT NULL,
+  `user_` VARCHAR (100) CHARACTER SET 'latin1' COLLATE 'latin1_spanish_ci' NULL DEFAULT NULL,
+  `object_` VARCHAR (100) CHARACTER SET 'latin1' COLLATE 'latin1_spanish_ci' NULL DEFAULT NULL,
+  `file_` VARCHAR (200) CHARACTER SET 'latin1' COLLATE 'latin1_spanish_ci' NULL DEFAULT NULL,
+  `file_size` VARCHAR (20) CHARACTER SET 'latin1' COLLATE 'latin1_spanish_ci' NULL DEFAULT NULL,
+  `file_date` VARCHAR (40) CHARACTER SET 'latin1' COLLATE 'latin1_spanish_ci' NULL DEFAULT NULL,
+  `file_time` VARCHAR (20) CHARACTER SET 'latin1' COLLATE 'latin1_spanish_ci' NULL DEFAULT NULL,
+  `pointer` VARCHAR (80) CHARACTER SET 'latin1' COLLATE 'latin1_spanish_ci' NULL DEFAULT NULL,
+  `id_user` INT (11) NULL DEFAULT NULL,
+  `idSysuserObjects` INT (11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`idSysuserObjects`)
+)
+ENGINE = INNODB;
+
+CREATE  TABLE IF NOT EXISTS lineasxusuario (
+  `cod_lineasxusuario` INT NOT NULL AUTO_INCREMENT ,
+  `cod_linea` INT NOT NULL ,
+  `cod_usuario` INT NOT NULL ,
+  PRIMARY KEY (`cod_lineasxusuario`) ,
+  INDEX `fk_lineasxusuario_linea1` (`cod_linea` ASC) ,
+  INDEX `fk_lineasxusuario_usuario1` (`cod_usuario` ASC) ,
+  CONSTRAINT `fk_lineasxusuario_linea1`
+    FOREIGN KEY (`cod_linea` )
+    REFERENCES `linea` (`cod_linea` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_lineasxusuario_usuario1`
+    FOREIGN KEY (`cod_usuario` )
+    REFERENCES `usuario` (`cod_usuario` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS grupo_usuarioxlinea(
+  `cod_grupo_usuarioxlinea` INT NOT NULL AUTO_INCREMENT,
+  `cod_grupo_usuario` INT NOT NULL,
+  `cod_linea` INT NOT NULL,
+  PRIMARY KEY (`cod_grupo_usuarioxlinea`),
+  INDEX `fk_grupo_usuarioxlinea_linea1` (`cod_linea` ASC),
+  INDEX `fk_grupo_usuarioxlinea_grupo_usuario1` (`cod_grupo_usuario` ASC),
+  CONSTRAINT `fk_grupo_usuarioxlinea_linea1`
+  FOREIGN KEY (`cod_linea`)
+  REFERENCES linea (`cod_linea`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION,
+  CONSTRAINT `fk_grupo_usuarioxlinea_grupo_usuario1`
+  FOREIGN KEY (`cod_grupo_usuario`)
+  REFERENCES grupo_usuario (`cod_grupo_usuario`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION
+)
+ENGINE = INNODB;
+
+CREATE TABLE IF NOT EXISTS grupousuario_usuario(
+  `cod_grupo_usuario` INT (11) NOT NULL,
+  `cod_usuario` INT (11) NOT NULL,
+  `cod_grupousuario_usuario` INT (11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`cod_grupousuario_usuario`),
+  INDEX `FK_grupoUsuario_usuario_grupoUsuarioIdx` (`cod_grupo_usuario` ASC),
+  INDEX `FK_grupoUsuario_usuario_usuariosIdx` (`cod_usuario` ASC),
+  CONSTRAINT `FK_grupoUsuario_usuario_grupoUsuario`
+  FOREIGN KEY (`cod_grupo_usuario`)
+  REFERENCES grupo_usuario (`cod_grupo_usuario`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION,
+  CONSTRAINT `FK_grupoUsuario_usuario_usuarios`
+  FOREIGN KEY (`cod_usuario`)
+  REFERENCES usuario (`cod_usuario`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION
+)
+ENGINE = INNODB;
+
+CREATE TABLE IF NOT EXISTS modulo_seguridad(
+  `cod_modulo_seguridad` INT (11) NOT NULL AUTO_INCREMENT,
+  `nombre_modulo_seguridad` VARCHAR (100) NOT NULL,
+  PRIMARY KEY (`cod_modulo_seguridad`)
+)
+ENGINE = INNODB;
+
+CREATE TABLE IF NOT EXISTS funcionalidad(
+  `cod_funcionalidad` INT (11) NOT NULL AUTO_INCREMENT,
+  `nombre_funcionalidad` VARCHAR (100) NOT NULL,
+  `cod_modulo_seguridad` INT (11) NULL DEFAULT NULL,
+  PRIMARY KEY (`cod_funcionalidad`),
+  INDEX `FK_moduloSeguridad_grupoSeguridadIdx` (`cod_modulo_seguridad` ASC),
+  INDEX `FK_moduloSeguridad_grupoUsuario_moduloSeguridadIdx2` (`cod_funcionalidad` ASC),
+  CONSTRAINT `FK_moduloSeguridad_grupoSeguridad`
+  FOREIGN KEY (`cod_modulo_seguridad`)
+  REFERENCES modulo_seguridad (`cod_modulo_seguridad`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION
+)
+ENGINE = INNODB;
+
+CREATE TABLE IF NOT EXISTS funcionalidad_usuario(
+  `cod_funcionalidad_usuario` INT NOT NULL AUTO_INCREMENT,
+  `cod_funcionalidad` INT NOT NULL,
+  `cod_usuario` INT NOT NULL,
+  `control_total` BIT (1) NULL DEFAULT NULL,
+  `modificar` BIT (1) NULL DEFAULT NULL,
+  `lectura_ejecucion` BIT (1) NULL DEFAULT NULL,
+  `escribir` BIT (1) NULL DEFAULT NULL,
+  `eliminar` BIT (1) NULL DEFAULT NULL,
+  `imprimir` BIT (1) NULL DEFAULT NULL,
+  `denegar` BIT (1) NULL DEFAULT NULL,
+  PRIMARY KEY (`cod_funcionalidad_usuario`),
+  INDEX `FK_moduloSeguridad_usuario_usuariosIdx` (`cod_usuario` ASC),
+  CONSTRAINT `FK_moduloSeguridad_usuario_usuarios`
+  FOREIGN KEY (`cod_usuario`)
+  REFERENCES usuario (`cod_usuario`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION
+)
+ENGINE = INNODB;
+
+CREATE TABLE IF NOT EXISTS funcionalidad_grupousuario(
+  `cod_funcionalidad_grupousuario` INT NOT NULL AUTO_INCREMENT,
+  `cod_grupo_usuario` INT NOT NULL,
+  `cod_funcionalidad` INT NOT NULL,
+  `control_total` BIT (1) NULL DEFAULT NULL,
+  `modificar` BIT (1) NULL DEFAULT NULL,
+  `lectura_ejecucion` BIT (1) NULL DEFAULT NULL,
+  `escribir` BIT (1) NULL DEFAULT NULL,
+  `eliminar` BIT (1) NULL DEFAULT NULL,
+  `imprimir` BIT (1) NULL DEFAULT NULL,
+  `denegar` BIT (1) NULL DEFAULT NULL,
+  PRIMARY KEY (`cod_funcionalidad_grupousuario`),
+  INDEX `FK_moduloSeguridad_grupoUsuario_grupoUsuarioIdx` (`cod_grupo_usuario` ASC),
+  CONSTRAINT `FK_moduloSeguridad_grupoUsuario_grupoUsuario`
+  FOREIGN KEY (`cod_grupo_usuario`)
+  REFERENCES grupo_usuario (`cod_grupo_usuario`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION
+)
+ENGINE = INNODB;
+
+CREATE TABLE IF NOT EXISTS moduloseguridad_usuario(
+  `cod_moduloseguridad_usuario` INT NOT NULL AUTO_INCREMENT,
+  `cod_modulo_seguridad` INT NOT NULL,
+  `cod_usuario` INT NOT NULL,
+  `control_total` BIT (1) NULL DEFAULT NULL,
+  `modificar` BIT (1) NULL DEFAULT NULL,
+  `lectura_ejecucion` BIT (1) NULL DEFAULT NULL,
+  `escribir` BIT (1) NULL DEFAULT NULL,
+  `eliminar` BIT (1) NULL DEFAULT NULL,
+  `imprimir` BIT (1) NULL DEFAULT NULL,
+  `denegar` BIT (1) NULL DEFAULT NULL,
+  PRIMARY KEY (`cod_moduloseguridad_usuario`),
+  INDEX `fk_moduloseguridad_usuario_usuario1` (`cod_usuario` ASC),
+  CONSTRAINT `fk_moduloseguridad_usuario_usuario1`
+  FOREIGN KEY (`cod_usuario`)
+  REFERENCES usuario (`cod_usuario`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION
+)
+ENGINE = INNODB;
+
+CREATE TABLE IF NOT EXISTS moduloseguridad_grupousuario(
+  `codmoduloseguridad_grupousuario` INT NOT NULL AUTO_INCREMENT,
+  `cod_modulo_seguridad` INT NOT NULL,
+  `cod_grupo_usuario` INT NOT NULL,
+  `control_total` BIT (1) NULL DEFAULT NULL,
+  `modificar` BIT (1) NULL DEFAULT NULL,
+  `lectura_ejecucion` BIT (1) NULL DEFAULT NULL,
+  `escribir` BIT (1) NULL DEFAULT NULL,
+  `eliminar` BIT (1) NULL DEFAULT NULL,
+  `imprimir` BIT (1) NULL DEFAULT NULL,
+  `denegar` BIT (1) NULL DEFAULT NULL,
+  PRIMARY KEY (`codmoduloseguridad_grupousuario`),
+  INDEX `fk_moduloseguridad_grupousuario_grupo_usuario1` (`cod_grupo_usuario` ASC),
+  CONSTRAINT `fk_moduloseguridad_grupousuario_grupo_usuario1`
+  FOREIGN KEY (`cod_grupo_usuario`)
+  REFERENCES grupo_usuario (`cod_grupo_usuario`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION
+)
+ENGINE = INNODB;
+
+INSERT
+INTO tipo_documento (nombre_tipo_documento, ind_1, ind_2, Abreviatura)
+VALUES ('Cedula de Ciudadania', 0, 0, 'C.C.');
+INSERT
+INTO tipo_documento (nombre_tipo_documento, ind_1, ind_2, Abreviatura)
+VALUES ('Cedula de Extranjeria', 0, 0, 'C.E.');
+INSERT
+INTO tipo_documento (nombre_tipo_documento, ind_1, ind_2, Abreviatura)
+VALUES ('Pasaporte', 0, 0, 'P.');
+
+INSERT
+INTO usuario (cod_usuario,login, nombre, documento, `password`,es_bloqueado,correo,intentos,fecha_cambio_password)
+VALUES (1,'Admin','Administrador','','',0,'',0,NOW());
+
+INSERT
+INTO grupo_usuario (cod_grupo_usuario,nombre_grupo_usuario)
+VALUES (1,'Administradores');
+
+INSERT
+INTO grupousuario_usuario (cod_grupousuario_usuario, cod_usuario, cod_grupo_usuario)
+VALUES (1,1,1);
+
+INSERT
+INTO linea (cod_linea, nombre_linea, contacto_linea, email_linea, telefono_linea, direccion_linea, fax_linea)
+VALUES (1, 'Linea General', '', '', '', '', '');
+
+INSERT
+INTO grupo_usuarioxlinea (cod_grupo_usuarioxlinea,cod_grupo_usuario ,cod_linea)
+VALUES (1, 1,1);
+
+INSERT
+INTO moduloseguridad_grupousuario (codmoduloseguridad_grupousuario, cod_modulo_seguridad, cod_grupo_usuario, control_total, modificar, lectura_ejecucion,
+escribir, eliminar, imprimir, denegar)
+VALUES (1, 1, 1, 1, 1, 1,1, 1, 1, 0);
+

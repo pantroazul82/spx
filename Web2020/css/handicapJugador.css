@@ -1,0 +1,77 @@
+﻿.principal
+{
+	/*border: solid 2px #000000 !important;*/
+	font-family:Georgia;
+	font-size:30px;
+	color:#780001;
+	/*background-color:#003366;*/
+	text-align:left;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	margin-top: 10px;
+	padding: 3px 3px 3px 20px;
+	width: 80%;
+}
+
+.infGeneral
+{
+	background-image:../img/nota.png  no-repeat;
+	background: #FFFFFF url(../img/nota.png) no-repeat;
+	border: solid 2px #003366 !important;
+	font-size:11px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	margin-top: 0px;
+	padding: 3px 3px 3px 3px;
+	width: 250px;
+	text-align:left;
+}
+
+.consultarHandicap
+{
+	border: solid 1px #003366;
+	font-size:12px;
+	margin-bottom: 100px;
+	margin-left: 310px;
+	margin-top: -207px;
+	padding: 3px 3px 3px 5px;
+	width: 445px;
+	height:150px;
+	text-align:left;
+	background-color:#5D84B4;
+	color:#F1F1F1;
+}
+
+.botones
+{
+	border: solid 2px #003366;
+	font-size:11px;
+    margin-bottom:20px;
+	margin-left: 310px;
+	margin-top: -91px;
+	/*
+	padding: 3px 3px 3px 44px;
+*/
+	width: 450px;
+	text-align :left;
+	height:25px;
+}
+
+.publicidad
+{
+	border: solid 1px #003366;
+	font-size:11px;
+    margin-bottom :-300px;
+	margin-left: 825px;
+	margin-top: -220px;
+	/*
+	padding: 3px 3px 3px 44px;
+*/
+	width: 125px;
+	height:500px;
+}
+
+.publicidad img
+{
+	max-width: 125px !important;
+}

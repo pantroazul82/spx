@@ -1,0 +1,93 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "spxWebDemo", "spxWebDemo\", "{905742D8-1378-4F40-9FB6-5354C8F121B9}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		ProjectReferences = "{F094CF11-600F-4018-997E-7458A79A926F}|BOLayer.dll;{D588F19E-9FE5-4E58-9D1D-51F8B3D1069A}|SPControladoraDatos.dll;{CFF6861A-3B4C-4793-B14B-3A21A6B57A1F}|SpFrm.dll;{99C640D7-0B40-4690-B8EE-2AA90722E208}|spHerramientas.dll;{A8B5B6AE-8E58-4469-A8FF-917E3F2E4A89}|spProcesos.dll;{9EA9DE2A-4B02-4FB7-92FC-77907ED97DA3}|spHorarios.dll;{2C29C44A-C83E-42C6-BFF7-DCE64635CF82}|SPXWebUtils.dll;{5A660349-5958-4BAF-A7D9-776EF7DDFF76}|SupportTech.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/spxWebDemo"
+		Debug.AspNetCompiler.PhysicalPath = "spxWebDemo\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\spxWebDemo\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/spxWebDemo"
+		Release.AspNetCompiler.PhysicalPath = "spxWebDemo\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\spxWebDemo\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "51289"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPControladoraDatos", "SupportTech X\SPControladoraDatos\SPControladoraDatos.csproj", "{D588F19E-9FE5-4E58-9D1D-51F8B3D1069A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpFrm", "SupportTech X\SpFrm\SpFrm.csproj", "{CFF6861A-3B4C-4793-B14B-3A21A6B57A1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spHerramientas", "SupportTech X\spHerramientas\spHerramientas.csproj", "{99C640D7-0B40-4690-B8EE-2AA90722E208}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spHorarios", "SupportTech X\spHorarios\spHorarios.csproj", "{9EA9DE2A-4B02-4FB7-92FC-77907ED97DA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spProcesos", "SupportTech X\spProcesos\spProcesos.csproj", "{A8B5B6AE-8E58-4469-A8FF-917E3F2E4A89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPX", "SupportTech X\SPX\SPX.csproj", "{E923C989-FF6A-4B81-80C6-77210DEAEBC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupportTech", "SupportTech\SupportTech.csproj", "{5A660349-5958-4BAF-A7D9-776EF7DDFF76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BOLayer", "spxBo\Output\BoLayer\BOLayer.csproj", "{F094CF11-600F-4018-997E-7458A79A926F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPXWebUtils", "..\..\..\componentes\SPXComponents\SPXWebUtils\SPXWebUtils.csproj", "{2C29C44A-C83E-42C6-BFF7-DCE64635CF82}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{905742D8-1378-4F40-9FB6-5354C8F121B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{905742D8-1378-4F40-9FB6-5354C8F121B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{905742D8-1378-4F40-9FB6-5354C8F121B9}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{905742D8-1378-4F40-9FB6-5354C8F121B9}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{D588F19E-9FE5-4E58-9D1D-51F8B3D1069A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D588F19E-9FE5-4E58-9D1D-51F8B3D1069A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D588F19E-9FE5-4E58-9D1D-51F8B3D1069A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D588F19E-9FE5-4E58-9D1D-51F8B3D1069A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFF6861A-3B4C-4793-B14B-3A21A6B57A1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFF6861A-3B4C-4793-B14B-3A21A6B57A1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFF6861A-3B4C-4793-B14B-3A21A6B57A1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFF6861A-3B4C-4793-B14B-3A21A6B57A1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99C640D7-0B40-4690-B8EE-2AA90722E208}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99C640D7-0B40-4690-B8EE-2AA90722E208}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99C640D7-0B40-4690-B8EE-2AA90722E208}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99C640D7-0B40-4690-B8EE-2AA90722E208}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EA9DE2A-4B02-4FB7-92FC-77907ED97DA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EA9DE2A-4B02-4FB7-92FC-77907ED97DA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EA9DE2A-4B02-4FB7-92FC-77907ED97DA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EA9DE2A-4B02-4FB7-92FC-77907ED97DA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8B5B6AE-8E58-4469-A8FF-917E3F2E4A89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8B5B6AE-8E58-4469-A8FF-917E3F2E4A89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8B5B6AE-8E58-4469-A8FF-917E3F2E4A89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8B5B6AE-8E58-4469-A8FF-917E3F2E4A89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E923C989-FF6A-4B81-80C6-77210DEAEBC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E923C989-FF6A-4B81-80C6-77210DEAEBC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E923C989-FF6A-4B81-80C6-77210DEAEBC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E923C989-FF6A-4B81-80C6-77210DEAEBC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A660349-5958-4BAF-A7D9-776EF7DDFF76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A660349-5958-4BAF-A7D9-776EF7DDFF76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A660349-5958-4BAF-A7D9-776EF7DDFF76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A660349-5958-4BAF-A7D9-776EF7DDFF76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F094CF11-600F-4018-997E-7458A79A926F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F094CF11-600F-4018-997E-7458A79A926F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F094CF11-600F-4018-997E-7458A79A926F}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{F094CF11-600F-4018-997E-7458A79A926F}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{2C29C44A-C83E-42C6-BFF7-DCE64635CF82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C29C44A-C83E-42C6-BFF7-DCE64635CF82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C29C44A-C83E-42C6-BFF7-DCE64635CF82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C29C44A-C83E-42C6-BFF7-DCE64635CF82}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

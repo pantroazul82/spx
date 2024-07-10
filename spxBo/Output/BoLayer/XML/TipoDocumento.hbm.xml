@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="TipoDocumento" 
+ table="[dbo].[tipoDocumento]" 
+>
+<id name="CodTipoDoc"
+ column="`codTipoDoc`"
+ type="System.String"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="NombreTipoDoc"
+column="`nombreTipoDoc`"
+type="System.String"
+length="30"
+    >
+</property>
+<property
+name="Abreviatura"
+column="`abreviatura`"
+type="System.String"
+length="5"
+    >
+</property>
+<bag name="Clientes"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codTipoDoc`" />
+</key>
+<one-to-many class="Cliente" />
+</bag>
+<bag name="ContactosClientes"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codTipoDoc`" />
+</key>
+<one-to-many class="ContactosCliente" />
+</bag>
+</class>
+</hibernate-mapping>
+

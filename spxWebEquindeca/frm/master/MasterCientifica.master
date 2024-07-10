@@ -1,0 +1,220 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterCientifica.master.cs" Inherits="frm_master_MasterCientifica" %>
+
+<%@ Register Assembly="System.Web.Extensions" Namespace="System.Web.UI" TagPrefix="asp" %>
+<%@ Register src="../../controles/menu.ascx" tagname="menu" tagprefix="uc1" %>
+<%@ Register assembly="Telerik.Web.UI" namespace="Telerik.Web.UI" tagprefix="telerik" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+
+<asp:ContentPlaceHolder runat="server" id="headerPlaceHolder">
+</asp:ContentPlaceHolder>
+ 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Soporte Tecnico</title>
+<style type="text/css">
+body {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	margin: 0; /* es recomendable ajustar a cero el margen y el relleno del elemento body para lograr la compatibilidad con la configuración predeterminada de los diversos navegadores */
+	padding: 0;
+	text-align: center; /* esto centra el contenedor en los navegadores IE 5*. El texto se ajusta posteriormente con el valor predeterminado de alineación a la izquierda en el selector #container */
+	color: #000000;
+	background-color: #426AB3;
+}
+.oneColFixCtrHdr #container {
+	width: 980px;  /* el uso de 20px menos que un ancho completo de 800px da cabida a los bordes del navegador y evita la aparición de una barra de desplazamiento horizontal */
+	background: #FFFFFF; /* los márgenes automáticos (conjuntamente con un ancho) centran la página */
+	border: 1px solid #000000;
+	text-align: left; /* esto anula text-align: center en el elemento body. */
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+}
+.oneColFixCtrHdr #header {
+	padding: 0 10px 0 20px;  /* este relleno coincide con la alineación izquierda de los elementos de los divs que aparecen bajo él. Si se utiliza una imagen en el #header en lugar de texto, es posible que le interese quitar el relleno. */
+    background-color: #426AB3;
+	background-repeat: no-repeat;
+
+	height: 30px;
+	border-bottom-width: thick;
+	border-bottom-color: #333;
+	border-bottom-style: solid;
+}
+.imagenSecundario {
+	background-image: url(../../img/header2.png);
+	height: 0px;
+}
+
+.contenidoPrincipal 
+{
+	background: #FFFFFF;
+	margin-bottom:10px;
+	min-height:500px;
+	padding-top: 10;
+	padding-right: 20px;
+	padding-bottom: 10;
+	padding-left: 20px;
+	text-align:left;
+	width:940px;
+}
+
+.contenidoPie
+{
+    margin-top:15px;
+    color:#FFFFFF;
+    font-size:10px;
+    font-family:Arial;
+	text-align:center;
+	margin-top:-60px;
+	z-index:0px;
+	width:940px;
+	height:50px;
+}
+
+.oneColFixCtrHdr #mainContent a{
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 11px;
+	color:Gray;
+}
+
+.oneColFixCtrHdr #footer {
+	background-color: #FFF;
+	/*margin-top: 500px;*/
+	height: 120px;
+}
+#apDiv1 {
+	position:relative;
+	width:930px;
+	height:35px;
+	z-index:1;
+}
+
+#apDiv2 {
+	position:absolute;
+	z-index:1;
+	left: 98px;
+	top: 72px;
+}
+
+#apDiv3 {
+	position:absolute;
+	text-align:right;
+	font-size:11px !important;
+	font-family:Verdana !important;
+	left: 593px;
+	top: 1px;
+	color:White;
+	width:365px;
+z-index:5 !important;
+}
+
+#apDiv2 Input{
+	
+	z-index:1;
+	margin-right:-5px;	
+}
+
+#apDiv5 {
+	position:absolute;
+	width:849px;
+	height:25px;
+	z-index:4;
+	left: 97px;
+	top: 5px;
+	background-color: #426AB3;
+}
+#apDiv5 a{
+	size:16px !important;
+	font-size:16px !important;
+}
+
+#apDiv7 {
+	position:absolute;
+	width:100px;
+	height:21px;
+	z-index:1;
+	left: 823px;
+	top: 7px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 10px;
+}
+#container a {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 10px;
+	color: #000033;
+}
+
+
+-->
+</style>
+</head>
+
+
+<body class="oneColFixCtrHdr">
+ <form id="form1" runat="server"> 
+    <asp:ScriptManager ID="ScriptManager1" runat="server" />
+<div id="container">
+  <div id="header">
+
+  <div id="apDiv1">
+   
+    <div id="apDiv3">
+    <asp:Label ID="lblNombre" runat="server" Text="" ForeColor="White" Font-Bold="true"></asp:Label>
+    </div>
+    <div id="apDiv5">
+    <telerik:radmenu ID="RadMenu1" style="z-index:99999;" Runat="server" Skin="Windows7">
+		<Items> 
+
+
+			
+			<telerik:radmenuitem 
+			NavigateUrl="~/frm/logica/frmLogoOut.aspx" ToolTip="Cerrar sesion"
+			runat="server" Text="" ImageUrl="~/img/web/logout.jpg">
+			</telerik:RadMenuItem>
+			
+			<telerik:radmenuitem runat="server" Text="Opciones">
+			<Items>
+			<telerik:radmenuitem runat="server" Text="Cambiar Password"
+			NavigateUrl="~/frm/logica/frmCambiarPassword.aspx">
+			</telerik:RadMenuItem>
+			</Items>
+			</telerik:RadMenuItem>
+ 
+		<telerik:radmenuitem runat="server" 
+			Text="" NavigateUrl="~/frm/logica/Default.aspx" ToolTip="Inicio"
+			ImageUrl="~/img/web/home.png" Width="20px"
+			>
+			</telerik:RadMenuItem>
+            </Items>
+<WebServiceSettings>
+<ODataSettings InitialContainerName=""></ODataSettings>
+</WebServiceSettings>
+	</telerik:RadMenu>
+
+    </div>
+    <div id="apDiv7">
+        <asp:Button ID="linkLogin" Text="Entrar al Sistema" 
+         ForeColor="DarkBlue" 
+            CommandName="~/frm/logica/frmLogin.aspx"  runat="server" 
+            onclick="linkLogin_Click"></asp:Button>
+    </div> 
+
+  </div>
+
+<!-- end #header --></div>
+<div class="imagenSecundario"></div>
+  <div id="mainContent" class="contenidoPrincipal">
+
+        <asp:ContentPlaceHolder  id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+</div>
+ <!--end #container--> 
+ </div>
+    </form>
+</body>
+</html>
+
+

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="ContratosxEquipo" 
+ table="[dbo].[contratosxEquipo]" 
+>
+<composite-id unsaved-value="any"
+ >
+<key-property 
+name="Serial"
+column="`serial`"
+type="System.String"
+length="30"
+>
+</key-property>
+<key-property 
+name="NumeroContrato"
+column="`numeroContrato`"
+type="System.String"
+length="40"
+>
+</key-property>
+<key-property 
+name="CodOtroSi"
+column="`codOtroSi`"
+type="System.Int32"
+>
+</key-property>
+</composite-id> 
+<property
+name="MantenimientosRealizados"
+column="`mantenimientosRealizados`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="MantenimientosxContrato"
+column="`mantenimientosxContrato`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="EsActivo"
+column="`esActivo`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<many-to-one
+ name="Contrato" 
+ class="Contrato" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`numeroContrato`" />
+<column name="`codOtroSi`" />
+</many-to-one>
+<many-to-one
+ name="Equipo" 
+ class="Equipo" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`serial`" />
+</many-to-one>
+</class>
+</hibernate-mapping>
+

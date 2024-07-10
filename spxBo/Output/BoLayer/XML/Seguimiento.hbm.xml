@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="Seguimiento" 
+ table="[dbo].[seguimiento]" 
+>
+<id name="IdSeguimiento"
+ column="`idSeguimiento`"
+ type="System.Int32"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="CreadoPor"
+column="`creadoPor`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="Realizado"
+column="`realizado`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="RealizadoPor"
+column="`realizadoPor`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="FechaSugerida"
+column="`fechaSugerida`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="FechaRealizado"
+column="`fechaRealizado`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="ObsIniciales"
+column="`obsIniciales`"
+type="System.String"
+    >
+</property>
+<property
+name="ObsFinales"
+column="`obsFinales`"
+type="System.String"
+    >
+</property>
+<property
+name="IdLlamadaSoporte"
+column="`idLlamadaSoporte`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="NitCliente"
+column="`nitCliente`"
+type="System.String"
+length="20"
+    >
+</property>
+<property
+name="CodContacto"
+column="`codContacto`"
+type="System.String"
+length="20"
+    >
+</property>
+<property
+name="Serial"
+column="`serial`"
+type="System.String"
+length="30"
+    >
+</property>
+<many-to-one
+ name="ContactosCliente" 
+ class="ContactosCliente" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`nitCliente`" />
+<column name="`codContacto`" />
+</many-to-one>
+<many-to-one
+ name="Equipo" 
+ class="Equipo" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`serial`" />
+</many-to-one>
+<many-to-one
+ name="LlamadaSoporte" 
+ class="LlamadaSoporte" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`idLlamadaSoporte`" />
+</many-to-one>
+<many-to-one
+ name="Usuario0" 
+ class="Usuario0" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`creadoPor`" />
+</many-to-one>
+<many-to-one
+ name="Usuario01" 
+ class="Usuario0" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`realizadoPor`" />
+</many-to-one>
+</class>
+</hibernate-mapping>
+

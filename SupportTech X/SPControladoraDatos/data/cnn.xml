@@ -1,0 +1,16 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <tablaConexiones>
+    <tipo_cnn>SQLSERVER</tipo_cnn>
+    <nombre_conexion>Produccion</nombre_conexion>
+    <login>sa</login>
+    <password>KknZPQY94xFRlzQtJ1GqrDximzUo7yCzEesLIjZ8/zc=</password>
+    <servidor>144.126.151.13</servidor>
+    <base_datos>SUPPORTECH</base_datos>
+    <puerto>19889</puerto>
+    <sid />
+    <conexion_directa>0</conexion_directa>
+    <tipo_cnn_oracle>normal</tipo_cnn_oracle>
+    <time_out>0</time_out>
+  </tablaConexiones>
+</NewDataSet>

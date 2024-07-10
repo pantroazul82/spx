@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="ActividadxordenServicio" 
+ table="[dbo].[actividadxordenServicio]" 
+>
+<composite-id unsaved-value="any"
+ >
+<key-property 
+name="CodOrdenServicio"
+column="`codOrdenServicio`"
+type="System.Int32"
+>
+</key-property>
+<key-property 
+name="CodActividad"
+column="`codActividad`"
+type="System.Int32"
+>
+</key-property>
+</composite-id> 
+<property
+name="Fecha"
+column="`fecha`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="Observacion"
+column="`observacion`"
+type="System.String"
+length="500"
+    >
+</property>
+<property
+name="LoginAutor"
+column="`loginAutor`"
+type="System.String"
+length="10"
+    >
+</property>
+<many-to-one
+ name="OrdenServicio" 
+ class="OrdenServicio" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codOrdenServicio`" />
+</many-to-one>
+<many-to-one
+ name="Usuario0" 
+ class="Usuario0" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`loginAutor`" />
+</many-to-one>
+</class>
+</hibernate-mapping>
+

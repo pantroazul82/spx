@@ -1,0 +1,43 @@
+﻿.principal
+{
+	/*border: solid 2px #000000 !important;*/
+	font-family:Georgia;
+	font-size:30px;
+	color:#780001;
+	/*background-color:#003366;*/
+	text-align:left;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	margin-top: 10px;
+	padding: 3px 3px 3px 20px;
+	width: 80%;
+}
+
+.infGeneral
+{
+	background-image:../img/nota.png  no-repeat;
+	background: #FFFFFF url(../img/nota.png) no-repeat;
+	border: solid 2px #003366 !important;
+	font-size:11px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	margin-top: 0px;
+	padding: 3px 3px 3px 3px;
+	width: 450px;
+	text-align:left;
+}
+
+
+.publicidad
+{
+	border: solid 1px #003366;
+	font-size:11px;
+    margin-bottom :-400px;
+	margin-left: 825px;
+	margin-top: -100px;
+	/*
+	padding: 3px 3px 3px 44px;
+*/
+	width: 125px;
+	height:500px;
+}

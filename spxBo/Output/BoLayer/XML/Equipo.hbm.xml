@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="Equipo" 
+ table="[dbo].[equipos]" 
+>
+<id name="Serial"
+ column="`serial`"
+ type="System.String"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="CodFabricante"
+column="`codFabricante`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="CodModelo"
+column="`codModelo`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="FechaLlegada"
+column="`fechaLlegada`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="FechaSalida"
+column="`fechaSalida`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="FechaProximoMante"
+column="`fechaProximoMante`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="FechaUltimoMante"
+column="`fechaUltimoMante`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="NitClienteUbica"
+column="`nitClienteUbica`"
+type="System.String"
+length="20"
+    >
+</property>
+<property
+name="CodSucursalUbica"
+column="`codSucursalUbica`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="CodTipoServicio"
+column="`codTipoServicio`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="ObservacionesUltimoMante"
+column="`observacionesUltimoMante`"
+type="System.String"
+length="250"
+    >
+</property>
+<property
+name="CodModalidadEquipo"
+column="`codModalidadEquipo`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="CodEstadoLocal"
+column="`codEstadoLocal`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="FechaProximaProgramacion"
+column="`fechaProximaProgramacion`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="FechaUltimoTraslado"
+column="`fechaUltimoTraslado`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="CodAdicional"
+column="`codAdicional`"
+type="System.String"
+length="50"
+    >
+</property>
+<property
+name="ObsEquipo"
+column="`obsEquipo`"
+type="System.String"
+    >
+</property>
+<property
+name="CodTipoPropiedad"
+column="`codTipoPropiedad`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="FechaCambioTipoPropiedad"
+column="`fechaCambioTipoPropiedad`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="UsuarioCambio"
+column="`usuarioCambio`"
+type="System.String"
+length="10"
+    >
+</property>
+<many-to-one
+ name="EstadoLocalEquipo" 
+ class="EstadoLocalEquipo" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codEstadoLocal`" />
+</many-to-one>
+<many-to-one
+ name="ModalidadEquipo" 
+ class="ModalidadEquipo" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codModalidadEquipo`" />
+</many-to-one>
+<many-to-one
+ name="Modelo" 
+ class="Modelo" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codFabricante`" />
+<column name="`codModelo`" />
+</many-to-one>
+<many-to-one
+ name="SucursalCliente" 
+ class="SucursalCliente" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`nitClienteUbica`" />
+<column name="`codSucursalUbica`" />
+</many-to-one>
+<many-to-one
+ name="TipoPropiedad" 
+ class="TipoPropiedad" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codTipoPropiedad`" />
+</many-to-one>
+<many-to-one
+ name="TipoServicio" 
+ class="TipoServicio" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codTipoServicio`" />
+</many-to-one>
+<bag name="ArchivosXequipos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`serial`" />
+</key>
+<one-to-many class="ArchivosXequipo" />
+</bag>
+<bag name="ContratosxEquipos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`serial`" />
+</key>
+<one-to-many class="ContratosxEquipo" />
+</bag>
+<bag name="DetalleProgramacionViajes"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`serial`" />
+</key>
+<one-to-many class="DetalleProgramacionViaje" />
+</bag>
+<bag name="EntradaSalidaEquipos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`serial`" />
+</key>
+<one-to-many class="EntradaSalidaEquipo" />
+</bag>
+<bag name="EquipoAuxiliars"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`serialEquipo`" />
+</key>
+<one-to-many class="EquipoAuxiliar" />
+</bag>
+<bag name="EquipoAuxiliars1"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`serialAuxiliar`" />
+</key>
+<one-to-many class="EquipoAuxiliar" />
+</bag>
+<bag name="LlamadaSoportes"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`serial`" />
+</key>
+<one-to-many class="LlamadaSoporte" />
+</bag>
+<bag name="MantenimientosxContratos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`serial`" />
+</key>
+<one-to-many class="MantenimientosxContrato" />
+</bag>
+<bag name="OrdenServicios"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`serial`" />
+</key>
+<one-to-many class="OrdenServicio" />
+</bag>
+<bag name="Recoleccions"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`serial`" />
+</key>
+<one-to-many class="Recoleccion" />
+</bag>
+<bag name="Seguimientos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`serial`" />
+</key>
+<one-to-many class="Seguimiento" />
+</bag>
+<bag name="SolicitudServicios"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`serial`" />
+</key>
+<one-to-many class="SolicitudServicio" />
+</bag>
+</class>
+</hibernate-mapping>
+

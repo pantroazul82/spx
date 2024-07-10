@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="TipoComprobante" 
+ table="[dbo].[tipoComprobante]" 
+>
+<id name="CodTipoComprobante"
+ column="`codTipoComprobante`"
+ type="System.String"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="NombreTipoComprobante"
+column="`NombreTipoComprobante`"
+type="System.String"
+length="30"
+    >
+</property>
+<bag name="ComprobantesAceptacionOrdenservicios"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codTipoComprobante`" />
+</key>
+<one-to-many class="ComprobantesAceptacionOrdenservicio" />
+</bag>
+</class>
+</hibernate-mapping>
+

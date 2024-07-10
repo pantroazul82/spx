@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="UnidadPeso" 
+ table="[dbo].[unidadPeso]" 
+>
+<id name="CodUnidadPeso"
+ column="`codUnidadPeso`"
+ type="System.Int32"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="NombreUnidadPeso"
+column="`nombreUnidadPeso`"
+type="System.String"
+length="30"
+    >
+</property>
+<property
+name="FactorConversion"
+column="`factorConversion`"
+type="System.Nullable`1[System.Double]"
+    >
+</property>
+</class>
+</hibernate-mapping>
+

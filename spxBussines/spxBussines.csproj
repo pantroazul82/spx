@@ -1,0 +1,1048 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{837D1F69-E915-4BE0-9337-EEA13BB1F6FE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>spxBussines</RootNamespace>
+    <AssemblyName>spxBussines</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="data\accesorio.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\accesoriosEquipo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\AccesoriosxEntradaSalidaEquipos.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\accion_novedad.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\accion_seguirxasesoria_cientifica.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\accion_seguirxseguimiento_cientifica.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\accion_seguir_cientifica.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\ActividadesxModelo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\actividadxordenServicio.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\actividadxtarea_calendario.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\actividad_adicional.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\adjunto_contrato_suministro.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\anuncio.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\ArchivosxComponente.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\archivosxcontrato.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\archivosxEntradaSalidaEquipos.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\archivosXequipo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\archivosxIncumplimiento.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\archivosxModelo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\archivosXOrdenServicio.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\archivosxRepuesto.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\archivosxtarea_calendario.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\archivos_control_calidad.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\archivos_revision_equipos.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\archivoxcontratos_suministro.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\archivoxcontrato_consumo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\archivo_movimiento.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\archivo_referencia.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\archivo_template_revision_equipo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\asesoresComerciales.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\asesoria_cientifica.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\asistentexsession.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\asistente_capacitacion.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\auditoria.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\bodega.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\calendario_Result.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\calibracion_calidad.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\campos_template_revision.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\capacitacion.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\categoria_referencia.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\cgq_layout_pivote.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\cgq_parametrosquery.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\cgq_parametrosquery_ultimo_valor.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\cgq_query.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\cgq_queryxgrupo_usuario.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\cgq_queryxusuario.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\cgq_tablas_pivote.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\ciudad.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\ciudades.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\cliente.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\clientes.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\componente.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\comprobantesAceptacionOrdenservicio.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\confirmacion_evento.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\consumibles.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\consumiblexcontrato_consumo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\consumoContratoxLinea.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\consumosxContratos.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\contactosClientes.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\contacto_cliente.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\contratos.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\contratosxEquipo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\contratos_suministro.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\contrato_consumo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\controles_calidad.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\control_calidad.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\control_calidad_interno.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\departamento.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\departamentos.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\detalleProgramacionViajes.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\detalleSolicitudInsumos.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\detalle_movimiento.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\dias_festivos.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\dispositivosmedicionxordenservicio.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\divisionxcontrato_suministro.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\division_experiencia_contrato_suministro.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\dominio.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\dominioSPX.cs" />
+    <Compile Include="data\EntradaSalidaEquipos.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\equipoAuxiliar.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\equipos.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\equiposAuxiliaresxEntrada.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\equiposxcontrato_consumo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\equipos_solicitud.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\EstadoFisicamente.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\estadoLocalEquipos.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\estadoRecoleccion.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\estadosLLamadasTecnicas.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\estadosOrdenPrestamo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\estadosOrdenServicio.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\estadosSolicitud.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\estado_adjunto_contrato_suministro.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\estado_asesoria_cientifica.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\estado_bloqueo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\estado_capacitacion.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\estado_contrato_suministro.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\estado_control_calidad.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\estado_fisico.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\estado_movimiento.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\estado_movimientoxgrupo_usuario.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\estado_movimientoxusuario.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\estado_proceso_item.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\estado_revision_equipos.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\estado_solicitud_general.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\estado_tarea_calendario.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\estampillas_contrato_sumisnistro.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\existencia.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\fabricante.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\filtro_estado_movimiento.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\Firma.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\flujo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\flujoxestado.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\flujoxproceso.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\fotografia.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\funcionalidad.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\funcionalidad_grupousuario.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\funcionalidad_usuario.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\gruposLineasConsumo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\gruposModulos.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\gruposModulosxGruposUsuarios.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\gruposUsuarios.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\gruposUsuariosxUsuario.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\grupousuario_usuario.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\grupo_consumible.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\grupo_inventario.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\grupo_reactivoxcontrato_suministro.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\grupo_reactivo_experiencia.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\grupo_usuario.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\grupo_usuarioxlinea.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\inconveniente_presentado_cientifica.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\incrementosxlinea_consumo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\incumplimientoConsumo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\indicacionesLLamadas.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\informacion_adicional_usuario.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\informacion_extendida_detalle.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\informacion_extendida_movimiento.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\layout_flujo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\layout_linea_flujo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\linea.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\lineasConsumo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\lineasxusuario.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\linea_consumo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\linea_consumoxcontrato_consumo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\LlamadaSoporte.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\LlamadaSoportePre.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\logcambia_estado.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\logCambioUbicaciones.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\logVinculacionesDesvinculacionesContrato.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\log_cambios_estado_contratos_suministro.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\log_cambio_contratos_consumo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\mantenimientosxContrato.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\medioSolicitud.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\modalidad.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\modalidadContrato.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\ModalidadEquipo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\modalidad_contrato.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\Modelos.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\modeloxtarea.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\modelo_inventario.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\moduloseguridad_grupousuario.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\moduloseguridad_usuario.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\modulo_seguridad.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\motivo_anulacion_cientifica.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\motivo_anulacion_movimiento.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\motivo_anulacion_proceso.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\motivo_anulacion_suministro.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\motivo_no_renovacion.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\motivo_salida.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\movimiento.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\muelle.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\notificacion.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\notificacion_estado.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\notificacion_estado_copia_grupo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\notificacion_estado_copia_usuario.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\novedad_movimiento.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\ObservacionesxOrdenPrestamo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\observicionesxseguimiento_control_calidad.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\opciones.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\opciones_extra_proceso.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\OrdenPrestamo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\ordenServicio.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\origen_datos.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\origen_revision_equipos.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\pais.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\paises.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\parametro.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\parametro_cientifica.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\pendiente_tarea.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\polizas_contrato_suministro.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\preime_referencia.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\prioridad.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\prioridadesOrdenServicio.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\prioridadSolicitud.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\prioridad_callcenter_cientifica.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\prioridad_movimiento.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\problemas_comunes_cientifica.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\problemas_frecuentes.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\problemas_frecuentes_por_llamada.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\proceso.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\producto_experiencia_contrato.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\producto_experiencia_contratoxcontrato_conmsumo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\programacionViajes.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\proveedor.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\razon_no_vigente.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\reactivoxtarea.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\reactivo_solicitud.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\reasignacionOrdenesTrabajo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\recoleccion.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\referencia.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\referencia_composicion.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\referencia_reactivo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\regionesXusuarios.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\repuestos.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\repuestosxContratos.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\repuestosxOrdenPrestamo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\repuestoxOrdenServicio.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\responsable_proceso.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\resultado_final_llamada.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\revision_equipos.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\revision_estado_producto.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\rpt.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\rpt_grupousuario.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\secuencia_estado_movimiento.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\secuencia_proceso.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\seguimiento.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\seguimiento_asesoria_cientifica.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\session_capacitacion.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\solicitudInsumos.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\solicitudServicio.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\solicitud_general.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\soluciones_problemas.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\spxDataContenedor.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>spxDataContenedor.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\spxDataContenedor.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\spxDataContenedor.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>spxDataContenedor.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="data\subCategoriaComponente.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\subcategoria_referencia.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\subTipoComponente.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\subTipoEquipo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\sub_modalidad_contrato.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\sub_tipo_tarea_calendario.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\sub_variable_medicion.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\sucursalCliente.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\sucursalxcontacto.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\sucursal_cliente.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\sysdiagrams.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\sysusersobjects.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\tarea_asesoria_cientifica.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\tarea_calendario.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\task.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\taskAdjuntos.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\taskCategoria.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\taskEstatus.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\taskPatronRecurrencia.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\TaskReminder.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\template_revison_equipo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\tipoarchivoxcontratos_suministro.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\TipoCombo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\tipoComponente.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\tipoComprobante.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\tipoContrato.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\tipoDocumento.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\tipoEquipo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\tipofiltro_query_rpt.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\tipoPropiedad.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\TiposArchivoXequipo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\TipoServicio.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\tipo_actividad.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\tipo_actividadxsubtipo_tarea_calendario.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\tipo_adjunto_contrato_suministro.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\tipo_archivo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\tipo_asesoria.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\tipo_bodega.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\tipo_documento.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\tipo_estado_bloqueo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\tipo_estado_fisico.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\tipo_movimiento.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\tipo_novedad.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\tipo_propiedad.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\tipo_servicio.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\tipo_servicioxsolicitud.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\tipo_softwarexcontrato_consumo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\tipo_software_contrato_consumo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\tipo_tarea_calendario.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\tituloContacto.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\titulo_persona.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\trabajosxReporteServicio.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\transportador.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\transportadora.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\ubicacion.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\ubicacionesxbodega_fisica.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\ubicacionxestado_bloqueo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\ubicacionxestado_fisico.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\ubicacionxgrupo_inventario.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\ubicacion_por_referencia.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\unidadPeso.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\unidadTiempo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\unidad_empaque.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\unidad_medida.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\unidad_peso.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\unidad_tiempo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\usuario.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\variables_medicion.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\variables_medicionxmodelo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\variables_medicionxorden_servicio.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\vigencias_contrato_consumo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\vistaEquipo.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\vistaSucursal.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\wcg_mapping.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\wcg_smtp_adjuntos.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\wcg_smtp_email.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\wcg_smtp_email_cc.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\wcg_smtp_email_to.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\wcg_smtp_email_to_cco.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\wcg_smtp_server.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\wcg_smtp_server_cc.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\wcg_smtp_server_cco.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\wcg_virtual_field.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\wcg_virtual_frm.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\wcg_virtual_grp.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="data\wcg_virtual_tab.cs">
+      <DependentUpon>spxDataContenedor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data\spxDataContenedor.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>spxDataContenedor.edmx</DependentUpon>
+      <LastGenOutput>spxDataContenedor.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="data\spxDataContenedor.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>spxDataContenedor.edmx</DependentUpon>
+      <LastGenOutput>spxDataContenedor.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="data\spxDataContenedor.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>spxDataContenedor.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="data\spxDataContenedor.edmx.diagram">
+      <DependentUpon>spxDataContenedor.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

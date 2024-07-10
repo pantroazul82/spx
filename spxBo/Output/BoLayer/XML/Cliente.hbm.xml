@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="Cliente" 
+ table="[dbo].[clientes]" 
+>
+<id name="NitCliente"
+ column="`nitCliente`"
+ type="System.String"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="NombreCliente"
+column="`nombreCliente`"
+type="System.String"
+length="100"
+    >
+</property>
+<property
+name="NombreContactoPrincipal"
+column="`nombreContactoPrincipal`"
+type="System.String"
+length="20"
+    >
+</property>
+<property
+name="ApellidosContacto"
+column="`apellidosContacto`"
+type="System.String"
+length="20"
+    >
+</property>
+<property
+name="DocContacto"
+column="`docContacto`"
+type="System.String"
+length="15"
+    >
+</property>
+<property
+name="CodTipoDoc"
+column="`codTipoDoc`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="TituloContacto"
+column="`tituloContacto`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="Telefono1"
+column="`telefono1`"
+type="System.String"
+length="25"
+    >
+</property>
+<property
+name="Telefono2"
+column="`telefono2`"
+type="System.String"
+length="25"
+    >
+</property>
+<property
+name="Fax"
+column="`fax`"
+type="System.String"
+length="25"
+    >
+</property>
+<property
+name="Celular"
+column="`celular`"
+type="System.String"
+length="50"
+    >
+</property>
+<property
+name="Email"
+column="`email`"
+type="System.String"
+length="50"
+    >
+</property>
+<property
+name="NumeroSocio"
+column="`numeroSocio`"
+type="System.String"
+length="20"
+    >
+</property>
+<property
+name="EsLocal"
+column="`esLocal`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<many-to-one
+ name="TipoDocumento" 
+ class="TipoDocumento" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codTipoDoc`" />
+</many-to-one>
+<many-to-one
+ name="TituloContactoParent" 
+ class="TituloContacto" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`tituloContacto`" />
+</many-to-one>
+<bag name="Contratos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`nitCliente`" />
+</key>
+<one-to-many class="Contrato" />
+</bag>
+<bag name="SolicitudServicios"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`nitCliente`" />
+</key>
+<one-to-many class="SolicitudServicio" />
+</bag>
+<bag name="SucursalClientes"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`nitCliente`" />
+</key>
+<one-to-many class="SucursalCliente" />
+</bag>
+</class>
+</hibernate-mapping>
+

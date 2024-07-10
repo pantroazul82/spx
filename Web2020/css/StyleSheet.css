@@ -1,0 +1,81 @@
+﻿
+table.tarjeta
+{
+	        background-color: #28893C;border-collapse:collapse;border-color: #999999;border-style:solid;border-width:1px;
+	        font-family: Verdana, Arial, Helvetica, sans-serif;    width:800px;      
+	        }
+	        
+table tr.filatarjeta 
+{
+	background-color: #CCCCCC;color: #3366A2; font-size:11px; text-align: center;
+	 font-family: Verdana, Arial, Helvetica, sans-serif;   
+}
+
+table tr.filaTarjetaAlternativa 
+{
+	background-color: #FFFFEF;color: #3366A2; font-size:11px;text-align: center;
+	 font-family: Verdana, Arial, Helvetica, sans-serif;   
+}
+
+table tr.trTituloTabla { 
+background-color: #28893C;color: #FFFFEF; font-size:11px; text-align: center;
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+
+}
+/*titulo tarjeta de scores*/
+ tr.trTituloTabla, tr.trTituloTabla td {
+				background:#003666 !important;
+			} 
+			
+			
+table.ListadoScores
+{
+     background-color: #28893C;border-collapse:collapse;border-color: #999999;border-style:solid;border-width:1px;
+     font-family: Verdana, Arial, Helvetica, sans-serif;    width:800px;      
+}
+/*
+
+*/
+
+
+.nota 
+{
+	background-image:../img/nota.png  no-repeat;
+	background: #FFFFFF url(../img/nota.png) no-repeat;
+	border: solid 1px #FFFFFF;
+	font-style: italic;
+	font-size:11px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	margin-top: 10px;
+	padding: 3px 3px 3px 44px;
+	width: 50%;
+}
+
+.nota2 {
+	background: #FFFFFF;
+	border: solid 1px #FFFFFF;
+	font-style: italic;
+	font-size:11px;
+	margin-bottom: -20px;
+	margin-left: 550px;
+	margin-top: 10px;
+	azimuth:right;
+	padding: 3px 3px 3px 34px;
+	width: 180px;
+}
+.nota3 
+{
+	color:#FFFFFF;
+	font-size:14px;
+	font-family:Arial Black;
+	margin-bottom: 5px;
+	margin-left: 10px;
+	margin-top: -20px;
+	padding: 3px 3px 3px 3px;
+	width: 180px;
+}
+	        
+
+			
+			

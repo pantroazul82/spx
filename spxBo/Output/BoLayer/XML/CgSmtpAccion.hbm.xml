@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="CgSmtpAccion" 
+ table="[dbo].[cgSmtpAccion]" 
+>
+<id name="IdCgSmtpAccion"
+ column="`idCgSmtpAccion`"
+ type="System.Int32"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="NombreAccion"
+column="`nombreAccion`"
+type="System.String"
+length="100"
+    >
+</property>
+<property
+name="Descripcion"
+column="`descripcion`"
+type="System.String"
+length="500"
+    >
+</property>
+<property
+name="CuerpoEmail"
+column="`cuerpoEmail`"
+type="System.String"
+    >
+</property>
+<property
+name="Asunto"
+column="`asunto`"
+type="System.String"
+length="250"
+    >
+</property>
+<bag name="GruposCopiaOcultaxSmtpAccions"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`idCgSmtpAccion`" />
+</key>
+<one-to-many class="GruposCopiaOcultaxSmtpAccion" />
+</bag>
+<bag name="GruposCopiaxSmtpAccions"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`idCgSmtpAccion`" />
+</key>
+<one-to-many class="GruposCopiaxSmtpAccion" />
+</bag>
+<bag name="GruposxSmtpAccions"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`idCgSmtpAccion`" />
+</key>
+<one-to-many class="GruposxSmtpAccion" />
+</bag>
+<bag name="ParametrosxCgSmtpAccions"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`idCgSmtpAccion`" />
+</key>
+<one-to-many class="ParametrosxCgSmtpAccion" />
+</bag>
+<bag name="UsuarioCopiaOcultaxSmtpAccions"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`idCgSmtpAccion`" />
+</key>
+<one-to-many class="UsuarioCopiaOcultaxSmtpAccion" />
+</bag>
+<bag name="UsuarioCopiaxSmtpAccions"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`idCgSmtpAccion`" />
+</key>
+<one-to-many class="UsuarioCopiaxSmtpAccion" />
+</bag>
+<bag name="UsuarioxSmtpAccions"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`idCgSmtpAccion`" />
+</key>
+<one-to-many class="UsuarioxSmtpAccion" />
+</bag>
+</class>
+</hibernate-mapping>
+

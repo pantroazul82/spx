@@ -1,0 +1,162 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Poppins&display=swap');
+
+* {
+    font-family: "Poppins";
+}
+
+.container{
+    width:100%;
+}
+
+.container div:nth-child(4){
+    margin-bottom:0;
+}
+
+.screen-1 {
+    background: white;
+    height: 100%;
+    padding: 0 2em;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    box-shadow: 0 0 2em #e6e9f9;
+    gap: 2em;
+}
+
+button {
+    cursor: pointer;
+}
+
+h2.titulo {
+    font-family: "Dosis" !important;
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #4FBDDB;
+    padding-top: 10px;
+}
+
+.filterSelector {
+    width: 25%;
+}
+
+.filterContainer{
+    width:25%;
+}
+.filterContainer > *:first-child {
+    width:100%;
+    margin: 0 1rem;
+}
+
+
+.buttonsContainer {
+    display: flex;
+    width:50%;
+    padding-left: 2%;
+    
+}
+
+.submitBtnContainer {
+    width: auto !important;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.exportExcelBtnContainer {
+    width:auto !important;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+.tableContainer {
+    max-width: 90%;
+    max-height: 400px;
+    overflow-y: auto;
+    display: inline-block;
+    position: absolute;
+    left: 30px;
+}
+
+.historicoContainer{
+    padding:5px 20px;
+}
+
+.checkboxContainer{
+    display:flex;
+}
+
+.checkboxContainer > *:first-child {
+        width: 10%;
+    }
+
+.checkboxContainer div:nth-child(2) {
+        width:50%;
+        padding-left:0;
+        padding:4px;
+    }
+
+.btnContainer > *:first-child {
+    width: 35% !important;
+    padding-right: 0px;
+}
+
+.btnContainer div:nth-child(2) {
+    width: 35% !important;
+}
+
+@media (max-width: 1200px) {
+    .filterSelector > *:first-child {
+        width: 100%;
+    }
+}
+@media (min-width: 1200px) {
+    .filterContainer > *:first-child {
+        margin: 0px 0px !important;
+    }
+
+
+}
+
+@media (max-width: 767px) {
+
+    h2.titulo {
+        font-size: 2rem;
+
+    }
+
+    .block-web {
+        height:720px !important;
+    }
+
+
+    .filterContainer > *:first-child {
+        width:80%;
+        margin: 2rem 0px !important;
+
+    }
+
+    .filterContainer {
+        position: relative;
+        width: 100%
+    }
+
+
+    .filterSelector {
+        width: 100%;
+    }
+
+    .filterSelector > *:first-child {
+        width:80%;
+    }
+
+    .filterSelector {
+        width: 100%;
+    }
+
+    .submitBtnContainer {
+        text-align: center;
+    }
+
+
+}

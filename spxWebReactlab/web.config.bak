@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<!-- 
+    Note: As an alternative to hand editing this file you can use the 
+    web admin tool to configure settings for your application. Use
+    the Website->Asp.Net Configuration option in Visual Studio.
+    A full list of settings and comments can be found in 
+    machine.config.comments usually located in 
+    \Windows\Microsoft.Net\Framework\v2.x\Config 
+-->
+<configuration>
+  <configSections>
+    <sectionGroup name="devExpress">
+      <section name="settings" type="DevExpress.Web.ASPxClasses.SettingsConfigurationSection, DevExpress.Web.v10.1, Version=10.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" requirePermission="false"/>
+      <section name="compression" type="DevExpress.Web.ASPxClasses.CompressionConfigurationSection, DevExpress.Web.v10.1, Version=10.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" requirePermission="false"/>
+      <section name="themes" type="DevExpress.Web.ASPxClasses.ThemesConfigurationSection, DevExpress.Web.v10.1, Version=10.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" requirePermission="false"/>
+      <section name="errors" type="DevExpress.Web.ASPxClasses.ErrorsConfigurationSection, DevExpress.Web.v10.1, Version=10.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" requirePermission="false"/>
+    </sectionGroup>
+  </configSections>
+  <appSettings>
+    <add key="cuentaFrom" value="contactenos@reactlabimport.com"/>
+    <add key="nombreCuentaFrom" value="Sistema de Mantenimiento Reactlab"/>
+    <add key="servidor" value="ip-68-178-128-58.ipsecureserver.net"/>
+    <add key="puerto" value="465"/>
+    <add key="usuario" value="contactenos@reactlabimport.com"/>
+    <add key="pass" value="reccon2013"/>
+    <add key="ssl" value="True"/>
+    <add key="autentificacion" value="True"/>
+    <add key="WijmoTheme" value="aristo"/>
+  </appSettings>
+  <connectionStrings>
+    <add name="spxConnectionString" connectionString="Data Source=CA-PC\SQL;Initial Catalog=spxreactlab;Persist Security Info=True;User ID=sa;Password=12345" providerName="System.Data.SqlClient"/>
+    <add name="spxConnectionStringa" connectionString="Data Source=192.168.0.100\sqlexpress;Initial Catalog=spx;Persist Security Info=True;User ID=sa;Password=msde" providerName="System.Data.SqlClient"/>
+  </connectionStrings>
+  <system.web>
+    <sessionState mode="InProc" timeout="2000"/>
+    <profile enabled="true" defaultProvider="SessionProfileProvider"/>
+    <compilation debug="true" targetFramework="4.0">
+      <assemblies>
+        <add assembly="System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/>
+        <add assembly="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+        <add assembly="System.Speech, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+        <add assembly="Telerik.Web.Design, Version=2011.3.1115.40, Culture=neutral, PublicKeyToken=121FAE78165BA3D4"/>
+        <add assembly="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/>
+        <add assembly="office, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71E9BCE111E9429C"/>
+        <add assembly="Microsoft.Vbe.Interop, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71E9BCE111E9429C"/>
+      </assemblies>
+    </compilation>
+    <!--
+            The <authentication> section enables configuration 
+            of the security authentication mode used by 
+            ASP.NET to identify an incoming user. 
+        -->
+    <authentication mode="Forms"/>
+    <!--
+            The <customErrors> section enables configuration 
+            of what to do if/when an unhandled error occurs 
+            during the execution of a request. Specifically, 
+            it enables developers to configure html error pages 
+            to be displayed in place of a error stack trace.
+-->
+        <customErrors mode="Off" >
+            
+        </customErrors>
+        
+    <httpRuntime maxRequestLength="2097150"/>
+    <pages validateRequest="false" enableEventValidation="false" controlRenderingCompatibilityVersion="3.5" clientIDMode="AutoID"/>
+    <httpModules>
+      <add type="DevExpress.Web.ASPxClasses.ASPxHttpHandlerModule, DevExpress.Web.v10.1, Version=10.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" name="ASPxHttpHandlerModule"/>
+    </httpModules>
+    <httpHandlers>
+      <add path="Telerik.Web.UI.DialogHandler.aspx" type="Telerik.Web.UI.DialogHandler" verb="*" validate="false"/>
+      <add path="Telerik.Web.UI.WebResource.axd" type="Telerik.Web.UI.WebResource" verb="*" validate="false"/>
+    </httpHandlers>
+  </system.web>
+  <!-- 
+        The system.webServer section is required for running ASP.NET AJAX under Internet
+        Information Services 7.0.  It is not necessary for previous version of IIS.
+    -->
+  <system.webServer>
+    <modules>
+      <add type="DevExpress.Web.ASPxClasses.ASPxHttpHandlerModule, DevExpress.Web.v10.1, Version=10.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" name="ASPxHttpHandlerModule"/>
+    </modules>
+    <validation validateIntegratedModeConfiguration="false"/>
+    <handlers>
+      <add name="Telerik_Web_UI_DialogHandler_aspx" verb="*" preCondition="integratedMode" path="Telerik.Web.UI.DialogHandler.aspx" type="Telerik.Web.UI.DialogHandler"/>
+      <add name="Telerik_Web_UI_WebResource_axd" verb="*" preCondition="integratedMode" path="Telerik.Web.UI.WebResource.axd" type="Telerik.Web.UI.WebResource"/>
+    </handlers>
+  </system.webServer>
+  <location path="." allowOverride="false"/>
+  <devExpress>
+    <settings rightToLeft="false"/>
+    <compression enableHtmlCompression="false" enableCallbackCompression="true" enableResourceCompression="true" enableResourceMerging="false"/>
+    <themes enableThemesAssembly="true"/>
+    <errors callbackErrorRedirectUrl=""/>
+  </devExpress>
+</configuration>

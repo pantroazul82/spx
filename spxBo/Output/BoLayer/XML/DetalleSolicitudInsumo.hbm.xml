@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="DetalleSolicitudInsumo" 
+ table="[dbo].[detalleSolicitudInsumos]" 
+>
+<composite-id unsaved-value="any"
+ >
+<key-property 
+name="CodOrdenServicio"
+column="`codOrdenServicio`"
+type="System.Int32"
+>
+</key-property>
+<key-property 
+name="CodSolicitud"
+column="`codSolicitud`"
+type="System.Int32"
+>
+</key-property>
+<key-property 
+name="CodDetalle"
+column="`codDetalle`"
+type="System.Int32"
+>
+</key-property>
+</composite-id> 
+<property
+name="CodRepuesto"
+column="`codRepuesto`"
+type="System.String"
+length="20"
+    >
+</property>
+<property
+name="Cantidad"
+column="`cantidad`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<many-to-one
+ name="Repuesto" 
+ class="Repuesto" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codRepuesto`" />
+</many-to-one>
+<many-to-one
+ name="SolicitudInsumo" 
+ class="SolicitudInsumo" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codOrdenServicio`" />
+<column name="`codSolicitud`" />
+</many-to-one>
+</class>
+</hibernate-mapping>
+

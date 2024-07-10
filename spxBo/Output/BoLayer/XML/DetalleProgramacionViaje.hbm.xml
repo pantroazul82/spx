@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="DetalleProgramacionViaje" 
+ table="[dbo].[detalleProgramacionViajes]" 
+>
+<composite-id unsaved-value="any"
+ >
+<key-property 
+name="CodProgramacionViajes"
+column="`codProgramacionViajes`"
+type="System.Int32"
+>
+</key-property>
+<key-property 
+name="CodDetalleProgramacionViajes"
+column="`codDetalleProgramacionViajes`"
+type="System.Int32"
+>
+</key-property>
+</composite-id> 
+<property
+name="CodOrdenServicio"
+column="`codOrdenServicio`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="Confirmado"
+column="`confirmado`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="Serial"
+column="`serial`"
+type="System.String"
+length="30"
+    >
+</property>
+<property
+name="FechaInicio"
+column="`fechaInicio`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="FechaFin"
+column="`fechaFin`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="CodTipoServicio"
+column="`codTipoServicio`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="CodPrioridadOS"
+column="`codPrioridadOS`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="Observaciones"
+column="`observaciones`"
+type="System.String"
+length="250"
+    >
+</property>
+<many-to-one
+ name="Equipo" 
+ class="Equipo" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`serial`" />
+</many-to-one>
+<many-to-one
+ name="OrdenServicio" 
+ class="OrdenServicio" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codOrdenServicio`" />
+</many-to-one>
+<many-to-one
+ name="PrioridadesOrdenServicio" 
+ class="PrioridadesOrdenServicio" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codPrioridadOS`" />
+</many-to-one>
+<many-to-one
+ name="ProgramacionViaje" 
+ class="ProgramacionViaje" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codProgramacionViajes`" />
+</many-to-one>
+<many-to-one
+ name="TipoServicio" 
+ class="TipoServicio" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codTipoServicio`" />
+</many-to-one>
+</class>
+</hibernate-mapping>
+

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="ComprobantesAceptacionOrdenservicio" 
+ table="[dbo].[comprobantesAceptacionOrdenservicio]" 
+>
+<composite-id unsaved-value="any"
+ >
+<key-property 
+name="CodComprobantesAceptacionOrdenservicio"
+column="`codComprobantesAceptacionOrdenservicio`"
+type="System.Int32"
+>
+</key-property>
+<key-property 
+name="CodOrdenServicio"
+column="`codOrdenServicio`"
+type="System.Int32"
+>
+</key-property>
+</composite-id> 
+<property
+name="Descripcion"
+column="`descripcion`"
+type="System.String"
+length="250"
+    >
+</property>
+<property
+name="CodTipoComprobante"
+column="`codTipoComprobante`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="Nombre"
+column="`nombre`"
+type="System.String"
+length="150"
+    >
+</property>
+<many-to-one
+ name="OrdenServicio" 
+ class="OrdenServicio" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codOrdenServicio`" />
+</many-to-one>
+<many-to-one
+ name="TipoComprobante" 
+ class="TipoComprobante" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codTipoComprobante`" />
+</many-to-one>
+</class>
+</hibernate-mapping>
+

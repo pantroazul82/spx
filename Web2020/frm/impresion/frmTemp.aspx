@@ -1,0 +1,5 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/frm/master/MasterPage.Master" AutoEventWireup="true" CodeBehind="frmTemp.aspx.cs" Inherits="Web2020.frm.impresion.frmTemp" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="headerPlaceHolder" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+</asp:Content>

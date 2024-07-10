@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="LogCambioUbicacione" 
+ table="[dbo].[logCambioUbicaciones]" 
+>
+<id name="CodLog"
+ column="`codLog`"
+ type="System.Int32"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="NitClienteOrigen"
+column="`nitClienteOrigen`"
+type="System.String"
+length="20"
+    >
+</property>
+<property
+name="CodSucursalOrigen"
+column="`codSucursalOrigen`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="NitClienteDestino"
+column="`nitClienteDestino`"
+type="System.String"
+length="20"
+    >
+</property>
+<property
+name="CodSucursalDestino"
+column="`codSucursalDestino`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="FechaCambio"
+column="`fechaCambio`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="UsuarioCambio"
+column="`usuarioCambio`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="Serial"
+column="`serial`"
+type="System.String"
+length="30"
+    >
+</property>
+<property
+name="Razon"
+column="`razon`"
+type="System.String"
+    >
+</property>
+<property
+name="FechaEnvio"
+column="`fechaEnvio`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<many-to-one
+ name="SucursalCliente" 
+ class="SucursalCliente" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`nitClienteDestino`" />
+<column name="`codSucursalDestino`" />
+</many-to-one>
+<many-to-one
+ name="SucursalCliente1" 
+ class="SucursalCliente" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`nitClienteDestino`" />
+<column name="`codSucursalDestino`" />
+</many-to-one>
+<many-to-one
+ name="Usuario0" 
+ class="Usuario0" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`usuarioCambio`" />
+</many-to-one>
+</class>
+</hibernate-mapping>
+

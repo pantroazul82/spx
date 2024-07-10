@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="ArchivosXOrdenServicio" 
+ table="[dbo].[archivosXOrdenServicio]" 
+>
+<composite-id unsaved-value="any"
+ >
+<key-property 
+name="CodOrdenServicio"
+column="`codOrdenServicio`"
+type="System.Int32"
+>
+</key-property>
+<key-property 
+name="CodArchivo"
+column="`codArchivo`"
+type="System.Int32"
+>
+</key-property>
+</composite-id> 
+<property
+name="NombreArchivo"
+column="`nombreArchivo`"
+type="System.String"
+length="100"
+    >
+</property>
+<property
+name="Descripcion"
+column="`descripcion`"
+type="System.String"
+length="250"
+    >
+</property>
+<many-to-one
+ name="OrdenServicio" 
+ class="OrdenServicio" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codOrdenServicio`" />
+</many-to-one>
+</class>
+</hibernate-mapping>
+

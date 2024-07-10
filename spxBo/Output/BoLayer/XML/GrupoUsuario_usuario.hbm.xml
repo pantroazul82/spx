@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="GrupoUsuario_usuario" 
+ table="[dbo].[grupoUsuario_usuario]" 
+>
+<id name="CodGrupoUsuario_usuario"
+ access="nosetter.camelcase-underscore" 
+ column="`codGrupoUsuario_usuario`"
+ type="System.Int32"
+ unsaved-value="-2147483648"
+    >
+<generator class="native" >
+</generator>
+</id> 
+<property
+name="CodGrupoUsuario"
+column="`codGrupoUsuario`"
+type="System.Int32"
+    >
+</property>
+<property
+name="CodUsuario"
+column="`codUsuario`"
+type="System.Int32"
+    >
+</property>
+<many-to-one
+ name="GrupoUsuario" 
+ class="GrupoUsuario" 
+ cascade="save-update" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codGrupoUsuario`" />
+</many-to-one>
+</class>
+</hibernate-mapping>
+

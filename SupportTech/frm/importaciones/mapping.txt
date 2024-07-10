@@ -1,0 +1,12 @@
+﻿movimiento[0].txt1 pais de origen
+movimiento[0].txt2 fabricante
+
+detalle_movimiento[0].texto1				fabricante
+detalle_movimiento[0].texto2				modelo
+detalle_movimiento[0].cal1					fecha_reserva
+detalle_movimiento[0].documento_principal   nit cliente
+detalle_movimiento[0].texto_adicional		sucursal
+detalle_movimiento[0].for1					tipo de propiedad
+
+
+

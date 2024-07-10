@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="SolicitudInsumo" 
+ table="[dbo].[solicitudInsumos]" 
+>
+<composite-id unsaved-value="any"
+ >
+<key-property 
+name="CodOrdenServicio"
+column="`codOrdenServicio`"
+type="System.Int32"
+>
+</key-property>
+<key-property 
+name="CodSolicitud"
+column="`codSolicitud`"
+type="System.Int32"
+>
+</key-property>
+</composite-id> 
+<property
+name="Aceptada"
+column="`aceptada`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="AprobadaPor"
+column="`aprobadaPor`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="FechaAprobacion"
+column="`fechaAprobacion`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="NumeroFactura"
+column="`numeroFactura`"
+type="System.String"
+length="30"
+    >
+</property>
+<property
+name="HorasMantPreventivo"
+column="`horasMantPreventivo`"
+type="System.Nullable`1[System.Double]"
+    >
+</property>
+<property
+name="HorasMantCorrectivo"
+column="`horasMantCorrectivo`"
+type="System.Nullable`1[System.Double]"
+    >
+</property>
+<property
+name="TiempoEstimadoEntrega"
+column="`tiempoEstimadoEntrega`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="Observaciones"
+column="`observaciones`"
+type="System.String"
+    >
+</property>
+<property
+name="FechaSolicitud"
+column="`fechaSolicitud`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="HorasDiagnostico"
+column="`horasDiagnostico`"
+type="System.Nullable`1[System.Double]"
+    >
+</property>
+<property
+name="AutorizadoPor"
+column="`autorizadoPor`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="Autorizado"
+column="`autorizado`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="FechaAutorizacion"
+column="`fechaAutorizacion`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="CodUnidadTiempo"
+column="`codUnidadTiempo`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<many-to-one
+ name="OrdenServicio" 
+ class="OrdenServicio" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codOrdenServicio`" />
+</many-to-one>
+<many-to-one
+ name="UnidadTiempo" 
+ class="UnidadTiempo" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codUnidadTiempo`" />
+</many-to-one>
+<bag name="DetalleSolicitudInsumos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codOrdenServicio`" />
+ <column name= "`codSolicitud`" />
+</key>
+<one-to-many class="DetalleSolicitudInsumo" />
+</bag>
+</class>
+</hibernate-mapping>
+

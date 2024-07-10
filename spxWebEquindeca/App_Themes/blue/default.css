@@ -1,0 +1,507 @@
+/* Modal Pop Up */
+
+.modalBackground {
+	background-color:#6d83b2;
+	filter:alpha(opacity=60);
+	opacity:0.7;
+}
+
+
+/*////////////////////////*/
+.panelResultados
+{
+    background: #F5F5FA !important;
+    text-align:right;
+    font: bold 9px verdana, arial, helvetica, sans-serif;
+    color:#4f6B72;
+}
+
+
+.Formulario thead th  {
+  font: bold 11px verdana, arial, helvetica, sans-serif;
+  border: 1px solid #03476F;
+  text-align: left;
+  background: #4591AD !important;
+  color: #FFFFFF;
+  padding-top:3px;
+  }
+  
+.FormularioSimple Table
+{
+    background-color:#FFFFFF !important;
+    font-size:11px !important;
+    border-top-style:solid !important;
+    border-top-width:0px !important;
+  }
+
+    .Formulario Table
+{
+    border-top: 0px solid #000000;
+    background-color:#F5F5FA;
+    color:#4f6B72;
+    font-size:12px;
+    text-align:left;
+    width: 906px;
+}
+  
+   .Formulario Input[type=text]
+{
+    border-style:solid;
+    border-width:1px;
+    border-color:#ABADB3;
+    min-width:150px;
+    font-size:"10px";
+    font-family:"Verdana:Arial";
+    color:#4F6B72;
+  }
+     .Formulario select 
+{
+    border-style:solid;
+    border-width:1px;
+    border-color:#ABADB3;
+    min-width:150px;
+    font-size:"10px";
+    font-family:"Verdana:Arial";
+    color:#4F6B72;
+  }
+ 
+  .calendario
+  {
+       max-width:100 !important;
+      }
+  
+    .calendario Input[type=text]
+  {
+    border-style:solid;
+    border-width:1px;
+    border-color:#ABADB3;
+    max-width:100 !important;
+  }
+  
+  
+
+
+.comboChiqui Select
+{
+    min-width:20px !important;
+    max-width:20px !important;
+}
+
+.comboChiqui
+{
+    min-width:45px !important;
+    max-width:45px !important;
+}
+
+
+  .tabChiqui {
+	text-align: left;
+	font-family: "Myriad Pro";
+	font-size: 17px;
+	font-style: normal;
+	color: #999999;
+	text-indent: 20px;
+	
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 22px;
+	min-width:200px !Important;
+}
+  
+  
+.tab {
+	text-align: left;
+	font-family: "Myriad Pro";
+	font-size: 17px;
+	font-style: normal;
+	color: #999999;
+	text-indent: 20px;
+	background-image: url(../../img/web/Fondo_tb_Caption.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 22px;
+	min-width:400px !Important;
+}
+
+
+
+
+BODY
+{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:small;
+}
+
+
+BODY, HTML
+{
+	height:80%;
+}
+
+H1, H2, H3, P
+{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	margin:0px;
+    text-align: center;
+}
+
+
+.NavBarTop
+{
+	background-image:url(bg-topnav.gif);
+	height:23px;
+}
+
+.NavBarTop  P {
+	text-align:right;
+	padding: 4px;	
+}
+
+.NavBarTitle
+{
+	background-image:url(bg-header.gif);
+	color:#FFFFFF;
+		padding: 4px;	
+}
+.NavBarTitle P  {
+
+}
+
+.NavBarBreadCrumb
+{
+	background-image:url(bg-topnav.gif);
+}
+
+.NavBarBreadCrumb P  {
+	padding: 4px;	
+
+}
+
+.MenuBar 
+{
+	width:150px;
+	vertical-align:top;
+	background-color:#EEEEEE;
+}
+
+.ContentArea
+{
+	vertical-align:top;
+	background-color:white;
+}
+
+
+.RightBar
+{
+	width:100px;
+	vertical-align:top;
+	background-color:#EEEEEE;
+}
+
+
+/* menu styles */
+
+/* This style sheet is intended to contain RARELY CHANGED rules used when the Menu control adapter is 
+
+enabled. */
+/* These rules correspond to the "pure CSS menu" technique that have been evolving over the past 
+
+several years. */ 
+/* See WhitePaper.aspx for details. */
+
+ul.AspNet-Menu 
+{
+    position: relative;
+}
+
+
+ul.AspNet-Menu, 
+ul.AspNet-Menu ul
+{
+    margin: 0;
+    padding: 0;
+    display: block;
+
+}
+
+ul.AspNet-Menu li
+{
+    position: relative;
+    list-style: none;
+}
+
+ul.AspNet-Menu li a,
+ul.AspNet-Menu li span
+{
+    display: block;
+    text-decoration: none;
+}
+
+ul.AspNet-Menu ul
+{
+    position: absolute;
+    display: none;    
+}
+
+/* Add more rules here if your menus have more than three (3) tiers */
+ul.AspNet-Menu li:hover ul ul,
+ul.AspNet-Menu li:hover ul ul ul,
+ul.AspNet-Menu li.AspNet-Menu-Hover ul ul,
+ul.AspNet-Menu li.AspNet-Menu-Hover ul ul ul
+{
+    display: none;
+}
+
+/* Add more rules here if your menus have more than three (3) tiers */
+ul.AspNet-Menu li:hover ul,
+ul.AspNet-Menu li li:hover ul,
+ul.AspNet-Menu li li li:hover ul,
+ul.AspNet-Menu li.AspNet-Menu-Hover ul,
+ul.AspNet-Menu li li.AspNet-Menu-Hover ul,
+ul.AspNet-Menu li li li.AspNet-Menu-Hover ul
+{
+    display: block;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* When the Menu control's Orientation property is Horizontal the adapter wraps the menu with DIV */
+/* whose class is AspNet-Menu-Horizontal. This allows us to force the top tier of the menu to layout */
+/* horizontally, whereas all subsequent tiers of the menu lay out vertically. */
+
+.AspNet-Menu-Horizontal ul.AspNet-Menu li
+{
+    float: left;
+}
+
+.AspNet-Menu-Horizontal ul.AspNet-Menu li li
+{
+    float: none;
+}
+
+
+/* */
+
+
+/* This style sheet is intended to contain OFTEN CHANGED rules used when the Menu control adapter is 
+
+enabled. */
+
+/* When the Menu control's Orientation property is Vertical the adapter wraps the menu with DIV */
+/* whose class is AspNet-Menu-Vertical. */
+/* Note that the example menu in this web site uses relative positioning to force the menu to occupy */
+/* a specific place in the web page.  Your web site will likely use a different technique to position 
+
+your */
+/* menu.  So feel free to change all the properties found in this CSS rule if you clone this style 
+
+sheet. */
+/* There is nothing, per se, that is magical about these particular property value choices.  They 
+
+happen to */
+/* work well for the sample page used to demonstrate an adapted menu. */
+ .AspNet-Menu-Vertical
+{
+    position:relative;
+    top: 30px;
+    left: 0;
+    z-index: 300;
+}
+
+/* The menu adapter renders an unordered list (ul) in HTML for each tier in the menu. */
+/* So, effectively says: style all tiers in the menu this way... */
+ ul.AspNet-Menu, 
+ ul.AspNet-Menu ul
+{
+    min-width:180px;
+    width: 180px;
+    font-family: Tahoma;
+    font-size: 8pt;
+}
+
+/* This rule effectively says: style all tiers EXCEPT THE TOP TIER in the menu this way... */
+/* In other words, this rule can be used to style the second and third tiers of the menu without 
+
+impacting */
+/* the topmost tier's appearance. */
+ ul.AspNet-Menu ul
+{
+    left: 177px;
+    top: 3px;
+}
+
+/* The menu adapter generates a list item (li) in HTML for each menu item. */
+/* Use this rule create the common appearance of each menu item. */
+ ul.AspNet-Menu li
+{
+    background: url(bg-menu-example.png) repeat-x;
+    margin:0 0 0 0;
+}
+
+/* Within each menu item is a link or a span, depending on whether or not the MenuItem has defined it's 
+
+*/
+/* NavigateUrl property. By setting a transparent background image here you can effectively layer two 
+
+images */
+/* in each menu item.  One comes from the CSS rule (above) governing the li tag that each menu item 
+
+has. */
+/* The second image comes from this rule (below). */
+ ul.AspNet-Menu li a,
+ ul.AspNet-Menu li span
+{
+    color: black;
+    padding: 4px 2px 4px 8px;
+    border-top: solid 1px #E7E7E7;
+    border-right: solid 1px #D2D2D2;
+    border-bottom: solid 1px #D2D2D2;
+    border-left: solid 1px #E7E7E7;
+    background: transparent url(arrow.png) right center no-repeat;
+}
+
+/* When a menu item contains no submenu items it is marked as a "leaf" and can be styled specially by 
+
+this rule. */
+ ul.AspNet-Menu li.AspNet-Menu-Leaf a,
+ ul.AspNet-Menu li.AspNet-Menu-Leaf span
+{
+    background-image: none;
+}
+
+/* Not used presently.  This is here if you modify the menu adapter so it renders img tags, too. */
+ ul.AspNet-Menu li a img
+{
+    border-style: none;
+    vertical-align: middle;
+}
+
+/* When you hover over a menu item, this rule comes into play. */
+/* Browsers that do not support the CSS hover pseudo-class, use JavaScript to dynamically change the */
+/* menu item's li tag so it has the AspNet-Menu-Hover class when the cursor is over that li tag. */
+/* See MenuAdapter.js (in the JavaScript folder). */
+ ul.AspNet-Menu li:hover, 
+ ul.AspNet-Menu li.AspNet-Menu-Hover
+{
+    background:#FFF;
+}
+
+/* While you hover over a list item (li) you are also hovering over a link or span because */
+/* the link or span covers the interior of the li.  So you can set some hover-related styles */
+/* in the rule (above) for the li but set other hover-related styles in this (below) rule. */
+ ul.AspNet-Menu li a:hover,
+ ul.AspNet-Menu li span.Asp-Menu-Hover
+{
+    color:#000;
+    background: transparent url(arrow-active.png) right center no-repeat;
+}
+
+ ul.AspNet-Menu li.AspNet-Menu-Leaf a:hover
+{
+    background-image: none;
+}
+
+
+
+
+/* -------------------------------------------------------------------------- */
+/* When the Menu control's Orientation property is Horizontal the adapter wraps the menu with DIV */
+/* whose class is AspNet-Menu-Horizontal. */
+/* Note that the example menu in this web site uses absolute positioning to force the menu to occupy */
+/* a specific place in the web page.  Your web site will likely use a different technique to position your */
+/* menu.  So feel free to change all the properties found in this CSS rule if you clone this style sheet. */
+/* There is nothing, per se, that is magical about these particular property value choices.  They happen to */
+/* work well for the sample page used to demonstrate an adapted menu. */
+
+.AspNet-Menu-Horizontal
+{
+    width: 500px;
+    z-index: 300;
+}
+
+/* This rule controls the width of the top tier of the horizontal menu. */
+/* BE SURE TO MAKE THIS WIDE ENOUGH to accomodate all of the top tier menu items that are lined */
+/* up from left to right. In other words, this width needs to be the width of the individual */
+/* top tier menu items multiplied by the number of items. */
+.AspNet-Menu-Horizontal ul.AspNet-Menu
+{
+    width: 500px;
+}
+
+/* This rule effectively says: style all tiers EXCEPT THE TOP TIER in the menu this way... */
+/* In other words, this rule can be used to style the second and third tiers of the menu without impacting */
+/* the topmost tier's appearance. */
+/* Remember that only the topmost tier of the menu is horizontal.  The second and third tiers are vertical. */
+/* So, they need a much smaller width than the top tier.  Effectively, the width specified here is simply */
+/* the width of a single menu item in the second and their tiers. */
+.AspNet-Menu-Horizontal ul.AspNet-Menu ul
+{
+    width: 130px;
+    left: 3px;
+    top: 2em;
+}
+
+/* Generally, you use this rule to set style properties that pertain to all menu items. */
+/* One exception is the width set here.  We will override this width with a more specific rule (below) */
+/* That sets the width for all menu items from the second tier downward in the menu. */
+.AspNet-Menu-Horizontal ul.AspNet-Menu li
+{
+    width:100px;
+    text-align:center;
+}
+
+/* This rule can be used to set styles for the menu items in the second tier (and lower) in the menu. */
+.AspNet-Menu-Horizontal ul.AspNet-Menu li li
+{
+    text-align:left;
+}
+
+/* This rule establishes the width of menu items below the top tier.  This allows the top tier menu items */
+/* to be narrower, for example, than the sub-menu items. */
+/* This value you set here should be slightly larger than the left margin value in the next rule. See */
+/* its comment for more details. */
+.AspNet-Menu-Horizontal ul.AspNet-Menu ul li
+{
+    min-width:180px;
+    width: 180px;
+}
+
+/* Third tier menus have to be positioned differently than second (or top) tier menu items because */
+/* they drop to the side, not below, their parent menu item. This is done by setting the last margin */
+/* value (which is equal to margin-left) to a value that is slightly smaller than the WIDTH of the */
+/* menu item. So, if you modify the rule above, then you should modify this (below) rule, too. */
+.AspNet-Menu-Horizontal ul.AspNet-Menu li ul li ul
+{
+    margin: -1.8em 0 0 126px;
+}
+
+.spec 
+{
+	background-color:#666666;
+	border-bottom-width:0px !important;
+	border-top-width:0px !important;
+	border-left-width:0px !important;
+	border-right-width:0px !important;
+	border-bottom-color:#666666;
+	border-top-color:#666666;
+	border-left-color:#666666;
+	border-right-color:#666666;
+	
+	color: #ffffff;
+}
+
+.spec a 
+{
+	background-color:#4f6b72 ;
+	color: #ffffff !important;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #C1DAD7;
+	border-right-color: #C1DAD7;
+	border-bottom-color: #C1DAD7;
+	border-left-color: #C1DAD7;
+}

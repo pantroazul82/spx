@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="Fotografium" 
+ table="[dbo].[fotografia]" 
+>
+<id name="CodFotografia"
+ column="`codFotografia`"
+ type="System.Int32"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="NombreArchivo"
+column="`nombreArchivo`"
+type="System.String"
+length="100"
+    >
+</property>
+<bag name="AccesoriosEquipos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codFoto`" />
+</key>
+<one-to-many class="AccesoriosEquipo" />
+</bag>
+</class>
+</hibernate-mapping>
+

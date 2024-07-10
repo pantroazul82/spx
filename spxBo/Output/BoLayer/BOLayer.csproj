@@ -1,0 +1,609 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <BuildDir>.\bin\</BuildDir>
+    <AssemblyName>BOLayer</AssemblyName>
+    <Optimization>False</Optimization>
+    <Obfuscate>False</Obfuscate>
+    <RootNamespace>BOLayer</RootNamespace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <OutputType>Library</OutputType>
+    <DebugType>full</DebugType>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectGuid>{F094CF11-600F-4018-997E-7458A79A926F}</ProjectGuid>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="BO\AccesoriosEquipo.cs" />
+    <Compile Include="BO\AccesoriosxEntradaSalidaEquipo.cs" />
+    <Compile Include="BO\ActividadesxModelo.cs" />
+    <Compile Include="BO\ActividadxordenServicio.cs" />
+    <Compile Include="BO\Archivosxcontrato.cs" />
+    <Compile Include="BO\ArchivosxEntradaSalidaEquipo.cs" />
+    <Compile Include="BO\ArchivosXequipo.cs" />
+    <Compile Include="BO\ArchivosxModelo.cs" />
+    <Compile Include="BO\ArchivosXOrdenServicio.cs" />
+    <Compile Include="BO\ArchivosxRecoleccion.cs" />
+    <Compile Include="BO\AsesoresComerciale.cs" />
+    <Compile Include="BO\CGQ_ParametrosQuery.cs" />
+    <Compile Include="BO\CGQ_Query.cs" />
+    <Compile Include="BO\CGQ_TipoFiltro.cs" />
+    <Compile Include="BO\CgSmtpAccion.cs" />
+    <Compile Include="BO\CgSmtpAdjunto.cs" />
+    <Compile Include="BO\CgSmtpEmail.cs" />
+    <Compile Include="BO\CgSmtpEmailCC.cs" />
+    <Compile Include="BO\CgSmtpEmailCCO.cs" />
+    <Compile Include="BO\CgSmtpEmailTo.cs" />
+    <Compile Include="BO\CgSmtpServer.cs" />
+    <Compile Include="BO\CgSmtpServerCC.cs" />
+    <Compile Include="BO\CgSmtpServerCCO.cs" />
+    <Compile Include="BO\Ciudade.cs" />
+    <Compile Include="BO\Cliente.cs" />
+    <Compile Include="BO\ComprobantesAceptacionOrdenservicio.cs" />
+    <Compile Include="BO\ContactosCliente.cs" />
+    <Compile Include="BO\Contrato.cs" />
+    <Compile Include="BO\ContratosxEquipo.cs" />
+    <Compile Include="BO\Departamento.cs" />
+    <Compile Include="BO\DetalleProgramacionViaje.cs" />
+    <Compile Include="BO\DetalleSolicitudInsumo.cs" />
+    <Compile Include="BO\EntradaSalidaEquipo.cs" />
+    <Compile Include="BO\Equipo.cs" />
+    <Compile Include="BO\EquipoAuxiliar.cs" />
+    <Compile Include="BO\EstadoFisicamente.cs" />
+    <Compile Include="BO\EstadoLocalEquipo.cs" />
+    <Compile Include="BO\EstadoRecoleccion.cs" />
+    <Compile Include="BO\EstadosLLamadasTecnica.cs" />
+    <Compile Include="BO\EstadosOrdenPrestamo.cs" />
+    <Compile Include="BO\EstadosOrdenServicio.cs" />
+    <Compile Include="BO\EstadosSolicitud.cs" />
+    <Compile Include="BO\Fabricante.cs" />
+    <Compile Include="BO\FiltrosRpt.cs" />
+    <Compile Include="BO\Fotografium.cs" />
+    <Compile Include="BO\GruposCopiaOcultaxSmtpAccion.cs" />
+    <Compile Include="BO\GruposCopiaxSmtpAccion.cs" />
+    <Compile Include="BO\GrupoSeguridad.cs" />
+    <Compile Include="BO\GrupoSeguridad_grupoUsuario.cs" />
+    <Compile Include="BO\GrupoSeguridad_usuario.cs" />
+    <Compile Include="BO\GruposModulo.cs" />
+    <Compile Include="BO\GruposModulosxGruposUsuario.cs" />
+    <Compile Include="BO\GruposModulosxUsuario.cs" />
+    <Compile Include="BO\GruposUsuario.cs" />
+    <Compile Include="BO\GruposUsuariosxUsuario.cs" />
+    <Compile Include="BO\GruposXgrupo.cs" />
+    <Compile Include="BO\GruposxSmtpAccion.cs" />
+    <Compile Include="BO\GrupoUsuario.cs" />
+    <Compile Include="BO\GrupoUsuario_usuario.cs" />
+    <Compile Include="BO\IndicacionesLLamada.cs" />
+    <Compile Include="BO\LlamadaSoporte.cs" />
+    <Compile Include="BO\LogCambioUbicacione.cs" />
+    <Compile Include="BO\MantenimientosxContrato.cs" />
+    <Compile Include="BO\MedioSolicitud.cs" />
+    <Compile Include="BO\ModalidadContrato.cs" />
+    <Compile Include="BO\ModalidadEquipo.cs" />
+    <Compile Include="BO\Modelo.cs" />
+    <Compile Include="BO\Modulo.cs" />
+    <Compile Include="BO\ModuloSeguridad.cs" />
+    <Compile Include="BO\ModuloSeguridad_grupoUsuario.cs" />
+    <Compile Include="BO\ModuloSeguridad_usuario.cs" />
+    <Compile Include="BO\ModulosxGruposUsuario.cs" />
+    <Compile Include="BO\ModulosxUsuario.cs" />
+    <Compile Include="BO\ObservacionesxOrdenPrestamo.cs" />
+    <Compile Include="BO\OrdenPrestamo.cs" />
+    <Compile Include="BO\OrdenServicio.cs" />
+    <Compile Include="BO\Paise.cs" />
+    <Compile Include="BO\ParametrosxCgSmtpAccion.cs" />
+    <Compile Include="BO\Prioridad.cs" />
+    <Compile Include="BO\PrioridadesOrdenServicio.cs" />
+    <Compile Include="BO\PrioridadSolicitud.cs" />
+    <Compile Include="BO\Problemas_frecuente.cs" />
+    <Compile Include="BO\ProgramacionViaje.cs" />
+    <Compile Include="BO\ReasignacionOrdenesTrabajo.cs" />
+    <Compile Include="BO\Recoleccion.cs" />
+    <Compile Include="BO\RegionesXusuario.cs" />
+    <Compile Include="BO\Repuesto.cs" />
+    <Compile Include="BO\RepuestosxContrato.cs" />
+    <Compile Include="BO\RepuestosxOrdenPrestamo.cs" />
+    <Compile Include="BO\RepuestoxOrdenServicio.cs" />
+    <Compile Include="BO\Rpt.cs" />
+    <Compile Include="BO\Seguimiento.cs" />
+    <Compile Include="BO\SmtpServer.cs" />
+    <Compile Include="BO\SolicitudInsumo.cs" />
+    <Compile Include="BO\SolicitudServicio.cs" />
+    <Compile Include="BO\Soluciones_problema.cs" />
+    <Compile Include="BO\SubTipoEquipo.cs" />
+    <Compile Include="BO\SucursalCliente.cs" />
+    <Compile Include="BO\Task.cs" />
+    <Compile Include="BO\TaskAdjunto.cs" />
+    <Compile Include="BO\TaskCategorium.cs" />
+    <Compile Include="BO\TaskEstatu.cs" />
+    <Compile Include="BO\TaskPatronRecurrencium.cs" />
+    <Compile Include="BO\TaskReminder.cs" />
+    <Compile Include="BO\TipoComprobante.cs" />
+    <Compile Include="BO\TipoContrato.cs" />
+    <Compile Include="BO\TipoDocumento.cs" />
+    <Compile Include="BO\TipoEquipo.cs" />
+    <Compile Include="BO\TipoFiltroRpt.cs" />
+    <Compile Include="BO\TipoPropiedad.cs" />
+    <Compile Include="BO\TiposArchivoXequipo.cs" />
+    <Compile Include="BO\TipoServicio.cs" />
+    <Compile Include="BO\TituloContacto.cs" />
+    <Compile Include="BO\TrabajosxReporteServicio.cs" />
+    <Compile Include="BO\Transportadora.cs" />
+    <Compile Include="BO\UnidadPeso.cs" />
+    <Compile Include="BO\UnidadTiempo.cs" />
+    <Compile Include="BO\Usuario.cs" />
+    <Compile Include="BO\Usuario0.cs" />
+    <Compile Include="BO\UsuarioCopiaOcultaxSmtpAccion.cs" />
+    <Compile Include="BO\UsuarioCopiaxSmtpAccion.cs" />
+    <Compile Include="BO\UsuariosXusuario.cs" />
+    <Compile Include="BO\UsuarioxSmtpAccion.cs" />
+    <Compile Include="BO\VistaEquipo.cs" />
+    <Compile Include="BO\VistaSucursal.cs" />
+    <Compile Include="Collections\AccesoriosEquipoCollection.cs" />
+    <Compile Include="Collections\AccesoriosxEntradaSalidaEquipoCollection.cs" />
+    <Compile Include="Collections\ActividadesxModeloCollection.cs" />
+    <Compile Include="Collections\ActividadxordenServicioCollection.cs" />
+    <Compile Include="Collections\ArchivosxcontratoCollection.cs" />
+    <Compile Include="Collections\ArchivosxEntradaSalidaEquipoCollection.cs" />
+    <Compile Include="Collections\ArchivosXequipoCollection.cs" />
+    <Compile Include="Collections\ArchivosxModeloCollection.cs" />
+    <Compile Include="Collections\ArchivosXOrdenServicioCollection.cs" />
+    <Compile Include="Collections\ArchivosxRecoleccionCollection.cs" />
+    <Compile Include="Collections\AsesoresComercialeCollection.cs" />
+    <Compile Include="Collections\CGQ_ParametrosQueryCollection.cs" />
+    <Compile Include="Collections\CGQ_QueryCollection.cs" />
+    <Compile Include="Collections\CGQ_TipoFiltroCollection.cs" />
+    <Compile Include="Collections\CgSmtpAccionCollection.cs" />
+    <Compile Include="Collections\CgSmtpAdjuntoCollection.cs" />
+    <Compile Include="Collections\CgSmtpEmailCCCollection.cs" />
+    <Compile Include="Collections\CgSmtpEmailCCOCollection.cs" />
+    <Compile Include="Collections\CgSmtpEmailCollection.cs" />
+    <Compile Include="Collections\CgSmtpEmailToCollection.cs" />
+    <Compile Include="Collections\CgSmtpServerCCCollection.cs" />
+    <Compile Include="Collections\CgSmtpServerCCOCollection.cs" />
+    <Compile Include="Collections\CgSmtpServerCollection.cs" />
+    <Compile Include="Collections\CiudadeCollection.cs" />
+    <Compile Include="Collections\ClienteCollection.cs" />
+    <Compile Include="Collections\ComprobantesAceptacionOrdenservicioCollection.cs" />
+    <Compile Include="Collections\ContactosClienteCollection.cs" />
+    <Compile Include="Collections\ContratoCollection.cs" />
+    <Compile Include="Collections\ContratosxEquipoCollection.cs" />
+    <Compile Include="Collections\DepartamentoCollection.cs" />
+    <Compile Include="Collections\DetalleProgramacionViajeCollection.cs" />
+    <Compile Include="Collections\DetalleSolicitudInsumoCollection.cs" />
+    <Compile Include="Collections\EntradaSalidaEquipoCollection.cs" />
+    <Compile Include="Collections\EquipoAuxiliarCollection.cs" />
+    <Compile Include="Collections\EquipoCollection.cs" />
+    <Compile Include="Collections\EstadoFisicamenteCollection.cs" />
+    <Compile Include="Collections\EstadoLocalEquipoCollection.cs" />
+    <Compile Include="Collections\EstadoRecoleccionCollection.cs" />
+    <Compile Include="Collections\EstadosLLamadasTecnicaCollection.cs" />
+    <Compile Include="Collections\EstadosOrdenPrestamoCollection.cs" />
+    <Compile Include="Collections\EstadosOrdenServicioCollection.cs" />
+    <Compile Include="Collections\EstadosSolicitudCollection.cs" />
+    <Compile Include="Collections\FabricanteCollection.cs" />
+    <Compile Include="Collections\FiltrosRptCollection.cs" />
+    <Compile Include="Collections\FotografiumCollection.cs" />
+    <Compile Include="Collections\GruposCopiaOcultaxSmtpAccionCollection.cs" />
+    <Compile Include="Collections\GruposCopiaxSmtpAccionCollection.cs" />
+    <Compile Include="Collections\GrupoSeguridadCollection.cs" />
+    <Compile Include="Collections\GrupoSeguridad_grupoUsuarioCollection.cs" />
+    <Compile Include="Collections\GrupoSeguridad_usuarioCollection.cs" />
+    <Compile Include="Collections\GruposModuloCollection.cs" />
+    <Compile Include="Collections\GruposModulosxGruposUsuarioCollection.cs" />
+    <Compile Include="Collections\GruposModulosxUsuarioCollection.cs" />
+    <Compile Include="Collections\GruposUsuarioCollection.cs" />
+    <Compile Include="Collections\GruposUsuariosxUsuarioCollection.cs" />
+    <Compile Include="Collections\GruposXgrupoCollection.cs" />
+    <Compile Include="Collections\GruposxSmtpAccionCollection.cs" />
+    <Compile Include="Collections\GrupoUsuarioCollection.cs" />
+    <Compile Include="Collections\GrupoUsuario_usuarioCollection.cs" />
+    <Compile Include="Collections\IndicacionesLLamadaCollection.cs" />
+    <Compile Include="Collections\LlamadaSoporteCollection.cs" />
+    <Compile Include="Collections\LogCambioUbicacioneCollection.cs" />
+    <Compile Include="Collections\MantenimientosxContratoCollection.cs" />
+    <Compile Include="Collections\MedioSolicitudCollection.cs" />
+    <Compile Include="Collections\ModalidadContratoCollection.cs" />
+    <Compile Include="Collections\ModalidadEquipoCollection.cs" />
+    <Compile Include="Collections\ModeloCollection.cs" />
+    <Compile Include="Collections\ModuloCollection.cs" />
+    <Compile Include="Collections\ModuloSeguridadCollection.cs" />
+    <Compile Include="Collections\ModuloSeguridad_grupoUsuarioCollection.cs" />
+    <Compile Include="Collections\ModuloSeguridad_usuarioCollection.cs" />
+    <Compile Include="Collections\ModulosxGruposUsuarioCollection.cs" />
+    <Compile Include="Collections\ModulosxUsuarioCollection.cs" />
+    <Compile Include="Collections\ObservacionesxOrdenPrestamoCollection.cs" />
+    <Compile Include="Collections\OrdenPrestamoCollection.cs" />
+    <Compile Include="Collections\OrdenServicioCollection.cs" />
+    <Compile Include="Collections\PaiseCollection.cs" />
+    <Compile Include="Collections\ParametrosxCgSmtpAccionCollection.cs" />
+    <Compile Include="Collections\PrioridadCollection.cs" />
+    <Compile Include="Collections\PrioridadesOrdenServicioCollection.cs" />
+    <Compile Include="Collections\PrioridadSolicitudCollection.cs" />
+    <Compile Include="Collections\Problemas_frecuenteCollection.cs" />
+    <Compile Include="Collections\ProgramacionViajeCollection.cs" />
+    <Compile Include="Collections\ReasignacionOrdenesTrabajoCollection.cs" />
+    <Compile Include="Collections\RecoleccionCollection.cs" />
+    <Compile Include="Collections\RegionesXusuarioCollection.cs" />
+    <Compile Include="Collections\RepuestoCollection.cs" />
+    <Compile Include="Collections\RepuestosxContratoCollection.cs" />
+    <Compile Include="Collections\RepuestosxOrdenPrestamoCollection.cs" />
+    <Compile Include="Collections\RepuestoxOrdenServicioCollection.cs" />
+    <Compile Include="Collections\RptCollection.cs" />
+    <Compile Include="Collections\SeguimientoCollection.cs" />
+    <Compile Include="Collections\SmtpServerCollection.cs" />
+    <Compile Include="Collections\SolicitudInsumoCollection.cs" />
+    <Compile Include="Collections\SolicitudServicioCollection.cs" />
+    <Compile Include="Collections\Soluciones_problemaCollection.cs" />
+    <Compile Include="Collections\SubTipoEquipoCollection.cs" />
+    <Compile Include="Collections\SucursalClienteCollection.cs" />
+    <Compile Include="Collections\TaskAdjuntoCollection.cs" />
+    <Compile Include="Collections\TaskCategoriumCollection.cs" />
+    <Compile Include="Collections\TaskCollection.cs" />
+    <Compile Include="Collections\TaskEstatuCollection.cs" />
+    <Compile Include="Collections\TaskPatronRecurrenciumCollection.cs" />
+    <Compile Include="Collections\TaskReminderCollection.cs" />
+    <Compile Include="Collections\TipoComprobanteCollection.cs" />
+    <Compile Include="Collections\TipoContratoCollection.cs" />
+    <Compile Include="Collections\TipoDocumentoCollection.cs" />
+    <Compile Include="Collections\TipoEquipoCollection.cs" />
+    <Compile Include="Collections\TipoFiltroRptCollection.cs" />
+    <Compile Include="Collections\TipoPropiedadCollection.cs" />
+    <Compile Include="Collections\TiposArchivoXequipoCollection.cs" />
+    <Compile Include="Collections\TipoServicioCollection.cs" />
+    <Compile Include="Collections\TituloContactoCollection.cs" />
+    <Compile Include="Collections\TrabajosxReporteServicioCollection.cs" />
+    <Compile Include="Collections\TransportadoraCollection.cs" />
+    <Compile Include="Collections\UnidadPesoCollection.cs" />
+    <Compile Include="Collections\UnidadTiempoCollection.cs" />
+    <Compile Include="Collections\Usuario0Collection.cs" />
+    <Compile Include="Collections\UsuarioCollection.cs" />
+    <Compile Include="Collections\UsuarioCopiaOcultaxSmtpAccionCollection.cs" />
+    <Compile Include="Collections\UsuarioCopiaxSmtpAccionCollection.cs" />
+    <Compile Include="Collections\UsuariosXusuarioCollection.cs" />
+    <Compile Include="Collections\UsuarioxSmtpAccionCollection.cs" />
+    <Compile Include="Collections\VistaEquipoCollection.cs" />
+    <Compile Include="Collections\VistaSucursalCollection.cs" />
+    <Compile Include="Error.cs" />
+    <Compile Include="Factories\AccesoriosEquipoFactory.cs" />
+    <Compile Include="Factories\AccesoriosxEntradaSalidaEquipoFactory.cs" />
+    <Compile Include="Factories\ActividadesxModeloFactory.cs" />
+    <Compile Include="Factories\ActividadxordenServicioFactory.cs" />
+    <Compile Include="Factories\ArchivosxcontratoFactory.cs" />
+    <Compile Include="Factories\ArchivosxEntradaSalidaEquipoFactory.cs" />
+    <Compile Include="Factories\ArchivosXequipoFactory.cs" />
+    <Compile Include="Factories\ArchivosxModeloFactory.cs" />
+    <Compile Include="Factories\ArchivosXOrdenServicioFactory.cs" />
+    <Compile Include="Factories\ArchivosxRecoleccionFactory.cs" />
+    <Compile Include="Factories\AsesoresComercialeFactory.cs" />
+    <Compile Include="Factories\CGQ_ParametrosQueryFactory.cs" />
+    <Compile Include="Factories\CGQ_QueryFactory.cs" />
+    <Compile Include="Factories\CGQ_TipoFiltroFactory.cs" />
+    <Compile Include="Factories\CgSmtpAccionFactory.cs" />
+    <Compile Include="Factories\CgSmtpAdjuntoFactory.cs" />
+    <Compile Include="Factories\CgSmtpEmailCCFactory.cs" />
+    <Compile Include="Factories\CgSmtpEmailCCOFactory.cs" />
+    <Compile Include="Factories\CgSmtpEmailFactory.cs" />
+    <Compile Include="Factories\CgSmtpEmailToFactory.cs" />
+    <Compile Include="Factories\CgSmtpServerCCFactory.cs" />
+    <Compile Include="Factories\CgSmtpServerCCOFactory.cs" />
+    <Compile Include="Factories\CgSmtpServerFactory.cs" />
+    <Compile Include="Factories\CiudadeFactory.cs" />
+    <Compile Include="Factories\ClienteFactory.cs" />
+    <Compile Include="Factories\ComprobantesAceptacionOrdenservicioFactory.cs" />
+    <Compile Include="Factories\ContactosClienteFactory.cs" />
+    <Compile Include="Factories\ContratoFactory.cs" />
+    <Compile Include="Factories\ContratosxEquipoFactory.cs" />
+    <Compile Include="Factories\DepartamentoFactory.cs" />
+    <Compile Include="Factories\DetalleProgramacionViajeFactory.cs" />
+    <Compile Include="Factories\DetalleSolicitudInsumoFactory.cs" />
+    <Compile Include="Factories\EntradaSalidaEquipoFactory.cs" />
+    <Compile Include="Factories\EquipoAuxiliarFactory.cs" />
+    <Compile Include="Factories\EquipoFactory.cs" />
+    <Compile Include="Factories\EstadoFisicamenteFactory.cs" />
+    <Compile Include="Factories\EstadoLocalEquipoFactory.cs" />
+    <Compile Include="Factories\EstadoRecoleccionFactory.cs" />
+    <Compile Include="Factories\EstadosLLamadasTecnicaFactory.cs" />
+    <Compile Include="Factories\EstadosOrdenPrestamoFactory.cs" />
+    <Compile Include="Factories\EstadosOrdenServicioFactory.cs" />
+    <Compile Include="Factories\EstadosSolicitudFactory.cs" />
+    <Compile Include="Factories\FabricanteFactory.cs" />
+    <Compile Include="Factories\FiltrosRptFactory.cs" />
+    <Compile Include="Factories\FotografiumFactory.cs" />
+    <Compile Include="Factories\GruposCopiaOcultaxSmtpAccionFactory.cs" />
+    <Compile Include="Factories\GruposCopiaxSmtpAccionFactory.cs" />
+    <Compile Include="Factories\GrupoSeguridadFactory.cs" />
+    <Compile Include="Factories\GrupoSeguridad_grupoUsuarioFactory.cs" />
+    <Compile Include="Factories\GrupoSeguridad_usuarioFactory.cs" />
+    <Compile Include="Factories\GruposModuloFactory.cs" />
+    <Compile Include="Factories\GruposModulosxGruposUsuarioFactory.cs" />
+    <Compile Include="Factories\GruposModulosxUsuarioFactory.cs" />
+    <Compile Include="Factories\GruposUsuarioFactory.cs" />
+    <Compile Include="Factories\GruposUsuariosxUsuarioFactory.cs" />
+    <Compile Include="Factories\GruposXgrupoFactory.cs" />
+    <Compile Include="Factories\GruposxSmtpAccionFactory.cs" />
+    <Compile Include="Factories\GrupoUsuarioFactory.cs" />
+    <Compile Include="Factories\GrupoUsuario_usuarioFactory.cs" />
+    <Compile Include="Factories\IndicacionesLLamadaFactory.cs" />
+    <Compile Include="Factories\LlamadaSoporteFactory.cs" />
+    <Compile Include="Factories\LogCambioUbicacioneFactory.cs" />
+    <Compile Include="Factories\MantenimientosxContratoFactory.cs" />
+    <Compile Include="Factories\MedioSolicitudFactory.cs" />
+    <Compile Include="Factories\ModalidadContratoFactory.cs" />
+    <Compile Include="Factories\ModalidadEquipoFactory.cs" />
+    <Compile Include="Factories\ModeloFactory.cs" />
+    <Compile Include="Factories\ModuloFactory.cs" />
+    <Compile Include="Factories\ModuloSeguridadFactory.cs" />
+    <Compile Include="Factories\ModuloSeguridad_grupoUsuarioFactory.cs" />
+    <Compile Include="Factories\ModuloSeguridad_usuarioFactory.cs" />
+    <Compile Include="Factories\ModulosxGruposUsuarioFactory.cs" />
+    <Compile Include="Factories\ModulosxUsuarioFactory.cs" />
+    <Compile Include="Factories\ObservacionesxOrdenPrestamoFactory.cs" />
+    <Compile Include="Factories\OrdenPrestamoFactory.cs" />
+    <Compile Include="Factories\OrdenServicioFactory.cs" />
+    <Compile Include="Factories\PaiseFactory.cs" />
+    <Compile Include="Factories\ParametrosxCgSmtpAccionFactory.cs" />
+    <Compile Include="Factories\PrioridadesOrdenServicioFactory.cs" />
+    <Compile Include="Factories\PrioridadFactory.cs" />
+    <Compile Include="Factories\PrioridadSolicitudFactory.cs" />
+    <Compile Include="Factories\Problemas_frecuenteFactory.cs" />
+    <Compile Include="Factories\ProgramacionViajeFactory.cs" />
+    <Compile Include="Factories\ReasignacionOrdenesTrabajoFactory.cs" />
+    <Compile Include="Factories\RecoleccionFactory.cs" />
+    <Compile Include="Factories\RegionesXusuarioFactory.cs" />
+    <Compile Include="Factories\RepuestoFactory.cs" />
+    <Compile Include="Factories\RepuestosxContratoFactory.cs" />
+    <Compile Include="Factories\RepuestosxOrdenPrestamoFactory.cs" />
+    <Compile Include="Factories\RepuestoxOrdenServicioFactory.cs" />
+    <Compile Include="Factories\RptFactory.cs" />
+    <Compile Include="Factories\SeguimientoFactory.cs" />
+    <Compile Include="Factories\SmtpServerFactory.cs" />
+    <Compile Include="Factories\SolicitudInsumoFactory.cs" />
+    <Compile Include="Factories\SolicitudServicioFactory.cs" />
+    <Compile Include="Factories\Soluciones_problemaFactory.cs" />
+    <Compile Include="Factories\SubTipoEquipoFactory.cs" />
+    <Compile Include="Factories\SucursalClienteFactory.cs" />
+    <Compile Include="Factories\TaskAdjuntoFactory.cs" />
+    <Compile Include="Factories\TaskCategoriumFactory.cs" />
+    <Compile Include="Factories\TaskEstatuFactory.cs" />
+    <Compile Include="Factories\TaskFactory.cs" />
+    <Compile Include="Factories\TaskPatronRecurrenciumFactory.cs" />
+    <Compile Include="Factories\TaskReminderFactory.cs" />
+    <Compile Include="Factories\TipoComprobanteFactory.cs" />
+    <Compile Include="Factories\TipoContratoFactory.cs" />
+    <Compile Include="Factories\TipoDocumentoFactory.cs" />
+    <Compile Include="Factories\TipoEquipoFactory.cs" />
+    <Compile Include="Factories\TipoFiltroRptFactory.cs" />
+    <Compile Include="Factories\TipoPropiedadFactory.cs" />
+    <Compile Include="Factories\TiposArchivoXequipoFactory.cs" />
+    <Compile Include="Factories\TipoServicioFactory.cs" />
+    <Compile Include="Factories\TituloContactoFactory.cs" />
+    <Compile Include="Factories\TrabajosxReporteServicioFactory.cs" />
+    <Compile Include="Factories\TransportadoraFactory.cs" />
+    <Compile Include="Factories\UnidadPesoFactory.cs" />
+    <Compile Include="Factories\UnidadTiempoFactory.cs" />
+    <Compile Include="Factories\Usuario0Factory.cs" />
+    <Compile Include="Factories\UsuarioCopiaOcultaxSmtpAccionFactory.cs" />
+    <Compile Include="Factories\UsuarioCopiaxSmtpAccionFactory.cs" />
+    <Compile Include="Factories\UsuarioFactory.cs" />
+    <Compile Include="Factories\UsuariosXusuarioFactory.cs" />
+    <Compile Include="Factories\UsuarioxSmtpAccionFactory.cs" />
+    <Compile Include="Factories\VistaEquipoFactory.cs" />
+    <Compile Include="Factories\VistaSucursalFactory.cs" />
+    <Compile Include="GwValidation.cs" />
+    <Compile Include="NHibernateUtils.cs" />
+    <Compile Include="PropertyComparer.cs" />
+    <Compile Include="SessionFactory.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="ValidationExceptions.cs" />
+    <Reference Include="Castle.Core, Version=2.5.1.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\dll\Terceros\web\Castle.Facilities.NHibernateIntegration-2.0.RC\net40\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\dll\Terceros\web\Castle.Facilities.NHibernateIntegration-2.0.RC\net40\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\dll\Terceros\web\Castle.Facilities.NHibernateIntegration-2.0.RC\net40\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=3.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\dll\Terceros\web\Castle.Facilities.NHibernateIntegration-2.0.RC\net40\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.Castle, Version=3.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\dll\Terceros\web\Castle.Facilities.NHibernateIntegration-2.0.RC\net40\NHibernate.ByteCode.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="XML\AccesoriosEquipo.hbm.xml" />
+    <EmbeddedResource Include="XML\AccesoriosxEntradaSalidaEquipo.hbm.xml" />
+    <EmbeddedResource Include="XML\ActividadesxModelo.hbm.xml" />
+    <EmbeddedResource Include="XML\ActividadxordenServicio.hbm.xml" />
+    <EmbeddedResource Include="XML\Archivosxcontrato.hbm.xml" />
+    <EmbeddedResource Include="XML\ArchivosxEntradaSalidaEquipo.hbm.xml" />
+    <EmbeddedResource Include="XML\ArchivosXequipo.hbm.xml" />
+    <EmbeddedResource Include="XML\ArchivosxModelo.hbm.xml" />
+    <EmbeddedResource Include="XML\ArchivosXOrdenServicio.hbm.xml" />
+    <EmbeddedResource Include="XML\ArchivosxRecoleccion.hbm.xml" />
+    <EmbeddedResource Include="XML\AsesoresComerciale.hbm.xml" />
+    <EmbeddedResource Include="XML\CGQ_ParametrosQuery.hbm.xml" />
+    <EmbeddedResource Include="XML\CGQ_Query.hbm.xml" />
+    <EmbeddedResource Include="XML\CGQ_TipoFiltro.hbm.xml" />
+    <EmbeddedResource Include="XML\CgSmtpAccion.hbm.xml" />
+    <EmbeddedResource Include="XML\CgSmtpAdjunto.hbm.xml" />
+    <EmbeddedResource Include="XML\CgSmtpEmail.hbm.xml" />
+    <EmbeddedResource Include="XML\CgSmtpEmailCC.hbm.xml" />
+    <EmbeddedResource Include="XML\CgSmtpEmailCCO.hbm.xml" />
+    <EmbeddedResource Include="XML\CgSmtpEmailTo.hbm.xml" />
+    <EmbeddedResource Include="XML\CgSmtpServer.hbm.xml" />
+    <EmbeddedResource Include="XML\CgSmtpServerCC.hbm.xml" />
+    <EmbeddedResource Include="XML\CgSmtpServerCCO.hbm.xml" />
+    <EmbeddedResource Include="XML\Ciudade.hbm.xml" />
+    <EmbeddedResource Include="XML\Cliente.hbm.xml" />
+    <EmbeddedResource Include="XML\ComprobantesAceptacionOrdenservicio.hbm.xml" />
+    <EmbeddedResource Include="XML\ContactosCliente.hbm.xml" />
+    <EmbeddedResource Include="XML\Contrato.hbm.xml" />
+    <EmbeddedResource Include="XML\ContratosxEquipo.hbm.xml" />
+    <EmbeddedResource Include="XML\Departamento.hbm.xml" />
+    <EmbeddedResource Include="XML\DetalleProgramacionViaje.hbm.xml" />
+    <EmbeddedResource Include="XML\DetalleSolicitudInsumo.hbm.xml" />
+    <EmbeddedResource Include="XML\EntradaSalidaEquipo.hbm.xml" />
+    <EmbeddedResource Include="XML\Equipo.hbm.xml" />
+    <EmbeddedResource Include="XML\EquipoAuxiliar.hbm.xml" />
+    <EmbeddedResource Include="XML\EstadoFisicamente.hbm.xml" />
+    <EmbeddedResource Include="XML\EstadoLocalEquipo.hbm.xml" />
+    <EmbeddedResource Include="XML\EstadoRecoleccion.hbm.xml" />
+    <EmbeddedResource Include="XML\EstadosLLamadasTecnica.hbm.xml" />
+    <EmbeddedResource Include="XML\EstadosOrdenPrestamo.hbm.xml" />
+    <EmbeddedResource Include="XML\EstadosOrdenServicio.hbm.xml" />
+    <EmbeddedResource Include="XML\EstadosSolicitud.hbm.xml" />
+    <EmbeddedResource Include="XML\Fabricante.hbm.xml" />
+    <EmbeddedResource Include="XML\FiltrosRpt.hbm.xml" />
+    <EmbeddedResource Include="XML\Fotografium.hbm.xml" />
+    <EmbeddedResource Include="XML\GruposCopiaOcultaxSmtpAccion.hbm.xml" />
+    <EmbeddedResource Include="XML\GruposCopiaxSmtpAccion.hbm.xml" />
+    <EmbeddedResource Include="XML\GrupoSeguridad.hbm.xml" />
+    <EmbeddedResource Include="XML\GrupoSeguridad_grupoUsuario.hbm.xml" />
+    <EmbeddedResource Include="XML\GrupoSeguridad_usuario.hbm.xml" />
+    <EmbeddedResource Include="XML\GruposModulo.hbm.xml" />
+    <EmbeddedResource Include="XML\GruposModulosxGruposUsuario.hbm.xml" />
+    <EmbeddedResource Include="XML\GruposModulosxUsuario.hbm.xml" />
+    <EmbeddedResource Include="XML\GruposUsuario.hbm.xml" />
+    <EmbeddedResource Include="XML\GruposUsuariosxUsuario.hbm.xml" />
+    <EmbeddedResource Include="XML\GruposXgrupo.hbm.xml" />
+    <EmbeddedResource Include="XML\GruposxSmtpAccion.hbm.xml" />
+    <EmbeddedResource Include="XML\GrupoUsuario.hbm.xml" />
+    <EmbeddedResource Include="XML\GrupoUsuario_usuario.hbm.xml" />
+    <EmbeddedResource Include="XML\IndicacionesLLamada.hbm.xml" />
+    <EmbeddedResource Include="XML\LlamadaSoporte.hbm.xml" />
+    <EmbeddedResource Include="XML\LogCambioUbicacione.hbm.xml" />
+    <EmbeddedResource Include="XML\MantenimientosxContrato.hbm.xml" />
+    <EmbeddedResource Include="XML\MedioSolicitud.hbm.xml" />
+    <EmbeddedResource Include="XML\ModalidadContrato.hbm.xml" />
+    <EmbeddedResource Include="XML\ModalidadEquipo.hbm.xml" />
+    <EmbeddedResource Include="XML\Modelo.hbm.xml" />
+    <EmbeddedResource Include="XML\Modulo.hbm.xml" />
+    <EmbeddedResource Include="XML\ModuloSeguridad.hbm.xml" />
+    <EmbeddedResource Include="XML\ModuloSeguridad_grupoUsuario.hbm.xml" />
+    <EmbeddedResource Include="XML\ModuloSeguridad_usuario.hbm.xml" />
+    <EmbeddedResource Include="XML\ModulosxGruposUsuario.hbm.xml" />
+    <EmbeddedResource Include="XML\ModulosxUsuario.hbm.xml" />
+    <EmbeddedResource Include="XML\ObservacionesxOrdenPrestamo.hbm.xml" />
+    <EmbeddedResource Include="XML\OrdenPrestamo.hbm.xml" />
+    <EmbeddedResource Include="XML\OrdenServicio.hbm.xml" />
+    <EmbeddedResource Include="XML\Paise.hbm.xml" />
+    <EmbeddedResource Include="XML\ParametrosxCgSmtpAccion.hbm.xml" />
+    <EmbeddedResource Include="XML\Prioridad.hbm.xml" />
+    <EmbeddedResource Include="XML\PrioridadesOrdenServicio.hbm.xml" />
+    <EmbeddedResource Include="XML\PrioridadSolicitud.hbm.xml" />
+    <EmbeddedResource Include="XML\Problemas_frecuente.hbm.xml" />
+    <EmbeddedResource Include="XML\ProgramacionViaje.hbm.xml" />
+    <EmbeddedResource Include="XML\ReasignacionOrdenesTrabajo.hbm.xml" />
+    <EmbeddedResource Include="XML\Recoleccion.hbm.xml" />
+    <EmbeddedResource Include="XML\RegionesXusuario.hbm.xml" />
+    <EmbeddedResource Include="XML\Repuesto.hbm.xml" />
+    <EmbeddedResource Include="XML\RepuestosxContrato.hbm.xml" />
+    <EmbeddedResource Include="XML\RepuestosxOrdenPrestamo.hbm.xml" />
+    <EmbeddedResource Include="XML\RepuestoxOrdenServicio.hbm.xml" />
+    <EmbeddedResource Include="XML\Rpt.hbm.xml" />
+    <EmbeddedResource Include="XML\Seguimiento.hbm.xml" />
+    <EmbeddedResource Include="XML\SmtpServer.hbm.xml" />
+    <EmbeddedResource Include="XML\SolicitudInsumo.hbm.xml" />
+    <EmbeddedResource Include="XML\SolicitudServicio.hbm.xml" />
+    <EmbeddedResource Include="XML\Soluciones_problema.hbm.xml" />
+    <EmbeddedResource Include="XML\SubTipoEquipo.hbm.xml" />
+    <EmbeddedResource Include="XML\SucursalCliente.hbm.xml" />
+    <EmbeddedResource Include="XML\Task.hbm.xml" />
+    <EmbeddedResource Include="XML\TaskAdjunto.hbm.xml" />
+    <EmbeddedResource Include="XML\TaskCategorium.hbm.xml" />
+    <EmbeddedResource Include="XML\TaskEstatu.hbm.xml" />
+    <EmbeddedResource Include="XML\TaskPatronRecurrencium.hbm.xml" />
+    <EmbeddedResource Include="XML\TaskReminder.hbm.xml" />
+    <EmbeddedResource Include="XML\TipoComprobante.hbm.xml" />
+    <EmbeddedResource Include="XML\TipoContrato.hbm.xml" />
+    <EmbeddedResource Include="XML\TipoDocumento.hbm.xml" />
+    <EmbeddedResource Include="XML\TipoEquipo.hbm.xml" />
+    <EmbeddedResource Include="XML\TipoFiltroRpt.hbm.xml" />
+    <EmbeddedResource Include="XML\TipoPropiedad.hbm.xml" />
+    <EmbeddedResource Include="XML\TiposArchivoXequipo.hbm.xml" />
+    <EmbeddedResource Include="XML\TipoServicio.hbm.xml" />
+    <EmbeddedResource Include="XML\TituloContacto.hbm.xml" />
+    <EmbeddedResource Include="XML\TrabajosxReporteServicio.hbm.xml" />
+    <EmbeddedResource Include="XML\Transportadora.hbm.xml" />
+    <EmbeddedResource Include="XML\UnidadPeso.hbm.xml" />
+    <EmbeddedResource Include="XML\UnidadTiempo.hbm.xml" />
+    <EmbeddedResource Include="XML\Usuario.hbm.xml" />
+    <EmbeddedResource Include="XML\Usuario0.hbm.xml" />
+    <EmbeddedResource Include="XML\UsuarioCopiaOcultaxSmtpAccion.hbm.xml" />
+    <EmbeddedResource Include="XML\UsuarioCopiaxSmtpAccion.hbm.xml" />
+    <EmbeddedResource Include="XML\UsuariosXusuario.hbm.xml" />
+    <EmbeddedResource Include="XML\UsuarioxSmtpAccion.hbm.xml" />
+    <EmbeddedResource Include="XML\VistaEquipo.hbm.xml" />
+    <EmbeddedResource Include="XML\VistaSucursal.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dll\Castle.Core.dll" />
+    <Content Include="dll\Iesi.Collections.dll" />
+    <Content Include="dll\log4net.dll" />
+    <Content Include="dll\NHibernate.ByteCode.Castle.dll" />
+    <Content Include="dll\NHibernate.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

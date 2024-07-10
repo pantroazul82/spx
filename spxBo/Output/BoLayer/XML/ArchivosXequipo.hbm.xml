@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="ArchivosXequipo" 
+ table="[dbo].[archivosXequipo]" 
+>
+<composite-id unsaved-value="any"
+ >
+<key-property 
+name="Serial"
+column="`serial`"
+type="System.String"
+length="30"
+>
+</key-property>
+<key-property 
+name="CodArchivo"
+column="`codArchivo`"
+type="System.Int32"
+>
+</key-property>
+</composite-id> 
+<property
+name="NombreArchivo"
+column="`nombreArchivo`"
+type="System.String"
+length="150"
+    >
+</property>
+<property
+name="Descripcion"
+column="`descripcion`"
+type="System.String"
+length="250"
+    >
+</property>
+<property
+name="CodTipoArchivoxEquipo"
+column="`codTipoArchivoxEquipo`"
+type="System.String"
+length="5"
+    >
+</property>
+<many-to-one
+ name="Equipo" 
+ class="Equipo" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`serial`" />
+</many-to-one>
+<many-to-one
+ name="TiposArchivoXequipo" 
+ class="TiposArchivoXequipo" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codTipoArchivoxEquipo`" />
+</many-to-one>
+</class>
+</hibernate-mapping>
+

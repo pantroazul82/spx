@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="Contrato" 
+ table="[dbo].[contratos]" 
+>
+<composite-id unsaved-value="any"
+ >
+<key-property 
+name="NumeroContrato"
+column="`numeroContrato`"
+type="System.String"
+length="40"
+>
+</key-property>
+<key-property 
+name="CodOtroSI"
+column="`codOtroSI`"
+type="System.Int32"
+>
+</key-property>
+</composite-id> 
+<property
+name="NitCliente"
+column="`nitCliente`"
+type="System.String"
+length="20"
+    >
+</property>
+<property
+name="CodTipoContrato"
+column="`codTipoContrato`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="IncluyeRepuestos"
+column="`incluyeRepuestos`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="NumeroMantenimientos"
+column="`NumeroMantenimientos`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="IncluyeTiquetes"
+column="`incluyeTiquetes`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="TienePolizaConsumoMinimo"
+column="`tienePolizaConsumoMinimo`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="ConsumoMinimoxLinea"
+column="`consumoMinimoxLinea`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="ConsumoMinimoGeneral"
+column="`consumoMinimoGeneral`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="ConsumoMinimoTotalLinea"
+column="`consumoMinimoTotalLinea`"
+type="System.Nullable`1[System.Decimal]"
+    >
+</property>
+<property
+name="ConsumoMinimoAcordado"
+column="`consumoMinimoAcordado`"
+type="System.Nullable`1[System.Decimal]"
+    >
+</property>
+<property
+name="FechaInicioContrato"
+column="`fechaInicioContrato`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="MesesxMantenimiento"
+column="`mesesxMantenimiento`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="Observaciones"
+column="`Observaciones`"
+type="System.String"
+    >
+</property>
+<property
+name="FechaFinContrato"
+column="`fechaFinContrato`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="TimeRptaDiasHabiles"
+column="`timeRptaDiasHabiles`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="TimeRptaHorasHabiles"
+column="`timeRptaHorasHabiles`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="PorcentajeTiquetes"
+column="`porcentajeTiquetes`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="CodModalidadContrato"
+column="`codModalidadContrato`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="MontoContrato"
+column="`montoContrato`"
+type="System.Nullable`1[System.Decimal]"
+    >
+</property>
+<property
+name="LoginCreacion"
+column="`loginCreacion`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="FechaCreacion"
+column="`fechaCreacion`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<many-to-one
+ name="Cliente" 
+ class="Cliente" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`nitCliente`" />
+</many-to-one>
+<many-to-one
+ name="ModalidadContrato" 
+ class="ModalidadContrato" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codModalidadContrato`" />
+<column name="`codTipoContrato`" />
+</many-to-one>
+<many-to-one
+ name="TipoContrato" 
+ class="TipoContrato" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codTipoContrato`" />
+</many-to-one>
+<bag name="Archivosxcontratos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`numeroContrato`" />
+ <column name= "`codOtroSi`" />
+</key>
+<one-to-many class="Archivosxcontrato" />
+</bag>
+<bag name="ContratosxEquipos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`numeroContrato`" />
+ <column name= "`codOtroSi`" />
+</key>
+<one-to-many class="ContratosxEquipo" />
+</bag>
+<bag name="MantenimientosxContratos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`numeroContrato`" />
+ <column name= "`codotroSi`" />
+</key>
+<one-to-many class="MantenimientosxContrato" />
+</bag>
+<bag name="RepuestosxContratos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`numeroContrato`" />
+ <column name= "`codOtroSi`" />
+</key>
+<one-to-many class="RepuestosxContrato" />
+</bag>
+</class>
+</hibernate-mapping>
+

@@ -1,0 +1,99 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33529.622
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SPControladoraDatos", "SupportTech X\SPControladoraDatos\SPControladoraDatos.csproj", "{D588F19E-9FE5-4E58-9D1D-51F8B3D1069A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web2020", "Web2020\Web2020.csproj", "{29BEBE2E-0D6F-4D0A-87C5-82950C69262C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BOLayer", "spxBo\Output\BoLayer\BOLayer.csproj", "{F094CF11-600F-4018-997E-7458A79A926F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spxBussines", "spxBussines\spxBussines.csproj", "{837D1F69-E915-4BE0-9337-EEA13BB1F6FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D588F19E-9FE5-4E58-9D1D-51F8B3D1069A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D588F19E-9FE5-4E58-9D1D-51F8B3D1069A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D588F19E-9FE5-4E58-9D1D-51F8B3D1069A}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{D588F19E-9FE5-4E58-9D1D-51F8B3D1069A}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{D588F19E-9FE5-4E58-9D1D-51F8B3D1069A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D588F19E-9FE5-4E58-9D1D-51F8B3D1069A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D588F19E-9FE5-4E58-9D1D-51F8B3D1069A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D588F19E-9FE5-4E58-9D1D-51F8B3D1069A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{D588F19E-9FE5-4E58-9D1D-51F8B3D1069A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{D588F19E-9FE5-4E58-9D1D-51F8B3D1069A}.Release|x86.ActiveCfg = Release|Any CPU
+		{29BEBE2E-0D6F-4D0A-87C5-82950C69262C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29BEBE2E-0D6F-4D0A-87C5-82950C69262C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29BEBE2E-0D6F-4D0A-87C5-82950C69262C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{29BEBE2E-0D6F-4D0A-87C5-82950C69262C}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{29BEBE2E-0D6F-4D0A-87C5-82950C69262C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{29BEBE2E-0D6F-4D0A-87C5-82950C69262C}.Debug|x86.Build.0 = Debug|Any CPU
+		{29BEBE2E-0D6F-4D0A-87C5-82950C69262C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29BEBE2E-0D6F-4D0A-87C5-82950C69262C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29BEBE2E-0D6F-4D0A-87C5-82950C69262C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{29BEBE2E-0D6F-4D0A-87C5-82950C69262C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{29BEBE2E-0D6F-4D0A-87C5-82950C69262C}.Release|x86.ActiveCfg = Release|Any CPU
+		{29BEBE2E-0D6F-4D0A-87C5-82950C69262C}.Release|x86.Build.0 = Release|Any CPU
+		{F094CF11-600F-4018-997E-7458A79A926F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F094CF11-600F-4018-997E-7458A79A926F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F094CF11-600F-4018-997E-7458A79A926F}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{F094CF11-600F-4018-997E-7458A79A926F}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{F094CF11-600F-4018-997E-7458A79A926F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F094CF11-600F-4018-997E-7458A79A926F}.Debug|x86.Build.0 = Debug|Any CPU
+		{F094CF11-600F-4018-997E-7458A79A926F}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{F094CF11-600F-4018-997E-7458A79A926F}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{F094CF11-600F-4018-997E-7458A79A926F}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{F094CF11-600F-4018-997E-7458A79A926F}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+		{F094CF11-600F-4018-997E-7458A79A926F}.Release|x86.ActiveCfg = Debug|Any CPU
+		{F094CF11-600F-4018-997E-7458A79A926F}.Release|x86.Build.0 = Debug|Any CPU
+		{837D1F69-E915-4BE0-9337-EEA13BB1F6FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{837D1F69-E915-4BE0-9337-EEA13BB1F6FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{837D1F69-E915-4BE0-9337-EEA13BB1F6FE}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{837D1F69-E915-4BE0-9337-EEA13BB1F6FE}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{837D1F69-E915-4BE0-9337-EEA13BB1F6FE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{837D1F69-E915-4BE0-9337-EEA13BB1F6FE}.Debug|x86.Build.0 = Debug|Any CPU
+		{837D1F69-E915-4BE0-9337-EEA13BB1F6FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{837D1F69-E915-4BE0-9337-EEA13BB1F6FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{837D1F69-E915-4BE0-9337-EEA13BB1F6FE}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{837D1F69-E915-4BE0-9337-EEA13BB1F6FE}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{837D1F69-E915-4BE0-9337-EEA13BB1F6FE}.Release|x86.ActiveCfg = Release|Any CPU
+		{837D1F69-E915-4BE0-9337-EEA13BB1F6FE}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+		SolutionGuid = {D9DB2CEF-53C5-40A5-94F7-12581BAD98A2}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/kuxancol
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SupportTech\u0020X\\SPControladoraDatos\\SPControladoraDatos.csproj
+		SccProjectName1 = SupportTech\u0020X/SPControladoraDatos
+		SccLocalPath1 = SupportTech\u0020X\\SPControladoraDatos
+		SccProjectUniqueName2 = Web2020\\Web2020.csproj
+		SccProjectName2 = Web2020
+		SccLocalPath2 = Web2020
+		SccProjectUniqueName3 = spxBo\\Output\\BoLayer\\BOLayer.csproj
+		SccProjectName3 = spxBo/Output/BoLayer
+		SccLocalPath3 = spxBo\\Output\\BoLayer
+		SccProjectUniqueName4 = spxBussines\\spxBussines.csproj
+		SccProjectName4 = spxBussines
+		SccLocalPath4 = spxBussines
+	EndGlobalSection
+	GlobalSection(PowerDesigner) = preSolution
+		HasSWS = 1
+	EndGlobalSection
+EndGlobal

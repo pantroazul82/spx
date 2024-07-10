@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="Modulo" 
+ table="[dbo].[modulos]" 
+>
+<id name="CodModulo"
+ column="`codModulo`"
+ type="System.String"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="CodGrupoModulo"
+column="`codGrupoModulo`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="NombreMod"
+column="`nombreMod`"
+type="System.String"
+length="100"
+    >
+</property>
+<property
+name="LinkMod"
+column="`linkMod`"
+type="System.String"
+length="300"
+    >
+</property>
+<property
+name="DescripcionMod"
+column="`descripcionMod`"
+type="System.String"
+    >
+</property>
+<property
+name="EsDeshabilitado"
+column="`esDeshabilitado`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<many-to-one
+ name="GruposModulo" 
+ class="GruposModulo" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codGrupoModulo`" />
+</many-to-one>
+<bag name="ModulosxGruposUsuarios"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codModulo`" />
+</key>
+<one-to-many class="ModulosxGruposUsuario" />
+</bag>
+<bag name="ModulosxUsuarios"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codModulo`" />
+</key>
+<one-to-many class="ModulosxUsuario" />
+</bag>
+</class>
+</hibernate-mapping>
+

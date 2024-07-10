@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="TipoEquipo" 
+ table="[dbo].[tipoEquipo]" 
+>
+<id name="CodTipoEquipo"
+ column="`codTipoEquipo`"
+ type="System.String"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="NombreTipoEquipo"
+column="`nombreTipoEquipo`"
+type="System.String"
+length="30"
+    >
+</property>
+<bag name="SubTipoEquipos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codTipoEquipo`" />
+</key>
+<one-to-many class="SubTipoEquipo" />
+</bag>
+</class>
+</hibernate-mapping>
+

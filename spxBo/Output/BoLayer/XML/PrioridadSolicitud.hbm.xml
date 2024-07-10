@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="PrioridadSolicitud" 
+ table="[dbo].[prioridadSolicitud]" 
+>
+<id name="CodPrioridadSolicitud"
+ column="`codPrioridadSolicitud`"
+ type="System.Int32"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="DescripcionPrioridad"
+column="`descripcionPrioridad`"
+type="System.String"
+length="10"
+    >
+</property>
+<bag name="SolicitudServicios"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codPrioridadSolicitud`" />
+</key>
+<one-to-many class="SolicitudServicio" />
+</bag>
+</class>
+</hibernate-mapping>
+

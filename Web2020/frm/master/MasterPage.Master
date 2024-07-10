@@ -1,0 +1,169 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="Web2020.frm.master.MasterPage" %>
+
+<!DOCTYPE html>
+<html lang="es">
+<head runat="server">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<title>SPX - Soporte Tecnico</title>
+
+<!-- Bootstrap -->
+<link href="../../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+<link href="../../assets/css/font-awesome.min.css" rel="stylesheet">
+<link href="../../assets/css/style.css" rel="stylesheet">
+<link href="../../assets/css/style-responsive.css" rel="stylesheet">
+<link href="../../assets/plugins/bootstrap-fileupload/bootstrap-fileupload.min.css" rel="stylesheet">
+<link href="../../assets/plugins/dropzone/dropzone.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../../assets/plugins/bootstrap-datepicker/css/datepicker.css" />
+<link rel="stylesheet" type="text/css" href="../../assets/plugins/bootstrap-timepicker/compiled/timepicker.css" />
+<link rel="stylesheet" type="text/css" href="../../assets/plugins/bootstrap-colorpicker/css/colorpicker.css" />
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<asp:ContentPlaceHolder runat="server" id="headerPlaceHolder">
+</asp:ContentPlaceHolder>
+ 
+
+
+</head>
+<body class="light-theme">
+
+    <form id="form2" runat="server"> 
+        	<asp:ScriptManager ID="ScriptManager1" runat="server" EnableScriptGlobalization="true"  EnablePageMethods="True" />
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="display: contents; ">
+  <div class="navbar-inner">
+    <div class="header-seperation">
+      <ul class="nav navbar-nav">
+        <li class="sidebar-toggle-box"> <a href="#"><i class="fa fa-bars"></i></a> </li>
+        <li> <a href="../../default.aspx"><strong>SPX</strong></a> </li>
+        <li class="hidden-xs">
+          <div class="hov">
+                <div class="btn-group">
+                    <div style="min-width:70px;"></div>
+                </div>
+            <div class="btn-group"> <a data-toggle="dropdown" href="" class="con"><span class="fa fa-user"></span></a>
+              <ul role="menu" class="dropdown-menu pull-right dropdown-profile">
+                <li class="title"><span class="icon icon-user"></span>&nbsp;&nbsp;Opciones de usuario</li>
+
+                <li><a  href="../../frm/logica/frmCambiarPassword.aspx"><span class="fa fa-envelope"></span>Cambiar Password</a></li>
+                  
+                <li></li>
+                <li>
+                        <asp:LinkButton  runat="server" ID="btnSalir" OnClick="btnSalir_click">Salir</asp:LinkButton>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+     
+        <li>
+              <asp:LinkButton  runat="server"  onclick="btnSalir_click">Salir <i class="fa fa-angle-double-right"></i></asp:LinkButton>
+        </li>
+      </ul><!--/nav navbar-nav--> 
+    </div><!--/header-seperation--> 
+  </div><!--/navbar-inner--> 
+</nav><!--/header-->
+
+<div class="page-container">
+  <div class="nav-collapse fixed box-shadow2 hidden-xs" id="sidebar">
+    <div class="leftside-navigation">
+      <div class="sidebar-section sidebar-user clearfix">
+        <div class="sidebar-user-avatar"> <a href="#"> <img alt="avatar" src="../../assets/images/avatar1.jpg"> </div>
+        <div class="sidebar-user-name">
+	<asp:Label ID="lblNombre" runat="server" Text="" ForeColor="Black" Font-Bold="true"></asp:Label>
+
+        </div>
+        <div class="sidebar-user-links">
+             <a title="" data-placement="bottom" data-toggle="" href="../../frm/logica/frmCambiarPassword.aspx" data-original-title="User"><i class="fa fa-user"></i></a>
+             <a title="" data-placement="bottom" data-toggle="" href="../../frm/logica/frmLogoOut.aspx" data-original-title="Logout"><i class="fa fa-sign-out"></i></a> 
+
+        </div>
+      </div>
+      <ul id="nav-accordion" class="sidebar-menu">
+     <asp:ListView ID="lstEvento" runat="server">
+    <ItemTemplate>
+    <li class="sub-menu dcjq-parent-li">
+         <a href="javascript:;" class="dcjq-parent"> <i class="fa fa-tasks"></i> 
+          <span><%#Eval("Nombre") %></span></a>
+            <ul class="sub" style="display: none;">
+                <asp:ListView ID="ListView1" runat="server" DataSource='<%# Eval("MenuActividades") %>'>
+                  <ItemTemplate>
+                      <li>
+                          <a class="active" href='<%# Eval("URL") %>'><i class="fa fa-angle-right"></i><%# Eval("Nombre") %></a>
+                      </li>
+                   </ItemTemplate>
+                </asp:ListView>        
+            </ul>
+      </li>
+          </ItemTemplate>
+          </asp:ListView>
+
+
+                              <!--/      <li class='< verClase(Eval("Nombre")) %>' >--> 
+	                        	      
+  
+     
+    </ul><!--/nav-accordion sidebar-menu--> 
+    </div><!--/leftside-navigation--> 
+  </div><!--/sidebar-->
+  
+  <div id="main-content">
+    <div class="page-content">
+        <asp:PlaceHolder runat="server" ID="pnlFuturo" Visible="false">
+
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Supportech Software para gestion de talleres de ingenieria</h2>
+        </div><!--/col-md-12--> 
+      </div><!--/row-->
+        </asp:PlaceHolder>
+      
+      <div class="row">
+        <div class="col-md-12">
+          <div class="block-web">
+              	<asp:ContentPlaceHolder  id="ContentPlaceHolder1" runat="server">
+		
+		</asp:ContentPlaceHolder>
+          </div><!--/block-web--> 
+        </div><!--/col-md-6-->
+      </div><!--/row-->
+        
+
+    </div><!--/page-content end--> 
+  </div><!--/main-content end--> 
+</div><!--/page-container end--> 
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="../../assets/js/jquery-2.0.2.min.js"></script> 
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="../../assets/bootstrap/js/bootstrap.min.js"></script> 
+<script src="../../assets/js/accordion.js"></script> 
+<script src="../../assets/js/common-script.js"></script> 
+<script src="../../assets/js/jquery.nicescroll.js"></script>
+<script type="text/javascript" src="../../assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script> 
+<script type="text/javascript" src="../../assets/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script> 
+<script type="text/javascript" src="../../assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script> 
+<script type="text/javascript" src="../../assets/plugins/bootstrap-timepicker/js/bootstrap-timepicker.js"></script> 
+<script type="text/javascript" src="../../assets/js/form-components.js"></script> 
+<script type="text/javascript"  src="../../assets/plugins/input-mask/jquery.inputmask.min.js"></script> 
+<script type="text/javascript"  src="../../assets/plugins/input-mask/demo-mask.js"></script> 
+<script type="text/javascript"  src="../../assets/plugins/toggle-switch/toggles.min.js"></script> 
+<script type="text/javascript"  src="../../assets/plugins/bootstrap-fileupload/bootstrap-fileupload.min.js"></script> 
+<script type="text/javascript"  src="../../assets/plugins/dropzone/dropzone.min.js"></script> 
+<script type="text/javascript"  src="../../assets/plugins/bootstrap-wizard/bootstrap-wizard.min.js"></script> 
+<script type="text/javascript" src="../../assets/plugins/ckeditor/ckeditor.js"></script> 
+<script type="text/javascript"  src="../../assets/js/form-wizard.js"></script> 
+
+
+        </form>
+
+</body>
+</html>

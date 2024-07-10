@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="TaskPatronRecurrencium" 
+ table="[dbo].[taskPatronRecurrencia]" 
+>
+<composite-id unsaved-value="any"
+ >
+<key-property 
+name="CodTarea"
+column="`codTarea`"
+type="System.Int32"
+>
+</key-property>
+<key-property 
+name="CodPatron"
+column="`codPatron`"
+type="System.Int32"
+>
+</key-property>
+</composite-id> 
+<property
+name="Diaria"
+column="`diaria`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="DiariaCada"
+column="`diariaCada`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="DiariaCadaDias"
+column="`diariaCadaDias`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="DiariaSemanal"
+column="`diariaSemanal`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="Semanal"
+column="`semanal`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="SemLunes"
+column="`semLunes`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="SemMartes"
+column="`semMartes`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="SemMiercoles"
+column="`semMiercoles`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="SemJueves"
+column="`semJueves`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="SemViernes"
+column="`semViernes`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="SemSabado"
+column="`semSabado`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="SemDomingo"
+column="`semDomingo`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="Mensual"
+column="`Mensual`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="MenElDia"
+column="`menElDia`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="MenEldiaDia"
+column="`menEldiaDia`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="MenEldiaCada"
+column="`menEldiaCada`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="MenEl"
+column="`menEl`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="MenElOrdenDia"
+column="`menElOrdenDia`"
+type="System.String"
+length="20"
+    >
+</property>
+<property
+name="MenElNombreDia"
+column="`menElNombreDia`"
+type="System.String"
+length="20"
+    >
+</property>
+<property
+name="MenElCada"
+column="`menElCada`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="Anual"
+column="`anual`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="AnuCada"
+column="`anuCada`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="AnuCadaMes"
+column="`anuCadaMes`"
+type="System.String"
+length="20"
+    >
+</property>
+<property
+name="AnuCadaDia"
+column="`anuCadaDia`"
+type="System.String"
+length="20"
+    >
+</property>
+<property
+name="AnuEl"
+column="`anuEl`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="AnuElOrden"
+column="`anuElOrden`"
+type="System.String"
+length="20"
+    >
+</property>
+<property
+name="AnuElDia"
+column="`anuElDia`"
+type="System.String"
+length="20"
+    >
+</property>
+<property
+name="AnuElMes"
+column="`anuElMes`"
+type="System.String"
+length="20"
+    >
+</property>
+<property
+name="Inicia"
+column="`inicia`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="SinFechaFin"
+column="`sinFechaFin`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="FinalizaDespues"
+column="`finalizaDespues`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="FinalizaOcurrencias"
+column="`finalizaOcurrencias`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="FinalizaElDia"
+column="`finalizaElDia`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="FinalizaDia"
+column="`finalizaDia`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="UltimoAviso"
+column="`ultimoAviso`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<many-to-one
+ name="Task" 
+ class="Task" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codTarea`" />
+</many-to-one>
+</class>
+</hibernate-mapping>
+

@@ -1,0 +1,79 @@
+﻿.titulo
+{
+	/*border: solid 2px #000000 !important;*/
+	font-family:Georgia;
+	font-size:30px !important;
+	color:#780001;
+	/*
+	background-color:#003366;
+    */	
+    text-align:left;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	margin-top: 10px;
+	padding: 3px 3px 3px 10px;
+	width: 50%;
+}
+.enunciado
+{
+	background: #FFFFFF;
+	font-size:12px;
+	font-family:Georgia;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	margin-top: 0px;
+	padding: 3px 3px 3px 3px;
+	width: 80%;
+	text-align:left;
+}
+
+.panelconsulta
+{
+	border: solid 1px #113581;
+	font-size:12px;
+	margin-left: 0px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	padding: 3px 3px 3px 5px;
+	width: 350px;
+	height:30px;
+	text-align:left;
+	background-color:#5D84B4;
+}
+
+.grid
+{
+	font-size:10px !important;
+	font-family:Georgia !important;
+    margin-bottom:100px;
+	margin-left: 0px;
+	margin-top: -305px;
+	text-align :left;
+}
+
+.gridzonas
+{
+	font-size:10px !important;
+	font-family:Georgia !important;
+	margin-left: 10px;
+	margin-top: -380px;
+	text-align :left;
+	height:300px;
+}
+
+
+.publicidad
+{
+	border: solid 1px #003366;
+	font-size:11px;
+	margin-left: 805px;
+	margin-top: -126px;
+	width: 145px;
+	height:500px;
+}
+
+.GENERAL {
+	font-family: "Trebuchet MS", Tahoma, Helvetica, Arial, Verdana;
+	font-size: 12px;
+	color: #000000;
+}

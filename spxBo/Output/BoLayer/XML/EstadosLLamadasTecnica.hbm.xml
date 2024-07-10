@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="EstadosLLamadasTecnica" 
+ table="[dbo].[estadosLLamadasTecnicas]" 
+>
+<id name="CodEstadoLlamada"
+ column="`codEstadoLlamada`"
+ type="System.String"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="NombreEstado"
+column="`nombreEstado`"
+type="System.String"
+length="30"
+    >
+</property>
+<bag name="LlamadaSoportes"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codEstadoLLamadaTecnica`" />
+</key>
+<one-to-many class="LlamadaSoporte" />
+</bag>
+</class>
+</hibernate-mapping>
+

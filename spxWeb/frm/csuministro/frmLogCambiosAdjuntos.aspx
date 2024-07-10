@@ -1,0 +1,54 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/frm/master/MasterPage.master" AutoEventWireup="true" CodeFile="frmLogCambiosAdjuntos.aspx.cs" Inherits="frm_csuministro_frmLogCambiosAdjuntos" %>
+
+<%@ Register assembly="DevExpress.Web.v17.2, Version=17.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web" tagprefix="dx" %>
+
+
+<asp:Content ID="Content1" ContentPlaceHolderID="headerPlaceHolder" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <br />
+    <br />
+    Log de cambios del adjunto
+    <asp:Button runat="server" ID="btnVolver" Text="Volver" OnClick="btnVolver_Click" />
+    <dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
+        <Columns>
+            <dx:GridViewDataDateColumn FieldName="fecha_cambio" VisibleIndex="0">
+            </dx:GridViewDataDateColumn>
+            <dx:GridViewDataTextColumn FieldName="Usuario" VisibleIndex="1">
+            </dx:GridViewDataTextColumn>
+            <dx:GridViewDataTextColumn FieldName="observaciones_cambio" VisibleIndex="2">
+            </dx:GridViewDataTextColumn>
+            <dx:GridViewDataTextColumn FieldName="estado_inicial" VisibleIndex="3">
+            </dx:GridViewDataTextColumn>
+            <dx:GridViewDataTextColumn FieldName="estado_final" VisibleIndex="4">
+            </dx:GridViewDataTextColumn>
+            <dx:GridViewDataTextColumn FieldName="horas" VisibleIndex="5">
+            </dx:GridViewDataTextColumn>
+            <dx:GridViewDataTextColumn FieldName="minutos" VisibleIndex="6">
+            </dx:GridViewDataTextColumn>
+        </Columns>
+        <SettingsPager Visible="False">
+        </SettingsPager>
+        <SettingsDataSecurity AllowDelete="False" AllowEdit="False" AllowInsert="False" />
+    </dx:ASPxGridView>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:spxConnectionString %>" SelectCommand="select 
+fecha_cambio,usuario.nombre 'Usuario',observaciones_cambio,
+estado_adjunto_contrato_suministro.nombre_estado_contrato 'estado_inicial',
+fin.nombre_estado_contrato 'estado_final',
+horas,minutos
+ from log_cambios_estado_adjuntos_suministro
+ join usuario on usuario.cod_usuario = log_cambios_estado_adjuntos_suministro.usuario_cambio
+ join estado_adjunto_contrato_suministro on estado_adjunto_contrato_suministro.cod_estado_adjunto_contrato_suministro =
+ log_cambios_estado_adjuntos_suministro.cod_estado_adjunto_contrato_suministro_original
+ join estado_adjunto_contrato_suministro  fin on fin.cod_estado_adjunto_contrato_suministro =
+ log_cambios_estado_adjuntos_suministro.cod_estado_adjunto_contrato_suministro_final
+ where cod_adjunto_contrato_suministro=@cod
+order by cod_log_cambios_estado_adjuntos_suministro desc">
+        <SelectParameters>
+            <asp:QueryStringParameter Name="cod" QueryStringField="cod" />
+        </SelectParameters>
+    </asp:SqlDataSource>
+&nbsp;
+
+</asp:Content>
+

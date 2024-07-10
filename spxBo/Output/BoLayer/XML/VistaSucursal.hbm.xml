@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="VistaSucursal" 
+ mutable="false" 
+ table="[dbo].[vistaSucursal]" 
+>
+<composite-id 
+ >
+<key-property 
+name="NitCliente"
+column="`nitCliente`"
+type="System.String"
+length="20"
+>
+</key-property>
+<key-property 
+name="CodSucursal"
+column="`codSucursal`"
+type="System.String"
+length="5"
+>
+</key-property>
+<key-property 
+name="NombreSucursal"
+column="`nombreSucursal`"
+type="System.String"
+length="50"
+>
+</key-property>
+<key-property 
+name="Direccion"
+column="`Direccion`"
+type="System.String"
+length="100"
+>
+</key-property>
+<key-property 
+name="Telefono1"
+column="`Telefono1`"
+type="System.String"
+length="15"
+>
+</key-property>
+<key-property 
+name="Telefono2"
+column="`Telefono2`"
+type="System.String"
+length="15"
+>
+</key-property>
+<key-property 
+name="CodContacto"
+column="`codContacto`"
+type="System.String"
+length="20"
+>
+</key-property>
+<key-property 
+name="NombrePais"
+column="`nombrePais`"
+type="System.String"
+length="30"
+>
+</key-property>
+<key-property 
+name="NombreDepartamento"
+column="`NombreDepartamento`"
+type="System.String"
+length="30"
+>
+</key-property>
+<key-property 
+name="NombreCiudad"
+column="`nombreCiudad`"
+type="System.String"
+length="30"
+>
+</key-property>
+</composite-id> 
+</class>
+</hibernate-mapping>
+

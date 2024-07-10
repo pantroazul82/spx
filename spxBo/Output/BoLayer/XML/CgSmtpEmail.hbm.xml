@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="CgSmtpEmail" 
+ table="[dbo].[cgSmtpEmail]" 
+>
+<id name="IdCgSmtpEmail"
+ column="`idCgSmtpEmail`"
+ type="System.Int32"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="Enviado"
+column="`enviado`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="FechaRealEnvio"
+column="`fechaRealEnvio`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="Cuerpo"
+column="`cuerpo`"
+type="System.String"
+    >
+</property>
+<property
+name="NombreFirma"
+column="`nombreFirma`"
+type="System.String"
+length="250"
+    >
+</property>
+<property
+name="EmailFirma"
+column="`emailFirma`"
+type="System.String"
+length="250"
+    >
+</property>
+<property
+name="Asunto"
+column="`asunto`"
+type="System.String"
+length="250"
+    >
+</property>
+<property
+name="IsBodyHtml"
+column="`IsBodyHtml`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="Prioridad"
+column="`prioridad`"
+type="System.String"
+length="50"
+    >
+</property>
+<property
+name="ResponderA"
+column="`responderA`"
+type="System.String"
+length="250"
+    >
+</property>
+<property
+name="FechaEnvio"
+column="`fechaEnvio`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<bag name="CgSmtpAdjuntos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`idCgSmtpEmail`" />
+</key>
+<one-to-many class="CgSmtpAdjunto" />
+</bag>
+<bag name="CgSmtpEmailCCs"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`idCgSmtpEmail`" />
+</key>
+<one-to-many class="CgSmtpEmailCC" />
+</bag>
+<bag name="CgSmtpEmailCCOs"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`idCgSmtpEmail`" />
+</key>
+<one-to-many class="CgSmtpEmailCCO" />
+</bag>
+<bag name="CgSmtpEmailTos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`idCgSmtpEmail`" />
+</key>
+<one-to-many class="CgSmtpEmailTo" />
+</bag>
+</class>
+</hibernate-mapping>
+

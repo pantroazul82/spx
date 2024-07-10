@@ -1,0 +1,83 @@
+﻿
+.principal
+{
+	border: solid 1px #000000 !important;
+	font-size:30px;
+	color:#F1F1F1;
+	background-color:#5D84B4;
+	text-align:left;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	margin-top: 10px;
+	padding: 3px 3px 3px 20px;
+	width: 80%;
+}
+
+.infGeneral
+{
+	background-image:../img/nota.png  no-repeat;
+	background: #FFFFFF url(../img/nota.png) no-repeat;
+	border: solid 1px #003366 !important;
+	font-size:11px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	margin-top: 0px;
+	padding: 3px 3px 3px 3px;
+	width: 350px;
+	text-align:left;
+}
+.infContacto
+{
+	background-image:../img/nota.png  no-repeat;
+	background: #FFFFFF url(../img/nota.png) no-repeat;
+	border: solid 1px #003366 !important;
+	font-size:11px;
+	margin-bottom: 10px;
+	margin-left: 380px;
+	margin-top: -321px;
+	padding: 3px 3px 3px 3px;
+	width: 350px;
+	text-align:left;
+}
+
+.infCategorias
+{
+	border: solid 1px #003366 !important;
+	font-size:11px;
+	margin-bottom: 0px;
+	margin-left: 380px;
+	margin-top: 0px;
+	padding: 3px 3px 3px 3px;
+	width: 350px;
+	height:120px;
+	text-align:left;
+}
+
+
+
+
+.publicidad
+{
+	border: solid 1px #003366;
+	font-size:11px;
+margin-bottom:-190px;
+	margin-left: 790px;
+	margin-top: -250px;
+	/*
+	padding: 3px 3px 3px 44px;
+*/
+	width: 145px;
+	height:500px;
+}
+
+.statsFecha
+{
+	border: solid 2px #003366 !important;
+	font-size:11px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	margin-top: 20px;
+	padding: 3px 3px 3px 3px;
+	width: 615px;
+	text-align:left;
+}

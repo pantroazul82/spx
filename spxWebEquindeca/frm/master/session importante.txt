@@ -1,0 +1,9 @@
+﻿ 
+ Session["urlRefer"] 
+ Session["msgLogin"] 
+ Session.Add["menu"]
+variables importantes de session
+
+Session["ss_nombre_usuario"].ToString()
+Session["ss_login"].ToString()
+Session["ss_cod_usuario"].ToString()

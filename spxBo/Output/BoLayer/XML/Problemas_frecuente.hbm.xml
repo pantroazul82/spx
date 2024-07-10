@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="Problemas_frecuente" 
+ table="[dbo].[problemas_frecuentes]" 
+>
+<id name="Cod_problema_frecuente"
+ access="nosetter.camelcase-underscore" 
+ column="`cod_problema_frecuente`"
+ type="System.Int32"
+ unsaved-value="-2147483648"
+    >
+<generator class="native" >
+</generator>
+</id> 
+<property
+name="CodFabricante"
+column="`codFabricante`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="CodModelo"
+column="`codModelo`"
+type="System.String"
+length="5"
+    >
+</property>
+<property
+name="Cod_manual"
+column="`cod_manual`"
+type="System.String"
+length="10"
+    >
+</property>
+<property
+name="Nombre_problema"
+column="`nombre_problema`"
+type="System.String"
+length="50"
+    >
+</property>
+<property
+name="Descripcion"
+column="`descripcion`"
+type="System.String"
+length="5000"
+    >
+</property>
+<many-to-one
+ name="Modelo" 
+ class="Modelo" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codFabricante`" />
+<column name="`codModelo`" />
+</many-to-one>
+<bag name="Soluciones_problemas"
+ cascade="all-delete-orphan"
+ inverse="true" 
+>
+<key>
+ <column name= "`cod_problema_frecuente`" />
+</key>
+<one-to-many class="Soluciones_problema" />
+</bag>
+</class>
+</hibernate-mapping>
+

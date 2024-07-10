@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="UsuarioCopiaOcultaxSmtpAccion" 
+ table="[dbo].[usuarioCopiaOcultaxSmtpAccion]" 
+>
+<composite-id unsaved-value="any"
+ >
+<key-property 
+name="Login"
+column="`login`"
+type="System.String"
+length="10"
+>
+</key-property>
+<key-property 
+name="IdCgSmtpAccion"
+column="`idCgSmtpAccion`"
+type="System.Int32"
+>
+</key-property>
+</composite-id> 
+<many-to-one
+ name="CgSmtpAccion" 
+ class="CgSmtpAccion" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`idCgSmtpAccion`" />
+</many-to-one>
+<many-to-one
+ name="Usuario0" 
+ class="Usuario0" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`login`" />
+</many-to-one>
+</class>
+</hibernate-mapping>
+

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="TaskReminder" 
+ table="[dbo].[TaskReminder]" 
+>
+<composite-id unsaved-value="any"
+ >
+<key-property 
+name="CodReminder"
+column="`codReminder`"
+type="System.Int32"
+>
+</key-property>
+<key-property 
+name="CodTarea"
+column="`codTarea`"
+type="System.Int32"
+>
+</key-property>
+</composite-id> 
+<property
+name="FechaReminder"
+column="`fechaReminder`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<many-to-one
+ name="Task" 
+ class="Task" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codTarea`" />
+</many-to-one>
+</class>
+</hibernate-mapping>
+

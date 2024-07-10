@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="AccesoriosxEntradaSalidaEquipo" 
+ table="[dbo].[AccesoriosxEntradaSalidaEquipos]" 
+>
+<composite-id unsaved-value="any"
+ >
+<key-property 
+name="CodEntradaSalidaEquipos"
+column="`codEntradaSalidaEquipos`"
+type="System.Int32"
+>
+</key-property>
+<key-property 
+name="Codigo"
+column="`Codigo`"
+type="System.Int32"
+>
+</key-property>
+<key-property 
+name="SonDeEntrada"
+column="`sonDeEntrada`"
+type="System.Boolean"
+>
+</key-property>
+</composite-id> 
+<property
+name="CodAccesoriosEquipos"
+column="`codAccesoriosEquipos`"
+type="System.String"
+length="15"
+    >
+</property>
+<property
+name="EsOtro"
+column="`esOtro`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="Descripcion"
+column="`descripcion`"
+type="System.String"
+length="50"
+    >
+</property>
+<property
+name="Cantidad"
+column="`cantidad`"
+type="System.Nullable`1[System.Double]"
+    >
+</property>
+<many-to-one
+ name="AccesoriosEquipo" 
+ class="AccesoriosEquipo" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codAccesoriosEquipos`" />
+</many-to-one>
+<many-to-one
+ name="EntradaSalidaEquipo" 
+ class="EntradaSalidaEquipo" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codEntradaSalidaEquipos`" />
+</many-to-one>
+</class>
+</hibernate-mapping>
+

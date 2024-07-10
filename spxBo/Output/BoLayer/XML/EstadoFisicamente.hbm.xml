@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="EstadoFisicamente" 
+ table="[dbo].[EstadoFisicamente]" 
+>
+<id name="CodEstadoFisicamente"
+ column="`codEstadoFisicamente`"
+ type="System.String"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="NombreEstadoFisicamente"
+column="`nombreEstadoFisicamente`"
+type="System.String"
+length="30"
+    >
+</property>
+<bag name="EntradaSalidaEquipos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codEstadoFisicamente`" />
+</key>
+<one-to-many class="EntradaSalidaEquipo" />
+</bag>
+</class>
+</hibernate-mapping>
+

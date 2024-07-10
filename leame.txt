@@ -1,0 +1,4 @@
+creado febrero 2024
+
+el codigo para reactlab y reactivos es el que se genera con la solucion
+SupportTech X.sln 

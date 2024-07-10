@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="CgSmtpAdjunto" 
+ table="[dbo].[cgSmtpAdjuntos]" 
+>
+<id name="IdCgSmtpAdjuntos"
+ column="`idCgSmtpAdjuntos`"
+ type="System.Int32"
+    >
+<generator class="assigned" >
+</generator>
+</id> 
+<property
+name="IdCgSmtpEmail"
+column="`idCgSmtpEmail`"
+type="System.Int32"
+    >
+</property>
+<property
+name="NombreAdjunto"
+column="`nombreAdjunto`"
+type="System.String"
+length="250"
+    >
+</property>
+<many-to-one
+ name="CgSmtpEmail" 
+ class="CgSmtpEmail" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`idCgSmtpEmail`" />
+</many-to-one>
+</class>
+</hibernate-mapping>
+

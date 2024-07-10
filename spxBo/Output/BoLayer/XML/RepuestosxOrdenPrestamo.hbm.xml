@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="RepuestosxOrdenPrestamo" 
+ table="[dbo].[repuestosxOrdenPrestamo]" 
+>
+<composite-id unsaved-value="any"
+ >
+<key-property 
+name="CodOrdenPrestamo"
+column="`codOrdenPrestamo`"
+type="System.Int32"
+>
+</key-property>
+<key-property 
+name="CodRepuesto"
+column="`codRepuesto`"
+type="System.String"
+length="20"
+>
+</key-property>
+</composite-id> 
+<property
+name="CantidadSolicitada"
+column="`cantidadSolicitada`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="CantidadPrestada"
+column="`cantidadPrestada`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="CantidadDevuelta"
+column="`cantidadDevuelta`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="CantidadConNotaSalida"
+column="`cantidadConNotaSalida`"
+type="System.Nullable`1[System.Int32]"
+    >
+</property>
+<property
+name="EntregadoIngeniero"
+column="`entregadoIngeniero`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="DevueltoAlmacen"
+column="`devueltoAlmacen`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="NotaSalida"
+column="`notaSalida`"
+type="System.Nullable`1[System.Boolean]"
+    >
+</property>
+<property
+name="ObsNotaSalida"
+column="`obsNotaSalida`"
+type="System.String"
+length="50"
+    >
+</property>
+<property
+name="FechaEntregaIng"
+column="`fechaEntregaIng`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="FechaDevolucion"
+column="`fechaDevolucion`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<property
+name="FechaNotaSalida"
+column="`fechaNotaSalida`"
+type="System.Nullable`1[System.DateTime]"
+    >
+</property>
+<many-to-one
+ name="OrdenPrestamo" 
+ class="OrdenPrestamo" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codOrdenPrestamo`" />
+</many-to-one>
+<many-to-one
+ name="Repuesto" 
+ class="Repuesto" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codRepuesto`" />
+</many-to-one>
+</class>
+</hibernate-mapping>
+

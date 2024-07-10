@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" 
+ namespace="BOLayer" 
+ assembly="BOLayer" >
+<class name="Ciudade" 
+ table="[dbo].[ciudades]" 
+>
+<composite-id unsaved-value="any"
+ >
+<key-property 
+name="CodPais"
+column="`codPais`"
+type="System.String"
+length="5"
+>
+</key-property>
+<key-property 
+name="CodDepartamento"
+column="`codDepartamento`"
+type="System.String"
+length="5"
+>
+</key-property>
+<key-property 
+name="CodCiudad"
+column="`codCiudad`"
+type="System.String"
+length="5"
+>
+</key-property>
+</composite-id> 
+<property
+name="NombreCiudad"
+column="`nombreCiudad`"
+type="System.String"
+length="30"
+    >
+</property>
+<many-to-one
+ name="Departamento" 
+ class="Departamento" 
+ cascade="none" 
+ outer-join="auto" 
+ insert="false" 
+ update="false" 
+>
+<column name="`codPais`" />
+<column name="`codDepartamento`" />
+</many-to-one>
+<bag name="OrdenPrestamos"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codPais`" />
+ <column name= "`codDepartamento`" />
+ <column name= "`codCiudad`" />
+</key>
+<one-to-many class="OrdenPrestamo" />
+</bag>
+<bag name="RegionesXusuarios"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codPais`" />
+ <column name= "`codDepartamento`" />
+ <column name= "`codCiudad`" />
+</key>
+<one-to-many class="RegionesXusuario" />
+</bag>
+<bag name="SucursalClientes"
+ cascade="none"
+ inverse="true" 
+>
+<key>
+ <column name= "`codPais`" />
+ <column name= "`codDepartamento`" />
+ <column name= "`codCiudad`" />
+</key>
+<one-to-many class="SucursalCliente" />
+</bag>
+</class>
+</hibernate-mapping>
+

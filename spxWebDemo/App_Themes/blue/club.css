@@ -1,0 +1,219 @@
+﻿.titulo
+{
+	/*border: solid 2px #000000 !important;*/
+	font-family:Georgia;
+	font-size:30px !important;
+	color:#780001;
+	/*
+	background-color:#003366;
+    */	
+    text-align:left;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	margin-top: 10px;
+	padding: 3px 3px 3px 10px;
+	width: 80%;
+}
+
+.infGeneral
+{
+	background-image:../img/nota.png  no-repeat;
+	background: #FFFFFF url(../img/nota.png) no-repeat;
+	border: solid 2px #003366 !important;
+	font-size:11px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	margin-top: 15px;
+	padding: 3px 3px 3px 3px;
+	width: 500px;
+	text-align:left;
+}
+
+.infNomina
+{
+	background-image:../img/nota.png  no-repeat;
+	background: #FFFFFF url(../img/nota.png) no-repeat;
+	border: solid 2px #003366 !important;
+	font-size:11px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	margin-top: 20px;
+	padding: 3px 3px 3px 3px;
+	width: 330px;
+	height: 130px;
+	text-align:left;
+}
+
+.imagenPrincipal
+{
+	background-color:#DADADA;
+	border: solid 1px #003366 !important;
+	font-size:12px !important;
+	font-family:Georgia !important;
+	margin-left: 350px;
+	margin-top: -574px;
+	text-align :center;
+	vertical-align:middle;
+	height:400px;
+	width:450px;
+}
+
+.imagenPrincipal image
+{
+	max-height:400px !important;
+	width:450px;
+	max-width:450px !important;
+	min-width:450px !important;
+}
+.imagenPrincipal img
+{
+	max-height:400px !important;
+	width:450px;
+	max-width:450px !important;
+	min-width:450px !important;
+}
+
+
+.imagenLogos
+{
+	background-color:#DADADA;
+	border: solid 1px #003366 !important;
+	font-size:12px !important;
+	font-family:Georgia !important;
+	margin-left: 0px;
+	margin-top: 10px;
+	text-align :center;
+	vertical-align:middle;
+	height:243px;
+	width:336px;
+}
+
+.imagenLogos image
+{
+	min-height:219px;
+	min-width:303px;
+	max-height:243px;
+	max-width:336px;
+}
+.imagenLogos img
+{
+	min-height:219px;
+	min-width:303px;
+	max-height:243px;
+	max-width:336px;
+}
+.linkHoyos
+{
+	/*background-color:#DADADA;
+	border: solid 1px #003366 !important;
+*/	
+margin-left: 245px;
+	margin-top: 10px;
+	text-align :right;
+	vertical-align:middle;
+	height:15px;
+	width:200px;
+}
+
+
+.tablaMarca
+{
+	border: solid 1px #003366 !important;
+	font-size:10px !important;
+	font-family:Georgia !important;
+    margin-bottom:100px;
+	margin-left: 0px;
+	margin-top: 75px;
+	text-align :center;
+	width:765px;
+}
+
+.tituloMarcas
+{
+/*	border: solid 1px #003366 !important;*/
+	font-size:14px !important;
+	font-family:Georgia !important;
+	margin-left: 0px;
+	margin-top: 5px;
+	text-align :left;
+	color:#780001;
+	width:200px;
+}
+
+.tituloTablaMarca
+{
+	background-color:#23669E;
+	color:White;
+    font-size:12px !important;
+	font-family:Arial !important;
+	font:bold;
+	height:20px;
+}
+.fila1TablaMarca
+{
+	background-color:#C7F0EA;
+	color:Black;
+    font-size:12px !important;
+	font-family:Arial !important;
+	border:0px;
+	font:bold;
+	height:20px;
+}
+.fila2TablaMarca
+{
+	background-color:#FFFFFF;
+	color:Blue;
+    font-size:12px !important;
+	font-family:Arial !important;
+	font:bold;
+	height:20px;
+}
+
+.publicidad
+{
+	border: solid 1px #003366;
+	font-size:11px;
+	margin-left: 805px;
+	margin-top: -400px;
+	width: 145px;
+	height:500px;
+}
+
+.GENERAL {
+	font-family: "Trebuchet MS", Tahoma, Helvetica, Arial, Verdana;
+	font-size: 12px;
+	color: #000000;
+}
+
+.imagenLupaLogo
+{	
+	margin-left: 290px;
+	margin-top: -50px;
+    text-align :center;
+	vertical-align:middle;
+	height:25px;
+	width:25px;
+	z-index:0;
+}
+
+.imagenLupa
+{	
+	margin-left: 400px;
+	margin-top: -75px;
+    text-align :center;
+	vertical-align:middle;
+	height:25px;
+	width:25px;
+	z-index:0;
+}
+
+.btnEstadisticas
+{	
+	margin-left: 350px;
+	margin-top: -410px;
+    text-align :center;
+	vertical-align:middle;
+	height:25px;
+	width:100px;
+	background-color:Black;
+}

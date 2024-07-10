@@ -1,0 +1,773 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ff37aa794ec0400d8efdc54808a712c0" Name="Diagram1">
+        <EntityTypeShape EntityType="spxReactivosValleModel.accesorio" Width="1.5" PointX="8.25" PointY="169.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.accesoriosEquipo" Width="1.5" PointX="23" PointY="81.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.AccesoriosxEntradaSalidaEquipos" Width="1.5" PointX="22.5" PointY="93" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.accion_novedad" Width="1.5" PointX="29.25" PointY="135" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.accion_seguir_cientifica" Width="1.5" PointX="8.25" PointY="77.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.accion_seguirxasesoria_cientifica" Width="1.5" PointX="10.5" PointY="62.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.accion_seguirxseguimiento_cientifica" Width="1.5" PointX="10.5" PointY="77.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.actividad_adicional" Width="1.5" PointX="3" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.ActividadesxModelo" Width="1.5" PointX="15" PointY="98.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.actividadxordenServicio" Width="1.5" PointX="3.75" PointY="56.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.actividadxtarea_calendario" Width="1.5" PointX="19.5" PointY="197.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.adjunto_contrato_suministro" Width="1.5" PointX="8.25" PointY="144.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.anuncio" Width="1.5" PointX="5.25" PointY="146.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.archivo_movimiento" Width="1.5" PointX="31.5" PointY="140.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.archivo_referencia" Width="1.5" PointX="20.25" PointY="171.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.archivo_template_revision_equipo" Width="1.5" PointX="5.25" PointY="150.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.archivos_control_calidad" Width="1.5" PointX="19.5" PointY="164.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.archivos_revision_equipos" Width="1.5" PointX="7.5" PointY="121.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.ArchivosxComponente" Width="1.5" PointX="12.75" PointY="73.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.archivosxcontrato" Width="1.5" PointX="3.75" PointY="93.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.archivosxEntradaSalidaEquipos" Width="1.5" PointX="22.5" PointY="96.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.archivosXequipo" Width="1.5" PointX="17.25" PointY="89.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.archivosxIncumplimiento" Width="1.5" PointX="15" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.archivosxModelo" Width="1.5" PointX="15" PointY="72.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.archivosXOrdenServicio" Width="1.5" PointX="3.75" PointY="69" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.archivosxRepuesto" Width="1.5" PointX="10.75" PointY="44.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.archivosxtarea_calendario" Width="1.5" PointX="19.5" PointY="126.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.archivoxcontrato_consumo" Width="1.5" PointX="16.5" PointY="165.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.archivoxcontratos_suministro" Width="1.5" PointX="25.5" PointY="135.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.asesoresComerciales" Width="1.5" PointX="3.75" PointY="48.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.asesoria_cientifica" Width="1.5" PointX="8.25" PointY="58.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.asistente_capacitacion" Width="1.5" PointX="8.25" PointY="139.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.asistentexsession" Width="1.5" PointX="8.25" PointY="150" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.auditoria" Width="1.5" PointX="17.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.bodega" Width="1.5" PointX="32.25" PointY="154.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.calibracion_calidad" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.campos_template_revision" Width="1.5" PointX="13.5" PointY="127.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.capacitacion" Width="1.5" PointX="11.25" PointY="144.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.categoria_referencia" Width="1.5" PointX="13.5" PointY="183.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.cgq_layout_pivote" Width="1.5" PointX="11.25" PointY="140" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.cgq_parametrosquery" Width="1.5" PointX="9" PointY="162.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.cgq_parametrosquery_ultimo_valor" Width="1.5" PointX="11.25" PointY="150.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.cgq_query" Width="1.5" PointX="9" PointY="100.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.cgq_queryxgrupo_usuario" Width="1.5" PointX="14.25" PointY="113.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.cgq_queryxusuario" Width="1.5" PointX="5.25" PointY="153.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.cgq_tablas_pivote" Width="1.5" PointX="11.25" PointY="114" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.ciudad" Width="1.5" PointX="6.75" PointY="115.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.ciudades" Width="1.5" PointX="10.5" PointY="93.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.cliente" Width="1.5" PointX="3.75" PointY="120" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.clientes" Width="1.5" PointX="12.75" PointY="107.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.componente" Width="1.5" PointX="10.5" PointY="83.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.comprobantesAceptacionOrdenservicio" Width="1.5" PointX="10.75" PointY="69.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.confirmacion_evento" Width="1.5" PointX="17.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.consumibles" Width="1.5" PointX="23.25" PointY="175.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.consumiblexcontrato_consumo" Width="1.5" PointX="25.5" PointY="154.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.consumoContratoxLinea" Width="1.5" PointX="17.25" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.consumosxContratos" Width="1.5" PointX="0.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.contacto_cliente" Width="1.5" PointX="6" PointY="139.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.contactosClientes" Width="1.5" PointX="15" PointY="106.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.contrato_consumo" Width="1.5" PointX="14.25" PointY="143" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.contratos" Width="1.5" PointX="1.5" PointY="72.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.contratos_suministro" Width="1.5" PointX="14.25" PointY="131.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.contratosxEquipo" Width="1.5" PointX="20.25" PointY="83.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.control_calidad" Width="1.5" PointX="17.25" PointY="136.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.control_calidad_interno" Width="1.5" PointX="17.75" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.controles_calidad" Width="1.5" PointX="17.75" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.departamento" Width="1.5" PointX="4.5" PointY="115.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.departamentos" Width="1.5" PointX="8.25" PointY="94.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.detalle_movimiento" Width="1.5" PointX="20.25" PointY="129.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.detalleProgramacionViajes" Width="1.5" PointX="17.25" PointY="76.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.detalleSolicitudInsumos" Width="1.5" PointX="10.75" PointY="41.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.dias_festivos" Width="1.5" PointX="5.75" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.dispositivosmedicionxordenservicio" Width="1.5" PointX="20.25" PointY="78.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.division_experiencia_contrato_suministro" Width="1.5" PointX="23.25" PointY="116.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.divisionxcontrato_suministro" Width="1.5" PointX="25.5" PointY="132.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.dominio" Width="1.5" PointX="7.75" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.EntradaSalidaEquipos" Width="1.5" PointX="20.25" PointY="91.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.equipoAuxiliar" Width="1.5" PointX="17.25" PointY="106.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.equipos" Width="1.5" PointX="15" PointY="84.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.equipos_solicitud" Width="1.5" PointX="13.5" PointY="123.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.equiposAuxiliaresxEntrada" Width="1.5" PointX="22.5" PointY="99.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.equiposxcontrato_consumo" Width="1.5" PointX="28.5" PointY="144.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.estado_adjunto_contrato_suministro" Width="1.5" PointX="6" PointY="112.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.estado_asesoria_cientifica" Width="1.5" PointX="6" PointY="45.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.estado_bloqueo" Width="1.5" PointX="18" PointY="115.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.estado_capacitacion" Width="1.5" PointX="9" PointY="159.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.estado_contrato_suministro" Width="1.5" PointX="12" PointY="118.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.estado_control_calidad" Width="1.5" PointX="15" PointY="120.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.estado_fisico" Width="1.5" PointX="18" PointY="101.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.estado_movimiento" Width="1.5" PointX="6.75" PointY="174.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.estado_movimientoxgrupo_usuario" Width="1.5" PointX="18" PointY="169.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.estado_movimientoxusuario" Width="1.5" PointX="11.25" PointY="153.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.estado_proceso_item" Width="1.5" PointX="4.5" PointY="181.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.estado_revision_equipos" Width="1.5" PointX="3" PointY="128.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.estado_solicitud_general" Width="1.5" PointX="6" PointY="118.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.estado_tarea_calendario" Width="1.5" PointX="15" PointY="169.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.EstadoFisicamente" Width="1.5" PointX="18" PointY="110.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.estadoLocalEquipos" Width="1.5" PointX="12.75" PointY="76.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.estadoRecoleccion" Width="1.5" PointX="21" PointY="102.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.estadosLLamadasTecnicas" Width="1.5" PointX="3.75" PointY="52.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.estadosOrdenPrestamo" Width="1.5" PointX="18" PointY="73.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.estadosOrdenServicio" Width="1.5" PointX="1.5" PointY="51.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.estadosSolicitud" Width="1.5" PointX="1.5" PointY="54.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.estampillas_contrato_sumisnistro" Width="1.5" PointX="16.5" PointY="157.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.existencia" Width="1.5" PointX="14.25" PointY="151.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.fabricante" Width="1.5" PointX="8.25" PointY="191.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.filtro_estado_movimiento" Width="1.5" PointX="9" PointY="185.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.Firma" Width="1.5" PointX="9.75" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.flujo" Width="1.5" PointX="8.25" PointY="195.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.flujoxestado" Width="1.5" PointX="11.5" PointY="186.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.flujoxproceso" Width="1.5" PointX="10.5" PointY="189.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.fotografia" Width="1.5" PointX="20.75" PointY="68.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.funcionalidad" Width="1.5" PointX="19.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.funcionalidad_grupousuario" Width="1.5" PointX="5.25" PointY="97" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.funcionalidad_usuario" Width="1.5" PointX="5.25" PointY="263.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.grupo_consumible" Width="1.5" PointX="19.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.grupo_inventario" Width="1.5" PointX="15.75" PointY="177.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.grupo_reactivo_experiencia" Width="1.5" PointX="23.25" PointY="110.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.grupo_reactivoxcontrato_suministro" Width="1.5" PointX="25.5" PointY="138.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.grupo_usuario" Width="1.5" PointX="3" PointY="136.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.grupo_usuarioxlinea" Width="1.5" PointX="11.25" PointY="161.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.gruposLineasConsumo" Width="1.5" PointX="12.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.gruposModulos" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.gruposModulosxGruposUsuarios" Width="1.5" PointX="15" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.gruposUsuarios" Width="1.5" PointX="12.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.gruposUsuariosxUsuario" Width="1.5" PointX="15" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.grupousuario_usuario" Width="1.5" PointX="5.25" PointY="136.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.inconveniente_presentado_cientifica" Width="1.5" PointX="19.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.incrementosxlinea_consumo" Width="1.5" PointX="28.5" PointY="141.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.incumplimientoConsumo" Width="1.5" PointX="12.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.indicacionesLLamadas" Width="1.5" PointX="8.25" PointY="53.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.informacion_adicional_usuario" Width="1.5" PointX="19.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.informacion_extendida_detalle" Width="1.5" PointX="22.5" PointY="166.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.informacion_extendida_movimiento" Width="1.5" PointX="25.5" PointY="145.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.layout_flujo" Width="1.5" PointX="14.5" PointY="186.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.layout_linea_flujo" Width="1.5" PointX="16.75" PointY="189.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.linea" Width="1.5" PointX="6" PointY="159.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.linea_consumo" Width="1.5" PointX="26.25" PointY="157.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.linea_consumoxcontrato_consumo" Width="1.5" PointX="28.5" PointY="149.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.lineasConsumo" Width="1.5" PointX="15" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.lineasxusuario" Width="1.5" PointX="8.25" PointY="136.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.LlamadaSoporte" Width="1.5" PointX="6" PointY="56.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.LlamadaSoportePre" Width="1.5" PointX="6" PointY="74.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.log_cambio_contratos_consumo" Width="1.5" PointX="19.75" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.log_cambios_estado_contratos_suministro" Width="1.5" PointX="25.5" PointY="141.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.logcambia_estado" Width="1.5" PointX="8.25" PointY="154.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.logCambioUbicaciones" Width="1.5" PointX="18" PointY="94" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.logVinculacionesDesvinculacionesContrato" Width="1.5" PointX="20.25" PointY="87.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.mantenimientosxContrato" Width="1.5" PointX="22.5" PointY="76.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.medioSolicitud" Width="1.5" PointX="1.5" PointY="56.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.modalidad" Width="1.5" PointX="21" PointY="115.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.modalidad_contrato" Width="1.5" PointX="9.75" PointY="166.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.modalidadContrato" Width="1.5" PointX="1.5" PointY="80.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.ModalidadEquipo" Width="1.5" PointX="12.75" PointY="79.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.modelo_inventario" Width="1.5" PointX="15.75" PointY="180.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.Modelos" Width="1.5" PointX="12.75" PointY="83.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.modeloxtarea" Width="1.5" PointX="19.5" PointY="123.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.modulo_seguridad" Width="1.5" PointX="19.75" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.moduloseguridad_grupousuario" Width="1.5" PointX="5.25" PointY="89.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.moduloseguridad_usuario" Width="1.5" PointX="5.25" PointY="277.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.motivo_anulacion_cientifica" Width="1.5" PointX="0.75" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.motivo_anulacion_movimiento" Width="1.5" PointX="31.5" PointY="150.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.motivo_anulacion_proceso" Width="1.5" PointX="29.25" PointY="159.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.motivo_anulacion_suministro" Width="1.5" PointX="2.75" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.motivo_no_renovacion" Width="1.5" PointX="11.75" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.motivo_salida" Width="1.5" PointX="18" PointY="87.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.movimiento" Width="1.5" PointX="23.25" PointY="127.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.muelle" Width="1.5" PointX="34.5" PointY="156.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.notificacion" Width="1.5" PointX="13.75" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.notificacion_estado" Width="1.5" PointX="9" PointY="181" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.notificacion_estado_copia_grupo" Width="1.5" PointX="20.25" PointY="167.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.notificacion_estado_copia_usuario" Width="1.5" PointX="11.25" PointY="136.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.novedad_movimiento" Width="1.5" PointX="31.5" PointY="144.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.ObservacionesxOrdenPrestamo" Width="1.5" PointX="22.5" PointY="73.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.observicionesxseguimiento_control_calidad" Width="1.5" PointX="28.5" PointY="152.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.opciones" Width="1.5" PointX="11.25" PointY="182.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.opciones_extra_proceso" Width="1.5" PointX="4.5" PointY="177.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.OrdenPrestamo" Width="1.5" PointX="20.25" PointY="71" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.ordenServicio" Width="1.5" PointX="1.5" PointY="59.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.origen_datos" Width="1.5" PointX="6.75" PointY="101.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.origen_revision_equipos" Width="1.5" PointX="3" PointY="130.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.pais" Width="1.5" PointX="2.25" PointY="115.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.paises" Width="1.5" PointX="6" PointY="94.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.parametro" Width="1.5" PointX="8.25" PointY="200.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.parametro_cientifica" Width="1.5" PointX="15.75" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.pendiente_tarea" Width="1.5" PointX="5.25" PointY="156.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.polizas_contrato_suministro" Width="1.5" PointX="16.5" PointY="161.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.preime_referencia" Width="1.5" PointX="20.25" PointY="190.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.prioridad" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.prioridad_callcenter_cientifica" Width="1.5" PointX="6" PointY="81.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.prioridad_movimiento" Width="1.5" PointX="21" PointY="111.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.prioridadesOrdenServicio" Width="1.5" PointX="17.75" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.prioridadSolicitud" Width="1.5" PointX="1.5" PointY="87" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.problemas_comunes_cientifica" Width="1.5" PointX="19.75" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.problemas_frecuentes" Width="1.5" PointX="9" PointY="50.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.problemas_frecuentes_por_llamada" Width="1.5" PointX="11.25" PointY="58.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.proceso" Width="1.5" PointX="2.25" PointY="178.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.producto_experiencia_contrato" Width="1.5" PointX="23.25" PointY="119.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.producto_experiencia_contratoxcontrato_conmsumo" Width="1.5" PointX="25.5" PointY="129.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.programacionViajes" Width="1.5" PointX="15" PointY="76.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.proveedor" Width="1.5" PointX="21" PointY="175.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.razon_no_vigente" Width="1.5" PointX="12" PointY="159.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.reactivo_solicitud" Width="1.5" PointX="10.5" PointY="121.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.reactivoxtarea" Width="1.5" PointX="22.5" PointY="123.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.reasignacionOrdenesTrabajo" Width="1.5" PointX="3.75" PointY="72.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.recoleccion" Width="1.5" PointX="23.25" PointY="85.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.referencia" Width="1.5" PointX="18" PointY="175.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.referencia_composicion" Width="1.5" PointX="20.25" PointY="193.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.referencia_reactivo" Width="1.5" PointX="20.25" PointY="119.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.regionesXusuarios" Width="1.5" PointX="12.75" PointY="67.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.repuestos" Width="1.5" PointX="8.5" PointY="45.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.repuestosxContratos" Width="1.5" PointX="12.75" PointY="62.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.repuestosxOrdenPrestamo" Width="1.5" PointX="25.5" PointY="72.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.repuestoxOrdenServicio" Width="1.5" PointX="10.75" PointY="56.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.responsable_proceso" Width="1.5" PointX="11.25" PointY="156.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.resultado_final_llamada" Width="1.5" PointX="21.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.revision_equipos" Width="1.5" PointX="5.25" PointY="125.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.revision_estado_producto" Width="1.5" PointX="21.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.rpt" Width="1.5" PointX="4.75" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.rpt_grupousuario" Width="1.5" PointX="21.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.secuencia_estado_movimiento" Width="1.5" PointX="9" PointY="177.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.secuencia_proceso" Width="1.5" PointX="4.5" PointY="184.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.seguimiento" Width="1.5" PointX="17.25" PointY="83" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.seguimiento_asesoria_cientifica" Width="1.5" PointX="8.25" PointY="97.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.session_capacitacion" Width="1.5" PointX="13.5" PointY="163.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.solicitud_general" Width="1.5" PointX="8.25" PointY="125.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.solicitudInsumos" Width="1.5" PointX="3.75" PointY="76.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.solicitudServicio" Width="1.5" PointX="3.75" PointY="60.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.soluciones_problemas" Width="1.5" PointX="9" PointY="73.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.sub_modalidad_contrato" Width="1.5" PointX="12" PointY="166.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.sub_tipo_tarea_calendario" Width="1.5" PointX="15" PointY="171.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.sub_variable_medicion" Width="1.5" PointX="15" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.subcategoria_referencia" Width="1.5" PointX="15.75" PointY="183.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.subCategoriaComponente" Width="1.5" PointX="8.25" PointY="84.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.subTipoComponente" Width="1.5" PointX="6" PointY="84.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.subTipoEquipo" Width="1.5" PointX="10.5" PointY="88" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.sucursal_cliente" Width="1.5" PointX="9" PointY="114.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.sucursalCliente" Width="1.5" PointX="12.75" PointY="91.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.sucursalxcontacto" Width="1.5" PointX="11.25" PointY="124.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.sysdiagrams" Width="1.5" PointX="6.75" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.sysusersobjects" Width="1.5" PointX="8.75" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.tarea_asesoria_cientifica" Width="1.5" PointX="10.5" PointY="66.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.tarea_calendario" Width="1.5" PointX="17.25" PointY="123.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.task" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.taskAdjuntos" Width="1.5" PointX="5.25" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.taskCategoria" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.taskEstatus" Width="1.5" PointX="0.75" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.taskPatronRecurrencia" Width="1.5" PointX="5.25" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.TaskReminder" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.template_revison_equipo" Width="1.5" PointX="11.25" PointY="131.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.tipo_actividad" Width="1.5" PointX="0.75" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.tipo_actividadxsubtipo_tarea_calendario" Width="1.5" PointX="17.25" PointY="198" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.tipo_adjunto_contrato_suministro" Width="1.5" PointX="6" PointY="110" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.tipo_archivo" Width="1.5" PointX="29.25" PointY="131.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.tipo_asesoria" Width="1.5" PointX="21.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.tipo_bodega" Width="1.5" PointX="30" PointY="162.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.tipo_documento" Width="1.5" PointX="0.75" PointY="140.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.tipo_estado_bloqueo" Width="1.5" PointX="15.75" PointY="116.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.tipo_estado_fisico" Width="1.5" PointX="15.75" PointY="102.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.tipo_movimiento" Width="1.5" PointX="21" PointY="179.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.tipo_novedad" Width="1.5" PointX="29.25" PointY="155.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.tipo_propiedad" Width="1.5" PointX="21.75" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.tipo_servicio" Width="1.5" PointX="21" PointY="182.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.tipo_servicioxsolicitud" Width="1.5" PointX="10.5" PointY="127.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.tipo_software_contrato_consumo" Width="1.5" PointX="26.25" PointY="126.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.tipo_softwarexcontrato_consumo" Width="1.5" PointX="28.5" PointY="138.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.tipo_tarea_calendario" Width="1.5" PointX="12.75" PointY="172" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.tipoarchivoxcontratos_suministro" Width="1.5" PointX="23.25" PointY="113.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.TipoCombo" Width="1.5" PointX="21.75" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.tipoComponente" Width="1.5" PointX="3.75" PointY="84.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.tipoComprobante" Width="1.5" PointX="8.5" PointY="80.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.tipoContrato" Width="1.5" PointX="1.5" PointY="83.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.tipoDocumento" Width="1.5" PointX="10.5" PointY="107.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.tipoEquipo" Width="1.5" PointX="8.25" PointY="88" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.tipofiltro_query_rpt" Width="1.5" PointX="21.75" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.tipoPropiedad" Width="1.5" PointX="12.75" PointY="99.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.TiposArchivoXequipo" Width="1.5" PointX="15" PointY="81" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.TipoServicio" Width="1.5" PointX="12.75" PointY="102" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.titulo_persona" Width="1.5" PointX="3.75" PointY="160.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.tituloContacto" Width="1.5" PointX="10.5" PointY="110.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.trabajosxReporteServicio" Width="1.5" PointX="21.75" PointY="22.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.transportador" Width="1.5" PointX="21" PointY="185.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.transportadora" Width="1.5" PointX="21" PointY="105" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.ubicacion" Width="1.5" PointX="34.5" PointY="159" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.ubicacion_por_referencia" Width="1.5" PointX="23.25" PointY="180.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.ubicacionesxbodega_fisica" Width="1.5" PointX="36.75" PointY="160.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.ubicacionxestado_bloqueo" Width="1.5" PointX="36.75" PointY="164.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.ubicacionxestado_fisico" Width="1.5" PointX="36.75" PointY="166.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.ubicacionxgrupo_inventario" Width="1.5" PointX="36.75" PointY="169.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.unidad_empaque" Width="1.5" PointX="23.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.unidad_medida" Width="1.5" PointX="0.75" PointY="24.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.unidad_peso" Width="1.5" PointX="23.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.unidad_tiempo" Width="1.5" PointX="23.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.unidadPeso" Width="1.5" PointX="23.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.unidadTiempo" Width="1.5" PointX="10.75" PointY="24.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.usuario" Width="1.5" PointX="3" PointY="139.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.variables_medicion" Width="1.5" PointX="12.75" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.variables_medicionxmodelo" Width="1.5" PointX="15" PointY="68.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.variables_medicionxorden_servicio" Width="1.5" PointX="3.75" PointY="81.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.vigencias_contrato_consumo" Width="1.5" PointX="23.75" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.wcg_mapping" Width="1.5" PointX="11.25" PointY="175.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.wcg_smtp_adjuntos" Width="1.5" PointX="10" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.wcg_smtp_email" Width="1.5" PointX="7.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.wcg_smtp_email_cc" Width="1.5" PointX="10" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.wcg_smtp_email_to" Width="1.5" PointX="10" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.wcg_smtp_email_to_cco" Width="1.5" PointX="10" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.wcg_smtp_server" Width="1.5" PointX="7.75" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.wcg_smtp_server_cc" Width="1.5" PointX="10" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.wcg_smtp_server_cco" Width="1.5" PointX="10" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.wcg_virtual_field" Width="1.5" PointX="13.5" PointY="175.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.wcg_virtual_frm" Width="1.5" PointX="6.75" PointY="205" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.wcg_virtual_grp" Width="1.5" PointX="11.25" PointY="204.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.wcg_virtual_tab" Width="1.5" PointX="9" PointY="204.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.vistaEquipo" Width="1.5" PointX="12.75" PointY="24.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="spxReactivosValleModel.vistaSucursal" Width="1.5" PointX="14.75" PointY="24.5" IsExpanded="true" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_accesorio_linea" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_accesoriosEquipo_fotografia" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_accesoriosEquipo_Modelos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_AccesoriosxEntradaSalidaEquipos_EntradaSalidaEquipos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_novedad_movimiento_accion_novedad" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_accion_seguirxasesoria_cientifica_accion_seguir_cientifica" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_accion_seguirxseguimiento_cientifica_accion_seguir_cientifica" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_accion_seguirxasesoria_cientifica_asesoria_cientifica" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_accion_seguirxseguimiento_cientifica_seguimiento_asesoria_cientifica" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_actividad_adicional_tipo_actividad" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_ActividadesxModelo_Modelos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_actividadxordenServicio_ordenServicio" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_actividadxtarea_calendario_tipo_actividadxsubtipo_tarea_calendario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_adjunto_contrato_suministro_contratos_suministro" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_adjunto_contrato_suministro_estado_adjunto_contrato_suministro" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_adjunto_contrato_suministro_tipo_adjunto_contrato_suministro" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_adjunto_contrato_suministro_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_adjunto_contrato_suministro_usuario1" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_adjunto_contrato_suministro_usuario2" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_anuncio_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_archivo_movimiento_movimiento" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_archivo_movimiento_tipo_archivo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_archivo_referencia_referencia" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_archivo_template_revision_equipo_revision_equipos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_archivo_template_revision_equipo_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_archivos_control_calidad_control_calidad" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_archivos_revision_equipos_revision_equipos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_ArchivosxComponente_componente" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_archivosxcontrato_contratos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_archivosxEntradaSalidaEquipos_EntradaSalidaEquipos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_archivosXequipo_equipos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_archivosXequipo_TiposArchivoXequipo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_archivosxIncumplimiento_incumplimientoConsumo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_archivosxModelo_Modelos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_archivosXOrdenServicio_ordenServicio" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_archivosxRepuesto_repuestos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_archivosxtarea_calendario_tarea_calendario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.fk_archivoxcontrato_consumo_contrato_consumo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_archivoxcontratos_suministro_contratos_suministro" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_archivoxcontratos_suministro_tipoarchivoxcontratos_suministro" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_contratos_suministro_asesoresComerciales" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_LlamadaSoporte_asesoresComerciales" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_solicitudServicio_asesoresComerciales" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_asesoria_cientifica_contactosClientes" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_asesoria_cientifica_estado_asesoria_cientifica" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_asesoria_cientifica_LlamadaSoporte" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_asesoria_cientifica_LlamadaSoportePre" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_asesoria_cientifica_prioridad_callcenter_cientifica" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_asesoria_cientifica_prioridad_callcenter_cientifica1" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_asesoria_cientifica_sucursalCliente" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_control_calidad_asesoria_cientifica" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_reactivo_solicitud_asesoria_cientifica" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_tarea_asesoria_cientifica_asesoria_cientifica" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_asistente_capacitacion_capacitacion" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_asistente_capacitacion_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.fk_asistentexsession_capacitacion" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.fk_asistentexsession_session_capacitacion" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.fk_asistentexsession_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_bodega_ciudad" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_bodega_tipo_bodega" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_bodega_transportador" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_muelle_bodega" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_ubicacion_bodega" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_ubicacionesxbodega_fisica_bodega" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_campos_template_revision_template_revison_equipo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_capacitacion_estado_capacitacion" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_capacitacion_Modelos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_capacitacion_referencia_reactivo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_capacitacion_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_session_capacitacion_capacitacion" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_categoria_referencia_linea" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_subcategoria_referencia_categoria_referencia" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_layout_pivote_CGQ_Query" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_layout_pivote_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_cgq_parametrosquery_cgq_query" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_cgq_parametrosquery_ultimo_valor_cgq_parametrosquery" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_cgq_parametrosquery_ultimo_valor_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_cgq_query_linea" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_CGQ_Query_origen_datos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_cgq_queryxgrupo_usuario_cgq_query" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_cgq_queryxusuario_cgq_query" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_cgq_tablas_pivote_CGQ_Query" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_cgq_queryxgrupo_usuario_grupo_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_cgq_queryxusuario_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_ciudad_departamento" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_movimiento_ciudad" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_sucursal_cliente_ciudad" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_transportador_ciudad" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_ciudades_departamento" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_contratos_suministro_ciudades" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_OrdenPrestamo_ciudades" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_regionesXusuarios_ciudades" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_sucursalCliente_ciudades" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_contacto_cliente_cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_detalle_movimiento_cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_existencia_cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_sucursal_cliente_cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_clientes_tipoDocumento" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_clientes_tituloContacto" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_contactosClientes_clientes" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.fk_contrato_consumo_clientes" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_solicitudServicio_clientes" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_sucursalCliente_clientes" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_componente_subCategoriaComponente" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_comprobantesAceptacionOrdenservicio_ordenServicio" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_comprobantesAceptacionOrdenservicio_tipoComprobante" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_consumiblexcontrato_consumo_consumibles" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_consumiblexcontrato_consumo_contrato_consumo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_consumoContratoxLinea_lineasConsumo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_contacto_cliente_tipo_documento" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_contacto_cliente_titulo_persona" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_sucursalxcontacto_contacto_cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_contactosClientes_tipoDocumento" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_contactosClientes_tituloContacto" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_contratos_suministro_contactosClientes" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_control_calidad_contactosClientes" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_LlamadaSoporte_contactosClientes" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_seguimiento_contactosClientes" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_solicitud_general_contactosClientes" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_sucursalCliente_contactosClientes" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_tarea_calendario_contactosClientes" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_contrato_consumo_razon_no_vigente" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.fk_contrato_consumo_sub_modalidad_contrato" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.fk_contrato_consumo_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.fk_contrato_consumo_usuario1" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.fk_equiposxcontrato_consumo_contrato_consumo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_incrementosxlinea_consumo_contrato_consumo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.fk_linea_consumoxcontrato_consumo_contrato_consumo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_tipo_softwarexcontrato_consumo_contrato_consumo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_contratos_modalidadContrato" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_contratosxEquipo_contratos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_logVinculacionesDesvinculacionesContrato_contratos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_ordenServicio_contratos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_repuestosxContratos_contratos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_contratos_suministro_estado_contrato_suministro" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_contratos_suministro_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_divisionxcontrato_suministro_contratos_suministro" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_estampillas_contrato_sumisnistro_contratos_suministro" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_grupo_reactivoxcontrato_suministro_contratos_suministro" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_log_cambios_estado_contratos_suministro_contratos_suministro" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_polizas_contrato_suministro_contratos_suministro" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_producto_experiencia_contratoxcontrato_conmsumo_contratos_suministro" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_contratosxEquipo_equipos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_mantenimientosxContrato_contratosxEquipo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_control_calidad_estado_control_calidad" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_control_calidad_Modelos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_control_calidad_referencia_reactivo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_control_calidad_sucursalCliente" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_control_calidad_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_control_calidad_usuario1" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_control_calidad_usuario2" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_control_calidad_usuario3" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_control_calidad_usuario4" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_control_calidad_usuario5" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_control_calidad_usuario6" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_control_calidad_usuario7" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_observicionesxseguimiento_control_calidad_control_calidad" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_departamento_pais" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_departamento_paises" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_detalle_movimiento_estado_bloqueo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_detalle_movimiento_estado_fisico" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_detalle_movimiento_estado_proceso_item" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_detalle_movimiento_movimiento" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_detalle_movimiento_referencia" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_detalle_movimiento_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_detalle_movimiento_usuario1" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_informacion_extendida_detalle_detalle_movimiento" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_novedad_movimiento_detalle_movimiento" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_detalleProgramacionViajes_equipos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_detalleProgramacionViajes_ordenServicio" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_detalleProgramacionViajes_programacionViajes" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_detalleSolicitudInsumos_repuestos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_dispositivosmedicionxordenservicio_equipos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_dispositivosmedicionxordenservicio_Modelos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_dispositivosmedicionxordenservicio_ordenServicio" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_divisionxcontrato_suministro_division_experiencia_contrato_suministro" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_EntradaSalidaEquipos_equipos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_EntradaSalidaEquipos_EstadoFisicamente" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_EntradaSalidaEquipos_motivo_salida" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_EntradaSalidaEquipos_sucursalCliente" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_EntradaSalidaEquipos_TipoServicio" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_equiposAuxiliaresxEntrada_EntradaSalidaEquipos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_equipoAuxiliar_equipos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_equipoAuxiliar_equipos1" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_equipos_estadoLocalEquipos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_equipos_estadoLocalEquipos1" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_equipos_ModalidadEquipo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_equipos_ModalidadEquipo1" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_equipos_Modelos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_equipos_solicitud_equipos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_equipos_sucursalCliente" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_equipos_sucursalCliente1" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_equipos_sucursalCliente2" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_equipos_tipoPropiedad" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_equipos_TipoServicio" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.fk_equiposxcontrato_consumo_equipos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_LlamadaSoporte_equipos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_logVinculacionesDesvinculacionesContrato_equipos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_mantenimientosxContrato_equipos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_OrdenPrestamo_equipos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_ordenServicio_equipos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_recoleccion_equipos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_revision_equipos_equipos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_solicitudServicio_equipos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_tarea_calendario_equipos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_equipos_solicitud_ordenServicio" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_equipos_solicitud_solicitud_general" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.fk_equiposxcontrato_consumo_modelos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.fk_equiposxcontrato_consumo_sucursalcliente" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_estado_bloqueo_linea" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_estado_bloqueo_tipo_estado_bloqueo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_existencia_estado_bloqueo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_movimiento_estado_bloqueo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_log_cambios_estado_contratos_suministro_estado_contrato_suministro" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_estado_fisico_linea" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_estado_fisico_tipo_estado_fisico" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_existencia_estado_fisico" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_movimiento_estado_fisico" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_estado_movimiento_estado_proceso_item" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_estado_movimiento_estado_proceso_item1" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_estado_movimiento_proceso" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_estado_movimientoxgrupo_usuario_estado_movimiento" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_estado_movimientoxusuario_estado_movimiento" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_filtro_estado_movimiento_estado_movimiento" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_flujoxestado_estado_movimiento" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_layout_flujo_estado_movimiento" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_logcambia_estado_estado_movimiento" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_logcambia_estado_estado_movimiento1" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_movimiento_estado_movimiento" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_notificacion_estado_estado_movimiento" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_secuencia_estado_movimiento_estado_movimiento" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_secuencia_estado_movimiento_estado_movimiento1" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_estado_movimientoxgrupo_usuario_grupo_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_estado_movimientoxusuario_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_estado_proceso_item_proceso" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_existencia_estado_proceso_item" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_revision_equipos_estado_revision_equipos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_solicitud_general_estado_solicitud_general" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_tarea_calendario_estado_tarea_calendario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_recoleccion_estadoRecoleccion" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_LlamadaSoporte_estadosLLamadasTecnicas" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_OrdenPrestamo_estadosOrdenPrestamo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_ordenServicio_estadosOrdenServicio" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_solicitudServicio_estadosSolicitud" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_existencia_linea" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_existencia_movimiento" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_existencia_movimiento1" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_existencia_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_fabricante_linea" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_flujo_linea" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_flujoxestado_flujo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_flujoxproceso_flujo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_layout_flujo_flujo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_layout_linea_flujo_flujo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_flujoxproceso_proceso" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_funcionalidad_grupousuario_grupo_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_funcionalidad_usuario_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_referencia_grupo_inventario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_ubicacionxgrupo_inventario_grupo_inventario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_grupo_reactivoxcontrato_suministro_grupo_reactivo_experiencia" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_grupo_usuarioxlinea_grupo_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_grupousuario_usuario_grupo_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_moduloseguridad_grupousuario_grupo_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_notificacion_estado_copia_grupo_grupo_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_grupo_usuarioxlinea_linea" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_lineasConsumo_gruposLineasConsumo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_gruposModulosxGruposUsuarios_gruposModulos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_gruposModulosxGruposUsuarios_gruposUsuarios" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_gruposUsuariosxUsuario_gruposUsuarios" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_grupousuario_usuario_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_incrementosxlinea_consumo_linea_consumo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_indicacionesLLamadas_LlamadaSoporte" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_informacion_extendida_movimiento_movimiento" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_layout_flujo_proceso" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_layout_linea_flujo_layout_flujo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_layout_linea_flujo_layout_flujo1" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_layout_linea_flujo_proceso" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_lineasxusuario_linea" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_modalidad_linea" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_movimiento_linea" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_opciones_linea" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_parametro_linea" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_proceso_linea" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_proveedor_linea" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_referencia_linea" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_referencia_linea1" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_tipo_archivo_linea" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_tipo_estado_bloqueo_linea" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_tipo_estado_fisico_linea" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_tipo_novedad_linea" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_transportador_linea" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_ubicacion_linea" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_wcg_mapping_linea" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.fk_linea_consumoxcontrato_consumo_linea_consumo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_lineasxusuario_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_LlamadaSoporte_ModalidadEquipo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_LlamadaSoporte_solicitudServicio" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_LlamadaSoporte_sucursalCliente" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_LlamadaSoportePre_LlamadaSoporte" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_problemas_frecuentes_por_llamada_LlamadaSoporte" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_seguimiento_LlamadaSoporte" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_log_cambios_estado_contratos_suministro_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_logcambia_estado_movimiento" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_logcambia_estado_proceso" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_logcambia_estado_proceso1" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_logcambia_estado_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_logCambioUbicaciones_ModalidadEquipo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_logCambioUbicaciones_ModalidadEquipo1" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_logCambioUbicaciones_sucursalCliente" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_logCambioUbicaciones_sucursalCliente1" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_mantenimientosxContrato_ordenServicio" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_solicitudServicio_medioSolicitud" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_movimiento_modalidad" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.fk_sub_modalidad_contrato_modalidad_contrato" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_modalidadContrato_tipoContrato" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_ordenServicio_ModalidadEquipo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_recoleccion_ModalidadEquipo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_solicitudServicio_ModalidadEquipo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_referencia_modelo_inventario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_Modelos_subTipoEquipo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_modeloxtarea_Modelos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_problemas_frecuentes_Modelos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_tarea_calendario_Modelos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_template_revison_equipo_Modelos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_variables_medicionxmodelo_Modelos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_modeloxtarea_tarea_calendario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_moduloseguridad_usuario_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_motivo_anulacion_movimiento_motivo_anulacion_proceso" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_motivo_anulacion_movimiento_movimiento" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_motivo_anulacion_proceso_proceso" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_movimiento_prioridad_movimiento" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_movimiento_proveedor" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_movimiento_tipo_movimiento" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_movimiento_tipo_servicio" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_movimiento_transportador" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_movimiento_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_movimiento_usuario1" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_movimiento_usuario2" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_movimiento_usuario3" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_movimiento_usuario4" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_movimiento_usuario5" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_novedad_movimiento_movimiento" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_novedad_movimiento_movimiento1" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_notificacion_estado_copia_grupo_notificacion_estado" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_notificacion_estado_copia_usuario_notificacion_estado" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_notificacion_estado_copia_usuario_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_novedad_movimiento_tipo_novedad" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_novedad_movimiento_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_novedad_movimiento_usuario1" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_ObservacionesxOrdenPrestamo_OrdenPrestamo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_observicionesxseguimiento_control_calidad_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_opciones_proceso" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_opciones_proceso1" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_opciones_extra_proceso_proceso" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_OrdenPrestamo_ordenServicio" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_repuestosxOrdenPrestamo_OrdenPrestamo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_ordenServicio_sucursalCliente" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_ordenServicio_TipoServicio" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_reasignacionOrdenesTrabajo_ordenServicio" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_repuestoxOrdenServicio_ordenServicio" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_solicitudInsumos_ordenServicio" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_solicitudServicio_ordenServicio" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_variables_medicionxorden_servicio_ordenServicio" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_revision_equipos_origen_revision_equipos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.fk_pendiente_tarea_tarea_calendario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.fk_pendiente_tarea_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_preime_referencia_referencia" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_task_prioridad" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_prioridad_movimiento_proceso" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_solicitudServicio_prioridadSolicitud" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_problemas_frecuentes_por_llamada_problemas_frecuentes" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_soluciones_problemas_problemas_frecuentes" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_problemas_frecuentes_por_llamada_soluciones_problemas" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_responsable_proceso_proceso" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_secuencia_proceso_proceso" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_secuencia_proceso_proceso1" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_tipo_movimiento_proceso" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_tipo_novedad_proceso" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_tipo_servicio_proceso" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_wcg_mapping_proceso" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_producto_experiencia_contratoxcontrato_conmsumo_producto_experiencia_contrato" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_reactivo_solicitud_referencia_reactivo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_reactivo_solicitud_solicitud_general" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_reactivoxtarea_referencia_reactivo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_reactivoxtarea_tarea_calendario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_recoleccion_sucursalCliente" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_recoleccion_transportadora" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_referencia_composicion_referencia" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_referencia_composicion_referencia1" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_referencia_referencia" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_referencia_subcategoria_referencia" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_ubicacion_por_referencia_referencia" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_repuestosxContratos_repuestos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_repuestosxOrdenPrestamo_repuestos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_repuestoxOrdenServicio_repuestos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_responsable_proceso_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_revision_equipos_sucursalCliente" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_revision_equipos_sucursalCliente1" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_revision_equipos_template_revison_equipo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_revision_equipos_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_revision_equipos_usuario1" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_revision_equipos_usuario2" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_revision_equipos_usuario3" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_solicitud_general_sucursalCliente" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_solicitud_general_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_solicitud_general_usuario1" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_solicitud_general_usuario2" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_tipo_servicioxsolicitud_solicitud_general" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_solicitudServicio_TipoServicio" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_sub_tipo_tarea_calendario_tipo_tarea_calendario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_tarea_calendario_sub_tipo_tarea_calendario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_tipo_actividadxsubtipo_tarea_calendario_sub_tipo_tarea_calendario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_sub_variable_medicion_variables_medicion" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_subCategoriaComponente_subTipoComponente" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_subTipoComponente_tipoComponente" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_subTipoEquipo_tipoEquipo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_sucursalxcontacto_sucursal_cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_tarea_calendario_sucursalCliente" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_tarea_calendario_tipo_tarea_calendario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_tarea_calendario_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_tarea_calendario_usuario1" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_task_taskCategoria" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_task_taskEstatus" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_taskAdjuntos_task" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_taskPatronRecurrencia_task" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_TaskReminder_task" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_template_revison_equipo_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_usuario_tipo_documento" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_tipo_softwarexcontrato_consumo_tipo_software_contrato_consumo" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_ubicacion_por_referencia_ubicacion" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_ubicacion_ubicacion" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_ubicacionesxbodega_fisica_ubicacion" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_ubicacionxestado_bloqueo_ubicacion" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_ubicacionxestado_fisico_ubicacion" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_ubicacionxgrupo_inventario_ubicacion" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_wcg_virtual_field_wcg_mapping" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_wcg_smtp_adjuntos_wcg_smtp_email" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_wcg_smtp_email_cc_wcg_smtp_email" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_wcg_smtp_email_to_cco_wcg_smtp_email" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_wcg_smtp_email_to_wcg_smtp_email" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_wcg_smtp_server_cc_wcg_smtp_server" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_wcg_smtp_server_cco_wcg_smtp_server" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_wcg_virtual_field_wcg_virtual_grp" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_wcg_virtual_tab_wcg_virtual_frm" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.FK_wcg_virtual_grp_wcg_virtual_tab" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.componentesxmodelos" ManuallyRouted="false" />
+        <AssociationConnector Association="spxReactivosValleModel.gruposXgrupos" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

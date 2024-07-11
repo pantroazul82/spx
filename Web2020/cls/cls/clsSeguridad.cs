@@ -158,16 +158,17 @@ public class clsSeguridad
         string pass = ar.GetValue("pass", typeof(string)).ToString();
 
         string usuario = ar.GetValue("usuario", typeof(string)).ToString();
+        string copia_email = ar.GetValue("copia_email", typeof(string)).ToString();
         bool ssl = (bool)ar.GetValue("ssl", typeof(bool));
         bool autentificacion = (bool)ar.GetValue("autentificacion", typeof(bool));
 
         return enviarEmail(asunto, cuerpo, cuentaFrom, nombreCuentaFrom, ssl, servidor,
-         puerto, autentificacion, usuario, pass, direccionDestino, adjuntos,out mensaje);
+         puerto, autentificacion, usuario, pass, direccionDestino, copia_email, adjuntos,out mensaje);
     }
 
     public bool enviarEmail(string asunto, string cuerpo, string cuentaFrom, string nombreCuentaFrom,
     bool sslHabilitado, string servidor, string puerto, bool conAutentificacion, string usuario, string password,
-    string direccionDestino,List<string> adjuntos,out string mensaje)
+    string direccionDestino,string copiaDestino,List<string> adjuntos,out string mensaje)
     {
         mensaje = "";
         System.Net.Mail.MailMessage email = new System.Net.Mail.MailMessage();
@@ -206,6 +207,11 @@ public class clsSeguridad
         System.Net.Mail.MailAddress dir = new System.Net.Mail.MailAddress(direccionDestino);
         email.To.Add(dir);
 
+            if (copiaDestino != null && copiaDestino != string.Empty)
+            {
+                System.Net.Mail.MailAddress dir = new System.Net.Mail.MailAddress(copiaDestino);
+                email.Bcc.Add(dir);
+            }
 
         email.BodyEncoding = System.Text.Encoding.UTF8;
        

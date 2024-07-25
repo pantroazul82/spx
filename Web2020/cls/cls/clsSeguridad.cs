@@ -135,11 +135,12 @@ public class clsSeguridad
         string pass = ar.GetValue("pass", typeof(string)).ToString();
 
         string usuario = ar.GetValue("usuario", typeof(string)).ToString();
+        string copia_email = ar.GetValue("copia_email", typeof(string)).ToString(); 
         bool ssl = (bool)ar.GetValue("ssl", typeof(bool));
         bool autentificacion = (bool)ar.GetValue("autentificacion", typeof(bool));
 
         return enviarEmail(asunto, cuerpo, cuentaFrom, nombreCuentaFrom, ssl, servidor,
-         puerto, autentificacion, usuario, pass, direccionDestino,null,out mensaje);
+         puerto, autentificacion, usuario, pass, direccionDestino, copia_email, null,out mensaje);
     }
 
     public string verIpSitiio()
@@ -156,7 +157,6 @@ public class clsSeguridad
         string servidor = ar.GetValue("servidor", typeof(string)).ToString();
         string puerto = ar.GetValue("puerto", typeof(string)).ToString();
         string pass = ar.GetValue("pass", typeof(string)).ToString();
-
         string usuario = ar.GetValue("usuario", typeof(string)).ToString();
         string copia_email = ar.GetValue("copia_email", typeof(string)).ToString();
         bool ssl = (bool)ar.GetValue("ssl", typeof(bool));
@@ -209,8 +209,8 @@ public class clsSeguridad
 
             if (copiaDestino != null && copiaDestino != string.Empty)
             {
-                System.Net.Mail.MailAddress dir = new System.Net.Mail.MailAddress(copiaDestino);
-                email.Bcc.Add(dir);
+                System.Net.Mail.MailAddress dirCopia = new System.Net.Mail.MailAddress(copiaDestino);
+                email.Bcc.Add(dirCopia);
             }
 
         email.BodyEncoding = System.Text.Encoding.UTF8;

@@ -86,7 +86,11 @@ namespace Web2020.frm.hojavida
             if (!dsSpx1.equipos[0].IsCodadicionalNull()) txtCodigoAdicional.Text = dsSpx1.equipos[0].Codadicional;
             if (!dsSpx1.equipos[0].IscodTipoPropiedadNull())
             {
-                tipoPropiedadTableAdapter1.FillBycodTipoPropiedad(dsSpx1.tipoPropiedad, dsSpx1.equipos[0].codTipoPropiedad);
+                sqlD = @"select codTipoPropiedad,nombreTipoPropiedad,descripcion from tipoPropiedad where codTipoPropiedad='"+dsSpx1.equipos[0].codTipoPropiedad+"'";
+                dsSpx1.tipoPropiedad.Merge(
+                 sql.ejecutarConsulta(sqlD).Tables[0]
+                );
+              
                 txtTipoPropiedad.Text = dsSpx1.tipoPropiedad[0].nombreTipoPropiedad;
             }
             else { txtTipoPropiedad.Text = "No Asignado"; }

@@ -762,7 +762,9 @@ namespace spProcesos.Equipos
         private void cgDataControler1_DespuesDeCancelar(object sender, CGDataControler.dataControlerEventArgs e)
         {
             clientesTableAdapter1.FillByComboBox(dsSpx1.clientes);
-            cmbCliente.SelectedValue = cgDataControler1.verValor("nitClienteUbica");
+            var obj= cgDataControler1.verValor("nitClienteUbica");
+            if(obj != null)
+            cmbCliente.SelectedValue = obj;
             cargarInformacionEquipo();
         }
 

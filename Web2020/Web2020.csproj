@@ -1703,6 +1703,7 @@
     </Compile>
     <Compile Include="frm\ordenServicio\frmCrearEquipo.aspx.cs">
       <DependentUpon>frmCrearEquipo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="frm\ordenServicio\frmCrearEquipo.aspx.designer.cs">
       <DependentUpon>frmCrearEquipo.aspx</DependentUpon>

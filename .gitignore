@@ -34,3 +34,8 @@
 /Web2020/.vs
 /SupportTech X/SPControladoraDatos/.vs
 /Web2020/bin
+/SupportTech X/SPControladoraDatos/bin/Release
+/SupportTech X/SPControladoraDatos/obj/Release/SPControladoraDatos.csproj.AssemblyReference.cache
+/Web2020/obj/Release/Web2020.csproj.AssemblyReference.cache
+/Web2020/Properties/PublishProfiles
+/Web2020/Web2020.csproj.user

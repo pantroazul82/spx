@@ -355,6 +355,11 @@ namespace spProcesos.ESequipos
             if (!dsSpx1.Modelos[0].IscodTipoEquipoNull())
             {
                 tipoEquipoTableAdapter1.FillBycodTipoEquipo(dsSpx1.tipoEquipo, dsSpx1.Modelos[0].codTipoEquipo);
+                if (dsSpx1.tipoEquipo[0].IsnombreTipoEquipoNull())
+                {
+                    MessageBox.Show("el tipo de equipo esta mal configurado");
+                    return true;
+                }
                 txtTipoEquipo.Text = dsSpx1.tipoEquipo[0].nombreTipoEquipo;
 
                 //

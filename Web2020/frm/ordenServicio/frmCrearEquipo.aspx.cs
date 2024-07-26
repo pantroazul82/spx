@@ -16,7 +16,7 @@ namespace Web2020.frm.ordenServicio
             //verficamos permiso
             clsSeguridad seg = new clsSeguridad();
             seg.comprobarAcceso(Page, Session, Response, 2014);
-       
+
 
         }
 
@@ -25,9 +25,64 @@ namespace Web2020.frm.ordenServicio
         {
             Response.Redirect("frmCrearEquipo.aspx");
         }
-     
 
 
+        /// <summary>
+        /// Retorna true si el formulario esta correcto para guardar
+        /// </summary>
+        /// <returns></returns>
+        private bool validar()
+        {
+            bool respuesta = true;
+
+            string codFabricante = cmbFabricante.SelectedValue;
+            string codModelo = cmbModelo.SelectedValue;
+            string tipoPropiedad = cmbTipoPropiedad.SelectedValue;
+            string cliente = cmbClientes.SelectedValue;
+            string sucursal = cmbSucursal.SelectedValue;
+            string modalidad = cmbModalidad.SelectedValue;
+
+            // Limpiar etiquetas de error
+            lblErrorFabricante.Text = string.Empty;
+            lblErrorModelo.Text = string.Empty;
+            lblTipoPropiedad.Text = string.Empty;
+            lblErrorCliente.Text = string.Empty;
+            lblSucursal.Text = string.Empty;
+            lblTipoModalidad.Text = string.Empty;
+
+            if (string.IsNullOrEmpty(codFabricante))
+            {
+                respuesta = false;
+                lblErrorFabricante.Text = "El fabricante es obligatorio, si el fabricante se encuentra en blanco asegúrese de crearlo con anterioridad";
+            }
+            if (string.IsNullOrEmpty(codModelo))
+            {
+                respuesta = false;
+                lblErrorModelo.Text = "El modelo es obligatorio, si el modelo se encuentra en blanco asegúrese de crearlo con anterioridad";
+            }
+            if (string.IsNullOrEmpty(tipoPropiedad))
+            {
+                respuesta = false;
+                lblTipoPropiedad.Text = "El tipo de propiedad es obligatorio, asegúrese de que exista";
+            }
+            if (string.IsNullOrEmpty(cliente))
+            {
+                respuesta = false;
+                lblErrorCliente.Text = "El cliente es obligatorio, si no hay un cliente asegúrese de que exista";
+            }
+            if (string.IsNullOrEmpty(sucursal))
+            {
+                respuesta = false;
+                lblSucursal.Text = "La sucursal es obligatoria, asegúrese de que exista";
+            }
+            if (string.IsNullOrEmpty(modalidad))
+            {
+                respuesta = false;
+                lblTipoModalidad.Text = "La modalidad es obligatoria, asegúrese de que exista";
+            }
+
+            return respuesta;
+        }
 
         private void crearEquipo(string serial, string codFabricante, string codModelo , int codTipoPropiedad,  string observaciones,
             string nitCliente, string codSucursal, string codModalidadEquipo , string creadoPor ,DateTime fecha_creacion)
@@ -55,11 +110,26 @@ namespace Web2020.frm.ordenServicio
                     {
                         string creadoPor = Session["ss_cod_usuario"].ToString();
                         DateTime fechaCreacion = obj.fechaServer;
+                        string codFabricante = cmbFabricante.SelectedValue;
+                        string codModelo = cmbModelo.SelectedValue;
 
-                        crearEquipo(txtSerial1.Text, cmbFabricante.SelectedValue, cmbModelo.SelectedValue, Convert.ToInt32(cmbTipoPropiedad.SelectedValue), TextBoxObservaciones.Text,
-                            cmbClientes.SelectedValue, cmbSucursal.SelectedValue, cmbModalidad.SelectedValue,creadoPor,fechaCreacion);
 
-                        return true;
+                        if(validar())
+                        {
+                            crearEquipo(txtSerial1.Text, codFabricante, codModelo, Convert.ToInt32(cmbTipoPropiedad.SelectedValue), TextBoxObservaciones.Text,
+                            cmbClientes.SelectedValue, cmbSucursal.SelectedValue, cmbModalidad.SelectedValue, creadoPor, fechaCreacion);
+                            return true;
+
+                        }
+                        else
+                        {
+                            lblErrores.Text = "Ocurrió un error al crear el equipo, falta información necesaria.";
+
+                        }
+
+
+
+                        return false;
                     }
                     else
                     {

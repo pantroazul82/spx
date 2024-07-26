@@ -78,6 +78,15 @@ namespace Web2020.frm.ordenServicio
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceFabricante;
 
         /// <summary>
+        /// Control lblErrorFabricante.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblErrorFabricante;
+
+        /// <summary>
         /// Control cmbModelo.
         /// </summary>
         /// <remarks>
@@ -94,6 +103,15 @@ namespace Web2020.frm.ordenServicio
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceModelo;
+
+        /// <summary>
+        /// Control lblErrorModelo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblErrorModelo;
 
         /// <summary>
         /// Control UpdatePanel1.
@@ -123,6 +141,15 @@ namespace Web2020.frm.ordenServicio
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceClientes;
 
         /// <summary>
+        /// Control lblErrorCliente.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblErrorCliente;
+
+        /// <summary>
         /// Control cmbSucursal.
         /// </summary>
         /// <remarks>
@@ -139,6 +166,15 @@ namespace Web2020.frm.ordenServicio
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceSucursalCliente;
+
+        /// <summary>
+        /// Control lblSucursal.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSucursal;
 
         /// <summary>
         /// Control cmbModalidad.
@@ -159,6 +195,15 @@ namespace Web2020.frm.ordenServicio
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceModalidad;
 
         /// <summary>
+        /// Control lblTipoModalidad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTipoModalidad;
+
+        /// <summary>
         /// Control cmbTipoPropiedad.
         /// </summary>
         /// <remarks>
@@ -175,6 +220,15 @@ namespace Web2020.frm.ordenServicio
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceTipoPropiedad;
+
+        /// <summary>
+        /// Control lblTipoPropiedad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTipoPropiedad;
 
         /// <summary>
         /// Control TextBoxObservaciones.

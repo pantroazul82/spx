@@ -39,12 +39,12 @@ namespace SupportTech.frm
             }
 
 
-            DateTime fechaLimite = new DateTime(2024, 9, 30);
-            if (DateTime.Now > fechaLimite)
-            {
-                MessageBox.Show("Version habilitada hasta 30 de septiembre, por favor solicite una version actualizada para continuar utilizando la herramienta.");
-                return false;
-            }
+            //DateTime fechaLimite = new DateTime(2024, 9, 30);
+            //if (DateTime.Now > fechaLimite)
+            //{
+            //    MessageBox.Show("Version habilitada hasta 30 de septiembre, por favor solicite una version actualizada para continuar utilizando la herramienta.");
+            //    return false;
+            //}
 
 
 

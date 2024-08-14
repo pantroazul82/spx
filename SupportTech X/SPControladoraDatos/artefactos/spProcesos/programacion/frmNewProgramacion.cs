@@ -123,7 +123,8 @@ txtObservaciones.ReadOnly = true;
                 sb.Append(" fechaProximaProgramacion is null ");
             }
             else {
-                sb.Append(" equipos.fechaProximoMante between @fechaInicio and @fechaFin ");
+                sb.Append(" (fechaProximaProgramacion is null or  fechaProximaProgramacion is not null) ");
+                //sb.Append(" equipos.fechaProximoMante between @fechaInicio and @fechaFin ");
             }
             #region ahora el filtro de localizacion
             if (rdCiudad.Checked)

@@ -19,37 +19,62 @@ namespace Web2020.frm.ordenServicio
 
         private void generarQuery()
         {
-            string sql = @"SELECT ordenServicio.codOrdenServicio, ordenServicio.fechaProgramacion, ordenServicio.asignadoA, ordenServicio.serial, estadosOrdenServicio.nombreEstado, TipoServicio.nombretipoServicio, Modelos.NombreModelo, clientes.nitCliente, clientes.nombreCliente, sucursalCliente.nombreSucursal, ModalidadEquipo.nombreModalidadEquipo, estadosOrdenServicio.codEstadoOrdenServicio FROM 
-ordenServicio 
-INNER JOIN estadosOrdenServicio ON ordenServicio.codEstadoOrdenServicio = estadosOrdenServicio.codEstadoOrdenServicio 
-INNER JOIN equipos ON ordenServicio.serial = equipos.serial 
-INNER JOIN Modelos ON equipos.codFabricante = Modelos.codFabricante AND equipos.codModelo = Modelos.codModelo 
-INNER JOIN clientes ON ordenServicio.nitCliente = clientes.nitCliente 
-INNER JOIN sucursalCliente ON ordenServicio.nitCliente = sucursalCliente.nitCliente AND ordenServicio.codSucursal = sucursalCliente.codSucursal 
-left JOIN ModalidadEquipo ON ordenServicio.codModalidad = ModalidadEquipo.codModalidadEquipo INNER JOIN TipoServicio ON ordenServicio.codTiposervicio = TipoServicio.codTipoServicio ";
+            string sql = @"SELECT 
+                        ordenServicio.codOrdenServicio, 
+                        ordenServicio.fechaProgramacion, 
+                        ordenServicio.asignadoA, 
+                        ordenServicio.serial, 
+                        estadosOrdenServicio.nombreEstado, 
+                        TipoServicio.nombretipoServicio, 
+                        Modelos.NombreModelo, 
+                        clientes.nitCliente, 
+                        clientes.nombreCliente, 
+                        sucursalCliente.nombreSucursal, 
+                        ModalidadEquipo.nombreModalidadEquipo, 
+                        fabricante.nombre_fabricante,
+                        estadosOrdenServicio.codEstadoOrdenServicio 
+                    FROM 
+                        ordenServicio 
+                    INNER JOIN 
+                        estadosOrdenServicio ON ordenServicio.codEstadoOrdenServicio = estadosOrdenServicio.codEstadoOrdenServicio 
+                    INNER JOIN 
+                        equipos ON ordenServicio.serial = equipos.serial 
+                    INNER JOIN 
+                        Modelos ON equipos.codFabricante = Modelos.codFabricante AND equipos.codModelo = Modelos.codModelo 
+                    INNER JOIN 
+                        clientes ON ordenServicio.nitCliente = clientes.nitCliente 
+                    INNER JOIN 
+                        sucursalCliente ON ordenServicio.nitCliente = sucursalCliente.nitCliente AND ordenServicio.codSucursal = sucursalCliente.codSucursal 
+                    LEFT JOIN 
+                        ModalidadEquipo ON ordenServicio.codModalidad = ModalidadEquipo.codModalidadEquipo 
+                    INNER JOIN 
+                        TipoServicio ON ordenServicio.codTiposervicio = TipoServicio.codTipoServicio 
+                    INNER JOIN 
+                        fabricante ON equipos.codFabricante = fabricante.codFabricante";
+
             string filtros = "";
             if (txtFiltro.Text.Trim() != string.Empty)
             {
                 switch (cmbFiltros.SelectedValue.Trim())
                 {
-                    //serial;
                     case "1":
-                        { filtros = " Serial like '" + txtFiltro.Text + "%'"; break; }
-                    //Nit Cliente;
+                        filtros = " ordenServicio.serial LIKE '" + txtFiltro.Text + "%'";
+                        break;
                     case "2":
-                        { filtros = " NitCliente like '" + txtFiltro.Text + "%'"; break; }
-                    //Modelo;
+                        filtros = " clientes.nitCliente LIKE '" + txtFiltro.Text + "%'";
+                        break;
                     case "3":
-                        { filtros = " Modelos.NombreModelo like '" + txtFiltro.Text + "%'"; break; }
-                    //FAbricante
+                        filtros = " Modelos.NombreModelo LIKE '" + txtFiltro.Text + "%'";
+                        break;
                     case "4":
-                        { filtros = " Fabricante.NombreFabricante like '" + txtFiltro.Text + "%'"; break; }
-                    //codigo orden de servicio
+                        filtros = " fabricante.nombre_fabricante LIKE '" + txtFiltro.Text + "%'";
+                        break;
                     case "5":
-                        { filtros = " CodOrdenServicio like '" + txtFiltro.Text + "%'"; break; }
-                    //asignado a
+                        filtros = " ordenServicio.codOrdenServicio LIKE '" + txtFiltro.Text + "%'";
+                        break;
                     case "6":
-                        { filtros = " AsignadoA like '" + txtFiltro.Text + "%'"; break; }
+                        filtros = " ordenServicio.asignadoA LIKE '" + txtFiltro.Text + "%'";
+                        break;
                 }
             }
             if (!chkHistorico.Checked)

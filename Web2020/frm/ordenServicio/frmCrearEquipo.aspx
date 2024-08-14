@@ -407,6 +407,9 @@
        ConnectionString="<%$ ConnectionStrings:spxConnectionString %>" 
        SelectCommand="SELECT codFabricante,nombre_fabricante FROM fabricante ORDER BY nombre_fabricante">
    </asp:SqlDataSource>
+                   <div class="frmError">
+    <asp:Label ID="lblErrorFabricante" runat="server" ForeColor="#CC0000"></asp:Label>
+</div>
  </div>
 
    <div class="row">
@@ -422,6 +425,9 @@
            <asp:ControlParameter ControlID="cmbFabricante" Name="codF" PropertyName="SelectedValue" Type="String" />
        </SelectParameters>
    </asp:SqlDataSource>
+            <div class="frmError">
+    <asp:Label ID="lblErrorModelo" runat="server" ForeColor="#CC0000"></asp:Label>
+</div>
 </div>
     </ContentTemplate>
 </asp:UpdatePanel>
@@ -438,6 +444,9 @@
                 ConnectionString="<%$ ConnectionStrings:spxConnectionString %>" 
                 SelectCommand="SELECT nitCliente, nombreCliente FROM clientes ORDER BY nombreCliente">
             </asp:SqlDataSource>
+                        <div class="frmError">
+    <asp:Label ID="lblErrorCliente" runat="server" ForeColor="#CC0000"></asp:Label>
+</div>
         </div>
 
         <div class="row">
@@ -453,6 +462,11 @@
                     <asp:ControlParameter ControlID="cmbClientes" Name="codSuc" PropertyName="SelectedValue" Type="String" />
                 </SelectParameters>
             </asp:SqlDataSource>
+
+<div class="frmError">
+    <asp:Label ID="lblSucursal" runat="server" ForeColor="#CC0000"></asp:Label>
+</div>
+
         </div>
     </ContentTemplate>
 </asp:UpdatePanel>
@@ -470,6 +484,9 @@
                      <asp:ControlParameter ControlID="cmbFabricante" Name="codF" PropertyName="SelectedValue" Type="String" />
                  </SelectParameters>
              </asp:SqlDataSource>
+             <div class="frmError">
+    <asp:Label ID="lblTipoModalidad" runat="server" ForeColor="#CC0000"></asp:Label>
+</div>
           </div>
 
        <div class="row">
@@ -482,6 +499,9 @@
        ConnectionString="<%$ ConnectionStrings:spxConnectionString %>" 
        SelectCommand="select codTipoPropiedad,nombreTipoPropiedad  from tipoPropiedad order by nombreTipoPropiedad">
    </asp:SqlDataSource>
+                       <div class="frmError">
+    <asp:Label ID="lblTipoPropiedad" runat="server" ForeColor="#CC0000"></asp:Label>
+</div>
 </div>
 
          

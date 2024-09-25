@@ -9193,20 +9193,20 @@ where ordenservicio.codOrdenServicio ='&lt;&lt;codOrdenServicio&gt;&gt;'</Record
         <Section>5</Section>
         <Text>Trim(nombrecliente) + " (" +Trim(nitCliente)+")"</Text>
         <Calculated>-1</Calculated>
-        <Left>1065</Left>
-        <Width>5010</Width>
+        <Left>1070</Left>
+        <Width>5483</Width>
         <Height>195</Height>
         <Font>
           <Name>Arial</Name>
-          <Size>7</Size>
+          <Size>6</Size>
         </Font>
       </Field>
       <Field>
         <Name>Field1</Name>
         <Section>5</Section>
         <Text>OS. Número:</Text>
-        <Left>6390</Left>
-        <Width>1380</Width>
+        <Left>6598</Left>
+        <Width>1172</Width>
         <Height>285</Height>
         <Font>
           <Bold>-1</Bold>
@@ -9219,8 +9219,8 @@ where ordenservicio.codOrdenServicio ='&lt;&lt;codOrdenServicio&gt;&gt;'</Record
         <Section>5</Section>
         <Text>codOrdenServicio</Text>
         <Calculated>-1</Calculated>
-        <Left>7785</Left>
-        <Width>1020</Width>
+        <Left>7788</Left>
+        <Width>1163</Width>
         <Height>285</Height>
         <Font>
           <Bold>-1</Bold>
@@ -9288,10 +9288,10 @@ where ordenservicio.codOrdenServicio ='&lt;&lt;codOrdenServicio&gt;&gt;'</Record
       <Field>
         <Name>Field3</Name>
         <Section>5</Section>
-        <Text>Tipo Servicio</Text>
-        <Left>6390</Left>
-        <Top>720</Top>
-        <Width>1275</Width>
+        <Text>Servicio</Text>
+        <Left>6387</Left>
+        <Top>717</Top>
+        <Width>696</Width>
         <Height>195</Height>
         <Font>
           <Bold>-1</Bold>
@@ -9304,9 +9304,9 @@ where ordenservicio.codOrdenServicio ='&lt;&lt;codOrdenServicio&gt;&gt;'</Record
         <Section>5</Section>
         <Text>nombretipoServicio</Text>
         <Calculated>-1</Calculated>
-        <Left>7785</Left>
-        <Top>720</Top>
-        <Width>1791</Width>
+        <Left>7113</Left>
+        <Top>717</Top>
+        <Width>2264</Width>
         <Height>195</Height>
         <Font>
           <Name>Arial</Name>
@@ -9317,9 +9317,9 @@ where ordenservicio.codOrdenServicio ='&lt;&lt;codOrdenServicio&gt;&gt;'</Record
         <Name>Field13</Name>
         <Section>5</Section>
         <Text>Telefono</Text>
-        <Left>6390</Left>
-        <Top>480</Top>
-        <Width>990</Width>
+        <Left>6387</Left>
+        <Top>478</Top>
+        <Width>696</Width>
         <Height>195</Height>
         <Font>
           <Bold>-1</Bold>
@@ -9332,9 +9332,9 @@ where ordenservicio.codOrdenServicio ='&lt;&lt;codOrdenServicio&gt;&gt;'</Record
         <Section>5</Section>
         <Text>telefono1</Text>
         <Calculated>-1</Calculated>
-        <Left>7785</Left>
-        <Top>477</Top>
-        <Width>1287</Width>
+        <Left>7113</Left>
+        <Top>478</Top>
+        <Width>2222</Width>
         <Height>195</Height>
         <Align>0</Align>
         <Font>
@@ -9415,9 +9415,9 @@ where ordenservicio.codOrdenServicio ='&lt;&lt;codOrdenServicio&gt;&gt;'</Record
         <Name>Field23</Name>
         <Section>5</Section>
         <Text>Celular</Text>
-        <Left>6390</Left>
-        <Top>960</Top>
-        <Width>990</Width>
+        <Left>6387</Left>
+        <Top>955</Top>
+        <Width>665</Width>
         <Height>195</Height>
         <Font>
           <Bold>-1</Bold>
@@ -9430,9 +9430,9 @@ where ordenservicio.codOrdenServicio ='&lt;&lt;codOrdenServicio&gt;&gt;'</Record
         <Section>5</Section>
         <Text>CelularContacto</Text>
         <Calculated>-1</Calculated>
-        <Left>7785</Left>
-        <Top>963</Top>
-        <Width>1620</Width>
+        <Left>7113</Left>
+        <Top>966</Top>
+        <Width>2233</Width>
         <Height>195</Height>
         <Font>
           <Name>Arial</Name>

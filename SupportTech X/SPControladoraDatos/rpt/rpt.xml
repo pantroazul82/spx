@@ -7295,10 +7295,10 @@ where codOrdenServicio ='&lt;&lt;codOrdenServicio&gt;&gt;'
       <Field>
         <Name>Field36</Name>
         <Section>0</Section>
-        <Text>Ingeniero</Text>
+        <Text>Ingeniero / asesor</Text>
         <Left>75</Left>
         <Top>585</Top>
-        <Width>882</Width>
+        <Width>2205</Width>
         <Height>261</Height>
         <Font>
           <Bold>-1</Bold>
@@ -7369,7 +7369,7 @@ where codOrdenServicio ='&lt;&lt;codOrdenServicio&gt;&gt;'
         <Section>0</Section>
         <Text>asignadoNombre</Text>
         <Calculated>-1</Calculated>
-        <Left>981</Left>
+        <Left>2406</Left>
         <Top>585</Top>
         <Width>4248</Width>
         <Height>261</Height>
@@ -9131,10 +9131,10 @@ where ordenservicio.codOrdenServicio ='&lt;&lt;codOrdenServicio&gt;&gt;'</Record
       <Field>
         <Name>Field60</Name>
         <Section>2</Section>
-        <Text>Ingeniero</Text>
-        <Left>1179</Left>
-        <Top>1179</Top>
-        <Width>990</Width>
+        <Text>Ingeniero / asesor</Text>
+        <Left>1035</Left>
+        <Top>1185</Top>
+        <Width>1740</Width>
         <Height>180</Height>
         <Align>1</Align>
         <Font>
@@ -9193,20 +9193,20 @@ where ordenservicio.codOrdenServicio ='&lt;&lt;codOrdenServicio&gt;&gt;'</Record
         <Section>5</Section>
         <Text>Trim(nombrecliente) + " (" +Trim(nitCliente)+")"</Text>
         <Calculated>-1</Calculated>
-        <Left>1065</Left>
-        <Width>5010</Width>
+        <Left>1070</Left>
+        <Width>5483</Width>
         <Height>195</Height>
         <Font>
           <Name>Arial</Name>
-          <Size>7</Size>
+          <Size>6</Size>
         </Font>
       </Field>
       <Field>
         <Name>Field1</Name>
         <Section>5</Section>
         <Text>OS. Número:</Text>
-        <Left>6390</Left>
-        <Width>1380</Width>
+        <Left>6598</Left>
+        <Width>1172</Width>
         <Height>285</Height>
         <Font>
           <Bold>-1</Bold>
@@ -9219,8 +9219,8 @@ where ordenservicio.codOrdenServicio ='&lt;&lt;codOrdenServicio&gt;&gt;'</Record
         <Section>5</Section>
         <Text>codOrdenServicio</Text>
         <Calculated>-1</Calculated>
-        <Left>7785</Left>
-        <Width>1020</Width>
+        <Left>7788</Left>
+        <Width>1163</Width>
         <Height>285</Height>
         <Font>
           <Bold>-1</Bold>
@@ -9288,10 +9288,10 @@ where ordenservicio.codOrdenServicio ='&lt;&lt;codOrdenServicio&gt;&gt;'</Record
       <Field>
         <Name>Field3</Name>
         <Section>5</Section>
-        <Text>Tipo Servicio</Text>
-        <Left>6390</Left>
-        <Top>720</Top>
-        <Width>1275</Width>
+        <Text>Servicio</Text>
+        <Left>6387</Left>
+        <Top>717</Top>
+        <Width>696</Width>
         <Height>195</Height>
         <Font>
           <Bold>-1</Bold>
@@ -9304,9 +9304,9 @@ where ordenservicio.codOrdenServicio ='&lt;&lt;codOrdenServicio&gt;&gt;'</Record
         <Section>5</Section>
         <Text>nombretipoServicio</Text>
         <Calculated>-1</Calculated>
-        <Left>7785</Left>
-        <Top>720</Top>
-        <Width>1791</Width>
+        <Left>7113</Left>
+        <Top>717</Top>
+        <Width>2264</Width>
         <Height>195</Height>
         <Font>
           <Name>Arial</Name>
@@ -9317,9 +9317,9 @@ where ordenservicio.codOrdenServicio ='&lt;&lt;codOrdenServicio&gt;&gt;'</Record
         <Name>Field13</Name>
         <Section>5</Section>
         <Text>Telefono</Text>
-        <Left>6390</Left>
-        <Top>480</Top>
-        <Width>990</Width>
+        <Left>6387</Left>
+        <Top>478</Top>
+        <Width>696</Width>
         <Height>195</Height>
         <Font>
           <Bold>-1</Bold>
@@ -9332,9 +9332,9 @@ where ordenservicio.codOrdenServicio ='&lt;&lt;codOrdenServicio&gt;&gt;'</Record
         <Section>5</Section>
         <Text>telefono1</Text>
         <Calculated>-1</Calculated>
-        <Left>7785</Left>
-        <Top>477</Top>
-        <Width>1287</Width>
+        <Left>7113</Left>
+        <Top>478</Top>
+        <Width>2222</Width>
         <Height>195</Height>
         <Align>0</Align>
         <Font>
@@ -9415,9 +9415,9 @@ where ordenservicio.codOrdenServicio ='&lt;&lt;codOrdenServicio&gt;&gt;'</Record
         <Name>Field23</Name>
         <Section>5</Section>
         <Text>Celular</Text>
-        <Left>6390</Left>
-        <Top>960</Top>
-        <Width>990</Width>
+        <Left>6387</Left>
+        <Top>955</Top>
+        <Width>665</Width>
         <Height>195</Height>
         <Font>
           <Bold>-1</Bold>
@@ -9430,9 +9430,9 @@ where ordenservicio.codOrdenServicio ='&lt;&lt;codOrdenServicio&gt;&gt;'</Record
         <Section>5</Section>
         <Text>CelularContacto</Text>
         <Calculated>-1</Calculated>
-        <Left>7785</Left>
-        <Top>963</Top>
-        <Width>1620</Width>
+        <Left>7113</Left>
+        <Top>966</Top>
+        <Width>2233</Width>
         <Height>195</Height>
         <Font>
           <Name>Arial</Name>
@@ -17393,10 +17393,10 @@ where ordenservicio.codOrdenServicio = '&lt;&lt;codOrdenServicio&gt;&gt;'
       <Field>
         <Name>Field60</Name>
         <Section>4</Section>
-        <Text>Ingeniero</Text>
-        <Left>1140</Left>
+        <Text>Ingeniero / asesor</Text>
+        <Left>915</Left>
         <Top>855</Top>
-        <Width>990</Width>
+        <Width>1485</Width>
         <Height>285</Height>
         <Align>1</Align>
         <Font>
@@ -20298,12 +20298,12 @@ where EntradaSalidaEquipos.codEntradaSalidaEquipos= &lt;&lt;codEntrada&gt;&gt;</
     </DataSource>
     <Layout>
       <Width>4943</Width>
-      <MarginLeft>0</MarginLeft>
-      <MarginTop>50</MarginTop>
+      <MarginLeft>1000</MarginLeft>
+      <MarginTop>1000</MarginTop>
       <MarginRight>0</MarginRight>
       <MarginBottom>0</MarginBottom>
       <Orientation>1</Orientation>
-      <CustomWidth>6000</CustomWidth>
+      <CustomWidth>6500</CustomWidth>
       <CustomHeight>3000</CustomHeight>
     </Layout>
     <Font>
@@ -20319,7 +20319,7 @@ where EntradaSalidaEquipos.codEntradaSalidaEquipos= &lt;&lt;codEntrada&gt;&gt;</
       <Section>
         <Name>Detail</Name>
         <Type>0</Type>
-        <Height>2556</Height>
+        <Height>3396</Height>
       </Section>
       <Section>
         <Name>Header</Name>
@@ -20590,6 +20590,36 @@ where EntradaSalidaEquipos.codEntradaSalidaEquipos= &lt;&lt;codEntrada&gt;&gt;</
           <Size>10</Size>
         </Font>
       </Field>
+      <Field>
+        <Name>Field18</Name>
+        <Section>0</Section>
+        <Text>IS-FT-IDM-162</Text>
+        <Left>90</Left>
+        <Top>2685</Top>
+        <Width>4605</Width>
+        <Height>192</Height>
+        <Align>7</Align>
+      </Field>
+      <Field>
+        <Name>Field19</Name>
+        <Section>0</Section>
+        <Text>VERSION 2</Text>
+        <Left>180</Left>
+        <Top>2895</Top>
+        <Width>4605</Width>
+        <Height>192</Height>
+        <Align>7</Align>
+      </Field>
+      <Field>
+        <Name>Field20</Name>
+        <Section>0</Section>
+        <Text>FECHA 17/01/2024</Text>
+        <Left>120</Left>
+        <Top>3090</Top>
+        <Width>4605</Width>
+        <Height>192</Height>
+        <Align>7</Align>
+      </Field>
     </Fields>
   </Report>
   <!--Report *** rptStiker ***-->
@@ -20620,12 +20650,13 @@ where EntradaSalidaEquipos.codEntradaSalidaEquipos= &lt;&lt;codEntrada&gt;&gt;</
     </DataSource>
     <Layout>
       <Width>4943</Width>
-      <MarginLeft>0</MarginLeft>
-      <MarginTop>0</MarginTop>
+      <MarginLeft>1000</MarginLeft>
+      <MarginTop>1000</MarginTop>
       <MarginRight>0</MarginRight>
       <MarginBottom>0</MarginBottom>
       <Orientation>1</Orientation>
-      <CustomWidth>6000</CustomWidth>
+      <PaperSize>1</PaperSize>
+      <CustomWidth>6500</CustomWidth>
       <CustomHeight>3000</CustomHeight>
     </Layout>
     <Font>
@@ -20641,7 +20672,7 @@ where EntradaSalidaEquipos.codEntradaSalidaEquipos= &lt;&lt;codEntrada&gt;&gt;</
       <Section>
         <Name>Detail</Name>
         <Type>0</Type>
-        <Height>2556</Height>
+        <Height>3351</Height>
       </Section>
       <Section>
         <Name>Header</Name>
@@ -20911,6 +20942,36 @@ where EntradaSalidaEquipos.codEntradaSalidaEquipos= &lt;&lt;codEntrada&gt;&gt;</
           <Name>Arial</Name>
           <Size>10</Size>
         </Font>
+      </Field>
+      <Field>
+        <Name>Field18</Name>
+        <Section>0</Section>
+        <Text>IS-FT-IDM-162</Text>
+        <Left>90</Left>
+        <Top>2685</Top>
+        <Width>4605</Width>
+        <Height>192</Height>
+        <Align>7</Align>
+      </Field>
+      <Field>
+        <Name>Field19</Name>
+        <Section>0</Section>
+        <Text>VERSION 2</Text>
+        <Left>180</Left>
+        <Top>2895</Top>
+        <Width>4605</Width>
+        <Height>192</Height>
+        <Align>7</Align>
+      </Field>
+      <Field>
+        <Name>Field20</Name>
+        <Section>0</Section>
+        <Text>FECHA 17/01/2024</Text>
+        <Left>120</Left>
+        <Top>3090</Top>
+        <Width>4605</Width>
+        <Height>192</Height>
+        <Align>7</Align>
       </Field>
     </Fields>
   </Report>

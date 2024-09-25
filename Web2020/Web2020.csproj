@@ -1060,6 +1060,7 @@
     <Content Include="frm\ordenServicio\frmCrearOrden.aspx" />
     <Content Include="frm\ordenServicio\frmEjecutarOrden.aspx" />
     <Content Include="frm\ordenServicio\frmEjecutarOrdenPaint.aspx" />
+    <Content Include="frm\ordenServicio\frmReasignar.aspx" />
     <Content Include="frm\ordenServicio\frmEjecutarOrdenSign.aspx" />
     <Content Include="frm\ordenServicio\frmFirmaN.aspx" />
     <Content Include="frm\ordenServicio\frmListado.aspx" />
@@ -1728,6 +1729,13 @@
     </Compile>
     <Compile Include="frm\ordenServicio\frmEjecutarOrdenPaint.aspx.designer.cs">
       <DependentUpon>frmEjecutarOrdenPaint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frm\ordenServicio\frmReasignar.aspx.cs">
+      <DependentUpon>frmReasignar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frm\ordenServicio\frmReasignar.aspx.designer.cs">
+      <DependentUpon>frmReasignar.aspx</DependentUpon>
     </Compile>
     <Compile Include="frm\ordenServicio\frmEjecutarOrdenSign.aspx.cs">
       <DependentUpon>frmEjecutarOrdenSign.aspx</DependentUpon>

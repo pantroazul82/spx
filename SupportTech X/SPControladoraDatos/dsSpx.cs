@@ -14,7 +14,12 @@
     }
 }
 
-namespace SPControladoraDatos.dsSpxTableAdapters {
+namespace SPControladoraDatos.dsSpxTableAdapters
+{
+    partial class reasignacionOrdenesTrabajoTableAdapter
+    {
+    }
+
     partial class equiposTableAdapter
     {
     }

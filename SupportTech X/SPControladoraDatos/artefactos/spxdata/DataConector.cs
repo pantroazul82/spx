@@ -75,7 +75,7 @@ namespace SPXdata.BD
             {
                 cnn = "Data Source=" + servidor + ((puerto == null || puerto == string.Empty || puerto.Trim() == "0") ? "" : ("," + puerto)) + ""
                     + ((!incluirBaseDatos) ? "" : ";Initial Catalog=" + baseDatos + "")
-                    + ";" + str_password + "User ID=" + login + ";Persist Security Info=True;";
+                    + ";" + str_password + "User ID=" + login + ";Persist Security Info=True;TrustServerCertificate=True";
             }
             else if (tipo == tipoMotor.oracle)
             {
@@ -89,7 +89,7 @@ namespace SPXdata.BD
 
                 cnn = "provider=Oracle;user id=" + login + "login;" + str_password + "server=" + servidor
                     + ((!incluirBaseDatos) ? "" : ";database=" + baseDatos + "")
-                    + ";connect mode=" + tipoCnn + ";direct=" + ((conexionDirecta) ? "True" : "False") + ";port=" + puerto + ";sid=" + sid + ";persist security info=True";
+                    + ";connect mode=" + tipoCnn + ";direct=" + ((conexionDirecta) ? "True" : "False") + ";port=" + puerto + ";sid=" + sid + ";persist security info=True;";
             }else if (tipo == tipoMotor.postgress)
             {
                 cnn = "provider=SQL Server;Data Source=" + servidor + ((puerto == string.Empty) ? "" : ("," + puerto)) + ""

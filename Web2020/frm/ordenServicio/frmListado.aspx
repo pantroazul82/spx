@@ -94,6 +94,11 @@
                         <asp:ImageButton ID="btnEjecutarOrden" runat="server" ImageUrl="~/img/web/update.gif" OnClick="ejecutarOrdenServicio" ToolTip="Ejecutar Orden de Servicio" ValidationGroup='<%# Eval("CodOrdenServicio") %>'
                             Visible='<%# validarVisibilidadEjecutar( Eval("Codestadoordenservicio") ) %>'
                             Width="30" />
+
+                         <asp:ImageButton ID="btnREasignarOrden" runat="server" ImageUrl="~/img/web/select.gif" 
+                             OnClick="reasignarOrdenServicio" ToolTip="Reasignar Orden de Servicio" ValidationGroup='<%# Eval("CodOrdenServicio") %>'
+     Visible='<%# validarVisibilidadREasignar( Eval("Codestadoordenservicio") ) %>'
+     Width="30" />
                     </DataItemTemplate>
                 </dx:GridViewDataColumn>
                 <dx:GridViewCommandColumn ShowClearFilterButton="True" VisibleIndex="0">

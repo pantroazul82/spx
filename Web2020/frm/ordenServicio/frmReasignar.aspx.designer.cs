@@ -51,6 +51,15 @@ namespace Web2020.frm.ordenServicio
         protected global::System.Web.UI.WebControls.Label lblError;
 
         /// <summary>
+        /// txtLoginIngenieroAsignado control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtLoginIngenieroAsignado;
+
+        /// <summary>
         /// txtIngenieroAsignado control.
         /// </summary>
         /// <remarks>
@@ -67,5 +76,14 @@ namespace Web2020.frm.ordenServicio
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList cmbIngenieros;
+
+        /// <summary>
+        /// txtMotivoReasignacion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtMotivoReasignacion;
     }
 }

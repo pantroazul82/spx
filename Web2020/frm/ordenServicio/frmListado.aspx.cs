@@ -145,8 +145,24 @@ namespace Web2020.frm.ordenServicio
 
         }
 
+        public bool validarVisibilidadREasignar(object codigoEstado)
+        {
+            if (codigoEstado == null) return false;
+            if (codigoEstado == null) return false;
+
+            string s = codigoEstado.ToString().ToUpper();
+            if (s == "EJECU" || s == "ENESP" || s == "NUEVA" || s == "PROGR" ) return true;
+            else return false;
+
+        }
 
 
+
+        public void reasignarOrdenServicio(object sender, System.Web.UI.ImageClickEventArgs e)
+        {
+            string orden = ((ImageButton)sender).ValidationGroup;
+            Response.Redirect("frmReasignar.aspx?osx=" + orden);
+        }
 
 
 

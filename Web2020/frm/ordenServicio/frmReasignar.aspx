@@ -117,7 +117,7 @@
             <hr />
             <div class="row">
                 <div class="col col-sm-2">
-                    <asp:Button ID="btnCancelar" class="btn btn-danger" runat="server" Text="Cerrar Orden"
+                    <asp:Button ID="btnCancelar" class="btn btn-danger" runat="server" Text="Cancelar"
                         OnClick="btnCancelar_Click"  />
                 </div>
                 <div class="col col-sm-2">
@@ -150,6 +150,7 @@
                                               <div class="row">
        <div class="col-sm-2">Ingeniero Asignado</div>
        <div class="col-sm-4">
+           <asp:TextBox runat="server" ID="txtLoginIngenieroAsignado" Visible="false" ReadOnly="True"></asp:TextBox>
            <asp:TextBox runat="server" ID="txtIngenieroAsignado" ReadOnly="True"></asp:TextBox>
        </div>
        
@@ -159,11 +160,20 @@
                                               <div class="row">
        <div class="col-sm-2">Nuevo Ingeniero Asignado</div>
        <div class="col-sm-4">
-           <asp:dropdownlist runat="server" ID="cmbIngenieros" ReadOnly="True"></asp:dropdownlist>
+           <asp:dropdownlist runat="server" ID="cmbIngenieros" ></asp:dropdownlist>
        </div>
        
    </div>
 
+                                            
+                                              <div class="row">
+       <div class="col-sm-2">Motivo reasignación</div>
+       <div class="col-sm-4">
+           <asp:TextBox runat="server" ID="txtMotivoReasignacion" TextMode="MultiLine"></asp:TextBox>
+       </div>
+       
+      
+   </div>
 
 
                                         </div>

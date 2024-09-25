@@ -28,53 +28,68 @@ namespace Web2020.frm.ordenServicio
                 obS.comprobarAcceso(Page, Session, Response, 1054);//
                
                 lblOrdenServicio.Text = Request.Params["osx"];
-                BOLayer.Usuario0Factory uf = new BOLayer.Usuario0Factory();
-                
-                BOLayer.Usuario0 usu = uf.Get(os.AsignadoA.Trim());
+                string sql = @"select top 1 asignadoA,usuario.nombre from ordenServicio
+join usuario on usuario.login = asignadoA where codOrdenServicio="+lblOrdenServicio.Text;
+                SPXdata.BD.DataConector obj = new SPXdata.BD.DataConector();
+
+                var ds= obj.ejecutarConsulta(sql);
+
                 //me extraña will
-                if (usu != null) {
-                    txtIngenieroAsignado.Text = usu.Nombre.Trim() + "(" + os.AsignadoA.Trim() + ")";
+                if (ds.Tables[0].Rows.Count >0) {
+                    txtLoginIngenieroAsignado.Text = ds.Tables[0].Rows[0][0].ToString();
+                    txtIngenieroAsignado.Text = ds.Tables[0].Rows[0][1].ToString() + "(" + lblOrdenServicio.Text + ")";
                 } else {
                     txtIngenieroAsignado.Text = "No asignado";
                 }
-               /* SPXSeguridad.data.cls.clsTusuario objU = new SPXSeguridad.data.cls.clsTusuario();
-                clsTusuario1.FillByPermiso(dsSPXSeguridad1.usuario, 1063);*/
-
+                sql = ""; 
+                
+                SPXSeguridad.data.cls.clsTusuario objU = new SPXSeguridad.data.cls.clsTusuario();
+                var ds2= objU.getDataByPermiso( 1063);
+                cmbIngenieros.DataSource = ds2;
+                cmbIngenieros.DataValueField = "login";
+                cmbIngenieros.DataTextField = "nombre";
+                cmbIngenieros.DataBind();
             }
    
         }
 
 
         protected void btnREasginar_Click(object sender, EventArgs e) {
-            if (cmbIngenieros.selectedValue == null || cmbIngenieros.selectedValue == "-1")
+            if (cmbIngenieros.SelectedValue == null || cmbIngenieros.SelectedValue == "-1")
             {
                 lblError.Text = "Debe seleccionar un ingeniero";
                 return;
             }
-          
-            reasignacionOrdenesTrabajoTableAdapter reasignacionOrdenesTrabajoTableAdapter1
-            int codR = reasignacionOrdenesTrabajoTableAdapter1.verSiguienteId(int.Parse(codOrdenServicio)).Value;
-            reasignacionOrdenesTrabajoTableAdapter1.Insert(int.Parse(codOrdenServicio), codR,
-                dsSpx1.ordenServicio[0].asignadoA, frmIng.LoginNuevo, n, frmIng.motivoReasignacion,
-                SPXSeguridad.logica.sesion.LoginUsuarioAutenticado);
-            //actualizamos la orden de servicio
-            ordenServicioTableAdapter1.UpdateAsignacion(frmIng.LoginNuevo, int.Parse(codOrdenServicio));
-            cmbIngeniero.SelectedValue = frmIng.LoginNuevo;
-            reasignacionOrdenesTrabajoTableAdapter1.FillByCodOrdenServicio(dsSpx1.reasignacionOrdenesTrabajo, int.Parse(codOrdenServicio));
-            #region zona de notificaciones de email
-            //CgSmtpEmailSender.core.clsSender mailsender = new CgSmtpEmailSender.core.clsSender();
-            //mailsender.EjecutarAccion(6, frmIng.LoginNuevo, (System.Data.DataRow)dsSpx1.ordenServicio[0], null, CgSmtpEmailSender.core.clsSender.prioridad.media,"","");
-            //mailsender.EjecutarAccion(7, frmIng.LoginActual, (System.Data.DataRow)dsSpx1.ordenServicio[0], null, CgSmtpEmailSender.core.clsSender.prioridad.media,"","");
-            #endregion
-            if (cmbIngeniero.SelectedValue != null && cmbIngeniero.SelectedValue.ToString().Trim() != string.Empty)
-                notificacionTableAdapter1.Insert(cmbIngeniero.SelectedValue.ToString(), "Orden de servicio reasignada.",
+            string creadoPor = Session["ss_cod_usuario"].ToString();
+            string sql = @"SELECT isnull(max(codReasignacion),0) + 1 
+ FROM reasignacionOrdenesTrabajo
+WHERE 
+codOrdenServicio = " + lblOrdenServicio.Text;
+            SPXdata.BD.DataConector obj = new SPXdata.BD.DataConector();
 
-        Response.Redirect("frmOs.aspx");
+            var id = obj.ejecutarProcedimiento(sql);
+
+            sql = @"INSERT INTO [reasignacionOrdenesTrabajo] ([codOrdenServicio], [codReasignacion], [loginOriginal]," +
+                 " [loginNuevo], [fechaReAsignacion], [motivoReasignacion], [reasignadoPor]) " +
+                 "VALUES (" + lblOrdenServicio.Text + "," + id + " ,'" + txtLoginIngenieroAsignado.Text + "' , '"
+                 + cmbIngenieros.SelectedValue + "', getdate(), '" + txtMotivoReasignacion.Text + "', '" + Session["ss_login"].ToString() + "')";
+
+            obj.ejecutarComando(sql);
+            //actualizamos la orden de servicio
+            sql = @"UPDATE [ordenServicio] 
+SET 
+ [asignadoA] = '"+cmbIngenieros.SelectedValue+@"'
+ WHERE (codOrdenServicio = " + lblOrdenServicio.Text+")";
+
+            obj.ejecutarComando(sql);
+
+
+        Response.Redirect("frmListado.aspx");
         }
 
         protected void btnCancelar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("frmOs.aspx");
+            Response.Redirect("frmListado.aspx");
         }
 
 

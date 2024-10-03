@@ -248,8 +248,8 @@ namespace SPControladoraDatos.artefactos.SPXUtilidades.Misc
                 if (grilla.Splits[0].DisplayColumns[l].Visible)
                 {
                     c1XLBook1.Sheets[0].Columns[columna].Width = 2500;
-                    c1XLBook1.Sheets[0][0, columna++].Value = grilla.Splits[0].DisplayColumns[l].Name;
-                    listaColumnas.Add(grilla.Splits[0].DisplayColumns[l].DataColumn.DataField);
+                    c1XLBook1.Sheets[0][0, columna++].Value = grilla.Splits[0].DisplayColumns[l].Name.Replace("Programada Por", "Creada Por");
+                    listaColumnas.Add(grilla.Splits[0].DisplayColumns[l].DataColumn.DataField.Replace("programadaPor", "creadaPor"));
                 }
             }
            

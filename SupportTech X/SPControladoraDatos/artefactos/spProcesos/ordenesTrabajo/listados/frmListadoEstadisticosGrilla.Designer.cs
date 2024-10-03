@@ -65,7 +65,7 @@
             this.btnVerOrden = new DevComponents.DotNetBar.ButtonX();
             this.btnExportarExcel = new DevComponents.DotNetBar.ButtonX();
             ((System.ComponentModel.ISupportInitialize)(this.dsSpx1)).BeginInit();
-            this.grddatos.BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grddatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.c1CmbTiposServicio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.c1CmbPrioiridades)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.c1cmbEstados)).BeginInit();
@@ -74,6 +74,7 @@
             // dsSpx1
             // 
             this.dsSpx1.DataSetName = "dsSpx";
+            this.dsSpx1.EnforceConstraints = false;
             this.dsSpx1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // ordenServicioTableAdapter1
@@ -96,9 +97,9 @@
             // 
             this.grddatos.AllowUpdate = false;
             this.grddatos.AlternatingRows = true;
-            this.grddatos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.grddatos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grddatos.DataMember = "ordenServicio";
             this.grddatos.DataSource = this.dsSpx1;
             this.grddatos.DataView = C1.Win.C1TrueDBGrid.DataViewEnum.GroupBy;
@@ -109,7 +110,7 @@
             this.grddatos.Name = "grddatos";
             this.grddatos.PreviewInfo.Location = new System.Drawing.Point(0, 0);
             this.grddatos.PreviewInfo.Size = new System.Drawing.Size(0, 0);
-            this.grddatos.PreviewInfo.ZoomFactor = 75;
+            this.grddatos.PreviewInfo.ZoomFactor = 75D;
             this.grddatos.PrintInfo.PageSettings = ((System.Drawing.Printing.PageSettings)(resources.GetObject("grddatos.PrintInfo.PageSettings")));
             this.grddatos.Size = new System.Drawing.Size(858, 457);
             this.grddatos.TabIndex = 0;
@@ -271,8 +272,8 @@
             this.Name = "frmListadoEstadisticosGrilla";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ordenes de Servicio";
-            this.Load += new System.EventHandler(this.frmListadoEstadisticosGrilla_Load);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmListadoEstadisticosGrilla_FormClosing);
+            this.Load += new System.EventHandler(this.frmListadoEstadisticosGrilla_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dsSpx1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grddatos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.c1CmbTiposServicio)).EndInit();

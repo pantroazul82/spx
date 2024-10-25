@@ -60,7 +60,8 @@ namespace SupportTech.frm
             var cnt = dc.ejecutarProcedimiento(sql).ToString();
             int a = 0;
             int.TryParse(cnt, out a);
-            if (a > 5 + 1)//ojo siempre hay un usario de kuxan
+            
+            if (a > 10 + 1)//ojo siempre hay un usario de kuxan
             {
                 MessageBox.Show("La licencia adquirida es para 10 usuarios, actualmente hay " + a +
                     " usuarios activos en la BD");
@@ -110,8 +111,8 @@ namespace SupportTech.frm
                 }
                 //
 
-                if (validacionREactivos() == false) { Application.Exit();   return; }
-               // if (validacionBiometrica() == false) { Application.Exit(); return; }
+               // if (validacionREactivos() == false) { Application.Exit();   return; }
+                if (validacionBiometrica() == false) { Application.Exit(); return; }
 
 
                 string sql = "select count(*) from usuario";

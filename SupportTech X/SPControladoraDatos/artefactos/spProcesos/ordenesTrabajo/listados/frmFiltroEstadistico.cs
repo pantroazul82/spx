@@ -57,8 +57,13 @@ namespace spProcesos.ordenesTrabajo.listados
                 tmp = c1CmbEstados.RowTop(grilla.RowCount - 1);
                 if (y >= tmp && y <= tmp + grilla.RowHeight) { fila = grilla.RowCount - 1; }
             }
-            #endregion
-            if (fila == -1) return;
+            if (fila == -1)
+            {
+                fila = grilla.RowCount-1;
+            }
+
+                #endregion
+                if (fila == -1) return;
             //verificamos si esa fila tiene mas de 0 si no no continuas
             string a = grilla[fila, 1].ToString().Trim();
             if (a == "0") return;

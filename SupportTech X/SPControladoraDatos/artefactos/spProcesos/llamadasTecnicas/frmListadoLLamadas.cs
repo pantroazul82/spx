@@ -24,7 +24,7 @@ namespace spProcesos.llamadasTecnicas
  select fechaSolucion,diasEnSolucionar,fechaUltimoSeguimiento, solucionado,
  fechaCierre,us2.nombre 'cerradaPor',usuarios.nombre 'abiertaPor', 
  idLlamadaSoporte,codEstadoLlamadaTecnica,
- nombreEstado,
+ 'test' nombreEstado,
  fechaLlamada, clientes.nitCliente,
  clientes.nombreCliente,clientes.numeroSocio, 
  contactosClientes.nombreContacto,
@@ -40,7 +40,7 @@ namespace spProcesos.llamadasTecnicas
   nombreModalidadEquipo ,
   obsCliente,obsAsesorTelefonico,obsFinales ,
   tipo_asesoria.nombre_tipo_asesoria,
-  resultado_final_llamada.resultado_final_llamada
+  resultado_final_llamada.resultado_final_llamada,asesorTelefonico,ingenieroAsesor
   
 from LlamadaSoporte 
   join estadosLLamadasTecnicas on estadosLLamadasTecnicas.codEstadoLlamada = LlamadaSoporte.codEstadoLlamadaTecnica  

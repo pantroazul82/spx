@@ -12,7 +12,7 @@ namespace SPControladoraDatos.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "14.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.14.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -20,17 +20,6 @@ namespace SPControladoraDatos.Properties {
         public static Settings Default {
             get {
                 return defaultInstance;
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=sql.kuxan.co,19889;Initial Catalog=spxjul1;Persist Security Info=True" +
-            ";User ID=sa;Password=sElectra69l;")]
-        public string SUPPORTECHConnectionString {
-            get {
-                return ((string)(this["SUPPORTECHConnectionString"]));
             }
         }
         
@@ -79,28 +68,6 @@ namespace SPControladoraDatos.Properties {
             }
             set {
                 this["customTheme"] = value;
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=sql.kuxan.co,19889;Initial Catalog=spxjul1;Persist Security Info=True" +
-            ";User ID=sa;Password=sElectra69l;")]
-        public string supportechConnectionString1 {
-            get {
-                return ((string)(this["supportechConnectionString1"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=sql.kuxan.co,19889;Initial Catalog=spxjul1;Persist Security Info=True" +
-            ";User ID=sa;Password=sElectra69l;")]
-        public string wcg_coreConnectionString {
-            get {
-                return ((string)(this["wcg_coreConnectionString"]));
             }
         }
         
@@ -461,6 +428,39 @@ namespace SPControladoraDatos.Properties {
             }
             set {
                 this["tipoPropiedad"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=144.126.151.13,19889;Initial Catalog=spxReactivosVallefff;Persist Sec" +
+            "urity Info=True;User ID=sa;Password=sElectra69l#2023;")]
+        public string SUPPORTECHConnectionString {
+            get {
+                return ((string)(this["SUPPORTECHConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=144.126.151.13,19889;Initial Catalog=spxReactivosVallefff;Persist Sec" +
+            "urity Info=True;User ID=sa;Password=sElectra69l#2023;")]
+        public string supportechConnectionString1 {
+            get {
+                return ((string)(this["supportechConnectionString1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=144.126.151.13,19889;Initial Catalog=spxReactivosVallefff;Persist Sec" +
+            "urity Info=True;User ID=sa;Password=sElectra69l#2023;")]
+        public string wcg_coreConnectionString {
+            get {
+                return ((string)(this["wcg_coreConnectionString"]));
             }
         }
     }

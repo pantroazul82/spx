@@ -57,7 +57,7 @@
             this.chkCreadas = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dsSpx1)).BeginInit();
-            this.grdDatos.BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPlantillas1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsSpx2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.calInicio)).BeginInit();
@@ -98,12 +98,14 @@
             // dsSpx1
             // 
             this.dsSpx1.DataSetName = "dsSpx";
+            this.dsSpx1.EnforceConstraints = false;
             this.dsSpx1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnBuscar
             // 
             this.btnBuscar.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.balloonTip1.SetBalloonCaption(this.btnBuscar, "Buscar");
+            this.balloonTip1.SetBalloonText(this.btnBuscar, null);
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
             this.btnBuscar.ImageFixedSize = new System.Drawing.Size(24, 24);
             this.btnBuscar.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
@@ -154,14 +156,15 @@
             this.grdDatos.PreviewInfo.Size = new System.Drawing.Size(0, 0);
             this.grdDatos.PreviewInfo.ZoomFactor = 75D;
             this.grdDatos.PrintInfo.PageSettings = ((System.Drawing.Printing.PageSettings)(resources.GetObject("grdDatos.PrintInfo.PageSettings")));
+            this.grdDatos.PropBag = resources.GetString("grdDatos.PropBag");
             this.grdDatos.Size = new System.Drawing.Size(984, 560);
             this.grdDatos.TabIndex = 12;
             this.grdDatos.Text = "c1TrueDBGrid1";
-            this.grdDatos.PropBag = resources.GetString("grdDatos.PropBag");
             // 
             // dsPlantillas1
             // 
             this.dsPlantillas1.DataSetName = "dsPlantillas";
+            this.dsPlantillas1.EnforceConstraints = false;
             this.dsPlantillas1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // estadosLLamadasTecnicasTableAdapter1
@@ -173,7 +176,6 @@
             this.btnVerLlamada.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnVerLlamada.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.balloonTip1.SetBalloonCaption(this.btnVerLlamada, "Ver Llamada");
-            this.balloonTip1.SetBalloonText(this.btnVerLlamada, null);
             this.btnVerLlamada.Image = ((System.Drawing.Image)(resources.GetObject("btnVerLlamada.Image")));
             this.btnVerLlamada.ImageFixedSize = new System.Drawing.Size(22, 22);
             this.btnVerLlamada.Location = new System.Drawing.Point(747, 115);
@@ -186,6 +188,7 @@
             // dsSpx2
             // 
             this.dsSpx2.DataSetName = "dsSpx";
+            this.dsSpx2.EnforceConstraints = false;
             this.dsSpx2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // pltListadoLlamadasTableAdapter1

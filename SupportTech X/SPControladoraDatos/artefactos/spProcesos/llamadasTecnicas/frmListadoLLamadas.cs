@@ -91,6 +91,10 @@ left join solicitudServicio on solicitudServicio.codsolicitudServicio = LlamadaS
                       "  '" + calSolciitudFin.Value.Year + "/" + calSolciitudFin.Value.Month.ToString().PadLeft(2, '0') + "/" + calSolciitudFin.Value.Day.ToString().PadLeft(2, '0') + "'";
 
             }
+            if (dsPlantillas1.pltListadoLlamadas.Columns.Contains("asesorTelefonico") == false) {
+                dsPlantillas1.pltListadoLlamadas.Columns.Add("asesorTelefonico");
+                dsPlantillas1.pltListadoLlamadas.Columns.Add("ingenieroAsesor");
+            }
             dsPlantillas1.pltListadoLlamadas.Merge(objData.ejecutarConsulta(sql +filtroFecha+ " order by idLlamadaSoporte desc").Tables[0]);
             System.Media.SystemSounds.Exclamation.Play();
         }

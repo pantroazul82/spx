@@ -36,7 +36,7 @@ namespace spProcesos.llamadasTecnicas
             calSugerida.fechaValue = DateTime.Now;
             
             dsSpx1.EnforceConstraints = false;
-            clsTusuario1.FillByPermiso(dsSPXSeguridad1.usuario, 1064);
+            clsTusuario1.FillByPermiso(dsSPXSeguridad1.usuario, 1095);
             panel1.BackColor = SPControladoraDatos.artefactos.SPXUtilidades.Themes.ThemeManager.verColor();
             txtCreadoPor.Text = SPXSeguridad.logica.sesion.NombreUsuarioAutenticado;
             

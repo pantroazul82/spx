@@ -9166,7 +9166,7 @@ where ordenservicio.codOrdenServicio ='&lt;&lt;codOrdenServicio&gt;&gt;'</Record
         <Height>648</Height>
         <ZOrder>5</ZOrder>
         <Align>6</Align>
-        <Picture encoding="base64">iVBORw0KGgoAAAANSUhEUgAAAKcAAAB5CAIAAADTQKbkAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvAAADrwBlbxySQAAARhJREFUeF7t0QEBAAAIwyD7l75BGBW4xdO6qHVR66LWRa2LWhe1Lmpd1LqodVHrotZFrYtaF7Uual3Uuqh1Ueui1kWti1oXtS5qXdS6qHVR66LWRa2LWhe1Lmpd1LqodVHrotZFrYtaF7Uual3Uuqh1Ueui1kWti1oXtS5qXdS6qHVR66LWRa2LWhe1Lmpd1LqodVHrotZFrYtaF7Uual3Uuqh1Ueui1kWti1oXtS5qXdS6qHVR66LWRa2LWhe1Lmpd1LqodVHrotZFrYtaF7Uual3Uuqh1Ueui1kWti1oXtS5qXdS6qHVR66LWRa2LWhe1Lmpd1LqodVHrotZFrYtaF7Uual3Uuqh1Ueui1kWti1oXtS5q3bM9OM/t+fpUZVQAAAAASUVORK5CYII=</Picture>
+        <Picture encoding="base64">iVBORw0KGgoAAAANSUhEUgAAAKcAAAB5CAIAAADTQKbkAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOvAAADrwBlbxySQAAASlJREFUeF7t0aEBAAAIgDD/f1q7L7BFKrP0zA8EuF7kepHrRa4XuV7kepHrRa4XuV7kepHrRa4XuV7kepHrRa4XuV7kepHrRa4XuV7kepHrRa4XuV7kepHrRa4XuV7kepHrRa4XuV7kepHrRa4XuV7kepHrRa4XuV7kepHrRa4XuV7kepHrRa4XuV7kepHrRa4XuV7kepHrRa4XuV7kepHrRa4XuV7kepHrRa4XuV7kepHrRa4XuV7kepHrRa4XuV7kepHrRa4XuV7kepHrRa4XuV7kepHrRa4XuV7kepHrRa4XuV7kepHrRa4XuV7kepHrRa4XuV7kepHrRa4XuV7kepHrRa4XuV7kepHrRa4XuV7kepHrRa4XuV7kepHrRa4XuV7kepHrRQc4z+35qY7WRgAAAABJRU5ErkJggg==</Picture>
         <PictureAlign>1</PictureAlign>
         <PictureScale>2</PictureScale>
         <CanGrow>-1</CanGrow>
@@ -11093,7 +11093,7 @@ from LlamadaSoporte
 join estadosLLamadasTecnicas on estadosLLamadasTecnicas.codEstadoLlamada = LlamadaSoporte.codEstadoLLamadaTecnica
 join clientes on clientes.nitCliente = LlamadaSoporte.nitCliente
 join dbo.vistaSucursal on dbo.vistaSucursal.nitCliente = clientes.nitCliente and dbo.vistaSucursal.codSucursal = LlamadaSoporte.codUbicacion
-join contactosClientes on contactosClientes.nitCliente = clientes.nitCliente and contactosClientes.codContacto = LlamadaSoporte.codUbicacion
+join contactosClientes on contactosClientes.nitCliente = clientes.nitCliente and contactosClientes.codContacto = LlamadaSoporte.codContacto
 left join ModalidadEquipo on ModalidadEquipo.codModalidadEquipo = LlamadaSoporte.codModalidadEquipo
 join dbo.vistaEquipo on  dbo.vistaEquipo.serial = LlamadaSoporte.serial
 join usuario us1 on us1.login = LlamadaSoporte.asesorTelefonico
@@ -15137,7 +15137,7 @@ from LlamadaSoporte
 join estadosLLamadasTecnicas on estadosLLamadasTecnicas.codEstadoLlamada = LlamadaSoporte.codEstadoLLamadaTecnica
 join clientes on clientes.nitCliente = LlamadaSoporte.nitCliente
 join dbo.vistaSucursal on dbo.vistaSucursal.nitCliente = clientes.nitCliente and dbo.vistaSucursal.codSucursal = LlamadaSoporte.codUbicacion
-join contactosClientes on contactosClientes.nitCliente = clientes.nitCliente and contactosClientes.codContacto = LlamadaSoporte.codUbicacion
+join contactosClientes on contactosClientes.nitCliente = clientes.nitCliente and contactosClientes.codContacto = LlamadaSoporte.codContacto
 left join ModalidadEquipo on ModalidadEquipo.codModalidadEquipo = LlamadaSoporte.codModalidadEquipo
 join dbo.vistaEquipo on  dbo.vistaEquipo.serial = LlamadaSoporte.serial
 join usuario us1 on us1.login = LlamadaSoporte.asesorTelefonico
